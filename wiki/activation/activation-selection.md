@@ -11,7 +11,7 @@
 - **隐层选错**：sigmoid/tanh 在深层网络中梯度消失，网络深度超过 5 层基本无法训练；ReLU 在 RNN 中可能导致输出爆炸
 - **输出层选错**：多分类用 sigmoid 输出概率和不等于 1，回归用 softmax 强制类别分布，loss 永远降不下去
 - **配对错误**：激活函数与 [[../initialization/initialization]] 必须匹配——ReLU 配 He，tanh/sigmoid 配 Xavier，否则梯度可能在训练一开始就爆炸或消失
-- **盲目尝试**：业务场景中过早更换激活函数是常见的浪费时间方式，应先做好数据、学习率和训练流程。参见 [[./activation]] 中"调参顺序"和"业务场景不宜过早更换激活函数"的讨论
+- **盲目尝试**：业务场景中过早更换激活函数是常见的浪费时间方式，应先做好数据、学习率和训练流程。参见 [[activation]] 中"调参顺序"和"业务场景不宜过早更换激活函数"的讨论
 
 ## 如何使用
 
@@ -52,7 +52,7 @@
 
 ### 损失函数的配对
 
-输出层激活函数需要与 [[../loss/]] 配对：
+输出层激活函数需要与 [[../data-eval/eval-metrics]] 配对：
 
 | 输出激活 | 对应损失 |
 |---------|---------|
@@ -79,7 +79,7 @@ Softmax + CrossEntropyLoss 内部已经包含了 log_softmax 计算，不要在 
 
 - [[relu]] — 隐层默认激活函数详解
 - [[leaky-relu-prelu]] — 当 ReLU 不够时尝试的变体
-- [[./activation]] — 激活函数总览与核心技巧
-- [[../loss/]] — 输出层激活函数与损失函数的配对
+- [[activation]] — 激活函数总览与核心技巧
+- [[../data-eval/eval-metrics]] — 输出层激活函数与损失函数的配对
 - [[../initialization/initialization]] — 激活函数与初始化方法的匹配
-- [[../capacity/]] — 隐层容量与激活函数的配合
+- [[../debugging/small-data-overfit-test]] — 隐层容量与激活函数的配合

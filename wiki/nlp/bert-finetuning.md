@@ -52,7 +52,7 @@ BERT 的 `[CLS]` 向量被设计为句子级表示，但在实际使用中需要
 | Weighted Pooling | 可学习的注意力加权求和 | 多任务、复杂场景 |
 | First-Last Avg | 取前几层和后几层平均再拼接 | 更鲁棒的句子表示 |
 
-实践中，mean pooling 是 CLS 之外的默认选择——简单、稳定、在文本匹配中常常优于 CLS。更复杂的选择是使用额外的 attention 层聚合所有 token，参考 [[./nlp]] 中"序列聚合：Attention 优于简单 Pooling"一节。
+实践中，mean pooling 是 CLS 之外的默认选择——简单、稳定、在文本匹配中常常优于 CLS。更复杂的选择是使用额外的 attention 层聚合所有 token，参考 [[nlp]] 中"序列聚合：Attention 优于简单 Pooling"一节。
 
 ## 常见误区
 
@@ -65,9 +65,9 @@ BERT 的 `[CLS]` 向量被设计为句子级表示，但在实际使用中需要
 
 ## 参见
 
-- [[./nlp]] — NLP 与序列任务核心技巧，包括 warmup 设置与学习率建议
-- [[./subword-tokenization]] — 子词分词对 BERT 词表设计的影响
+- [[nlp]] — NLP 与序列任务核心技巧，包括 warmup 设置与学习率建议
+- [[subword-tokenization]] — 子词分词对 BERT 词表设计的影响
 - [[../optimizer-lr/optimizer-lr]] — 优化器与学习率调度，AdamW 权重衰减设置
 - [[../regularization/regularization]] — 正则化方法：weight decay、dropout 在微调中的使用
 - [[../../contradictory]] — Pooling vs Attention 的深入讨论
-- [[./embedding-perturbation]] — Embedding 对抗扰动（FGM / PGD），可与微调结合使用
+- [[embedding-perturbation]] — Embedding 对抗扰动（FGM / PGD），可与微调结合使用

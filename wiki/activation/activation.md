@@ -24,14 +24,14 @@
 - **适用场景**: 所有网络的输出层
 - **原文**: "最后一层千万不要relu，因为relu可能把很多数值都干为0" / "最后一层的激活函数千万慎用relu"
 - **要点**: ReLU 会将负值截断为 0，输出层使用会导致信息丢失，破坏预测结果。连续值用 identity，分类用 softmax，回归直接 wx+b。
-- **参见**: [[relu]], [[loss]]
+- **参见**: [[relu]], [[../data-eval/eval-metrics]]
 
 ### 输出层激活函数按任务类型选择
 - **来源**: 王惠东（京东）、苏辄
 - **适用场景**: 输出层设计
 - **原文**: "多分类任务选用softmax输出，二分类任务选用sigmoid输出，回归任务选用线性输出" / "如果是连续的用identify，分类的用softmax，拟合回归的话直接wx +b就行"
 - **要点**: 多分类 → softmax；二分类 → sigmoid；回归 → 线性/identity/无激活函数。
-- **参见**: [[loss]]
+- **参见**: [[../data-eval/eval-metrics]]
 
 ### 中间隐层优先用 ReLU，RNN 用 tanh
 - **来源**: 王惠东（京东）
@@ -59,42 +59,42 @@
 - **适用场景**: 当分类精度因类别相似不够高时
 - **原文**: "如果你的分类精度不够是因为有两类或者多类太相近造成的，考虑使用其他softmax，比如amsoftmax" / "各种魔改的softmax能更好的增大类间差距"
 - **要点**: 标准 softmax 仅优化类别分离，AM-Softmax、ArcFace、CosFace 等变体通过加 margin 增大类间距离，适合细粒度分类和人脸识别。
-- **参见**: [[loss]]
+- **参见**: [[../data-eval/eval-metrics]]
 
 ### 召回场景：softmax 优于 sigmoid（listwise 学习）
 - **来源**: 爱睡觉的KKY
 - **适用场景**: 推荐系统召回
 - **原文**: "推荐召回用softmax效果比sigmoid更好，意思就是召回更适合对比学习那种listwise学习方式"
 - **要点**: 推荐召回本质是 listwise 排序问题，softmax 的多类别对比学习方式优于 sigmoid 的点式二分类。
-- **参见**: [[loss]]
+- **参见**: [[../data-eval/eval-metrics]]
 
 ### ReLU 学习率不能设太大，否则神经元易死
 - **来源**: 知乎社区
 - **适用场景**: 学习率调节 + ReLU 搭配
 - **原文**: "LR在可以工作的最大值下往小收一收, 免得ReLU把神经元弄死了"
 - **要点**: 学习率过大会使大量 ReLU 神经元陷入永不激活的状态。在可工作的最大 LR 下适当调小，在收敛速度和神经元存活率之间平衡。
-- **参见**: [[relu]], [[optimizer]]
+- **参见**: [[relu]], [[../optimizer-lr/adam]]
 
 ### Conv → MaxPool → ReLU 顺序更省计算
 - **来源**: 答主「十九」
 - **适用场景**: CNN 网络结构设计
 - **原文**: "在ReLU之前使用最大池化来节省一些计算。由于ReLU阈值的值为0：f(x)=max(0,x)和最大池化只有max激活：f(x)=max(x1,x2,...,xi)，使用Conv > MaxPool > ReLU 而不是Conv > ReLU > MaxPool" / "MaxPool > ReLU = max(0, max(0.5, -0.5)) = 0.5 和 ReLU > MaxPool = max(max(0,0.5), max(0,-0.5)) = 0.5 ... 使用MaxPool > ReLU可以节省一个max操作"
 - **要点**: 对于 ReLU（非负阈值），MaxPool 和 ReLU 复合后在数学上等价于 Conv → MaxPool → ReLU 也可得到相同结果，且少做一次 ReLU 的逐元素操作，节省计算量。
-- **参见**: [[convolution]]
+- **参见**: [[../cnn-cv/3x3-conv-rule]]
 
 ### 欠拟合时可尝试加入 Mish / ReLU 等激活层
 - **来源**: 爱睡觉的KKY
 - **适用场景**: 模型欠拟合时
 - **原文**: "考虑增加relu，mish等作为某些层的激活函数"
 - **要点**: 模型欠拟合时，除增大宽度深度外，可在特定层加入 ReLU/Mish 等激活函数来增加非线性表达能力。
-- **参见**: [[activation-selection]], [[capacity]]
+- **参见**: [[activation-selection]], [[../debugging/small-data-overfit-test]]
 
 ### ReLU6：限制上界，适合移动设备
 - **来源**: 苏辄
 - **适用场景**: 移动端 / 低算力设备
 - **原文**: "ReLu6：限制激活值的上界，超过6的统一算为6，减轻运算压力，适合移动设备"
 - **要点**: ReLU6 将输出截断至 [0, 6] 区间，减少激活值的动态范围，降低量化难度和计算压力，MobileNet 等轻量网络常用。
-- **参见**: [[quantization]]
+- **参见**: [[../infra/mixed-precision]]
 
 ### ReLU 激活函数推荐搭配 He 初始化
 - **来源**: 王惠东（京东）、多位答主
@@ -108,7 +108,7 @@
 - **适用场景**: 网络调参流程
 - **原文**: "先疯狂加隐藏层，一直加到过拟合，然后开始减隐藏层，然后开始调神经元个数，然后开始调激活函数，然后开始调隐藏层的类型..."
 - **要点**: 激活函数的调优优先级低于网络深度和宽度。应先用 ReLU 做 baseline，再尝试 PReLU 等变体来提升精度。
-- **参见**: [[activation-selection]], [[capacity]]
+- **参见**: [[activation-selection]], [[../debugging/small-data-overfit-test]]
 
 ### 做新模型的第一步：不加激活函数
 - **来源**: 爱睡觉的KKY
@@ -122,4 +122,4 @@
 - **适用场景**: 工程实践
 - **原文**: "很多人一看效果不行就加层、改 attention、改激活函数、换 loss。大多数业务场景里，这些不是第一优先级。先用成熟结构，先把数据、学习率、训练流程做好。"
 - **要点**: 业务调参的优先级：数据质量 → 学习率 → 训练流程 → 网络结构。改激活函数属于结构创新，应在基础工作做好之后考虑。
-- **参见**: [[data]]
+- **参见**: [[../data-eval/data-eval]]

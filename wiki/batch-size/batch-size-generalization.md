@@ -32,7 +32,7 @@ Hochreiter & Schmidhuber (1997) 的平坦极小值理论为此提供了理论基
 - PPO/RLHF：越大越好
 
 **验证泛化变化：**
-- 增加 batch size 后观察验证集指标：若下降，尝试减小 batch size 或同步调整学习率（参见 [[./batch-size-lr-scaling]]）
+- 增加 batch size 后观察验证集指标：若下降，尝试减小 batch size 或同步调整学习率（参见 [[batch-size-lr-scaling]]）
 - 在固定计算预算下比较：相同训练步数时大批次更稳定，但相同 epoch 数时小批次泛化可能更好
 
 ### 噪声注入的正则化视角
@@ -45,10 +45,10 @@ Hochreiter & Schmidhuber (1997) 的平坦极小值理论为此提供了理论基
 ### 大批次优化的实用技巧
 
 当业务需要大批次（吞吐优先）但担心泛化下降时：
-- 线性学习率缩放 + warmup（参见 [[./batch-size-lr-scaling]]）
+- 线性学习率缩放 + warmup（参见 [[batch-size-lr-scaling]]）
 - 使用 LayerNorm / GroupNorm 替代 BatchNorm，消除 BN 统计量偏差
 - 大批次 + 小学习率的组合往往优于大批次 + 大学习率
-- 用梯度累积等效扩大批次（参见 [[./gradient-accumulation]]），但注意 BN 问题
+- 用梯度累积等效扩大批次（参见 [[gradient-accumulation]]），但注意 BN 问题
 
 ### 何时坚持大批次
 
@@ -74,7 +74,7 @@ Hochreiter & Schmidhuber (1997) 的平坦极小值理论为此提供了理论基
 ## 参见
 
 - [[../batch-size/batch-size]] — 批大小核心概念与技巧集合
-- [[./gradient-accumulation]] — 梯度累积技术
-- [[./batch-size-lr-scaling]] — 批大小与学习率缩放
+- [[gradient-accumulation]] — 梯度累积技术
+- [[batch-size-lr-scaling]] — 批大小与学习率缩放
 - [[../optimizer-lr/optimizer-lr]] — 学习率与优化器选择
 - [[../../contradictory]]

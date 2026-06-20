@@ -67,7 +67,7 @@
 - **适用场景**: 标准化训练流程封装
 - **原文**: "可以将机器学习模型的基本要素封装成一个 Runner 类。除上述提到的要素外，再加上模型保存、模型加载等功能。"
 - **要点**: Runner 类通常包含 `__init__`（模型/优化器/loss/指标）、`train`（训练循环）、`evaluate`（验证）、`predict`（预测）、`save_model`（保存）、`load_model`（加载）六个核心方法。训练过程分为四阶段：初始化 → 训练 → 评价 → 预测。
-- **参见**: [[model-checkpoint]]
+- **参见**: [[../data-eval/eval-metrics]]
 
 ### 分桶策略（Bucketing）
 

@@ -52,7 +52,7 @@ for i, (inputs, labels) in enumerate(dataloader):
 ### 注意事项
 
 - **Batch Normalization**：累积模式下 BN 的均值和方差基于 micro-batch 而非 effective batch 计算，可能引入统计量偏差。可改用 SyncBN（同步所有卡的 BN 统计量）或 LayerNorm / GroupNorm。
-- **学习率不变**：梯度累积扩大的是等效批大小，学习率不需要对应调整。如需调整，参见 [[./batch-size-lr-scaling]]。
+- **学习率不变**：梯度累积扩大的是等效批大小，学习率不需要对应调整。如需调整，参见 [[batch-size-lr-scaling]]。
 - **Loss 缩放**：`loss / accumulation_steps` 确保每个 micro-batch 对最终参数更新的贡献等价于在 effective batch 中增加一个样本。
 - **梯度裁剪**：在 `optimizer.step()` 前执行，基于累积后的完整梯度做裁剪，而不是在每次 micro-batch 后裁剪。
 - **混合精度（AMP）**：GradScaler 需在 accumulation 循环外 step，确保缩放正确。同时注意 micro-batch 的 loss 溢出检测——单个 micro-batch 的 loss 可能因除以累积步数而过小。
@@ -80,7 +80,7 @@ for i, (inputs, labels) in enumerate(dataloader):
 ## 参见
 
 - [[../batch-size/batch-size]] — 批大小核心概念与技巧集合
-- [[./batch-size-generalization]] — 批大小对泛化能力的影响
-- [[./batch-size-lr-scaling]] — 批大小与学习率的缩放关系
+- [[batch-size-generalization]] — 批大小对泛化能力的影响
+- [[batch-size-lr-scaling]] — 批大小与学习率的缩放关系
 - [[../multi-gpu]] — 多卡分布式训练
 - [[../../contradictory]]

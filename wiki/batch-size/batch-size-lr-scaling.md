@@ -64,7 +64,7 @@ B_opt = 0.2920 · C^(0.3271)
 对于 LLM 预训练，给定计算预算 C：
 1. 用幂律公式计算 B_opt 和 η_opt
 2. B_opt 决定需要的 GPU 数量和梯度累积步数
-3. 如果显存无法满足 B_opt，用梯度累积等效扩大（参见 [[./gradient-accumulation]]）
+3. 如果显存无法满足 B_opt，用梯度累积等效扩大（参见 [[gradient-accumulation]]）
 4. η_opt 随 C 增加下降极慢（C^(-0.125)），意味着大规模训练中学习率基本稳定，主要调整 batch size
 
 ## 常见误区
@@ -78,8 +78,8 @@ B_opt = 0.2920 · C^(0.3271)
 ## 参见
 
 - [[../batch-size/batch-size]] — 批大小核心概念与技巧集合
-- [[./gradient-accumulation]] — 梯度累积实现
-- [[./batch-size-generalization]] — 批大小与泛化关系
+- [[gradient-accumulation]] — 梯度累积实现
+- [[batch-size-generalization]] — 批大小与泛化关系
 - [[../optimizer-lr/optimizer-lr]] — 学习率与优化器
 - [[../learning-rate-scheduler]] — 学习率调度策略
 - [[../../contradictory]]

@@ -90,7 +90,7 @@ def focal_loss(logits, targets, gamma=2.0, alpha=0.25):
 
 ### 误区一：Focal Loss 能替代一切不平衡处理手段
 
-Focal Loss 是损失函数层面的解决方案，但不替代数据层面的处理。当数据极度不平衡时，仍需配合[[./class-imbalance|过采样/欠采样]]等数据增广手段。
+Focal Loss 是损失函数层面的解决方案，但不替代数据层面的处理。当数据极度不平衡时，仍需配合[[class-imbalance|过采样/欠采样]]等数据增广手段。
 
 ### 误区二：Gamma 越大越好
 
@@ -106,10 +106,10 @@ Focal Loss 主要适用于二分类和目标检测。多分类场景中需要调
 
 ## 参见
 
-- [[./class-imbalance]] — 类别不平衡全攻略
-- [[./eval-metrics]] — 不平衡数据的评估指标
-- [[./data-augmentation]] — 配合数据增强缓解不平衡
-- [[./cross-validation]] — 不平衡下的交叉验证策略（Stratified K-Fold）
+- [[class-imbalance]] — 类别不平衡全攻略
+- [[eval-metrics]] — 不平衡数据的评估指标
+- [[data-augmentation]] — 配合数据增强缓解不平衡
+- [[cross-validation]] — 不平衡下的交叉验证策略（Stratified K-Fold）
 - [[../data-eval/data-eval]] — 数据与评估核心原则
 - [[../debugging/debugging]] — Focal Loss 训练效果异常排查
 - [[../regularization/regularization]] — Focal Loss 与正则化配合

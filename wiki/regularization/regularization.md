@@ -20,21 +20,21 @@
 - **适用场景**: 所有深度学习任务，尤其是从零训练新模型
 - **原文**: "先overfit 再trade off，首先保证你的model capacity能够过拟合，再尝试减小模型，各种正则化方法" ——爱睡觉的KKY
 - **要点**: 先在小数据上过拟合（甚至100~32条样本），这是验证代码正确性和模型容量的最高效手段。不能过拟合 → 检查代码bug、学习率、标签质量。
-- **参见**: [[overfitting-underfitting]], [[lr]], [[../data-eval/data-eval]]
+- **参见**: [[overfitting-underfitting]], [[../optimizer-lr/learning-rate-scheduling]], [[../data-eval/data-eval]]
 
 ### Dropout
 - **来源**: 爱睡觉的KKY / 匿名 / DOTA / BugBuster喵 / 罗浩 / 随机漫步的傻瓜 / 四点半的理一
 - **适用场景**: 全连接层、CNN、Transformer微调，预训练模型内部
 - **原文**: "Dropout, Dropout, Dropout(不仅仅可以防止过拟合, 其实这相当于做人力成本最低的Ensemble)" ——匿名
 - **要点**: 默认比例从0.2~0.5，若不知设多少直接选0.5。测试时必须关闭。预训练模型中Dropout ratio不一定要大，0到0.1常见，有时reset到0有奇效。一过拟合不要猛加Dropout，先看数据量、标签质量、weight decay、早停。
-- **参见**: [[dropout]], [[ensemble]]
+- **参见**: [[dropout]], [[../data-eval/eval-metrics]]
 
 ### Weight Decay（L2 正则化）
 - **来源**: 阿里云云栖号 / 爱睡觉的KKY / 四点半的理一 / BugBuster喵 / Sam聊算法 / 匿名 / 苏辄
 - **适用场景**: 所有模型，Transformer与ResNet对weight decay敏感度差异大
 - **原文**: "可以先从0.01开始，如果模型不稳定，往0.001甚至0.0001调" ——四点半的理一
 - **要点**: 常用范围1e-4~0.1。ResNet类相对不敏感，Transformer类大batch时weight decay设大会导致不收敛。小数据集和浅层结构需更大weight decay（1e-3~1e-2），大数据和深层结构设小（1e-4~1e-6）。AdamW保留weight decay效果，提升泛化。建议先0.01试，不稳定则调小。
-- **参见**: [[overfitting-underfitting]], [[optimizer]], [[lr]]
+- **参见**: [[overfitting-underfitting]], [[../optimizer-lr/adam]], [[../optimizer-lr/learning-rate-scheduling]]
 
 ### L1 正则化
 - **来源**: 苏辄 / 匿名
@@ -48,7 +48,7 @@
 - **适用场景**: 任何训练流程，防止验证集loss回升后的过拟合
 - **原文**: "不要过早的early stopping，有时候收敛平台在后段，你会错过，参考1. ，先过拟合train set" ——爱睡觉的KKY
 - **要点**: 监控验证集loss，在连续若干epoch不下降时停止。但不要过早早停——有可能收敛发生在训练后段。ASHA/Hyperband这类方法让跑得差的组合尽早停。早停短训适合筛掉明显垃圾组合，不能完全替代完整训练。随机种子策略：跑一批随机种子后早停，挑loss下降快的种子深度训练。
-- **参见**: [[early-stopping]], [[lr-scheduler]]
+- **参见**: [[early-stopping]], [[../optimizer-lr/learning-rate-scheduling]]
 
 ### 数据增强（Data Augmentation）作为正则化
 - **来源**: 爱睡觉的KKY / 匿名 / 忍猫 / 四点半的理一 / BugBuster喵
@@ -62,7 +62,7 @@
 - **适用场景**: 分类任务，防止过拟合于hard label
 - **原文**: "Label smoothing将hard label转变成soft label，使网络优化更加平滑。它通常用于减少训练DNN的过拟合问题并进一步提高分类性能。"
 - **要点**: 将hard target与均匀分布加权平均：`targets = (1 - label_smooth) * targets + label_smooth / num_classes`。使模型对预测不那么"自信"，提升泛化能力。
-- **参见**: [[label-smoothing]], [[loss-function]]
+- **参见**: [[label-smoothing]], [[../data-eval/eval-metrics]]
 
 ### SpatialDropout
 - **来源**: 匿名（亚马逊工程师经验）
@@ -83,7 +83,7 @@
 - **适用场景**: 训练loss降到很低后继续提升泛化
 - **原文**: "当training loss大于一个阈值时，进行正常的梯度下降；当training loss低于阈值时，会反过来进行梯度上升"
 - **要点**: 在loss函数上加flooding操作：`flood = (loss - b).abs() + b`，使训练loss保持在一个阈值附近，让模型做"random walk"，期望进入平坦的损失区域，实现test loss的double decent。
-- **参见**: [[loss-function]], [[generalization]]
+- **参见**: [[../data-eval/eval-metrics]], [[../batch-size/batch-size-generalization]]
 
 ### Mixup 与 CutMix
 - **来源**: BugBuster喵
@@ -97,7 +97,7 @@
 - **适用场景**: 比赛刷分、追求泛化性能上限
 - **原文**: "可以使用不同的初始化方式训练出模型，然后做ensemble。可以使用不同超参数(如学习率，batch_size，优化器)训练出不同模型，然后做ensemble。" ——BBuf
 - **要点**: 常用方式：(1) 不同初始化训练多个模型做voting/soft-voting；(2) 不同超参数（lr/batch_size/优化器）训练不同模型；(3) 不同网络架构（VGG/ResNet/Xception）提取特征加权组合；(4) Cyclic LR自动收敛到多个局部最小值得到多个模型做集成。Dropout本身是低成本的隐式Ensemble。Inception/Shortcut/Dense Connection也相当于集成。
-- **参见**: [[dropout]], [[model-ensemble]]
+- **参见**: [[dropout]], [[dropout]]
 
 ### BN 的正则化效果与 Dropout 的交互
 - **来源**: BBuf / 匿名 / 罗浩 / 苏辄 / DOTA / 四点半的理一
@@ -111,7 +111,7 @@
 - **适用场景**: 任何训练实验的第一步——诊断
 - **原文**: "训练集loss低但验证集loss高，那是典型的过拟合，优先加数据，其次加正则化，最后才考虑降低模型容量。" ——四点半的理一
 - **要点**: 用训练/验证loss差值为诊断依据：差值大=过拟合→加数据/正则化；两边都高=欠拟合→增大模型/学习率。不要同时调超过两个超参数。每次实验前先写假设，跑完对比。
-- **参见**: [[overfitting-underfitting]], [[../data-eval/data-eval]], [[model-capacity]]
+- **参见**: [[overfitting-underfitting]], [[../data-eval/data-eval]], [[../debugging/small-data-overfit-test]]
 
 ### 梯度裁剪（Gradient Clipping）与泛化
 - **来源**: 匿名 / BugBuster喵 / Sam聊算法
@@ -125,7 +125,7 @@
 - **适用场景**: 训练后期追求泛化性能上限
 - **原文**: "SGD+momentum可以实现找到全局最小值，但它依赖于鲁棒初始化。我建议你使用SGD+动量，因为它能达到更好的最佳效果。" ——匿名（亚马逊工程师）
 - **要点**: SGD+Momentum泛化能力通常比Adam强1~2个点。大厂标准做法：前几个epoch用Adam快速冷启动，之后切换到SGD进行微调（两阶段训练）。AdamW在Adam基础上保留weight decay效果，提升泛化。
-- **参见**: [[optimizer]]
+- **参见**: [[../optimizer-lr/adam]]
 
 ---
 
@@ -157,11 +157,11 @@
 - [[early-stopping]] — 早停策略：耐心值选择、ASHA/Hyperband
 - [[../normalization/normalization]] — BN/LN/GN 的正则化效果与选择
 - [[../data-eval/data-eval]] — 如何诊断过拟合与欠拟合
-- [[lr]] — 学习率与正则化的配合
-- [[optimizer]] — SGD vs Adam vs AdamW 的泛化差异
+- [[../optimizer-lr/learning-rate-scheduling]] — 学习率与正则化的配合
+- [[../optimizer-lr/adam]] — SGD vs Adam vs AdamW 的泛化差异
 - [[data-augmentation]] — 数据增强详细策略
 - [[dropout]] — Dropout 变体与实现
 - [[label-smoothing]] — 标签平滑实现细节
-- [[model-ensemble]] — 集成方法进阶
-- [[loss-function]] — 损失函数选择与正则
+- [[dropout]] — 集成方法进阶
+- [[../data-eval/eval-metrics]] — 损失函数选择与正则
 - [[gradient-clipping]] — 梯度裁剪的配置

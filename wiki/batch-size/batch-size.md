@@ -57,7 +57,7 @@
 - **适用场景**: A100/H100 多卡训练、梯度累积场景
 - **原文**: > batch size 也重要，但它不是越大越好。大 batch 训练快，梯度稳定，但泛化不一定更好。今天大家用 A100、H100、L40S、国产卡集群，gradient accumulation 很常见，看到的 batch size 往往是 effective batch size。调参时要记录清楚：单卡 batch、卡数、累积步数、总 batch 到底是多少。很多复现实验复现不出来，就是这里没说清。
 - **要点**: 使用多卡和梯度累积时必须记录「单卡 batch × 卡数 × 累积步数 = effective batch size」的完整公式，否则实验无法复现。
-- **参见**: [[gradient-accumulation]], [[batch-size-generalization]], [[multi-gpu]]
+- **参见**: [[gradient-accumulation]], [[batch-size-generalization]], [[../infra/distributed-training]]
 
 ### 批量大小受硬件内存限制，多 GPU 总批量为单卡批量乘以 GPU 数
 - **来源**: 阿里云云栖号
@@ -89,7 +89,7 @@
 - **适用场景**: PyTorch 下显存不足时等效扩大 batch size
 - **原文**: > 梯度累积可以在不增加内存消耗的情况下模拟大批次训练。通过在多个小批次上累积梯度，然后在达到指定累积次数后进行一次参数更新，可以有效提高训练效率。
 - **要点**: 核心实现为 loss = loss / accumulation_steps，每积累 accumulation_steps 次才执行 optimizer.step()，注意 loss 需除以累积步数以保持梯度量级一致。
-- **参见**: [[gradient-accumulation]], [[multi-gpu]]
+- **参见**: [[gradient-accumulation]], [[../infra/distributed-training]]
 
 ### mini batch size 数十到数百皆可，SGD 默认设定
 - **来源**: 匿名用户

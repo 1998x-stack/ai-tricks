@@ -77,4 +77,4 @@ LeakyReLU 和 PReLU 是 ReLU 的最直接改进，目的是解决 ReLU 的 dying
 - [[activation-selection]] — 完整激活函数选型框架
 - [[../initialization/initialization]] — 各激活函数对应的初始化方法
 - [[../normalization/normalization]] — 激活函数与 BN/LN 的配合
-- [[../quantization/]] — ReLU6 与量化部署
+- [[../infra/mixed-precision]] — ReLU6 与量化部署

@@ -39,91 +39,91 @@
 - **适用场景**: 召回模型负样本构建
 - **原文**: > 召回负采样负样本效果肯定高于曝光未点击负样本
 - **要点**: 召回阶段，全局随机负采样效果优于曝光未点击负样本。
-- **参见**: [[negative-sampling]], [[coarse-ranking]]
+- **参见**: [[negative-sampling]], [[negative-sampling]]
 
 ### 粗排用精排 Top-K 做负样本
 - **来源**: Tang AI
 - **适用场景**: 粗排模型训练
 - **原文**: > 粗排用精排后topk做负样本，基本是有效果的
 - **要点**: 将精排模型打分后排在后部的样本作为粗排的负样本，这一策略在多数场景有效。
-- **参见**: [[召回负采样]]
+- **参见**: [[negative-sampling]]
 
 ### 多任务学习：Gradient Surgery 优先，不推荐 Pareto
 - **来源**: Tang AI
 - **适用场景**: 推荐系统多目标任务
 - **原文**: > 推荐多目标任务可以考虑采用Gradient Surgery的方式，帕累托就算复杂度又高，效果也没有好很多，不推荐。
 - **要点**: Gradient Surgery 是多任务学习中的有效方法，Pareto 优化复杂度高且收益有限，不推荐。
-- **参见**: [[multi-task-learning]], [[gradient-surgery]]
+- **参见**: [[multi-task-recsys]], [[multi-task-recsys]]
 
 ### 多任务各 Loss 应在同一量级
 - **来源**: 匿名
 - **适用场景**: 多任务训练平衡
 - **原文**: > 多任务情况下, 各loss想法限制在一个量级上, 或者最终限制在一个量级上, 初期可以着重一个任务的loss
 - **要点**: 多任务训练的各个 Loss 应通过权重调整至同一量级，初期可侧重某一主任务。
-- **参见**: [[multi-task-learning]]
+- **参见**: [[multi-task-recsys]]
 
 ### 推荐序列：Pooling 与 Attention 效果差异不大
 - **来源**: Tang AI
 - **适用场景**: 推荐系统序列特征聚合
 - **原文**: > 对于推荐序列来说pooling和attention的效果差别真的不大，基本没有diff
 - **要点**: 在推荐系统的序列特征聚合中，简单 Pooling 和 Attention 的线上效果差异极小，优先使用简单的 Pooling 以降低复杂度。
-- **参见**: [[序列特征]], [[attention-vs-pooling]]
+- **参见**: [[../normalization/layer-normalization]], [[multi-task-recsys]]
 
 ### SENet 与 LHUC：可解释特征重要性
 - **来源**: Tang AI
 - **适用场景**: 推荐特征重要性分析
 - **原文**: > 对于推荐来说senet和lhuc，是深度学习领域为数不多的可以观察特征重要性的模型结构
 - **要点**: SENet 和 LHUC 是推荐系统中少数可直接观察特征重要性的模型结构，适合用于特征筛选和可解释性分析。
-- **参见**: [[feature-importance]], [[senet]]
+- **参见**: [[feature-binning]], [[multi-task-recsys]]
 
 ### 不推荐用强化学习优化推荐系统
 - **来源**: Tang AI
 - **适用场景**: 推荐系统策略优化
 - **原文**: > 一般不要尝试用强化学习优化，因为真的很费力气，而且效果很一般
 - **要点**: 用 RL 优化推荐系统投入产出比低，效果一般，不推荐。
-- **参见**: [[rl-recsys]]
+- **参见**: [[../llm-rl/ppo-rlhf]]
 
 ### 召回用 Softmax 优于 Sigmoid
 - **来源**: Tang AI
 - **适用场景**: 召回模型输出层选择
 - **原文**: > 推荐召回用softmax效果比sigmoid更好，意思就是召回更适合对比学习那种listwise学习方式。
 - **要点**: 召回任务中 Softmax（listwise）效果优于 Sigmoid（pointwise），因为召回本质更适合 listwise / 对比学习范式。
-- **参见**: [[loss-function]], [[对比学习]]
+- **参见**: [[../data-eval/eval-metrics]], [[../batch-size/batch-size-generalization]]
 
 ### Batch Size 范围：32 - 128 - 512
 - **来源**: Tang AI
 - **适用场景**: 推荐模型 batch size 选择
 - **原文**: > batch size对于推荐来说32-64-128-512测试效果再高一般也不会正向了，再低训练太慢了。
 - **要点**: 推荐系统的 batch size 在 32 到 512 之间调优，超过 512 基本无正向收益，低于 32 训练过慢。
-- **参见**: [[../batch-size/batch-size]], [[learning-rate]]
+- **参见**: [[../batch-size/batch-size]], [[../optimizer-lr/lr-range-test]]
 
 ### 稀疏特征用 Adagrad，稠密特征用 Adam
 - **来源**: Tang AI
 - **适用场景**: 推荐系统优化器选择
 - **原文**: > 对于稀疏特征多的模型采用adagrad，稠密特征多的模型用adam
 - **要点**: 稀疏特征主导的模型宜用 Adagrad 处理不同特征频次差异，稠密特征场景用 Adam。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[adagrad]], [[adam]]
+- **参见**: [[../optimizer-lr/optimizer-lr]], [[../optimizer-lr/adam]], [[adam]]
 
 ### 数据稀疏时用自适应优化器
 - **来源**: 王惠东
 - **适用场景**: 通用优化器选择
 - **原文**: > 如果数据是稀疏的，就用自适应方法，即 Adagrad, Adadelta, RMSprop, Adam。整体来讲，Adam 是最好的选择。
 - **要点**: 稀疏数据场景应优先选择自适应优化器（Adagrad / Adam 等），其中 Adam 综合表现最佳。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[adagrad]], [[adam]]
+- **参见**: [[../optimizer-lr/optimizer-lr]], [[../optimizer-lr/adam]], [[adam]]
 
 ### Embedding L2 Normalization 反而不利于召回
 - **来源**: Tang AI
 - **适用场景**: 召回模型 Embedding 处理
 - **原文**: > 做召回的同学，不要迷信专家们说的embedding做l2 norm，笔者就踩过这个坑，直接对embedding l2结果效果贼垃圾，查了半天，直接去掉l2，效果正常了。
 - **要点**: 对 Embedding 施加 L2 Normalization 可能严重损害召回效果，不建议盲目添加。如果效果差，先去掉 L2 试试。
-- **参见**: [[embedding]], [[召回]]
+- **参见**: [[../initialization/initialization]], [[negative-sampling]]
 
 ### 数据量巨大时一个 Epoch 足矣
 - **来源**: Tang AI
 - **适用场景**: 大规模推荐系统训练
 - **原文**: > 对于数据量巨大的推荐系统的模型来说一个epoch足矣，再多就会过拟合。
 - **要点**: 推荐系统数据量极大时，一个 epoch 即可收敛，更多 epoch 会导致过拟合。
-- **参见**: [[epoch]], [[overfitting]]
+- **参见**: [[../regularization/overfitting-underfitting]], [[../regularization/overfitting-underfitting]]
 
 ### 模型构建顺序：先不加激活函数、BN、Dropout
 - **来源**: Tang AI
@@ -144,7 +144,7 @@
 - **适用场景**: 样本极度不平衡的推荐任务
 - **原文**: > 对于负样本太多的数据集，测试集的loss降并不代表没有过拟合，试试看看f1或者auc有没有降低，因为有可能负样本学的爆好，所以loss降低，但是正样本凉了
 - **要点**: 负样本远多于正样本时，Loss 下降可能是因为负样本学好了而正样本反而变差，应同步监控 F1 或 AUC。
-- **参见**: [[imbalanced-data]], [[evaluation]]
+- **参见**: [[imbalanced-data]], [[eval-metrics]]
 
 ### 两阶段训练：Adam 预热 + SGD 收尾
 - **来源**: 四点半的理一
@@ -158,7 +158,7 @@
 - **适用场景**: 推荐模型离线评估
 - **原文**: > 之前做一个电商搜索排序模型，离线 AUC 提了 0.7 个点，团队挺兴奋。后来线上灰度没动静，甚至部分品类略降。排查后发现验证集是随机切的，同一个用户的连续行为同时出现在训练和验证里，模型学到了一些用户短期偏好泄漏。重新按时间切分以后，离线提升直接没了一半。
 - **要点**: 推荐系统必须按时间切分训练 / 验证集，避免同用户连续行为同时出现在两份数据中造成信息泄漏。
-- **参见**: [[data-leakage]], [[evaluation]]
+- **参见**: [[data-leakage]], [[eval-metrics]]
 
 ### 负采样需避免污染正样本
 - **来源**: BugBuster喵
@@ -172,4 +172,4 @@
 - **适用场景**: 多任务 / 层次化特征聚合
 - **原文**: > 基于banckbone 构建层次化的neck 一般都比直接使用最后一层输出要好，reduce function 一般attention 优于简单pooling，多任务需要构建不同的qkv
 - **要点**: 通用原则上 Attention 优于 Pooling（尽管在推荐序列上二者差异不大），多任务场景需要为每个任务构建独立的 Query / Key / Value。
-- **参见**: [[attention]], [[multi-task-learning]], [[pooling]]
+- **参见**: [[attention]], [[multi-task-recsys]], [[pooling]]

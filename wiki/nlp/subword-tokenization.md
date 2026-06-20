@@ -79,8 +79,8 @@ tokenizer.train(
 
 ## 参见
 
-- [[./bert-finetuning]] — BERT 微调中的词表与分词器使用
-- [[./text-data-augmentation]] — 分词结果的增强方法
-- [[./nlp]] — NLP 核心技巧概览
+- [[bert-finetuning]] — BERT 微调中的词表与分词器使用
+- [[text-data-augmentation]] — 分词结果的增强方法
+- [[nlp]] — NLP 核心技巧概览
 - [[../optimizer-lr/optimizer-lr]] — 分词的序列长度影响 batch 大小进而影响学习率选择
 - [[../../contradictory]] — 分词对模型兼容性的影响讨论

@@ -184,7 +184,7 @@ RL对齐（包括RLHF/PPO、DPO、GRPO等技术）是在SFT基础上将模型能
 - **适用场景**: Base-RL效果提升
 - **原文**: "如果Base-RL的效果想要更进一步，可以试试用base-RL拒绝采样一批样本，然后对Base模型进行简单的冷启动微调，随后再继续RL。这就是先挑出reward高的样本先微调冷启动一把。"
 - **要点**: Base-RL后，用拒绝采样挑reward高的样本，对Base模型冷启动微调，再继续RL。
-- **参见**: [[rejection-sampling]]
+- **参见**: [[grpo]]
 
 ### reward不涨：检查基模能力上限
 - **来源**: Tang AI
@@ -202,14 +202,14 @@ RL对齐（包括RLHF/PPO、DPO、GRPO等技术）是在SFT基础上将模型能
 - **适用场景**: DPO训练缓慢
 - **原文**: "DPO中，模型对 chosen 和 rejected 的概率差增长缓慢，这是因为beta 值过高。DPO中的 beta 参数扮演着类似PPO中KL散度惩罚的角色，它控制着隐式奖励模型的温度。beta 过高意味着策略更新过于保守。可以调低 beta。降低 beta可以让模型更大胆地学习偏好，拉开 chosen 和 rejected 的差距。"
 - **要点**: Beta控制DPO隐式奖励温度；beta过高导致更新保守，概率差增长慢 → 降低beta让模型更大胆学习偏好。
-- **参见**: [[dpo-beta]]
+- **参见**: [[dpo]]
 
 ### Beta过低或LR过高：损失下降快但生成效果差
 - **来源**: Tang AI
 - **适用场景**: DPO训练效果差
 - **原文**: "DPO中，DPO训练损失下降很快，但生成效果差，甚至不如SFT模型，这是因为beta 值过低 或 学习率过高。beta 过低导致模型过于激进，偏离SFT模型太远，丢失了通用能力。学习率过高同样会破坏预训练模型的结构。可以调高 beta：增加对SFT模型的约束。降低学习率：使用更小的学习率（如1e-7到5e-6）进行微调。"
 - **要点**: DPO loss快速下降但效果差 → beta过低（偏离SFT）或LR过高（破坏预训练结构）→ 调高beta + 降低LR（1e-7到5e-6）。
-- **参见**: [[dpo-beta]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [[dpo]], [[../optimizer-lr/optimizer-lr]]
 
 ### Chosen-Rejected对质量
 - **来源**: BugBuster喵 (综合回答)
@@ -241,4 +241,4 @@ RL对齐（包括RLHF/PPO、DPO、GRPO等技术）是在SFT基础上将模型能
 - **适用场景**: GRPO / Base-RL提效
 - **原文**: "如果Base-RL的效果想要更进一步，可以试试用base-RL拒绝采样一批样本，然后对Base模型进行简单的冷启动微调，随后再继续RL。"
 - **要点**: 先用RL模型对高reward样本做拒绝采样，冷启动微调基模，再继续RL训练，可突破瓶颈。
-- **参见**: [[rejection-sampling]], [[cold-start]]
+- **参见**: [[grpo]], [[cold-start]]
