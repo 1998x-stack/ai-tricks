@@ -2,7 +2,7 @@
 
 > 从知乎「深度学习调参有哪些技巧？」问题下 30+ 位一线从业者的回答中提取、分类、深化的结构化知识库 —— 覆盖从经典 CNN 到大模型 RLHF 的全栈调参方法论。
 
-[![Pages](https://img.shields.io/badge/GitHub_Pages-在线浏览-blue)](https://github.com/0xLida00/ai-tricks)
+[![Pages](https://img.shields.io/badge/GitHub_Pages-在线浏览-blue)](https://1998x-stack.github.io/ai-tricks/)
 [![Obsidian](https://img.shields.io/badge/Obsidian-兼容-7C3AED)](https://obsidian.md)
 [![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 [![Files](https://img.shields.io/badge/Wiki页面-72个-orange)](./wiki/)
@@ -55,7 +55,7 @@
 ### 在 Obsidian 中打开（推荐）
 ```bash
 # 克隆仓库
-git clone https://github.com/0xLida00/ai-tricks.git
+git clone https://github.com/1998x-stack/ai-tricks.git
 
 # 在 Obsidian 中作为 Vault 打开
 # File → Open Vault → 选择 ai-tricks 目录
