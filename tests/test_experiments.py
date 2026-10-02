@@ -81,7 +81,7 @@ class ExperimentContracts(unittest.TestCase):
         checkpoint = directory/'checkpoint.fixture'
         checkpoint.write_text('contract test only; not model weights')
         write_json(directory/'checkpoint_manifest.json',{'selected_by_validation':True,
-                   'path':checkpoint.name,'sha256':file_hash(checkpoint)})
+                   'path':checkpoint.name,'sha256':file_hash(checkpoint),'step':1})
         (directory/'history.csv').write_text('step,train_loss,val_loss\n1,1.0,1.2\n')
         (directory/'predictions.jsonl').write_text('{"id":"test:1","prediction":0}\n')
         result = {key:request[key] for key in ('experiment_id','plan_hash','seed','arm','dataset_revision','model_revision')}
@@ -102,6 +102,41 @@ class ExperimentContracts(unittest.TestCase):
             (path/'checkpoint.fixture').write_text('tampered')
             with self.assertRaises(ValueError):
                 validate_result(result,request,path)
+
+    def test_history_and_checkpoint_steps_cannot_claim_missing_updates(self):
+        for checkpoint_step, history in [
+            (0, '1,1,1\n'), (2, '1,1,1\n'),
+            (1, '1,1,1\n1,1,1\n'), (1, '2,1,1\n'),
+        ]:
+            with self.subTest(step=checkpoint_step, history=history), tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp)
+                request, result = self.fixture_result(path)
+                manifest = read_json(path/'checkpoint_manifest.json')
+                manifest['step'] = checkpoint_step
+                write_json(path/'checkpoint_manifest.json', manifest)
+                (path/'history.csv').write_text('step,train_loss,val_loss\n'+history)
+                with self.assertRaises(ValueError):
+                    validate_result(result, request, path)
+
+    def test_runner_marks_training_and_reporting_failures(self):
+        from types import SimpleNamespace
+        path = ROOT/'experiments/activation/activation-001-01/experiment.py'
+        spec = importlib.util.spec_from_file_location('failure_entry_fixture', path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        plan = {'environment': {'execution': {'max_total_seconds': 100, 'max_run_seconds': 20}},
+                'runs': [{'seed': 1, 'arm': 'A'}], 'spec': {}}
+        for failure_point in ('execute_run', 'summarize'):
+            with self.subTest(failure_point=failure_point), tempfile.TemporaryDirectory() as tmp:
+                output = Path(tmp)/'run'
+                with patch.object(module, 'provenance', return_value={}), \
+                     patch.object(module, 'execute_run', return_value={}), \
+                     patch.object(module, failure_point, side_effect=RuntimeError('fixture failure')):
+                    with self.assertRaises(RuntimeError):
+                        module.run_all(SimpleNamespace(output=output), plan, {})
+                status = read_json(output/'status.json')
+                self.assertEqual(status['status'], 'failed')
+                self.assertEqual(status['completed_runs'], 0 if failure_point == 'execute_run' else 1)
 
     def test_prediction_hash_is_recomputed(self):
         with tempfile.TemporaryDirectory() as tmp:

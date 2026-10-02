@@ -1,4 +1,4 @@
-"""CIFAR 分辨率的 ResNet-18/34 实际模型；不访问网络、不加载示例权重。"""
+"""CIFAR 分辨率的 ResNet-18 与均匀 stage 深度变体；不访问网络、不加载示例权重。"""
 import torch
 from torch import nn
 
@@ -97,7 +97,9 @@ class ResNet(nn.Module):
             if not isinstance(layer, (nn.Conv2d, nn.Linear)):
                 continue
             weight = layer.weight
-            if kind in ('default', 'kaiming_normal'):
+            if kind == 'default':
+                pass  # 保留模块构造器的初始权重，不能冒充 ReLU Kaiming normal。
+            elif kind == 'kaiming_normal':
                 nn.init.kaiming_normal_(weight, nonlinearity='relu')
             elif kind == 'xavier_normal':
                 nn.init.xavier_normal_(weight)

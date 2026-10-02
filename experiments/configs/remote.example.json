@@ -18,7 +18,7 @@
         "source": "code",
         "architecture": "cifar_resnet18",
         "path": "experiments/drivers/vision_model.py",
-        "revision": "d8b8f1764c841e9bff9f92dc6811c216902604fa44543cff6290920c4a98660e"
+        "revision": "4ca3c473614db508b15d1aa5b94fa0c703af098442fa0d5671d024685f5b9a0d"
       },
       "streaming": true,
       "columns": {
@@ -154,7 +154,7 @@
       "budget": {
         "epochs": 3,
         "max_steps": 0,
-        "eval_every_steps": 500,
+        "eval_every_examples": 8000,
         "max_new_tokens": 256
       },
       "driver": {

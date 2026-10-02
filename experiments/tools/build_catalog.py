@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 from collections import Counter
 from pathlib import Path
@@ -13,6 +14,8 @@ from experiments.utils.runtime import ROOT, write_json
 
 def extract():
     items = []
+    source_ids = json.loads((ROOT/'experiments/tools/source_ids.json').read_text())
+    seen_ids = set()
     for path in sorted((ROOT / 'wiki').glob('*/*.md')):
         if path.stem != path.parent.name:
             continue
@@ -24,7 +27,11 @@ def extract():
             if '**来源**' not in body:
                 continue
             author = re.search(r'\*\*来源\*\*[:：]\s*(.*)', body)
-            items.append({'id': f'{path.stem}-{i+1:03}', 'category': path.stem,
+            identity = source_ids.get(str(path.relative_to(ROOT)),{}).get(match[1])
+            if identity is None or identity in seen_ids:
+                raise ValueError(f'新增/重名标题需显式审核稳定 ID: {path}: {match[1]}')
+            seen_ids.add(identity)
+            items.append({'id': identity, 'category': path.stem,
                           'title': match[1], 'body': body,
                           'source': {'wiki': str(path.relative_to(ROOT)),
                                      'line': text[:match.start()].count('\n') + 1,
@@ -33,6 +40,20 @@ def extract():
                                      'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}})
     return items
 
+
+
+def render_wikilinks(body, source, output_directory):
+    """从原 Wiki 相对目录解析引用；不存在的原红链接保留为文字，不制造新断链。"""
+    def replace(match):
+        target, _, alias = match[1].partition('|')
+        filename, separator, anchor = target.partition('#')
+        path = (source.parent / (filename + '.md')).resolve() if filename else source
+        label = alias or target
+        if not path.is_file():
+            return f'`[[{match[1]}]]`（原 Wiki 未解析链接）'
+        relative = os.path.relpath(path,output_directory)
+        return f'[{label}]({relative}{separator}{anchor})'
+    return re.sub(r'\[\[([^\]]+)\]\]',replace,body)
 
 def raw_references(body, raw_lines):
     # 只认可原文连续片段匹配；不把语义相似当成准确引文。
@@ -86,6 +107,12 @@ def measurement(profile, axis):
 
 def controls_for(item, axis):
     controls = {}
+    if axis in ('optimizer.beta1','optimizer.beta2'):
+        controls['optimizer.kind'] = 'adam'
+    if axis == 'optimizer.gamma':
+        controls['optimizer.schedule'] = 'exponential'
+    if axis in ('optimizer.warmup_ratio','optimizer.min_lr'):
+        controls['optimizer.schedule'] = 'warmup_cosine'
     if item['id'] in ('batch-size-006', 'optimizer-lr-027'):
         controls['training.batch_size'] = 256
     if item['id'] in ('normalization-003', 'regularization-013'):
@@ -135,7 +162,7 @@ def generate():
     for item in items:
         item['source']['raw_exact_lines'] = raw_references(item['body'], raw_lines)
         item['source']['raw_attribution_status'] = (
-            'exact_fragment_matched' if item['source']['raw_exact_lines'] else 'wiki_attributed_raw_unverified')
+            'normalized_fragment_matched' if item['source']['raw_exact_lines'] else 'wiki_attributed_raw_unverified')
         base = mapping[item['id']]
         variants = [base] + EXTRA.get(item['id'], [])
         item['experiments'] = []
@@ -186,7 +213,7 @@ python experiments/{item['category']}/{spec['id']}/experiment.py --run --environ
 
 ## 原始细节（保留 Wiki 归因）
 
-{item['body']}
+{render_wikilinks(item['body'], ROOT/item['source']['wiki'], directory)}
 
 ## 解释边界
 
@@ -210,7 +237,7 @@ python experiments/{item['category']}/{spec['id']}/experiment.py --run --environ
     coverage = {'main_tips': len(items), 'atomic_protocols': len(all_specs),
                 'categories': dict(Counter(x['category'] for x in items)),
                 'detail_pages_retained': len(leaf_pages),
-                'raw_exact_matched_lines': len(matched), 'raw_unmatched_candidates': len(unresolved),
+                'raw_normalized_matched_lines': len(matched), 'raw_unmatched_candidates': len(unresolved),
                 'raw_sha256': hashlib.sha256(raw_path.read_bytes()).hexdigest(),
                 'full_training_runs': 0, 'all_source_content_atomically_audited': False}
     write_json(ROOT / 'experiments/catalog/coverage.json', coverage)

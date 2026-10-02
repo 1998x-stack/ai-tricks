@@ -36,7 +36,7 @@ def build():
                      'adapter.alpha':16,'adapter.dropout':0.,'training.batch_size':4,
                      'training.accumulation_steps':4,'training.precision':'bf16',
                      'data.max_length':2048,'loss.assistant_only':True},
-        'budget':{'epochs':3,'max_steps':0,'eval_every_steps':500,'max_new_tokens':256},
+        'budget':{'epochs':3,'max_steps':0,'eval_every_examples':8000,'max_new_tokens':256},
         'driver':{'kind':'real_training','argv':['{python}','-m','experiments.drivers.sft'],
                   'supported_axes':sorted(SFT_AXES)},
     }

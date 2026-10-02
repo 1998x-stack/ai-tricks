@@ -82,29 +82,36 @@ def prepare(args, spec):
 def run_all(args, plan, profile):
     output = (args.output or ROOT / 'experiments' / 'runs' / EXPERIMENT_ID).resolve()
     output.mkdir(parents=True, exist_ok=False)
+    write_json(output / 'status.json', {'status': 'running', 'completed_runs': 0})
     write_json(output / 'plan.json', plan)
     write_json(output / 'provenance.json', provenance())
     execution = plan['environment']['execution']
     started = time.monotonic()
     results = []
-    for run in plan['runs']:
-        remaining = execution['max_total_seconds'] - (time.monotonic() - started)
-        if remaining <= 0:
-            write_json(output / 'status.json', {'status': 'budget_exhausted',
-                                               'completed_runs': len(results)})
-            raise TimeoutError('达到总时间预算；不将不完整配对当成结果')
-        timeout = min(remaining, execution['max_run_seconds'])
-        print(f"{EXPERIMENT_ID} seed={run['seed']} arm={run['arm']}", flush=True)
-        result = execute_run(plan, run, profile, output, timeout)
-        results.append(result)
-        write_json(output / 'progress.json', {'completed_runs': len(results),
-                                             'total_runs': len(plan['runs'])})
-    # 所有种子与两组完成后才能汇总，避免挑选成功/有利的结果。
-    summary = summarize(results, plan['spec'], output)
-    plot_results(results, plan['spec'], output)
-    write_report(plan['spec'], summary, output)
-    write_json(output / 'status.json', {'status': 'complete',
-                                       'completed_runs': len(results)})
+    try:
+        for run in plan['runs']:
+            remaining = execution['max_total_seconds'] - (time.monotonic() - started)
+            if remaining <= 0:
+                write_json(output / 'status.json', {'status': 'budget_exhausted',
+                                                   'completed_runs': len(results)})
+                raise TimeoutError('达到总时间预算；不将不完整配对当成结果')
+            timeout = min(remaining, execution['max_run_seconds'])
+            print(f"{EXPERIMENT_ID} seed={run['seed']} arm={run['arm']}", flush=True)
+            result = execute_run(plan, run, profile, output, timeout)
+            results.append(result)
+            write_json(output / 'progress.json', {'completed_runs': len(results),
+                                                 'total_runs': len(plan['runs'])})
+        # 所有种子与两组完成后才能汇总，避免挑选成功/有利的结果。
+        summary = summarize(results, plan['spec'], output)
+        plot_results(results, plan['spec'], output)
+        write_report(plan['spec'], summary, output)
+        write_json(output / 'status.json', {'status': 'complete',
+                                           'completed_runs': len(results)})
+    except Exception as error:
+        if read_json(output / 'status.json')['status'] != 'budget_exhausted':
+            write_json(output / 'status.json', {'status': 'failed',
+                       'completed_runs': len(results), 'error': str(error)})
+        raise
     return output
 
 

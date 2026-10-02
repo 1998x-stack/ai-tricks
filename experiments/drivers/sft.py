@@ -8,6 +8,7 @@ import random
 import time
 from pathlib import Path
 
+from experiments.utils.training_checks import EvaluationClock, validate_numbers, validate_budget
 from experiments.utils.hf_stream import ids_digest, require_remote, stream
 from experiments.utils.runtime import file_hash, read_json, write_json
 
@@ -20,6 +21,7 @@ SUPPORTED_AXES = {
 
 
 def tokenize_example(row, tokenizer, config, message_column):
+    validate_numbers(config)
     messages = row[message_column]
     if not messages or messages[-1]['role'] != 'assistant':
         raise ValueError('SFT 样本必须以 assistant 回复结束，不静默丢弃非法样本')
@@ -58,12 +60,30 @@ def collate(records, tokenizer, config, message_column, device):
             'labels':torch.tensor(labels,device=device),'attention_mask':torch.tensor(masks,device=device)}
 
 
+
+def validate_config(config, mode='lora'):
+    validate_numbers(config)
+    if mode not in ('lora','full'):
+        raise ValueError('finetune_mode 只能为 lora/full')
+    if set(config)-SUPPORTED_AXES:
+        raise ValueError(f'SFT 驱动未实现干预: {sorted(set(config)-SUPPORTED_AXES)}')
+    if mode == 'full' and any(k.startswith('adapter.') for k in config):
+        raise ValueError('全量微调不能配置 LoRA 参数')
+    if 'adapter.target_modules' in config:
+        targets=config['adapter.target_modules']
+        if not isinstance(targets,list) or not targets or any(not isinstance(t,str) or not t for t in targets):
+            raise ValueError('target_modules 必须是非空名称列表')
+
+
+def evaluation_config(config):
+    # 同一个固定的回复 NLL 目标选 checkpoint，禁止 A/B 训练 mask 改写验证目标。
+    return {**config,'loss.assistant_only':True}
+
 def train(request, output):
     profile, config = request['profile'],request['config']
     require_remote(profile)
-    unsupported = set(config)-SUPPORTED_AXES
-    if unsupported:
-        raise ValueError(f'SFT 驱动未实现干预: {sorted(unsupported)}')
+    validate_config(config,profile.get('finetune_mode','lora'))
+    validate_budget(profile,config)
     import numpy as np
     import torch
     from itertools import islice
@@ -116,6 +136,8 @@ def train(request, output):
     columns = profile['columns']['messages']
     step, seen, tokens_seen = 0, 0, 0
     best, best_step = float('inf'), 0
+    eval_clock = EvaluationClock(budget['eval_every_examples'])
+    eval_config = evaluation_config(config)
     checkpoint = output/'best_trainable.pt'
     started = time.monotonic()
     torch.cuda.reset_peak_memory_stats()
@@ -126,7 +148,7 @@ def train(request, output):
         records = iter(stream(profile,'validation'))
         with torch.no_grad():
             while rows := list(islice(records,batch_size)):
-                batch = collate(rows,tokenizer,config,columns,'cuda')
+                batch = collate(rows,tokenizer,eval_config,columns,'cuda')
                 tokens = batch['labels'][:,1:].ne(-100).sum().item()
                 with torch.autocast('cuda',dtype=dtype,enabled=precision!='fp32'):
                     loss = model(**batch).loss
@@ -169,7 +191,7 @@ def train(request, output):
                 step += 1
                 seen += len(rows)
                 tokens_seen += total_tokens
-                if step % budget['eval_every_steps'] == 0:
+                if eval_clock.due(seen):
                     val_loss = validation()
                     if val_loss < best:
                         best,best_step = val_loss,step
@@ -181,13 +203,14 @@ def train(request, output):
                     print(f'step={step} train_loss={train_loss:.6g} val_loss={val_loss:.6g}',flush=True)
         if step == 0:
             raise ValueError('训练集为空或 epoch 预算为零')
-        # 最后一个不足 eval interval 的 checkpoint 也必须验证。
-        val_loss = validation()
-        if val_loss < best:
-            best,best_step = val_loss,step
-            torch.save({name:p.detach().cpu() for name,p in model.named_parameters() if p.requires_grad},checkpoint)
-        writer.writerow({'step':step,'train_loss':train_loss,'val_loss':val_loss,
-                         'examples_seen':seen,'tokens_seen':tokens_seen,'seconds':time.monotonic()-started})
+        # 避免对最后一个已评测的 checkpoint 再写相同步数日志。
+        if eval_clock.due(seen,final=True):
+            val_loss = validation()
+            if val_loss < best:
+                best,best_step = val_loss,step
+                torch.save({name:p.detach().cpu() for name,p in model.named_parameters() if p.requires_grad},checkpoint)
+            writer.writerow({'step':step,'train_loss':train_loss,'val_loss':val_loss,
+                             'examples_seen':seen,'tokens_seen':tokens_seen,'seconds':time.monotonic()-started})
     training_seconds,peak = time.monotonic()-started,torch.cuda.max_memory_allocated()
     loaded = torch.load(checkpoint,map_location='cpu',weights_only=True)
     with torch.no_grad():

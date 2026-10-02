@@ -10,7 +10,8 @@ import time
 from itertools import islice
 from pathlib import Path
 
-from experiments.drivers.capabilities import MODEL_AXES
+from experiments.drivers.capabilities import MODEL_AXES, MODEL_VALUES
+from experiments.utils.training_checks import (validate_numbers, validate_active_axis, validate_budget, require_complete_epoch)
 from experiments.utils.hf_stream import ids_digest, require_remote, stream
 from experiments.utils.runtime import file_hash, read_json, write_json
 
@@ -27,6 +28,16 @@ SUPPORTED_AXES = MODEL_AXES | {
 
 
 def validate_config(config):
+    validate_numbers(config)
+    for key,values in MODEL_VALUES.items():
+        if key in config and config[key] not in values:
+            raise ValueError(f'不支持的 {key}: {config[key]}')
+    if 'model.kernel_size' in config and config['model.kernel_size'] not in (3,5):
+        raise ValueError('卷积核只支持 3/5')
+    if 'model.width' in config and (config['model.width'] < 8 or config['model.width'] % 8):
+        raise ValueError('width 必须是至少 8 的 8 倍数')
+    if 'model.depth' in config and not 1 <= config['model.depth'] <= 6:
+        raise ValueError('depth 表示每 stage block 数，范围为 1–6')
     unknown = set(config) - SUPPORTED_AXES
     if unknown:
         raise ValueError(f'真实视觉驱动没有实现这些字段: {sorted(unknown)}')
@@ -164,6 +175,8 @@ def train(request, output):
     profile, config = request['profile'], request['config']
     require_remote(profile)  # 位于所有 HF 调用之前，直接调用驱动也不能绕过。
     validate_config(config)
+    validate_active_axis(config,request['axis'])
+    validate_budget(profile,config)
     import numpy as np
     import torch
     from experiments.drivers.vision_model import ResNet
@@ -204,12 +217,14 @@ def train(request, output):
         writer = csv.DictWriter(log,fieldnames=['step','epoch','train_loss','val_loss','val_accuracy','lr','grad_norm','examples_seen','seconds','cuda_memory_bytes'])
         writer.writeheader()
         for epoch in range(epochs):
+            epoch_start_seen = seen
             iterator = iter(batches(profile,'train',config,epoch,request['seed']))
             if config.get('optimizer.kind') == 'adam_then_sgd' and epoch == epochs//2:
                 optimizer = optimizer_for(model,config,switched=True)
             while step < total_steps:
                 group = list(islice(iterator,accum))
                 if not group:
+                    require_complete_epoch(seen-epoch_start_seen,profile['train_count'])
                     break
                 model.train()
                 optimizer.zero_grad(set_to_none=True)
@@ -269,6 +284,10 @@ def train(request, output):
                     print(f'step={step} train_loss={observed_loss:.6g} val_loss={val_loss:.6g} val_accuracy={val_acc:.6g}',flush=True)
                     if config.get('training.patience',0) and stale >= config['training.patience']:
                         break
+            if not (config.get('training.patience',0) and stale >= config['training.patience']):
+                if next(iterator,None) is not None:
+                    raise RuntimeError('数据流超过注册 train_count，拒绝截断后声称完整 epoch')
+                require_complete_epoch(seen-epoch_start_seen,profile['train_count'])
             if step >= total_steps or (config.get('training.patience',0) and stale >= config['training.patience']):
                 break
     training_seconds = time.monotonic()-started

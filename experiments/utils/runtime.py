@@ -47,6 +47,8 @@ def validate_spec(spec):
                   'direction', 'profile', 'controls', 'limitations'):
         if field not in spec:
             raise ValueError(f'实验缺少字段: {field}')
+    if spec['axis'] in spec['controls']:
+        raise ValueError('干预变量不能同时作为固定条件')
     if spec['a'] == spec['b']:
         raise ValueError('A/B 取值必须不同')
     if spec['direction'] not in ('min', 'max'):
@@ -54,12 +56,17 @@ def validate_spec(spec):
     source = ROOT / spec['source']['wiki']
     if not source.is_file():
         raise ValueError(f'Wiki 不存在: {source}')
+    line = spec['source']['line']
+    if type(line) is not int or not 1 <= line <= len(source.read_text().splitlines()) or source.read_text().splitlines()[line-1] != '### '+spec['source']['heading']:
+        raise ValueError('Wiki 来源行与标题不一致')
     if file_hash(source) != spec['source']['sha256']:
         raise ValueError('Wiki 已变化；请重新生成目录并审核实验协议')
 
 
 def build_plan(spec, seeds, environment=None):
     validate_spec(spec)
+    if any(type(seed) is not int or not 0 <= seed < 2**32 for seed in seeds):
+        raise ValueError('seed 必须为 [0, 2**32) 的整数')
     if len(seeds) < 2 or len(set(seeds)) != len(seeds):
         raise ValueError('至少两个互不重复的配对随机种子；默认三种子')
     plan = {'schema_version': 1, 'spec': spec, 'seeds': seeds,
@@ -84,6 +91,8 @@ def check_remote(environment, spec):
         raise ValueError('需在远程资源配置中明确 remote_training_confirmed')
     if execution['max_total_seconds'] <= 0 or execution['max_run_seconds'] <= 0:
         raise ValueError('必须设置明确的正数时间预算')
+    if spec['profile'] not in environment['profiles']:
+        raise ValueError(f'尚未配置任务驱动: {spec["profile"]}')
     profile = environment['profiles'][spec['profile']]
     for artifact in ('dataset', 'model'):
         item = profile[artifact]
@@ -100,6 +109,7 @@ def check_remote(environment, spec):
         raise ValueError('此任务只接受 real_training 驱动')
     if not isinstance(driver['argv'], list) or not driver['argv']:
         raise ValueError('driver.argv 必须为非空参数数组，不接受 shell 字符串')
+    preflight_native(profile,spec)
     validate_splits(profile['splits'])
     if profile['budget']['max_steps'] < 1:
         raise ValueError('max_steps 必须预先指定')
@@ -111,6 +121,29 @@ def check_remote(environment, spec):
     profile['allowed_hostnames'] = execution['allowed_hostnames']
     return profile
 
+
+
+def preflight_native(profile, spec):
+    """在两个 arm 均通过完整配置检查之前，不启动任何训练子进程。"""
+    from experiments.utils.training_checks import validate_active_axis
+    argv=profile['driver']['argv']
+    if argv == ['{python}','-m','experiments.drivers.vision']:
+        from experiments.drivers.vision import validate_config
+        metrics={'test_accuracy','test_loss','val_loss','examples_per_second','peak_cuda_memory_bytes'}
+        for arm in ('a','b'):
+            config={**profile.get('baseline',{}),**spec['controls'],spec['axis']:spec[arm]}
+            validate_config(config)
+            validate_active_axis(config,spec['axis'])
+    elif argv == ['{python}','-m','experiments.drivers.sft']:
+        from experiments.drivers.sft import validate_config
+        metrics={'test_rougeL','test_exact_match','val_loss','examples_per_second','peak_cuda_memory_bytes'}
+        for arm in ('a','b'):
+            config={**profile.get('baseline',{}),**spec['controls'],spec['axis']:spec[arm]}
+            validate_config(config,profile.get('finetune_mode','lora'))
+    else:
+        return  # 外部驱动契约仍需代码审查，不能推断其内部能力。
+    if spec['metric'] not in metrics:
+        raise ValueError('所选驱动没有实现协议主指标')
 
 def make_request(plan, run, profile):
     spec = plan['spec']
@@ -146,6 +179,9 @@ def validate_result(result, request, directory):
         if not path.is_file() or path.stat().st_size == 0:
             raise ValueError(f'真实训练产物缺失: {name}')
     checkpoints = read_json(Path(directory) / 'checkpoint_manifest.json')
+    checkpoint_step = checkpoints.get('step')
+    if type(checkpoint_step) is not int or not 1 <= checkpoint_step <= result['optimizer_steps']:
+        raise ValueError('checkpoint step 不在实际参数更新范围内')
     if not checkpoints.get('selected_by_validation'):
         raise ValueError('checkpoint 必须仅按预注册验证指标选择')
     checkpoint_path = (Path(directory) / checkpoints['path']).resolve()
@@ -157,9 +193,16 @@ def validate_result(result, request, directory):
         history = list(csv.DictReader(stream))
     if not history or not {'step','train_loss','val_loss'} <= set(history[0]):
         raise ValueError('训练历史字段不完整')
+    previous_step = 0
     for row in history:
+        step = float(row['step'])
+        if not step.is_integer() or not previous_step < step <= result['optimizer_steps']:
+            raise ValueError('训练历史步数必须严格递增且不超出实际更新')
+        previous_step = step
         if any(not math.isfinite(float(row[k])) for k in ('step','train_loss','val_loss')):
             raise ValueError('训练历史中出现非有限数值')
+    if previous_step != result['optimizer_steps'] or not any(int(row['step']) == checkpoint_step for row in history):
+        raise ValueError('训练历史缺少最终更新或选中 checkpoint 的评测记录')
     identities = []
     with (Path(directory) / 'predictions.jsonl').open() as stream:
         for line in stream:
@@ -226,25 +269,37 @@ def check_pairs(results):
 
 
 def validate_splits(splits):
-    """对支持的稳定 modulo 切分做真实的互斥检查，而非仅比较名称。"""
-    if set(splits) != {'train', 'validation', 'test'}:
+    """验证所有 selector 的类型与范围，再检查同源样本 ID 互斥。"""
+    from experiments.utils.training_checks import positive_int
+    if set(splits) != {'train','validation','test'}:
         raise ValueError('需要 train/validation/test 三个切分')
-    names = list(splits)
-    for i, name in enumerate(names):
-        left = splits[name]
-        if not isinstance(left, dict) or not left.get('source'):
-            raise ValueError('切分必须指定 Hugging Face source')
+    for name,selector in splits.items():
+        if not isinstance(selector,dict) or not isinstance(selector.get('source'),str) or not selector['source']:
+            raise ValueError(f'{name} 必须指定 source')
+        if set(selector)-{'source','modulo','remainder','keep_equal'}:
+            raise ValueError('未实现的切分选项')
+        if 'modulo' in selector:
+            modulus=positive_int(selector['modulo'],'modulo')
+            remainder=selector.get('remainder')
+            if type(remainder) is not int or not 0 <= remainder < modulus:
+                raise ValueError('remainder 必须在 [0, modulo)')
+            if type(selector.get('keep_equal',True)) is not bool:
+                raise ValueError('keep_equal 必须为布尔值')
+        elif 'remainder' in selector or 'keep_equal' in selector:
+            raise ValueError('remainder/keep_equal 需要 modulo')
+    names=list(splits)
+    for i,name in enumerate(names):
+        left=splits[name]
         for other in names[i+1:]:
-            right = splits[other]
+            right=splits[other]
             if left['source'] != right['source']:
                 continue
             if 'modulo' not in left or 'modulo' not in right:
-                raise ValueError('同一源 split 必须显式划分不重叠的 modulo 子集')
-            period = math.lcm(left['modulo'], right['modulo'])
-            if period <= 0 or period > 100000:
-                raise ValueError('非法 modulo 周期')
-            def kept(selector, index):
-                return ((index % selector['modulo'] == selector['remainder'])
-                        == selector.get('keep_equal', True))
-            if any(kept(left, j) and kept(right, j) for j in range(period)):
+                raise ValueError('同一源 split 需要互斥的 modulo 子集')
+            period=math.lcm(left['modulo'],right['modulo'])
+            if period > 100000:
+                raise ValueError('modulo 周期超过检查上限')
+            def kept(selector,index):
+                return ((index % selector['modulo'] == selector['remainder']) == selector.get('keep_equal',True))
+            if any(kept(left,j) and kept(right,j) for j in range(period)):
                 raise ValueError(f'{name} 与 {other} 的样本 ID 相交')
