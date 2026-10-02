@@ -21,3 +21,11 @@ node_modules/
 .claude/
 wiki/.obsidian/
 wiki/未命名.base
+
+# Experiment environments, real datasets and generated training artifacts
+.venv/
+experiments/runs/
+.hf-cache/
+*.safetensors
+*.pt
+*.pth
