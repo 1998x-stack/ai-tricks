@@ -62,3 +62,7 @@ description: 从知乎 30+ 位一线从业者回答中提取、分类、深化�
 - **来源可追溯** — 每条技巧标注原始作者
 
 [GitHub 仓库](https://github.com/1998x-stack/ai-tricks) · [矛盾观点](./contradictory.md) · [原始素材](./raw/tricks.md)
+
+## A/B 实验（建设中）
+
+[实验目录](./experiments/README.md)：412 个主条目已拆出 517 个具体对照协议，每个有独立代码入口与 Wiki 来源。真实训练尚未执行，驱动实现与待完成状态见目录；不在本机下载模型或数据。

@@ -122,3 +122,7 @@ ai-tricks/
 <p align="center">
   <sub>用 <a href="https://claude.ai/code">Claude Code</a> 构建 · 2026</sub>
 </p>
+
+## A/B 实验（建设中）
+
+[实验目录](./experiments/README.md)：412 个主条目已拆出 517 个具体对照协议，每个有独立代码入口与 Wiki 来源。真实训练尚未执行，驱动实现与待完成状态见目录；不在本机下载模型或数据。
