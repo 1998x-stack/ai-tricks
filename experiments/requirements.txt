@@ -1,0 +1,10 @@
+# 仅在远程 Linux GPU 环境安装；本机 --plan 不需要这些依赖。
+# 安装后保存 pip freeze 到实际运行目录。未把区间依赖伪装为已验证的精确锁定。
+torch>=2.5,<3
+numpy>=1.26,<3
+matplotlib>=3.8,<4
+Pillow>=10,<13
+datasets>=3,<5
+transformers>=4.45,<5
+peft>=0.13,<1
+rouge-score>=0.1.2,<0.2

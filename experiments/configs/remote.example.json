@@ -1,0 +1,196 @@
+{
+  "execution": {
+    "allowed_hostnames": [],
+    "remote_training_confirmed": false,
+    "max_total_seconds": 0,
+    "max_run_seconds": 0,
+    "hf_cache": "/workspace/hf-cache"
+  },
+  "profiles": {
+    "vision": {
+      "dataset": {
+        "id": "uoft-cs/cifar10",
+        "revision": "0b2714987fa478483af9968de7c934580d0bb9a2",
+        "card_url": "https://huggingface.co/datasets/uoft-cs/cifar10",
+        "metadata_only": true
+      },
+      "model": {
+        "source": "code",
+        "architecture": "cifar_resnet18",
+        "path": "experiments/drivers/vision_model.py",
+        "revision": "d8b8f1764c841e9bff9f92dc6811c216902604fa44543cff6290920c4a98660e"
+      },
+      "streaming": true,
+      "columns": {
+        "image": "img",
+        "label": "label"
+      },
+      "train_count": 45000,
+      "splits": {
+        "train": {
+          "source": "train",
+          "modulo": 10,
+          "remainder": 0,
+          "keep_equal": false
+        },
+        "validation": {
+          "source": "train",
+          "modulo": 10,
+          "remainder": 0
+        },
+        "test": {
+          "source": "test"
+        }
+      },
+      "baseline": {
+        "optimizer.kind": "sgd",
+        "optimizer.lr": 0.1,
+        "optimizer.momentum": 0.9,
+        "optimizer.weight_decay": 0.0005,
+        "training.batch_size": 128,
+        "model.norm": "batch",
+        "model.activation": "relu"
+      },
+      "budget": {
+        "epochs": 200,
+        "max_steps": 0,
+        "eval_every_examples": 45000
+      },
+      "driver": {
+        "kind": "real_training",
+        "argv": [
+          "{python}",
+          "-m",
+          "experiments.drivers.vision"
+        ],
+        "supported_axes": [
+          "checkpoint.selection_metric",
+          "data.augmentation",
+          "data.brightness_jitter",
+          "data.shuffle",
+          "data.standardize",
+          "loss.flooding",
+          "loss.kind",
+          "loss.l1",
+          "loss.label_smoothing",
+          "model.activation",
+          "model.bias_init",
+          "model.depth",
+          "model.dropout",
+          "model.init_std",
+          "model.kernel_size",
+          "model.norm",
+          "model.output_activation",
+          "model.residual",
+          "model.spatial_dropout",
+          "model.weight_init",
+          "model.width",
+          "optimizer.beta1",
+          "optimizer.beta2",
+          "optimizer.gamma",
+          "optimizer.kind",
+          "optimizer.lr",
+          "optimizer.min_lr",
+          "optimizer.momentum",
+          "optimizer.schedule",
+          "optimizer.warmup_ratio",
+          "optimizer.weight_decay",
+          "training.accumulation_steps",
+          "training.batch_size",
+          "training.clip_norm",
+          "training.epochs",
+          "training.max_weight_norm",
+          "training.patience",
+          "training.precision"
+        ]
+      }
+    },
+    "sft": {
+      "dataset": {
+        "id": "HuggingFaceH4/ultrachat_200k",
+        "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+        "card_url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+        "metadata_only": true
+      },
+      "model": {
+        "id": "Qwen/Qwen2.5-0.5B-Instruct",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "metadata_only": true,
+        "card_url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct"
+      },
+      "streaming": true,
+      "columns": {
+        "messages": "messages"
+      },
+      "finetune_mode": "lora",
+      "context_limit": 32768,
+      "splits": {
+        "train": {
+          "source": "train_sft"
+        },
+        "validation": {
+          "source": "test_sft",
+          "modulo": 2,
+          "remainder": 0
+        },
+        "test": {
+          "source": "test_sft",
+          "modulo": 2,
+          "remainder": 1
+        }
+      },
+      "baseline": {
+        "optimizer.lr": 0.0001,
+        "optimizer.weight_decay": 0.01,
+        "adapter.rank": 8,
+        "adapter.alpha": 16,
+        "adapter.dropout": 0.0,
+        "training.batch_size": 4,
+        "training.accumulation_steps": 4,
+        "training.precision": "bf16",
+        "data.max_length": 2048,
+        "loss.assistant_only": true
+      },
+      "budget": {
+        "epochs": 3,
+        "max_steps": 0,
+        "eval_every_steps": 500,
+        "max_new_tokens": 256
+      },
+      "driver": {
+        "kind": "real_training",
+        "argv": [
+          "{python}",
+          "-m",
+          "experiments.drivers.sft"
+        ],
+        "supported_axes": [
+          "adapter.alpha",
+          "adapter.dropout",
+          "adapter.rank",
+          "adapter.target_modules",
+          "data.max_length",
+          "loss.assistant_only",
+          "optimizer.lr",
+          "optimizer.weight_decay",
+          "training.accumulation_steps",
+          "training.batch_size",
+          "training.clip_norm",
+          "training.epochs",
+          "training.gradient_checkpointing",
+          "training.precision"
+        ]
+      }
+    }
+  },
+  "unimplemented_profiles": [
+    "nlp",
+    "preference",
+    "reasoning_rl",
+    "recommendation",
+    "retrieval",
+    "detection",
+    "segmentation"
+  ],
+  "note": "示例不是可直接执行的资源授权；尚未在 GPU 上验证。其他 profile 必须实现专用驱动。"
+}
