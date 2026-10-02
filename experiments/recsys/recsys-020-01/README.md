@@ -37,7 +37,7 @@ python experiments/recsys/recsys-020-01/experiment.py --run --environment remote
 - **适用场景**: 推荐系统冷启动训练 / 通用深度模型
 - **原文**: > Adam系优化器的真正价值在哪里？在训练早期收敛快。当你数据量大、模型深、训练周期长的时候，Adam能帮你快速度过冷启动阶段。所以很多大厂的标准做法是：前几个epoch用Adam，后面的epoch切换到SGD。这叫"两阶段训练"，用好了效果提升非常明显。
 - **要点**: 前若干 epoch 用 Adam 快速跨越冷启动，后续切换到 SGD + Momentum 追求更好的泛化性能。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[adam]], [[sgd]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), `[[adam]]`（原 Wiki 未解析链接）, `[[sgd]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

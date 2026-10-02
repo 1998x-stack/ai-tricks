@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-081-01/experiment.py --run --enviro
 - **适用场景**: 有限预算下的精细调参
 - **原文**: 调参时一定要先文字记录，然后跑模型填空，一定要保证自己知道自己这个实验的目的是什么
 - **要点**: 网格搜索时每个实验必须记录目的和假设，避免盲目试参
-- **参见**: [[../infra/wandb-sweeps]] | [[../infra/wandb-sweeps]]
+- **参见**: [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md) | [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md)
 
 ## 解释边界
 

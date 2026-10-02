@@ -37,7 +37,7 @@ python experiments/regularization/regularization-003-02/experiment.py --run --en
 - **适用场景**: 所有模型，Transformer与ResNet对weight decay敏感度差异大
 - **原文**: "可以先从0.01开始，如果模型不稳定，往0.001甚至0.0001调" ——四点半的理一
 - **要点**: 常用范围1e-4~0.1。ResNet类相对不敏感，Transformer类大batch时weight decay设大会导致不收敛。小数据集和浅层结构需更大weight decay（1e-3~1e-2），大数据和深层结构设小（1e-4~1e-6）。AdamW保留weight decay效果，提升泛化。建议先0.01试，不稳定则调小。
-- **参见**: [[overfitting-underfitting]], [[../optimizer-lr/adam]], [[../optimizer-lr/learning-rate-scheduling]]
+- **参见**: [overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md), [../optimizer-lr/adam](../../../wiki/optimizer-lr/adam.md), [../optimizer-lr/learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

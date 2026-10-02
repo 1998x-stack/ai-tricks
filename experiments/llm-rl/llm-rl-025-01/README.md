@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-025-01/experiment.py --run --environment remote
 - **适用场景**: reward停滞诊断
 - **原文**: "reward始终不上涨，在排除了一切可能的原因后，建议用训练前的模型针对一些case rollout出多个回复（n可以大一点），看下这些回复的奖励是不是都特别低，如果都特别低，那说明基模的能力上限就如此，想要通过探索来提升表现是行不通的，建议换模型或者对SFT模型进行优化。"
 - **要点**: Reward不上涨 → rollout多个回复检查奖励分布 → 如果都低则说明基模能力已达上限，需换模型或优化SFT。
-- **参见**: [[../llm-sft/llm-sft]], [[model-capacity]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md), `[[model-capacity]]`（原 Wiki 未解析链接）
 
 ---
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-083-01/experiment.py --run --enviro
 - **适用场景**: CV任务、不愿意纠结优化器选择
 - **原文**: sgd adam这些选择上，看你个人选择。一般对网络不是决定性的。反正我无脑用sgd + momentum。
 - **要点**: SGD+Momentum在CV领域是最稳妥的选择
-- **参见**: [[sgd-momentum]], [[../cnn-cv/cnn-cv]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

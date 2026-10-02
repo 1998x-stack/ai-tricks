@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-025-01/experiment.py --run --environment 
 - **适用场景**: 调参陷入瓶颈时
 - **原文**: "每轮重要实验都要看错误样例，整理失败类型。错误分析比盲调参数更有价值。" / "后来我们停下来做错误分析，发现漏掉的样本里，大量是新话术和变体表达，训练集里几乎没有。误杀样本则集中在几个正常业务词上……我们重新清洗标签，模型参数几乎没大改，F1在新验证集上从86提到89。"
 - **要点**: 连续调参无提升时，停止调参转向错误分析。分类错误类型、检查数据分布、分析bad case，往往比继续调参收益更大。
-- **参见**: [[error-analysis]], [[../debugging/debugging]]
+- **参见**: `[[error-analysis]]`（原 Wiki 未解析链接）, [../debugging/debugging](../../../wiki/debugging/debugging.md)
 
 ## 解释边界
 

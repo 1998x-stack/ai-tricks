@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-015-01/experiment.py --run --environmen
 - **适用场景**: 超参调试顺序
 - **原文**: > 新手最容易犯的错，是同时调学习率、batch size、正则化系数，一口气改五六个参数……锁定学习率之后，你再调 batch size。
 - **要点**: 不要同时调超过两个超参数。先确定学习率再调 batch size 的串行策略效率远高于并行乱调。
-- **参见**: [[batch-size-generalization]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-084-01/experiment.py --run --enviro
 - **适用场景**: 快速定位合理LR
 - **原文**: 从1e-5开始，以10倍为单位往上跳，观察loss曲线。平稳下降到某一点开始发散，那发散前一档就是候选LR。
 - **要点**: 1e-5 -> 1e-4 -> 1e-3 -> 1e-2逐档扫描找发散临界点
-- **参见**: [[lr-range-test]], [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

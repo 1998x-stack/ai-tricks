@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-068-01/experiment.py --run --enviro
 - **适用场景**: LLM超大算力预训练
 - **原文**: 给定计算成本C，大多数超参的最优值是基本固定的，只需调整学习率和batch size
 - **要点**: 超大规模训练时只有LR和batch需要随算力调整，其余超参固定
-- **参见**: [[../batch-size/batch-size-lr-scaling]] | [[../llm-sft/llm-sft]]
+- **参见**: [../batch-size/batch-size-lr-scaling](../../../wiki/batch-size/batch-size-lr-scaling.md) | [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

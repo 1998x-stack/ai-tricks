@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-079-01/experiment.py --run --enviro
 - **适用场景**: 自动调参工具选择
 - **原文**: Grid Search在所有候选参数中循环遍历，最费时但保证最优；Random Search效率更高，常与粗到细结合；Bayesian Optimization利用历史实验结果，效率最高。
 - **要点**: 网格搜索(n<=4维) -> 随机搜索(高维) -> 贝叶斯优化(最先进)
-- **参见**: [[../infra/wandb-sweeps]]
+- **参见**: [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md)
 
 ## 解释边界
 

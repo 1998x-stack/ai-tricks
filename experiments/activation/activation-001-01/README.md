@@ -37,7 +37,7 @@ python experiments/activation/activation-001-01/experiment.py --run --environmen
 - **适用场景**: 所有深度神经网络的中间隐层，尤其 CV 领域
 - **原文**: "无脑用ReLU(CV领域)" / "relu 是一个很万能的激活函数，可以很好的防止梯度弥散问题" / "请好好使用ReLU激活函数" / "用极简的方式实现非线性激活，缓解梯度消失"
 - **要点**: ReLU 计算简单、收敛快、有效缓解梯度消失，CV 领域可直接作为默认选择。
-- **参见**: [[relu]], [[../initialization/initialization]]
+- **参见**: [relu](../../../wiki/activation/relu.md), [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

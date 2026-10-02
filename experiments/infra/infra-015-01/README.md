@@ -37,7 +37,7 @@ python experiments/infra/infra-015-01/experiment.py --run --environment remote.j
 - **适用场景**: 大模型预训练超参缩放
 - **原文**: "给定计算成本 C，大多数超参的最优值是基本固定的，只需调整学习率和 batch size，而学习率 eta 的最优值随 C 增加而下降，batch size 的最优值随 C 增加而上升，满足幂律：eta_opt = 0.3118 * C^(-0.1250), B_opt = 0.2920 * C^(0.3271)"
 - **要点**: 来自 DeepSeek LLM 技术报告；计算预算增大时应扩大 batch size 并降低学习率；其他超参（beta、weight_decay、梯度裁剪）取固定最优值即可；公式提供理论锚点，实际仍需网格搜索微调。
-- **参见**: [[../batch-size/batch-size]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

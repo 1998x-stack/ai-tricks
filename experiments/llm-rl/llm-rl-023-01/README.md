@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-023-01/experiment.py --run --environment remote
 - **适用场景**: 生成内容同质化
 - **原文**: "策略熵快速下降，生成内容同质化严重，这是因为entropy_coef过低，导致策略过早收敛到局部最优，探索能力不足。可以增大熵系数；或者采用DAPO的Clip-Higher策略：解耦PPO的clip上下界，放宽低概率token的提升空间，缓解熵崩溃。"
 - **要点**: 策略熵下降 → 增大entropy_coef；或采用DAPO Clip-Higher策略（解耦PPO clip上下界，放宽低概率token提升空间）。
-- **参见**: [[entropy-bonus]], [[dapo]]
+- **参见**: `[[entropy-bonus]]`（原 Wiki 未解析链接）, `[[dapo]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

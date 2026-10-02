@@ -37,7 +37,7 @@ python experiments/debugging/debugging-024-01/experiment.py --run --environment 
 - **适用场景**: 多组实验都无法提升
 - **原文**: "当你连续调10组参数都没有稳定提升时，别再调第11组，去看数据和错误样例。"
 - **要点**: 调参瓶颈往往不在参数本身，而在数据质量、标签噪声、评估方式。做错误分析比盲调参数更有价值。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

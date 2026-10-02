@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-001-01/experiment.py --run --environment 
 - **适用场景**: 任何深度学习项目的初始阶段
 - **原文**: "先overfit 再trade off，首先保证你的模型capacity能够过拟合，再尝试减小模型，各种正则化方法" / "刚开始，先上小规模数据，模型往大了放，只要不爆显存，能用256个filter你就别用128个。直接奔着过拟合去。"
 - **要点**: 拿100条甚至32条样本，让模型把训练loss打到非常低。如果这都做不到，别谈调参——大概率是标签错了、输入没对齐、loss写错了、学习率离谱。
-- **参见**: [[../debugging/debugging]]
+- **参见**: [../debugging/debugging](../../../wiki/debugging/debugging.md)
 
 ## 解释边界
 

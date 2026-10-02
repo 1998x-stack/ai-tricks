@@ -37,7 +37,7 @@ python experiments/infra/infra-006-01/experiment.py --run --environment remote.j
 - **适用场景**: 工程化训练代码组织
 - **原文**: "一般cv模型的代码都是由这几个模块构成，Data(dataset/dataloader), Model本身，optimizer优化器，loss functions，再加一个 trainer（其实就是组织整个框架的训练顺序）"
 - **要点**: 标准 pipeline 分为 Data → Model → Optimizer → Loss → Trainer 五大模块；代码应模块化以方便维护和复用；不必从零写起，基于开源 baseline 修改，但要确保修改部分 bug-free。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

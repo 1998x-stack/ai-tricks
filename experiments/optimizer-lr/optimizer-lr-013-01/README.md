@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-013-01/experiment.py --run --enviro
 - **适用场景**: 绝大多数深度学习的默认LR调度方案
 - **原文**: 万能模板 Adam + Cos退火 构建基础：初始构建时选 Adam 优化器，学习率初始时可以设置3.5e-4。学习率变化选择 warm-up + cos退火。
 - **要点**: Adam + Warmup + Cosine Decay是最通用的训练配置
-- **参见**: [[adam]], [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

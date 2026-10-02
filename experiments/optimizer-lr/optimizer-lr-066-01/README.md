@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-066-01/experiment.py --run --enviro
 - **适用场景**: 推荐系统
 - **原文**: batch size对于推荐来说32-64-128-512测试效果再高一般也不会正向了，再低训练太慢了。
 - **要点**: 推荐系统batch size 32~512，过大会负向
-- **参见**: [[../recsys/recsys]]
+- **参见**: [../recsys/recsys](../../../wiki/recsys/recsys.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-029-01/experiment.py --run --environment remote
 - **适用场景**: 偏好优化注意事项
 - **原文**: "偏好优化不是补救低质量 SFT 的工具，前面的 SFT 和评测要先过关。"
 - **要点**: DPO/偏好优化不能弥补低质量SFT；先做好SFT和评测再考虑偏好优化。
-- **参见**: [[../llm-sft/llm-sft]], [[../data-eval/eval-metrics]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md), [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ---
 

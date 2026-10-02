@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-020-01/experiment.py --run --environment remote
 - **适用场景**: 模型响应长度异常
 - **原文**: "模型响应的长度变得非常短或非常长，这是因为奖励模型可能存在length bias，需要修正奖励模型：在RM训练数据中加入不同长度的优质样本，消除长度偏见。或者在RL阶段加入长度惩罚/奖励。"
 - **要点**: RM可能存在length bias，在RM训练数据中加入不同长度的优质样本，或在RL阶段加入长度惩罚/奖励。
-- **参见**: [[reward-hacking]]
+- **参见**: [reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

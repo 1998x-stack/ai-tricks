@@ -37,7 +37,7 @@ python experiments/debugging/debugging-001-01/experiment.py --run --environment 
 - **适用场景**: 任何深度学习模型首次训练
 - **原文**: "先上小规模数据，模型往大了放，只要不爆显存，能用256个filter你就别用128个。直接奔着过拟合去。"
 - **要点**: 拿32-100条样本，让模型把训练loss打到非常低。如果做不到，别谈调参 —— 大概率是标签错了、输入没对齐、mask有问题、loss写错了、学习率离谱、数据增强把信号破坏了、训练和推理的tokenizer不一致。
-- **参见**: [[../data-eval/data-eval]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

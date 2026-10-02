@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-039-01/experiment.py --run --enviro
 - **适用场景**: 调参方法论
 - **原文**: 不要同时调超过两个超参数。这是新手和大神最本质的区别。
 - **要点**: 每次只动1-2个参数，否则无法归因效果变化
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

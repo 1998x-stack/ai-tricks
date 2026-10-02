@@ -37,7 +37,7 @@ python experiments/recsys/recsys-017-01/experiment.py --run --environment remote
 - **适用场景**: 推荐模型初次搭建
 - **原文**: > 做新模型的时候，最开始不要加激活函数，不要加batchnorm，不要加dropout，先就纯模型。然后再一步一步的实验，不要过于信赖经典的模型结构(除非它是预训练的)，比如加了dropout一定会有效果，或者加了batchnorm一定会有提升所以先加上，首先你要确定你的模型处于什么阶段，到底是欠拟合还是过拟合，然后再确定解决手段。
 - **要点**: 新模型应先裸跑确认 baseline，逐步依据过拟合 / 欠拟合状态添加 Dropout、BN、激活函数，而非一开始全加上。
-- **参见**: [[model-debug]]
+- **参见**: `[[model-debug]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

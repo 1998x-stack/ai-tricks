@@ -7,11 +7,11 @@
     "line": 42,
     "heading": "SVD 初始化用于 RNN",
     "author": "摘星狐狸",
-    "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+    "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
     "raw_exact_lines": [
       1300
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.recurrent_init",
   "a": "normal",

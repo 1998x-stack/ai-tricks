@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-027-02/experiment.py --run --environment remote
 - **适用场景**: DPO训练效果差
 - **原文**: "DPO中，DPO训练损失下降很快，但生成效果差，甚至不如SFT模型，这是因为beta 值过低 或 学习率过高。beta 过低导致模型过于激进，偏离SFT模型太远，丢失了通用能力。学习率过高同样会破坏预训练模型的结构。可以调高 beta：增加对SFT模型的约束。降低学习率：使用更小的学习率（如1e-7到5e-6）进行微调。"
 - **要点**: DPO loss快速下降但效果差 → beta过低（偏离SFT）或LR过高（破坏预训练结构）→ 调高beta + 降低LR（1e-7到5e-6）。
-- **参见**: [[dpo]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [dpo](../../../wiki/llm-rl/dpo.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

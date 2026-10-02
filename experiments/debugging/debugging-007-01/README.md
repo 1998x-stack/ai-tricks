@@ -37,7 +37,7 @@ python experiments/debugging/debugging-007-01/experiment.py --run --environment 
 - **适用场景**: Loss NaN或梯度爆炸时的临时措施
 - **原文**: "如果实在无法解决，梯度CLIP防止NaN也行，但这样可能治标不治本"
 - **要点**: 梯度裁剪可以防止NaN继续训练，但可能掩盖真正的问题。有时裁剪会导致性能下降 —— 正常收敛的模型加clip反而变差。建议定位根因而非依赖clip。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

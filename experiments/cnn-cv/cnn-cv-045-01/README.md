@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-045-01/experiment.py --run --environment remote
 - **适用场景**: 检测任务分类效果差
 - **原文**: "如果你的一阶段检测模型得不到好的分类结果，考虑两阶段，先检测再分类"
 - **要点**: 两阶段检测（先proposal再分类）在困难分类场景下有优势
-- **参见**: [[fpn-neck-design]], [[fpn-neck-design]]
+- **参见**: [fpn-neck-design](../../../wiki/cnn-cv/fpn-neck-design.md), [fpn-neck-design](../../../wiki/cnn-cv/fpn-neck-design.md)
 
 ## 解释边界
 

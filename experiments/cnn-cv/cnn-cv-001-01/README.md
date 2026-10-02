@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-001-01/experiment.py --run --environment remote
 - **适用场景**: 通用图像分类、检测、分割
 - **原文**: "3x3卷积是CNN的主流组件……两个3x3的卷积核堆叠能获得5x5卷积核的感受野并且参数比5x5卷积核少"
 - **要点**: 3x3是默认选择，两个堆叠等效5x5感受野但参数更少；小卷积核有利于网络走向更深
-- **参见**: [[../activation/activation]]
+- **参见**: [../activation/activation](../../../wiki/activation/activation.md)
 
 ## 解释边界
 

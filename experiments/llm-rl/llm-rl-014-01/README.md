@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-014-01/experiment.py --run --environment remote
 - **适用场景**: 能力遗忘
 - **原文**: "为防止能力遗忘，可以在RL的prompt池中混入5%-10%的通用SFT数据。这是一种简单有效的方法，可以在优化特定偏好的同时，通过让模型回顾通用任务来'锚定'其基础能力。"
 - **要点**: RL prompt池中混入5%-10%的通用SFT数据，锚定基础能力。
-- **参见**: [[catastrophic-forgetting]]
+- **参见**: `[[catastrophic-forgetting]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

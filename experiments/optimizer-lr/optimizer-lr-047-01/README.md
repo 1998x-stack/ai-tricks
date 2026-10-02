@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-047-01/experiment.py --run --enviro
 - **适用场景**: 大模型SFT训练中期评估
 - **原文**: 对于大模型训练，到了中后期loss小效果不一定好，甚至会出现loss先下降后上升的情况。正确判断方法是用checkpoint进行accuracy或其他业务指标判断。
 - **要点**: SFT中后期不能只看loss，需用checkpoint评估业务指标
-- **参见**: [[../llm-sft/llm-sft]] | [[eval-metrics]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md) | `[[eval-metrics]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

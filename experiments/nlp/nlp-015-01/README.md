@@ -37,7 +37,7 @@ python experiments/nlp/nlp-015-01/experiment.py --run --environment remote.json
 - **适用场景**: NLP 模型训练
 - **原文**: *"优化器，nlp，抽象层次较高或目标函数非常不平滑的问题adam优先"*
 - **要点**: NLP 任务的损失函数通常较为不平滑，Adam 的自适应学习率机制相比 SGD 能更快收敛且更稳定。推荐 AdamW（带解耦权重衰减）作为默认选择。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

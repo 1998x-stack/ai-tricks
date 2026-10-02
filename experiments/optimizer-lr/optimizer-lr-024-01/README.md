@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-024-01/experiment.py --run --enviro
 - **适用场景**: 训练缓慢但loss不降
 - **原文**: 太小：半天loss没反映（但是，LR需要降低的情况也是这样，这里可视化网络中间结果，不是weights，有效果，两者可视化结果是不一样的，太小的话中间结果有点水波纹或者噪点的样子）
 - **要点**: LR太小时loss几乎不动，中间层特征有水波纹状噪点
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

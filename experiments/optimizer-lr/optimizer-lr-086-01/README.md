@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-086-01/experiment.py --run --enviro
 - **适用场景**: RLHF全流程
 - **原文**: SFT是为了让模型有能力去回答问题，而RL仅仅是将这个能力推到上限。SFT后用RL精调，KL散度从0.001开始。
 - **要点**: SFT阶段LR较大让模型学到能力，RL阶段LR缩小一个数量级做精调
-- **参见**: [[../llm-sft/llm-sft]] | [[../llm-rl/llm-rl]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md) | [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md)
 
 ## 解释边界
 

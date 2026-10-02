@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-058-01/experiment.py --run --enviro
 - **适用场景**: 自定义WarmupCosineScheduler
 - **原文**: WarmupCosineScheduler代码实现，warmup期间线性增长，之后cosine衰减
 - **要点**: WarmupCosineScheduler可用Python自定义实现，warmup线性/之后余弦
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

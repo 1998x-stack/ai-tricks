@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-040-01/experiment.py --run --environment remote
 - **适用场景**: 类别不平衡
 - **原文**: "如果你的分类精度不够是样本不均衡造成的，考虑使用focal loss"
 - **要点**: Focal loss对极度不平衡数据集有奇效，gamma因子可成10倍数衰减
-- **参见**: [[focal-loss]]
+- **参见**: `[[focal-loss]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

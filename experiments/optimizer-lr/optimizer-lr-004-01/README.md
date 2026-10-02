@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-004-01/experiment.py --run --enviro
 - **适用场景**: 大模型/大数据量/长训练周期，追求最优效果
 - **原文**: 很多大厂的标准做法是：前几个epoch用Adam，后面的epoch切换到SGD。这叫"两阶段训练"，用好了效果提升非常明显。
 - **要点**: 早期用Adam快速收敛，后期切SGD+Momentum提升泛化
-- **参见**: [[adam]], [[learning-rate-scheduling]], [[adam]], [[learning-rate-scheduling]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [adam](../../../wiki/optimizer-lr/adam.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

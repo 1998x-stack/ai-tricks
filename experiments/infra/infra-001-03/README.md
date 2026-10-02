@@ -37,7 +37,7 @@ python experiments/infra/infra-001-03/experiment.py --run --environment remote.j
 - **适用场景**: 大模型微调与大规模训练，显存受限时
 - **原文**: "混合精度训练可以在保持模型性能的同时减少内存消耗和计算时间。通过在训练过程中使用半精度浮点数（FP16）和全精度浮点数（FP32）的混合，可以有效提高训练效率。" / "bf16 优先于 fp16，前提是硬件支持。fp16 下 loss scale、溢出问题有时会让你误判参数效果。"
 - **要点**: BF16 优先于 FP16（前提是硬件支持）；FP16 需注意 loss scaling 和溢出问题；使用 `apex.amp` 或 PyTorch 原生 AMP 实现；常用 opt_level='O1'。
-- **参见**: [[../batch-size/batch-size]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

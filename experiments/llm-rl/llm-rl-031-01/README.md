@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-031-01/experiment.py --run --environment remote
 - **适用场景**: GRPO / Base-RL提效
 - **原文**: "如果Base-RL的效果想要更进一步，可以试试用base-RL拒绝采样一批样本，然后对Base模型进行简单的冷启动微调，随后再继续RL。"
 - **要点**: 先用RL模型对高reward样本做拒绝采样，冷启动微调基模，再继续RL训练，可突破瓶颈。
-- **参见**: [[grpo]], [[cold-start]]
+- **参见**: [grpo](../../../wiki/llm-rl/grpo.md), `[[cold-start]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

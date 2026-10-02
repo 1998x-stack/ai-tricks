@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-055-01/experiment.py --run --enviro
 - **适用场景**: 模型不收敛时的排错方向
 - **原文**: 一次惨痛的教训是用初始化cnn的参数，最后acc只能到70%多，仅仅改成xavier，acc可以到98%。
 - **要点**: 初始化不对会导致无论怎么调LR都无效，先确认初始化正确
-- **参见**: [[../initialization/initialization]]
+- **参见**: [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

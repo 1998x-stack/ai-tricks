@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-004-01/experiment.py --run --environment 
 - **适用场景**: 时序预测、推荐系统、风控模型
 - **原文**: "cross validation方式要结合任务设计，数据标签设计，其中时序数据要避免未来信息泄漏" / "验证集是随机切的，同一个用户的连续行为同时出现在训练和验证里，模型学到了一些用户短期偏好泄漏。重新按时间切分以后，离线提升直接没了一半。"
 - **要点**: 时序数据必须按时间切分，不能用随机切分；推荐系统等含用户ID的数据要按用户切分，避免同一用户行为横跨训练/验证集导致信息泄漏。
-- **参见**: [[cross-validation]], [[time-series]]
+- **参见**: [cross-validation](../../../wiki/data-eval/cross-validation.md), `[[time-series]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

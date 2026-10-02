@@ -37,7 +37,7 @@ python experiments/nlp/nlp-012-02/experiment.py --run --environment remote.json
 - **适用场景**: NLP 模型词表构建与文本预处理
 - **原文**: *"子词分割方法（如字节对编码 BPE、Unigram 语言模型等）可以将词汇切分成更小的单元，从而减少词表规模，同时保留词汇的语义信息"*
 - **要点**: 使用 BPE 或 SentencePiece 进行子词分词可有效控制词表规模（通常 32K~64K），覆盖未登录词，并适配任意语言。SentencePiece 将原始文本视为 Unicode 序列，无需预分词。
-- **参见**: [[tokenization]]
+- **参见**: `[[tokenization]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

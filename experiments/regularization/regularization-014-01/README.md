@@ -37,7 +37,7 @@ python experiments/regularization/regularization-014-01/experiment.py --run --en
 - **适用场景**: 任何训练实验的第一步——诊断
 - **原文**: "训练集loss低但验证集loss高，那是典型的过拟合，优先加数据，其次加正则化，最后才考虑降低模型容量。" ——四点半的理一
 - **要点**: 用训练/验证loss差值为诊断依据：差值大=过拟合→加数据/正则化；两边都高=欠拟合→增大模型/学习率。不要同时调超过两个超参数。每次实验前先写假设，跑完对比。
-- **参见**: [[overfitting-underfitting]], [[../data-eval/data-eval]], [[../debugging/small-data-overfit-test]]
+- **参见**: [overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md), [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md), [../debugging/small-data-overfit-test](../../../wiki/debugging/small-data-overfit-test.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/activation/activation-016-01/experiment.py --run --environmen
 - **适用场景**: 工程实践
 - **原文**: "很多人一看效果不行就加层、改 attention、改激活函数、换 loss。大多数业务场景里，这些不是第一优先级。先用成熟结构，先把数据、学习率、训练流程做好。"
 - **要点**: 业务调参的优先级：数据质量 → 学习率 → 训练流程 → 网络结构。改激活函数属于结构创新，应在基础工作做好之后考虑。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

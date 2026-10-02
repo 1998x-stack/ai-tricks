@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-048-01/experiment.py --run --enviro
 - **适用场景**: 新模型起步阶段debug
 - **原文**: 做新模型的时候，最开始不要加激活函数，不要加batchnorm，不要加dropout，先就纯模型。然后再一步一步的实验。
 - **要点**: 新模型先跑纯结构确认能收敛，再逐步加激活函数/BN/dropout
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

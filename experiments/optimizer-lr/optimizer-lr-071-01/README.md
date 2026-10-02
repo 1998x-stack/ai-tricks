@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-071-01/experiment.py --run --enviro
 - **适用场景**: Loss设计复杂的任务、初始训练不稳定
 - **原文**: 如果上面的Loss设计那块你没法合理，初始情况下容易爆，先上一个小LR保证不爆，等loss降下来了，再慢慢升LR
 - **要点**: 不确定时先保守小LR跑稳定，再逐步提高到合适值
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

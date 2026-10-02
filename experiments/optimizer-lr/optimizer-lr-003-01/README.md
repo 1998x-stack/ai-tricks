@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-003-01/experiment.py --run --enviro
 - **适用场景**: 追求极致泛化性能、训练后期精调
 - **原文**: 我基本都是带动量的SGD。如果优化不动可以试试Adam。
 - **要点**: SGD+Momentum虽然训练更慢更难，但泛化能力通常比Adam高一两个点
-- **参见**: [[sgd-momentum]], [[adam]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [adam](../../../wiki/optimizer-lr/adam.md)
 
 ## 解释边界
 

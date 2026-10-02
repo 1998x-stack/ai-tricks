@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-013-01/experiment.py --run --environment 
 - **适用场景**: CV任务的数据预处理
 - **原文**: "数据与处理之zero-center。主要有2个步骤，第一个是减均值，第二个是除以方差。" / "shuffle, shuffle, shuffle."
 - **要点**: zero-center（减均值除方差）使输入满足均值为0方差为1分布，一般减均值最常用。shuffle（数据打乱）对每个epoch必须执行，防止模型学到数据顺序相关的伪模式。
-- **参见**: [[data-augmentation]], [[../normalization/normalization]]
+- **参见**: [data-augmentation](../../../wiki/data-eval/data-augmentation.md), [../normalization/normalization](../../../wiki/normalization/normalization.md)
 
 ## 解释边界
 

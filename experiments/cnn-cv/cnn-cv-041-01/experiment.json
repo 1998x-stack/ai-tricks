@@ -11,7 +11,7 @@
     "raw_exact_lines": [
       726
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.landmark_head",
   "a": "coordinate_fc",

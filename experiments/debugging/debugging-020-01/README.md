@@ -37,7 +37,7 @@ python experiments/debugging/debugging-020-01/experiment.py --run --environment 
 - **适用场景**: 使用开源代码和预训练模型
 - **原文**: "不要完全相信论文里面的东西。结构什么的觉得可能有效果，可以拿去试试。"
 - **要点**: 开源repo的默认配置往往是为跑通demo设计的，不一定适合你的数据和任务。batch、lr、max length等都需要重新调试。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

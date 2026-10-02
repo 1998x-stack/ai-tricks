@@ -37,7 +37,7 @@ python experiments/activation/activation-010-01/experiment.py --run --environmen
 - **适用场景**: CNN 网络结构设计
 - **原文**: "在ReLU之前使用最大池化来节省一些计算。由于ReLU阈值的值为0：f(x)=max(0,x)和最大池化只有max激活：f(x)=max(x1,x2,...,xi)，使用Conv > MaxPool > ReLU 而不是Conv > ReLU > MaxPool" / "MaxPool > ReLU = max(0, max(0.5, -0.5)) = 0.5 和 ReLU > MaxPool = max(max(0,0.5), max(0,-0.5)) = 0.5 ... 使用MaxPool > ReLU可以节省一个max操作"
 - **要点**: 对于 ReLU（非负阈值），MaxPool 和 ReLU 复合后在数学上等价于 Conv → MaxPool → ReLU 也可得到相同结果，且少做一次 ReLU 的逐元素操作，节省计算量。
-- **参见**: [[../cnn-cv/3x3-conv-rule]]
+- **参见**: [../cnn-cv/3x3-conv-rule](../../../wiki/cnn-cv/3x3-conv-rule.md)
 
 ## 解释边界
 

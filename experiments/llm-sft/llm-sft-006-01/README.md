@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-006-01/experiment.py --run --environment remo
 - **适用场景**: SFT 数据策略
 - **原文**: "思维链+fewshot肯定是可以提高原始模型能力的，但是，SFT就不用加思维链和fewshot了，直接用样本堆死它。而且思维链+fewshot也超级耗时啊，标注也是一个超级麻烦的事情。所以，还不如直接造大量高质量样本，直接让模型学习。暴力但是很有效。"
 - **要点**: CoT 和 Few-shot 是 prompt 层面的技巧，用于在推理时激发模型能力。但在 SFT 训练中，不需要在每条数据中构造 CoT 或 Few-shot 格式——直接堆大量高质量的、风格统一的问答对样本，让模型直接从数据中学习，效果更好且标注成本更低。
-- **参见**: [[../llm-rl/llm-rl]]
+- **参见**: [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md)
 
 ## 解释边界
 

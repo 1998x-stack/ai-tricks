@@ -37,7 +37,7 @@ python experiments/recsys/recsys-014-01/experiment.py --run --environment remote
 - **适用场景**: 通用优化器选择
 - **原文**: > 如果数据是稀疏的，就用自适应方法，即 Adagrad, Adadelta, RMSprop, Adam。整体来讲，Adam 是最好的选择。
 - **要点**: 稀疏数据场景应优先选择自适应优化器（Adagrad / Adam 等），其中 Adam 综合表现最佳。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[../optimizer-lr/adam]], [[adam]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../optimizer-lr/adam](../../../wiki/optimizer-lr/adam.md), `[[adam]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-028-01/experiment.py --run --environment 
 - **适用场景**: 长期迭代的竞赛或研究项目
 - **原文**: "机器学习方法的最终参数在训练时并不完全固定，而是间接依赖于测试集。……使用未校准的评价指标或使用测试集指导参数设定可能会产生误导性的结果，进而导致在实际环境下的差异性，这被称为是参数选择的偏差。"
 - **要点**: 即使没有直接在测试集上训练，反复参照测试集结果调参也会引入选择偏差。最终线上部署时效果可能远低于预期。
-- **参见**: [[../regularization/overfitting-underfitting]], [[evaluation-bias]]
+- **参见**: [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md), `[[evaluation-bias]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

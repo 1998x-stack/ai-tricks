@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-002-01/experiment.py --run --enviro
 - **适用场景**: NLP vs CV任务选择优化器
 - **原文**: 优化器，nlp，抽象层次较高或目标函数非常不平滑的问题adam优先，其他可以尝试下sgd（一般需要的迭代次数高于sgd）
 - **要点**: NLP/抽象层次高/目标函数不平滑用Adam，CV等任务可尝试SGD
-- **参见**: [[adam]], [[sgd-momentum]], [[adam]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [adam](../../../wiki/optimizer-lr/adam.md)
 
 ## 解释边界
 

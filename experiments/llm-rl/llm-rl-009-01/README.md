@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-009-01/experiment.py --run --environment remote
 - **适用场景**: KL惩罚系数调节
 - **原文**: "reward是基石，KL散度是尺度器，reward直接决定了RL能够达到的上限，KL是让模型的生成不要太单一或者太杂乱。通常KL是从小到大调，一般0.001足够了"
 - **要点**: KL系数通常从0.001开始；reward决定上限，KL控制生成的多样性。
-- **参见**: [[kl-divergence-rlhf]]
+- **参见**: [kl-divergence-rlhf](../../../wiki/llm-rl/kl-divergence-rlhf.md)
 
 ## 解释边界
 

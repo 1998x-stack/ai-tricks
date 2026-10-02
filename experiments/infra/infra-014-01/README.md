@@ -37,7 +37,7 @@ python experiments/infra/infra-014-01/experiment.py --run --environment remote.j
 - **适用场景**: 自动化超参搜索
 - **原文**: "如果团队有条件，上 Optuna、Ray Tune、Weights & Biases Sweeps、MLflow、Ax 都可以。Optuna 对中小团队很友好，接入成本不高。Ray Tune 适合集群资源多的情况。W&B 的记录和可视化做得顺手。MLflow 在企业内部环境更容易被接受。"
 - **要点**: 中小团队首选 Optuna（轻量友好）；集群资源多选 Ray Tune；协作实验选 W&B Sweeps；企业内部选 MLflow；NNI（微软）也值得尝试。随机搜索优于网格搜索——真正敏感参数通常只有少数几个。
-- **参见**: [[../batch-size/batch-size]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

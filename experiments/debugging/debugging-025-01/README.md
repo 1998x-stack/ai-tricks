@@ -37,7 +37,7 @@ python experiments/debugging/debugging-025-01/experiment.py --run --environment 
 - **适用场景**: 使用预训练模型微调
 - **原文**: "使用pretrained模型时记得把load过程打印出来，保证模型被load了"
 - **要点**: 加载预训练权重后务必打印加载状态，确认所有参数都被正确加载。权重未加载但训练继续的情况比想象中更常见。
-- **参见**: [[../initialization/initialization]]
+- **参见**: [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

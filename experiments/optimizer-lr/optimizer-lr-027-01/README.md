@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-027-01/experiment.py --run --enviro
 - **适用场景**: 调整batch size时同步调整LR
 - **原文**: batch size翻倍，学习率通常也可以适当放大。batch size从64扩到256时，学习率可以从0.1对应扩到0.4左右。
 - **要点**: batch size放大n倍，LR也可放大n倍左右
-- **参见**: [[../batch-size/batch-size]] | [[lr-range-test]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md) | [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

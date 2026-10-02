@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-009-01/experiment.py --run --environment 
 - **适用场景**: 推荐系统、搜索排序、风控等线上A/B测试场景
 - **原文**: "之前做一个电商搜索排序模型，离线AUC提了0.7个点，团队挺兴奋。后来线上灰度没动静，甚至部分品类略降。排查后发现验证集是随机切的……那一周我们调了学习率、特征交叉、负采样比例，基本都是在错误验证集上自嗨。"
 - **要点**: 离线评估结果与线上效果不一致，常见原因包括验证集切分不当、评估指标与业务目标不匹配、线上数据分布偏移等。先确认评估可信度，再调参。
-- **参见**: [[cross-validation]], [[eval-metrics]]
+- **参见**: [cross-validation](../../../wiki/data-eval/cross-validation.md), [eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

@@ -18,7 +18,7 @@
     "regularization": 16
   },
   "detail_pages_retained": 58,
-  "raw_exact_matched_lines": 242,
+  "raw_normalized_matched_lines": 242,
   "raw_unmatched_candidates": 351,
   "raw_sha256": "c56ffa133d3341a2817b236b0a929d6ab45aba7cc87a5c633210e1abccdfacdf",
   "full_training_runs": 0,

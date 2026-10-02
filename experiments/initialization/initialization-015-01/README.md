@@ -37,7 +37,7 @@ python experiments/initialization/initialization-015-01/experiment.py --run --en
 - **适用场景**: 新模型开发流程中的初始化策略
 - **原文**: "做新模型的时候，最开始不要加激活函数，不要加batchnorm，不要加dropout，先就纯模型。然后再一步一步的实验"
 - **要点**: 开发新模型时，先确保模型 capacity 过拟合，再逐步添加正则化和调整初始化策略，逐个区分每个组件的影响。
-- **参见**: [[overfitting]]
+- **参见**: `[[overfitting]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

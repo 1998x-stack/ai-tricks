@@ -37,7 +37,7 @@ python experiments/normalization/normalization-011-01/experiment.py --run --envi
 - **适用场景**: 小 batch 训练 / 检测分割
 - **原文**: > Face book AI research（FAIR）吴育昕-恺明联合推出重磅新作Group Normalization（GN），提出使用Group Normalization 替代深度学习里程碑式的工作Batch normalization。一句话概括，Group Normbalization（GN）是一种新的深度学习归一化方式，可以替代BN。
 - **要点**: GN 将通道分为若干组，每组内计算均值和方差，不依赖 batch 维度，在小 batch（batch_size=1~8）场景效果优于 BN。
-- **参见**: [[group-normalization]], [[../cnn-cv/cnn-cv]]
+- **参见**: [group-normalization](../../../wiki/normalization/group-normalization.md), [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

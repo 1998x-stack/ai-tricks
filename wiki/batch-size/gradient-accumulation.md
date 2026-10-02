@@ -2,85 +2,65 @@
 
 ## 是什么
 
-梯度累积（Gradient Accumulation）是一种在不增加显存占用的情况下，通过多次前向-反向传播累积梯度后统一更新参数的技术，等效于使用更大的批大小进行训练。
+梯度累积在多个 microbatch 上依次执行 forward/backward，再统一更新参数。它减少单次需要保留的激活显存，**不会保证全部显存不增加**。来源：原素材中 LindgeWAI 的实现建议与 BugBuster喵 的 effective batch 记录建议。
 
-核心机制：
+对于可逐样本分解的损失，第 j 个 microbatch 有 n_j 个有效监督单位、平均损失 L_j，整组目标为：
 
-1. 每个小批次（micro-batch）正常做 forward + backward，计算梯度
-2. 将梯度累积到 `.grad` 中，不清零
-3. 每累积 N 步后执行 `optimizer.step()` 更新参数
-4. 更新后调用 `optimizer.zero_grad()` 清零梯度
+`L = sum(n_j * L_j) / sum(n_j)`。
 
-关键细节：`loss` 必须除以累积步数 N，否则梯度量级会放大 N 倍，破坏训练稳定性。
+监督单位可以是图像、有效回复 token 或未忽略的像素，必须与损失的 reduction 定义一致。只有 n_j 相同时，才能直接平均各 microbatch 的 mean loss；尾组应使用实际大小。
 
-有效批大小计算公式：
-
-```
-effective_batch_size = per_device_batch_size × num_gpus × accumulation_steps
-```
-
-这就是 [[../batch-size/batch-size]] 中 BugBuster喵 强调的必须记录完整的有效批大小公式——很多实验无法复现就是因为这里没说清。
+完整且各卡等大的批次可记录 `effective_batch = micro_batch × world_size × accumulation_steps`；尾组须另外记录真实样本/token 数。
 
 ## 为什么重要
 
-梯度累积是当代深度学习训练的基础技术，主要原因：
-
-- **突破显存墙**：单卡显存有限（A100 80GB / H100 80GB），大批次（如 4096）无法单次装入，梯度累积是唯一的等效方案。
-- **等效批大小扩展**：在对比学习、RLHF/PPO 等场景中，模型对批大小有硬性要求（太小不收敛），梯度累积直接决定训练能否成功。
-- **多卡训练的标配**：分布式数据并行（DDP/FSDP）中，每卡计算 gradient accumulation steps 次本地梯度，然后 all-reduce 聚合。这也是 [[../batch-size/batch-size]] 中阿里云提到的 "总批量大小是单个 GPU 上的批量大小乘以 GPU 的数量" 背后的实现机制。
-- **实验复现的关键信息**：论文和开源仓库常只说 "batch size = 1024"，但实际由 4 卡 x 8 累积 x 32 单卡 batch 构成。不记录完整公式会导致严重的可复现性问题。
+- 显存不足时，以更多次前后向换取较少的单次激活存储。
+- 将 loss 归一化、裁剪和 optimizer/scheduler 的调用时点统一到参数更新。
+- 将普通累积与对比学习负样本池分开记录，防止实验解释错误。
 
 ## 如何使用
 
-### PyTorch 标准实现
+以下单卡分类示例按真实样本数归一化，包含 epoch 尾组。输入组暂存在 CPU，只把当前 microbatch 放上设备。
 
 ```python
+from itertools import islice
+import torch
+import torch.nn.functional as F
+
 accumulation_steps = 4
-optimizer.zero_grad()
-
-for i, (inputs, labels) in enumerate(dataloader):
-    outputs = model(inputs)
-    loss = criterion(outputs, labels)
-    loss = loss / accumulation_steps  # 关键：除以累积步数
-    loss.backward()
-
-    if (i + 1) % accumulation_steps == 0:
-        optimizer.step()
-        optimizer.zero_grad()
+iterator = iter(dataloader)
+while group := list(islice(iterator, accumulation_steps)):
+    sample_count = sum(len(labels) for _, labels in group)
+    optimizer.zero_grad(set_to_none=True)
+    for inputs, labels in group:
+        inputs, labels = inputs.to(device), labels.to(device)
+        logits = model(inputs)
+        loss = F.cross_entropy(logits, labels, reduction="sum") / sample_count
+        loss.backward()
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+    optimizer.step()
+    # 若 scheduler 的单位是 optimizer step，在此调用 scheduler.step()。
 ```
 
-### 注意事项
+变长语言模型使用 `labels[:, 1:] != -100` 统计因果预测的有效 token，按该数量给各 microbatch 的 mean loss 加权。像素 ignore_index、类别权重会改变分母，需要按具体损失定义处理，不能一律除以 batch 长度。
 
-- **Batch Normalization**：累积模式下 BN 的均值和方差基于 micro-batch 而非 effective batch 计算，可能引入统计量偏差。可改用 SyncBN（同步所有卡的 BN 统计量）或 LayerNorm / GroupNorm。
-- **学习率不变**：梯度累积扩大的是等效批大小，学习率不需要对应调整。如需调整，参见 [[batch-size-lr-scaling]]。
-- **Loss 缩放**：`loss / accumulation_steps` 确保每个 micro-batch 对最终参数更新的贡献等价于在 effective batch 中增加一个样本。
-- **梯度裁剪**：在 `optimizer.step()` 前执行，基于累积后的完整梯度做裁剪，而不是在每次 micro-batch 后裁剪。
-- **混合精度（AMP）**：GradScaler 需在 accumulation 循环外 step，确保缩放正确。同时注意 micro-batch 的 loss 溢出检测——单个 micro-batch 的 loss 可能因除以累积步数而过小。
+AMP 时先逐次 `scaler.scale(loss).backward()`，整组完成后只 `unscale_` 一次，再裁剪、`scaler.step()` 与 `scaler.update()`；参考 [PyTorch AMP 梯度累积说明](https://docs.pytorch.org/docs/stable/notes/amp_examples.html#gradient-accumulation)。
 
-### 何时使用
-
-- 显存 OOM，但需要更大等效批大小
-- 对比学习/表示学习（SimCLR、MoCo、CLIP）——需要大量负样本避免模型坍塌
-- PPO / GRPO / RLHF 训练——梯度稳定性要求大批次（参见 [[../batch-size/batch-size]] 中 Tang AI 的观点）
-- 推荐系统 CTR 模型——批大小在 32-512 区间内有效
-
-### 何时避免
-
-- 使用 BatchNorm 且无法替换为 SyncBN 时，micro-batch 太小（如 1-2）会导致 BN 统计量严重偏差
-- 时间敏感的训练：梯度累积会降低 wall-clock 训练速度（前向+反向多次后才更新一次）
+A/B 应记录 microbatch、实际有效样本/token、更新步数、峰值显存和耗时。比较“大 batch 与等效累积”时，固定 effective batch 和样本顺序；比较“更大 effective batch”时则把更新次数变化明确写入解释。
 
 ## 常见误区
 
-- **loss 不除以累积步数**：最常见错误。不除则梯度放大 N 倍，轻则训练不稳定，重则直接发散。
-- **BN 统计量问题被忽略**：micro-batch 上的 BN 统计量和 effective batch 上的 BN 统计量不同，在大幅度梯度累积时不可忽略。
-- **认为梯度累积和增大 batch size 完全等价**：不完全等价。BN 行为不同，优化轨迹也不同（梯度是 N 次独立前向的累积而非一次大前向），有些场景中效果不如直接增大 batch size。
-- **记录不完整**：实验记录只写 "batch size = 1024"，不写 "per_device=32, gpus=4, accum=8"，导致不可复现。
-- **学习率盲目跟随**：梯度累积等效扩大批大小不需要同步调大学习率。学习率调整需遵循线性缩放规则。
+- **普通累积自动扩大对比学习负样本池**：错误。若每次 InfoNCE 只看到当前 microbatch，多个小 softmax 不等于一次大 softmax。Gao 等的[梯度缓存方法](https://arxiv.org/abs/2101.06983)另行处理跨样本依赖。
+- **任何情况下都除以固定累积步数**：尾组少于该步数、有效 token 不等长时会缩放错误；以上代码按实际总量计算。
+- **不处理尾组**：仅在 `(i + 1) % N == 0` 时更新会丢失尾部梯度。
+- **SyncBN 解决跨累积步的 BN 差异**：SyncBN 同步同一前向中的各卡统计量，不合并不同时刻的 microbatch。BN、Dropout 和浮点舍入都会影响与单次大 batch 的一致性。
+- **累积改变就必须/不必调学习率**：固定有效批量的实现替换与扩大有效批量是不同实验；学习率调整应另设对照。
+- **DDP 自动只在末次通信**：通常需按框架要求使用 `no_sync()`，并保证所有 rank 的步数与全局损失归一化一致。
 
 ## 参见
 
-- [[../batch-size/batch-size]] — 批大小核心概念与技巧集合
-- [[batch-size-generalization]] — 批大小对泛化能力的影响
-- [[batch-size-lr-scaling]] — 批大小与学习率的缩放关系
-- [[../multi-gpu]] — 多卡分布式训练
-- [[../../contradictory]]
+- [[batch-size]] — 来源技巧与有效批大小
+- [[batch-size-lr-scaling]] — 批大小与学习率
+- [[../infra/distributed-training]] — 多卡训练
+- [[../debugging/gradient-clipping]] — 累积完成后裁剪
+- [对应实验目录](../../experiments/batch-size/README.md) — 协议与实际驱动覆盖状态

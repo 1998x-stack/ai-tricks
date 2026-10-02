@@ -36,8 +36,8 @@ python experiments/debugging/debugging-003-01/experiment.py --run --environment 
 - **来源**: Josh Robin (伯克利) / 量子位
 - **适用场景**: 调试新搭建的模型
 - **原文**: "错误的张量形状；预处理输入错误；损失函数错误输入；忘记设置正确的训练模型；错误的数据类型。"
-- **要点**: 1) 张量形状不匹配；2) 预处理/输入错误；3) 损失函数输入错误（如输入了未归一化的logits而非softmax输出）；4) 忘记设置 model.train()；5) 数据类型错误（未转成 float32）。
-- **参见**: [[../normalization/normalization]]
+- **要点**: 1) 张量形状不匹配；2) 预处理/输入错误；3) 损失函数接口错误（PyTorch CrossEntropyLoss 应接收原始 logits，而非预先 softmax 的输出；BCEWithLogitsLoss 同理）；4) 忘记设置 model.train()；5) 数据类型错误（输入采用模型所需浮点类型，类别索引通常为 int64）。接口依据见 [PyTorch CrossEntropyLoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)。
+- **参见**: [../normalization/normalization](../../../wiki/normalization/normalization.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-009-01/experiment.py --run --enviro
 - **适用场景**: 任何新任务的初始LR选择
 - **原文**: 学习率的设置，一般可以先从1e-3、3e-4、1e-4开始，同时跑三炉丹，然后看效果，用类似二分的方法迭代搜索
 - **要点**: 同时跑三个数量级附近的LR，迭代缩小范围
-- **参见**: [[lr-range-test]], [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

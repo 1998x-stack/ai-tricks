@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-021-01/experiment.py --run --enviro
 - **适用场景**: 通用LR初值选择
 - **原文**: 有三个学习率起点（即1e-1，1e-3和1e-6）。如果对预训练模型微调，考虑小于1e-3（比如1e-4）的低学习率。从头训练则考虑大于等于1e-3。
 - **要点**: 三个LR起点：0.1（从头训）、0.001（通用）、1e-6（微调预训练模型用1e-4）
-- **参见**: [[lr-range-test]], [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

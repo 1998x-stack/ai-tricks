@@ -1,13 +1,13 @@
 {
   "scripts": 517,
-  "line_count_min": 127,
-  "line_count_max": 127,
+  "line_count_min": 134,
+  "line_count_max": 134,
   "syntax_checked": true,
   "offline_plans_checked": true,
   "driver_status": {
-    "实现待远程验证": 180,
+    "基础驱动配置兼容，场景待复核": 180,
     "专用训练驱动待实现": 337
   },
   "real_training_runs": 0,
-  "no_local_dataset_or_model_downloads": true
+  "scope": "offline_structure_and_configuration_only"
 }

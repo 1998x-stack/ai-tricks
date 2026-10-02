@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-005-02/experiment.py --run --environment 
 - **适用场景**: 所有监督学习任务
 - **原文**: "调参请在验证集上！调参请在验证集上！调参请在验证集上！" / "保留一个真正不碰的最终测试集，最好按时间或业务单元切。重要版本才评一次。"
 - **要点**: 验证集用于调参，测试集只能用于最终评估。反复在验证集上调参会使其成为训练的一部分（验证集过拟合）。最终测试集必须保持纯净。
-- **参见**: [[cross-validation]], [[../regularization/overfitting-underfitting]]
+- **参见**: [cross-validation](../../../wiki/data-eval/cross-validation.md), [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-033-01/experiment.py --run --enviro
 - **适用场景**: RLHF/PPO强化学习阶段
 - **原文**: PPO的学习率通常需要比SFT小一个数量级。例如SFT是2e-5，PPO初始建议1e-6到3e-6，过高易导致模式崩溃。
 - **要点**: PPO_LR = SFT_LR x 0.1，极端保守从1e-6开始
-- **参见**: [[learning-rate-scheduling]], [[../llm-rl/llm-rl]], [[lr-range-test]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

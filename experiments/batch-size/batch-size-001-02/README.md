@@ -36,8 +36,8 @@ python experiments/batch-size/batch-size-001-02/experiment.py --run --environmen
 - **来源**: 爱睡觉的KKY
 - **适用场景**: 对比学习、表示学习（如 SimCLR、MoCo、CLIP）
 - **原文**: > batch size 在表示学习，对比学习领域一般越大越好，显存不够上累计梯度，否则模型可能不收敛… 其他领域看情况；
-- **要点**: 对比学习依赖大量负样本区分正负对，小批次容易导致模型坍塌，必须用大批次或梯度累积等效扩大批次。
-- **参见**: [[batch-size-generalization]], [[gradient-accumulation]], [[../optimizer-lr/optimizer-lr]]
+- **要点**: 对使用 in-batch negatives 的对比学习，负样本池大小会改变损失。普通梯度累积只累加各 microbatch 的梯度，不自动增加 softmax 分母中的负样本；如需大负样本池，须额外使用跨批表示缓存/重算或全局表示收集。参考 [Gao 等的梯度缓存方法](https://arxiv.org/abs/2101.06983)，不能把其效果归于普通累积。
+- **参见**: [batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md), [gradient-accumulation](../../../wiki/batch-size/gradient-accumulation.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

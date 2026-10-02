@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-015-01/experiment.py --run --environment remo
 - **适用场景**: SFT 训练效率优化
 - **原文**: "大模型微调里，数据调参包括...是否 packing、最大长度设置..."（上下文多处提及 sequence packing）
 - **要点**: Sequence Packing 将多个短样本拼接为一个训练序列，可显著提升训练吞吐和 GPU 利用率。但 packing 需要正确处理 attention mask 和 position ID，确保不同样本之间不会互相干扰。packing 策略的选择（按长度相似度打包 vs 随机打包）也会影响训练稳定性。
-- **参见**: [[../infra/infra]]
+- **参见**: [../infra/infra](../../../wiki/infra/infra.md)
 
 ## 解释边界
 

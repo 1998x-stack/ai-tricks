@@ -37,7 +37,7 @@ python experiments/activation/activation-013-02/experiment.py --run --environmen
 - **适用场景**: 权重初始化策略
 - **原文**: "relu激活函数初始化推荐使用He normal，tanh初始化推荐使用Glorot normal" / "Xavier初始化适用于常见的激活函数（如tanh和sigmoid），而He初始化适用于ReLU激活函数" / "在使用ReLU激活函数时，通常推荐使用这种高斯初始化，通过缩放方差为2/n，以更好地适应ReLU的性质"
 - **要点**: ReLU → He normal（方差 2/n）；tanh/sigmoid → Xavier/Glorot normal。激活函数与初始化方法必须匹配，错误搭配会导致梯度爆炸或消失。
-- **参见**: [[relu]], [[../initialization/initialization]]
+- **参见**: [relu](../../../wiki/activation/relu.md), [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

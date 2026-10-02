@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-020-01/experiment.py --run --environment 
 - **适用场景**: 团队协作、实验可复现、数据追踪
 - **原文**: "数据版本管理可以看 DVC"
 - **要点**: 使用DVC（Data Version Control）对数据集进行版本管理，确保每次实验的数据版本可追溯、可复现。配合git使用。
-- **参见**: [[../infra/wandb-sweeps]], [[cross-validation]]
+- **参见**: [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md), [cross-validation](../../../wiki/data-eval/cross-validation.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/infra/infra-011-01/experiment.py --run --environment remote.j
 - **适用场景**: 实验可复现性
 - **原文**: "万能随机种子：42、3407" / "随机数种子设定好，否则很多对比实验结论不一定准确" / "随机种子不固定。深度学习有随机性，尤其小数据任务。没有 seed，不记录环境，结果就很难复现。"
 - **要点**: 固定 seed（如 42、3407）确保结果可复现；小数据任务至少换两个种子跑验证，仅提升 0.1 但方差 0.3 的提升不可靠；固定 seed 不保证完全确定，但避免实验变记忆游戏。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

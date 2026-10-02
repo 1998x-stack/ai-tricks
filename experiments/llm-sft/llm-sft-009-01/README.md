@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-009-01/experiment.py --run --environment remo
 - **适用场景**: SFT 训练监控
 - **原文**: "事实上loss，对于大模型训练仅能做一个基本的判断了，基本上，到了中后期，loss小，效果不一定好，甚至还会出现loss先下降后上升的情况，即使是在训练集。所以，正确的判断方法还是，从小步数的checkpoint，进行accuray或者其他业务指标的判断，正常情况，只要模型在正常训练，该指标通常也是下降逐渐到收敛的一个状态。因此，不能太依赖loss指标，仅仅做初步参考。"
 - **要点**: 大模型 SFT 训练中后期，loss 与模型实际效果之间关联度很低。可能出现 loss 下降但效果变差，或者 loss 先降后升的情况。正确做法是定期保存 checkpoint，在每个 checkpoint 上跑业务指标（准确率、F1、人工评测等）来评估效果。Loss 仅作为训练是否正常的初步参考。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

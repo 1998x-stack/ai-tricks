@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-075-01/experiment.py --run --enviro
 - **适用场景**: 需要权衡收敛速度与泛化性能
 - **原文**: 如果你关心快速收敛，使用自适应优化器如Adam，但它可能会陷入局部极小，提供了糟糕的泛化。SGD+momentum可以实现找到全局最小值，但需要更长时间收敛。
 - **要点**: Adam收敛快但泛化可能差，SGD+Momentum慢但效果好
-- **参见**: [[adam]], [[adam]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [adam](../../../wiki/optimizer-lr/adam.md)
 
 ## 解释边界
 

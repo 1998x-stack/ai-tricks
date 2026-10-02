@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-060-01/experiment.py --run --enviro
 - **适用场景**: 不同规模数据的正则化强度选择
 - **原文**: 较小的数据集和模型结构设置较大的权重衰减值，而较大的数据集和更深的模型结构设置较小的值。
 - **要点**: 小数据/浅层结构 -> 大weight decay；大数据/深层结构 -> 小weight decay
-- **参见**: [[weight-decay]]
+- **参见**: [weight-decay](../../../wiki/optimizer-lr/weight-decay.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/recsys/recsys-010-01/experiment.py --run --environment remote
 - **适用场景**: 推荐系统策略优化
 - **原文**: > 一般不要尝试用强化学习优化，因为真的很费力气，而且效果很一般
 - **要点**: 用 RL 优化推荐系统投入产出比低，效果一般，不推荐。
-- **参见**: [[../llm-rl/ppo-rlhf]]
+- **参见**: [../llm-rl/ppo-rlhf](../../../wiki/llm-rl/ppo-rlhf.md)
 
 ## 解释边界
 

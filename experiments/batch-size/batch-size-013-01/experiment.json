@@ -7,11 +7,11 @@
     "line": 94,
     "heading": "mini batch size 数十到数百皆可，SGD 默认设定",
     "author": "匿名用户",
-    "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+    "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
     "raw_exact_lines": [
       2882
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "training.batch_size",
   "a": 32,

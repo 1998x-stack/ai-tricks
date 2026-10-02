@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-011-01/experiment.py --run --environmen
 - **适用场景**: 大语言模型预训练超参选择
 - **原文**: > 给定计算成本 C，大多数超参的最优值是基本固定的，只需调整学习率和 batch size，而学习率的最优值随 C 增加而下降，batch size 的最优值随 C 增加而上升，满足幂律：η_opt = 0.3118·C^(-0.1250)，B_opt = 0.2920·C^(0.3271)
 - **要点**: DeepSeek 实验表明，预训练中仅 batch size 和学习率需随计算量调整，其他超参固定；计算量增大时应开大 batch size、调小学习率。
-- **参见**: [[batch-size-lr-scaling]], [[../optimizer-lr/optimizer-lr]], [[learning-rate-scheduler]]
+- **参见**: [batch-size-lr-scaling](../../../wiki/batch-size/batch-size-lr-scaling.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), `[[learning-rate-scheduler]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

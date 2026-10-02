@@ -37,7 +37,7 @@ python experiments/nlp/nlp-004-02/experiment.py --run --environment remote.json
 - **适用场景**: 机器阅读理解（MRC）、文本匹配、推理任务
 - **原文**: *"对于机器阅读任务，在bert层后加bi-attention或者coattention有奇效"*
 - **要点**: 在 BERT 编码层之后添加双向注意力（bi-attention）或协同注意力（co-attention）机制，能显式建模两个序列间的交互，对 MRC 任务提升显著。
-- **参见**: [[../recsys/multi-task-recsys]]
+- **参见**: [../recsys/multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

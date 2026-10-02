@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-019-01/experiment.py --run --environmen
 - **适用场景**: RLHF / PPO 训练
 - **原文**: > PPO的学习率通常需要比SFT小一个数量级。例如，如果SFT阶段的学习率是2e-5，PPO阶段的初始学习率建议设置为1e-6到3e-6之间
 - **要点**: PPO 使用小学习率+大批次的组合，学习率降低一个数量级的同时 batch size 放大，两者配合才能稳定训练。
-- **参见**: [[batch-size-lr-scaling]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [batch-size-lr-scaling](../../../wiki/batch-size/batch-size-lr-scaling.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

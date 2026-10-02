@@ -37,7 +37,7 @@ python experiments/recsys/recsys-012-01/experiment.py --run --environment remote
 - **适用场景**: 推荐模型 batch size 选择
 - **原文**: > batch size对于推荐来说32-64-128-512测试效果再高一般也不会正向了，再低训练太慢了。
 - **要点**: 推荐系统的 batch size 在 32 到 512 之间调优，超过 512 基本无正向收益，低于 32 训练过慢。
-- **参见**: [[../batch-size/batch-size]], [[../optimizer-lr/lr-range-test]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), [../optimizer-lr/lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

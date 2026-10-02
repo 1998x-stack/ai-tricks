@@ -7,11 +7,11 @@
     "line": 30,
     "heading": "五种最常见的实现Bug",
     "author": "Josh Robin (伯克利) / 量子位",
-    "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+    "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
     "raw_exact_lines": [
       514
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "training.force_eval_mode",
   "a": true,

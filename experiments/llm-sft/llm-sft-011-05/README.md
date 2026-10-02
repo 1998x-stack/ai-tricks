@@ -42,7 +42,7 @@ python experiments/llm-sft/llm-sft-011-05/experiment.py --run --environment remo
   - **Dropout**: 0~0.1 范围内尝试。
   - **LR**: 1e-4 到 3e-4 是常见范围，小数据或强基座模型可以用更低。
   - **训练轮数**: 不要太多，2-3 个 epoch 后模型可能已经开始"记数据"而非学习范式。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

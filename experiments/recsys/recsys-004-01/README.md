@@ -37,7 +37,7 @@ python experiments/recsys/recsys-004-01/experiment.py --run --environment remote
 - **适用场景**: 召回模型负样本构建
 - **原文**: > 召回负采样负样本效果肯定高于曝光未点击负样本
 - **要点**: 召回阶段，全局随机负采样效果优于曝光未点击负样本。
-- **参见**: [[negative-sampling]], [[negative-sampling]]
+- **参见**: [negative-sampling](../../../wiki/recsys/negative-sampling.md), [negative-sampling](../../../wiki/recsys/negative-sampling.md)
 
 ## 解释边界
 

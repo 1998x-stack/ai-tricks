@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-019-01/experiment.py --run --environment remote
 - **适用场景**: 下采样位置设计
 - **原文**: "在使用下采样之前要保证在这一层上有足够的感受野……靠近输入层的层空间信息冗余度最高，所以越靠近输入层相对感受野应该越小"
 - **要点**: 两个下采样之间的子网络必须有一定感受野才能将空间信息编码到下一层
-- **参见**: [[receptive-field]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

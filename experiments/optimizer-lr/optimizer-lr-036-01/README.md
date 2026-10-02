@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-036-01/experiment.py --run --enviro
 - **适用场景**: LLM预训练超参随计算量的变化
 - **原文**: 给定计算成本C，大多数超参的最优值基本固定，只需调整学习率和batch size。η_opt = 0.3118 * C^(-0.1250), B_opt = 0.2920 * C^(0.3271)
 - **要点**: 计算量越大，LR越小（幂律-0.125），batch越大（幂律0.327）
-- **参见**: [[../batch-size/batch-size-lr-scaling]] | [[../llm-sft/llm-sft]]
+- **参见**: [../batch-size/batch-size-lr-scaling](../../../wiki/batch-size/batch-size-lr-scaling.md) | [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

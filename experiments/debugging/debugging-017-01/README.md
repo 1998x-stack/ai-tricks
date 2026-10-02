@@ -37,7 +37,7 @@ python experiments/debugging/debugging-017-01/experiment.py --run --environment 
 - **适用场景**: 判断分类网络是否学习充分
 - **原文**: "刚开始的网络预测都是在0.5上下，很模糊。随着学习过程，网络预测会慢慢的移动到0,1这种极值附近"
 - **要点**: 分类网络从含糊到清晰。如果预测概率分布集中在中间值（如0.5附近），说明网络还没学充分，需要继续训练或调整超参数。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

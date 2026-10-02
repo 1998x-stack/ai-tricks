@@ -37,7 +37,7 @@ python experiments/infra/infra-013-01/experiment.py --run --environment remote.j
 - **适用场景**: 训练中断恢复、模型版本管理
 - **原文**: "最终模型我们可以使用中间的 checkpoint" / "一定记得取不同训练步骤的 checkpoint 针对某些问题进行检验" / "最优 checkpoint、评估结果、错误样例"
 - **要点**: Runner 类中 `save_model` 保存模型参数，`load_model` 加载；在验证指标达到最优时保存 checkpoint；大模型训练时保留多个中间 checkpoint 便于回溯；记录 checkpoint 对应的代码版本、数据版本和配置。
-- **参见**: [[infra]]
+- **参见**: [infra](../../../wiki/infra/infra.md)
 
 ## 解释边界
 

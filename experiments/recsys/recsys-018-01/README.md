@@ -37,7 +37,7 @@ python experiments/recsys/recsys-018-01/experiment.py --run --environment remote
 - **适用场景**: 推荐模型中 Normalization 选择
 - **原文**: > 序列特征才用layernorm，正常用batchnorm。
 - **要点**: 序列特征（用户行为序列等）用 LayerNorm，非序列特征（普通稠密 / 稀疏特征）用 BatchNorm。
-- **参见**: [[layernorm]], [[batchnorm]]
+- **参见**: `[[layernorm]]`（原 Wiki 未解析链接）, `[[batchnorm]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

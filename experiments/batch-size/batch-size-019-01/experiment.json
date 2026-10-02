@@ -7,11 +7,11 @@
     "line": 131,
     "heading": "PPO 学习率通常比 SFT 小一个数量级",
     "author": "Tang AI",
-    "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+    "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
     "raw_exact_lines": [
       137
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "optimizer.lr",
   "a": 2e-05,

@@ -11,7 +11,7 @@
 | B | `0.1` |
 | 任务配置 | `vision` |
 | 主指标 | `test_accuracy`（max） |
-| 固定条件 | `{}`，另固定数据/模型版本、切分、种子、硬件 |
+| 固定条件 | `{"optimizer.schedule": "warmup_cosine"}`，另固定数据/模型版本、切分、种子、硬件 |
 | 对照类型 | `single_factor` |
 | 状态 | 协议和编排入口已生成；完整训练尚未执行，专用驱动支持情况见总表 |
 
@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-014-01/experiment.py --run --enviro
 - **适用场景**: Transformer/LoRA/大模型训练
 - **原文**: lr_scheduler的warmup步数设置：一般遵循模型复杂，步数多点；数据集大，步数少点（参考BERT，默认设成总训练轮次的1/10，也可1/20）
 - **要点**: 模型越复杂warmup越长，数据越大warmup越短，BERT默认用总步数1/10
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-016-01/experiment.py --run --environment remote
 - **适用场景**: 训练配置
 - **原文**: "RLHF阶段的batch_size宁大勿小。更大的批次可以提供更稳定的梯度估计，尤其对于PPO。如果显存不足，应优先使用Gradient Accumulation来等效扩大批次大小。"
 - **要点**: RLHF batch size越大梯度估计越稳定；显存不够用gradient accumulation。
-- **参见**: [[../batch-size/batch-size]], [[gradient-accumulation]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), `[[gradient-accumulation]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

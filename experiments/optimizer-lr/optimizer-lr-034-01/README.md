@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-034-01/experiment.py --run --enviro
 - **适用场景**: DPO偏好优化
 - **原文**: DPO训练损失下降很快但生成效果差，可能是因为beta值过低或学习率过高。调高beta增加对SFT模型的约束，降低学习率使用1e-7到5e-6微调。
 - **要点**: DPO的LR要极保守（1e-7~5e-6），beta控制模型偏离SFT的程度
-- **参见**: [[dpo]] | [[../llm-rl/llm-rl]]
+- **参见**: `[[dpo]]`（原 Wiki 未解析链接） | [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md)
 
 ## 解释边界
 

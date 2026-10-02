@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-001-01/experiment.py --run --environment remo
 - **适用场景**: 任何准备做 SFT 的任务
 - **原文**: "先调prompt，保证让模型可以按照你想输出的样式先输出。如果怎么调都不行建议换模型，说明能力不行。正常来说，通过prompt至少有20%以上的答案是正确的，才有SFT成功的可能性。"
 - **要点**: 在做任何微调之前，必须先用 prompt 验证基座模型是否具备完成任务的基本能力。如果 prompt 调优后正确率达不到 20%，说明模型本身能力不足，应该换更强的基座模型，而不是尝试用 SFT 来"补课"。如果 prompt 不复杂就能有不错效果，也不用把 prompt 构造得太复杂。
-- **参见**: [[../llm-rl/llm-rl]]
+- **参见**: [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md)
 
 ## 解释边界
 

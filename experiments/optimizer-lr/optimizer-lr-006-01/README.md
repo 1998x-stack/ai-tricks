@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-006-01/experiment.py --run --enviro
 - **适用场景**: 推荐系统，稀疏/稠密特征分布差异大的场景
 - **原文**: 对于稀疏特征多的模型采用adagrad，稠密特征多的模型用adam
 - **要点**: 稀疏特征多 -> Adagrad，稠密特征多 -> Adam
-- **参见**: [[adam]], [[adam]], [[../recsys/recsys]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [adam](../../../wiki/optimizer-lr/adam.md), [../recsys/recsys](../../../wiki/recsys/recsys.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-022-01/experiment.py --run --enviro
 - **适用场景**: 验证集驱动自适应LR衰减
 - **原文**: 如果验证损失在某些epoch停止改善，减小学习率；如果验证损失停止改善在某些epoch，停止训练过程。
 - **要点**: 验证集不下降时自动降低LR，再不下降则早停
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]], [[early-stopping]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), `[[early-stopping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

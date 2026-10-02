@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-017-01/experiment.py --run --environment remote
 - **适用场景**: 网络深度设计
 - **原文**: "最终能够下采样的最大深度，以该层的感受野以及数据集中最大的有意义物体尺寸决定"
 - **要点**: 最后一层至少能看到最大的有意义物体；更大感受野通常无害；若超出太多，网络可学出单位卷积
-- **参见**: [[receptive-field]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

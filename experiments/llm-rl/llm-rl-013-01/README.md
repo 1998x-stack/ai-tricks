@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-013-01/experiment.py --run --environment remote
 - **适用场景**: PPO训练配置
 - **原文**: "PPO的学习率通常需要比SFT小一个数量级。例如，如果SFT阶段的学习率是2e-5，PPO阶段的初始学习率建议设置为1e-6到3e-6之间，过高的学习率极易导致模式崩溃（Mode Collapse）。"
 - **要点**: PPO LR ≈ SFT LR / 10。过大LR导致mode collapse。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

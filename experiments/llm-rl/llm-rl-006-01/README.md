@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-006-01/experiment.py --run --environment remote
 - **适用场景**: RLHF准备工作
 - **原文**: "做RL的模型本身就对数据集回答的超级差，可能20%都达不要，那就果断换模型吧。"
 - **要点**: 确保SFT模型在目标数据上至少达到20%的正确率，否则应更换模型或优化SFT。
-- **参见**: [[../llm-sft/llm-sft]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

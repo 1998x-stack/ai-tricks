@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-004-01/experiment.py --run --environment remote
 - **适用场景**: RL策略选择
 - **原文**: "对于有确定性rule reward的数据集，可能纯RL也能起到效果，不用再去SFT。反之，必须SFT，再RL。如果SFT都没有效果，那么别指望RL了。"
 - **要点**: 有明确规则reward时可直接RL；否则必须SFT+RL。SFT不行RL必然不行。
-- **参见**: [[../llm-sft/llm-sft]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

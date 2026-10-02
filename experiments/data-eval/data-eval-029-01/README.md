@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-029-01/experiment.py --run --environment 
 - **适用场景**: 分类任务的训练状态诊断
 - **原文**: "如果是二分类，你会发现，刚开始的网络预测都是在0.5上下，很模糊。随着学习过程，网络预测会慢慢的移动到0,1这种极值附近。所以，如果你的网络预测分布靠中间，再学习学习。"
 - **要点**: 分类网络的输出概率分布反映学习进度。如果预测概率集中在中间值（如0.4-0.6），说明网络尚未充分学习，需要继续训练。
-- **参见**: [[classification]], [[model-convergence]]
+- **参见**: `[[classification]]`（原 Wiki 未解析链接）, `[[model-convergence]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

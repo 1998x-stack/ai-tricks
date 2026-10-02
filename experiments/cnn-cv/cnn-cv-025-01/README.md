@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-025-01/experiment.py --run --environment remote
 - **适用场景**: 分割任务上采样
 - **原文**: "在做分割实验的时候我发现用upsampling加1x1卷积代替反卷积做上采样得到的结果更平滑，并且miou差距不大"
 - **要点**: 两者都可使用，upsample+conv结果更平滑；anchor也说转置卷积完全可用上采样+卷积替代
-- **参见**: [[fpn-neck-design]], [[receptive-field]]
+- **参见**: [fpn-neck-design](../../../wiki/cnn-cv/fpn-neck-design.md), [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/recsys/recsys-013-01/experiment.py --run --environment remote
 - **适用场景**: 推荐系统优化器选择
 - **原文**: > 对于稀疏特征多的模型采用adagrad，稠密特征多的模型用adam
 - **要点**: 稀疏特征主导的模型宜用 Adagrad 处理不同特征频次差异，稠密特征场景用 Adam。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[../optimizer-lr/adam]], [[adam]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../optimizer-lr/adam](../../../wiki/optimizer-lr/adam.md), `[[adam]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

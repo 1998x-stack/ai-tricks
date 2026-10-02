@@ -12,7 +12,7 @@
       2684,
       2689
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.pool_relu_order",
   "a": "relu_pool",

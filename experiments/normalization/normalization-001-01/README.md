@@ -37,7 +37,7 @@ python experiments/normalization/normalization-001-01/experiment.py --run --envi
 - **适用场景**: 新模型开发
 - **原文**: > 做新模型的时候，最开始不要加激活函数，不要加batchnorm，不要加dropout，先就纯模型。然后再一步一步的实验，不要过于信赖经典的模型结构（除非它是预训练的），比如加了dropout一定会有效果，或者加了batchnorm一定会有提升所以先加上，首先你要确定你的模型处于什么阶段，到底是欠拟合还是过拟合，然后再确定解决手段。
 - **要点**: 从裸模型起步，根据欠拟合/过拟合状态逐个添加组件，而非一次性堆叠。
-- **参见**: [[normalization-cheatsheet]], [[../debugging/debugging]], [[../regularization/regularization]]
+- **参见**: [normalization-cheatsheet](../../../wiki/normalization/normalization-cheatsheet.md), [../debugging/debugging](../../../wiki/debugging/debugging.md), [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

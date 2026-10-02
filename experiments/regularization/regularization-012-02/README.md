@@ -37,7 +37,7 @@ python experiments/regularization/regularization-012-02/experiment.py --run --en
 - **适用场景**: 比赛刷分、追求泛化性能上限
 - **原文**: "可以使用不同的初始化方式训练出模型，然后做ensemble。可以使用不同超参数(如学习率，batch_size，优化器)训练出不同模型，然后做ensemble。" ——BBuf
 - **要点**: 常用方式：(1) 不同初始化训练多个模型做voting/soft-voting；(2) 不同超参数（lr/batch_size/优化器）训练不同模型；(3) 不同网络架构（VGG/ResNet/Xception）提取特征加权组合；(4) Cyclic LR自动收敛到多个局部最小值得到多个模型做集成。Dropout本身是低成本的隐式Ensemble。Inception/Shortcut/Dense Connection也相当于集成。
-- **参见**: [[dropout]], [[dropout]]
+- **参见**: [dropout](../../../wiki/regularization/dropout.md), [dropout](../../../wiki/regularization/dropout.md)
 
 ## 解释边界
 

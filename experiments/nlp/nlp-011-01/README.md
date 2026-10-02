@@ -11,7 +11,7 @@
 | B | `0.1` |
 | 任务配置 | `nlp` |
 | 主指标 | `test_accuracy`（max） |
-| 固定条件 | `{}`，另固定数据/模型版本、切分、种子、硬件 |
+| 固定条件 | `{"optimizer.schedule": "warmup_cosine"}`，另固定数据/模型版本、切分、种子、硬件 |
 | 对照类型 | `single_factor` |
 | 状态 | 协议和编排入口已生成；完整训练尚未执行，专用驱动支持情况见总表 |
 
@@ -37,7 +37,7 @@ python experiments/nlp/nlp-011-01/experiment.py --run --environment remote.json
 - **适用场景**: Transformer 系列模型（BERT、GPT、LLaMA 等）的训练
 - **原文**: *"lr_scheduler的warmup步数设置：一般遵循模型复杂，步数多点；数据集大，步数少点 (参考BERT，默认设成总训练轮次的1/10，也可1/20)"*
 - **要点**: Transformer 训练基本必须开启 warmup。推荐 warmup 步数为总步数的 3%~10%（复杂模型取高值，大数据集取低值）。warmup + cosine/linear decay 是最常见的搭配。warmup 的作用是防止初期大学习率导致的不稳定。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[transformer-training]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), `[[transformer-training]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

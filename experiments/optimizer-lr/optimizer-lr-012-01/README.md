@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-012-01/experiment.py --run --enviro
 - **适用场景**: Cyclical LR的上下界确定
 - **原文**: LR范围测试：运行模型几个epoch，同时让学习率在高低学习率值之间线性增加。对于浅层的3层架构，最大设置为0.01，而对于resnet这样的网络，学习率最大可以设置为3.0。
 - **要点**: 线性增加LR跑几个epoch确定上下界，最大LR的十分之一设为最小LR
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

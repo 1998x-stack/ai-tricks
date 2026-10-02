@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-051-01/experiment.py --run --enviro
 - **适用场景**: 确认模型容量足够的debug方法
 - **原文**: 先overfit再trade off，首先保证你的模型capacity能够过拟合，再尝试减小模型，各种正则化方法
 - **要点**: 调参第一步：确保模型能在小数据上过拟合
-- **参见**: [[../debugging/small-data-overfit-test]]
+- **参见**: [../debugging/small-data-overfit-test](../../../wiki/debugging/small-data-overfit-test.md)
 
 ## 解释边界
 

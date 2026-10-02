@@ -36,8 +36,8 @@ python experiments/debugging/debugging-002-01/experiment.py --run --environment 
 - **来源**: BugBuster喵
 - **适用场景**: 验证模型实现是否正确
 - **原文**: "随机标签能不能不过拟合"
-- **要点**: 打乱标签后模型应该无法过拟合（loss不下降）。如果随机标签下loss依然下降，说明模型在记忆数据而非学习规律，通常是数据泄露或代码bug。
-- **参见**: [[../data-eval/data-eval]]
+- **要点**: 高容量模型可以记忆固定随机训练标签，训练 loss 下降本身不构成泄漏证据。随机标签只在训练前生成一次；用独立且未参与调参的验证集检验泛化，并检查输入是否含标签信息。参见 [Zhang 等的随机标签实验](https://arxiv.org/abs/1611.03530)。
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

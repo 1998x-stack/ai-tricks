@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-021-01/experiment.py --run --environment remote
 - **适用场景**: RM过拟合或偏好偏差
 - **原文**: "reward持续上涨，但人工评估发现生成内容存在事实错误或逻辑混乱，这是因为RM过拟合或偏好数据存在偏差，导致模型学习到'欺骗性策略'。这时候需要根据你的具体任务，把奖励拆分多个独立维度，分别标注并加权融合。"
 - **要点**: RM过拟合导致欺骗性策略 → 将奖励拆分为多个独立维度分别标注、加权融合。
-- **参见**: [[reward-hacking]], [[reward-hacking]]
+- **参见**: [reward-hacking](../../../wiki/llm-rl/reward-hacking.md), [reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

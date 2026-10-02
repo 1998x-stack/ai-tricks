@@ -37,7 +37,7 @@ python experiments/recsys/recsys-002-01/experiment.py --run --environment remote
 - **适用场景**: 推荐系统中连续数值特征的处理
 - **原文**: > 在推荐系统中，神经网络模型对于连续数值的处理是不如xgb的，所以，最好对连续数值分箱，一般等频分箱足矣，但是，个人建议还是观察数据分布，把outlier单独一箱，如果还想完美一点可以，用IV值看看分箱的优劣。
 - **要点**: 神经网络处理连续数值不如 XGBoost，应优先做等频分箱，将异常值单独成箱，可用 IV 值评估分箱质量。
-- **参见**: [[feature-binning]], [[feature-binning]]
+- **参见**: [feature-binning](../../../wiki/recsys/feature-binning.md), [feature-binning](../../../wiki/recsys/feature-binning.md)
 
 ## 解释边界
 

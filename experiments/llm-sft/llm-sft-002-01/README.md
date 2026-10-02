@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-002-01/experiment.py --run --environment remo
 - **适用场景**: SFT 训练数据收集与质量保证
 - **原文**: "可以通过更强大的模型造一些数据，然后，再多个模型对其进行打标，判断产生的QA对是否符合要求，这样够可以构造一批高质量的样本。如果有人力的支持，可以进行人工检验，更加保险。"
 - **要点**: 使用比目标模型更强的模型（如 GPT-4、Claude）来生成 SFT 训练数据，再用多个模型对生成的 QA 对进行交叉验证/打标，筛选出高质量的样本。有人工校验资源的情况下，加一道人工检验最保险。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

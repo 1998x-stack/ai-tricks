@@ -37,7 +37,7 @@ python experiments/activation/activation-011-02/experiment.py --run --environmen
 - **适用场景**: 模型欠拟合时
 - **原文**: "考虑增加relu，mish等作为某些层的激活函数"
 - **要点**: 模型欠拟合时，除增大宽度深度外，可在特定层加入 ReLU/Mish 等激活函数来增加非线性表达能力。
-- **参见**: [[activation-selection]], [[../debugging/small-data-overfit-test]]
+- **参见**: [activation-selection](../../../wiki/activation/activation-selection.md), [../debugging/small-data-overfit-test](../../../wiki/debugging/small-data-overfit-test.md)
 
 ## 解释边界
 

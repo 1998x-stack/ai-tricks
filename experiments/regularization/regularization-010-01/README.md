@@ -37,7 +37,7 @@ python experiments/regularization/regularization-010-01/experiment.py --run --en
 - **适用场景**: 训练loss降到很低后继续提升泛化
 - **原文**: "当training loss大于一个阈值时，进行正常的梯度下降；当training loss低于阈值时，会反过来进行梯度上升"
 - **要点**: 在loss函数上加flooding操作：`flood = (loss - b).abs() + b`，使训练loss保持在一个阈值附近，让模型做"random walk"，期望进入平坦的损失区域，实现test loss的double decent。
-- **参见**: [[../data-eval/eval-metrics]], [[../batch-size/batch-size-generalization]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md), [../batch-size/batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md)
 
 ## 解释边界
 

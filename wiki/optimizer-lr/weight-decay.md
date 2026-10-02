@@ -1,111 +1,78 @@
-# 权重衰减与L2正则化
+# 权重衰减与 L2 正则化
 
 ## 是什么
 
-权重衰减（Weight Decay）是一种正则化技术，在每一步参数更新时额外减去参数本身的一个小比例：
+L2 正则化是在目标函数中加入 $\lambda\|\theta\|^2/2$，其梯度为 $\lambda\theta$。解耦权重衰减直接缩小参数，不让衰减项进入优化器的梯度动量和二阶矩。
 
-```math
-θ_{t+1} = θ_t - lr * ∇L(θ_t) - lr * λ * θ_t
-```
+对于**无动量的普通 SGD**，把 L2 梯度加到任务梯度，更新为：
 
-等价于在损失函数中加入L2正则化项 `0.5 * λ * ||θ||²`，因为L2正则化的梯度 `λ * θ` 正好等于权重衰减项 —— **但仅对SGD成立**。
+$$\theta_{t+1}=(1-\eta_t\lambda)\theta_t-\eta_t\nabla L(\theta_t).$$
 
-关键区别在于 **L2正则化与自适应优化器的交互**：
+这与使用相同学习率缩放的乘法衰减等价。加入动量或自适应预条件后，需要检查具体更新公式，不能直接推广该等价性。PyTorch SGD 的 `weight_decay` 将衰减项加到梯度中；有 momentum 时该项进入动量缓冲区，**不是独立的解耦更新**。参见 [PyTorch SGD 官方算法](https://docs.pytorch.org/docs/stable/generated/torch.optim.SGD.html)。
 
-- **SGD中**：L2正则化 ≈ 权重衰减，两者完全等价
-- **Adam中**：权重衰减项 `λ * θ_t` 被Adam的自适应学习率缩放，使得大梯度参数（对应高频特征）的权重衰减被抑制，小梯度参数（对应稀疏特征）的权重衰减被放大——这并非设计意图
+Adam 的耦合 L2 会改变一、二阶矩估计。AdamW 将参数衰减与任务梯度的自适应更新分开，其简化形式为：
 
-**AdamW**（2019年，Loshchilov & Hutter）修正了这个问题：将权重衰减从梯度更新中解耦，在Adam自适应更新之后独立执行：
+$$\theta_{t+1}=(1-\eta_t\lambda)\theta_t-\eta_t\frac{\hat m_t}{\sqrt{\hat v_t}+\epsilon}.$$
 
-```
-# AdamW伪码
-m_t = β1 * m_{t-1} + (1-β1) * g_t
-v_t = β2 * v_{t-1} + (1-β2) * g_t²
-θ_t = θ_{t-1} - lr * m̂_t / (√v̂_t + ε)  # Adam更新
-θ_t = θ_t - lr * λ * θ_{t-1}            # 解耦的权重衰减
-```
+这里的 $\hat m_t,\hat v_t$ 来自任务梯度，不含 L2 项。不要再手工添加同一 L2 惩罚，否则改变了实验处理。
 
 ## 为什么重要
 
-1. **防止过拟合的核心手段**。权重衰减通过限制参数范数防止模型对训练数据中的噪声过拟合。没有weight decay，深层网络几乎必然过拟合。
+同名 `weight_decay` 在不同优化器中的语义可能不同，直接复用数值会混淆正则化强度与算法变化。AdamW 的论文给出了特定图像分类设置中的实验结果，不能据此承诺所有任务固定提升 0.5–2%，或声称所有主流模型采用同一配置。参见 [Decoupled Weight Decay Regularization](https://arxiv.org/abs/1711.05101)。
 
-2. **AdamW是现代训练的标准配置**。HuggingFace Transformers、LLaMA、GPT系列等主流模型全部使用AdamW而非Adam。从Adam切换到AdamW通常能获得0.5-2%的效果提升而不需要额外调参。
-
-3. **不同模型对weight decay的敏感度差异极大**。ResNet类CNN对weight decay相当鲁棒（0.0001~0.1都能工作），但Transformer类模型对weight decay极为敏感——设太大可能使模型完全不收敛，设太小则过拟合。这背后的原因可能在于Transformer的LayerNorm与weight decay存在交互。
-
-4. **与小数据微调的关系**。微调预训练模型时，weight decay过大会损伤预训练学到的知识，过小又不足以防止过拟合——这个平衡点的选择直接影响微调效果（参见[[../optimizer-lr#小数据微调：dropout和weight decay不宜过大]]）。
+仅看一个 weight decay 数值还不够：在忽略梯度的直观分析中，累计缩放因子为 $\prod_t(1-\eta_t\lambda)$。因此学习率调度、更新步数、batch 和训练时长都会改变累计作用。增大 batch 后更新步数减少，即使 epoch 和 decay 数值不变，也不等于相同的累计衰减。
 
 ## 如何使用
 
-### 不同场景的weight decay推荐值
+### 定义一个可以解释的 A/B 对照
 
-| 场景 | 推荐WD | 说明 |
-|------|--------|------|
-| CV ResNet + SGD | 0.0001 ~ 0.005 | 不敏感，0.0001是起点 |
-| CV + AdamW | 0.01 ~ 0.1 | AdamW通常用比SGD更大的WD |
-| Transformer LLM预训练 | 0.1（DeepSeek） | 大模型固定超参，0.1很常见 |
-| Transformer微调 | 0.01 ~ 0.1 | 从0.01开始试，不稳定则降低 |
-| LoRA微调 | 0.01 | 通常不调rank或alpha后再动 |
-| NLP AdamW | 0.01 | HuggingFace默认值 |
-| 大模型SFT | 0.25 -> 下探 | 从较大值（0.25）向小调 |
-| DPO训练 | 0.01 ~ 0.1 | 与beta配合调整 |
-| 小数据微调 | 0.001 ~ 0.01 | 保守开始，防止损伤预训练能力 |
+1. 固定优化器、学习率调度、训练样本、更新预算与参数分组。
+2. 只改变 `optimizer.weight_decay`，例如 A=0、B=0.01。这个例子是探索性候选值，不是跨任务推荐值。
+3. 使用相同种子配对，记录训练/验证损失、主任务指标、参数范数及实际学习率。
+4. 按验证集选择 checkpoint，最终在固定测试集比较。若继续试多个 decay 数值，应报告搜索预算并保留独立测试集。
+5. Adam 和 AdamW 的比较应另设优化器策略实验，避免把算法切换与 decay 数值修改混为一谈。
 
-### 基本调参方法
+出现 loss 上升时，先排查标签、数据预处理、数值问题及学习率；不能仅凭曲线断言 decay 太大。小数据是否需要更强正则化取决于预训练、任务偏移和参数子空间，没有单调通用规律。
 
-1. **初始化先固定**：所有模型从 `weight_decay=0.01` 开始
-2. **判断稳定性**：观察loss曲线是否发散——如果训练早期loss不降反升，WD太高了
-3. **粗调方向**：
-   - 数据量小 → 增大WD（更多正则化）
-   - 数据量大 → 减小WD
-   - 模型容量大 → 减小WD
-   - 模型容量小 → 增大WD
-4. **与其他超参数的协调**：
-   - LR越大本身就有正则化效果，此时WD可设小
-   - Dropout大时WD可设小
-   - 小数据微调时WD和dropout都宜小（参见[[../optimizer-lr#小数据微调：dropout和weight decay不宜过大]]）
+### 参数分组必须明确
 
-### 是否对所有参数施加Weight Decay
-
-实践中通常不对bias和LayerNorm/BatchNorm参数施加weight decay。PyTorch中需要手动将参数分组：
+以下示例声明一个可复查的规则：对可训练且维度大于 1 的参数衰减；其余参数不衰减。这是**维度规则**，并不等于对每种架构都完美识别 normalization/bias。特殊归一化参数、向量参数和共享权重需按模型结构核对。
 
 ```python
-optimizer = AdamW([
-    {'params': model.parameters_without_ln_and_bias()},
-    {'params': model.ln_and_bias_params(), 'weight_decay': 0.0}
-], lr=1e-4, weight_decay=0.01)
+import torch
+
+decay, no_decay = [], []
+for name, parameter in model.named_parameters():
+    if not parameter.requires_grad:
+        continue
+    target = decay if parameter.ndim > 1 else no_decay
+    target.append(parameter)
+
+optimizer = torch.optim.AdamW(
+    [
+        {"params": decay, "weight_decay": 0.01},
+        {"params": no_decay, "weight_decay": 0.0},
+    ],
+    lr=1e-4,
+)
 ```
 
-这种做法在LLaMA、GPT等主流模型中广泛采用，原因是bias和normalization参数的数值范围本就不大，正则化它们没有意义。
+实验日志应保存每组参数名、数量与 decay，而不只保存优化器顶层默认值。LoRA 中衰减的是适配器矩阵；其缩放、分解与合并后的等效权重不同，不能直接当成全量微调同一强度的正则化。
 
 ## 常见误区
 
-1. **Adam + L2正则化 = AdamW**。这是最常见的误解。AdamW的作者明确证明了Adam的L2实现不等于解耦的权重衰减，并在几乎所有实验中发现AdamW优于Adam+L2。详见AdamW原论文《Decoupled Weight Decay Regularization》。
-
-2. **Weight Decay越大泛化越好**。WD过大会限制模型容量，导致欠拟合。尤其对于Transformer，WD过大会破坏训练稳定性——模型参数被过度约束在零附近，LayerNorm的偏移量无法有效学习。
-
-3. **Weight Decay只关于过拟合**。对Transformer而言，WD更多影响训练稳定性。大batch训练时WD过大可以直接让loss不下降。这种情况下需要先将WD降到0.001甚至0.0001。
-
-4. **不同框架的weight decay等价**。PyTorch的 `weight_decay` 参数在 `optim.SGD` 中实现的是"真实的权重衰减"（解耦的），而在旧的 `optim.Adam` 中实现的是L2正则化（耦合的）。`optim.AdamW` 使用了解耦实现。用TensorFlow/Keras时也需注意框架文档中的实现语义。
-
-5. **微调时weight decay与预训练一致即可**。预训练使用大WD（0.1）是因为有大量数据、长训练周期。微调通常数据更少，直接用0.1可能过度正则化。建议从0.01开始。
-
-## 相关技巧
-
-- 来自[[../optimizer-lr/optimizer-lr]]的核心技巧摘要：
-  - AdamW替代Adam，权重衰减更合理（[[../optimizer-lr#AdamW替代Adam权重衰减更合理]]）
-  - Weight Decay默认值及调参（[[../optimizer-lr#Weight Decay默认值及调参]]）
-  - ResNet对WD不敏感，Transformer很敏感（[[../optimizer-lr#Weight Decay默认值及调参]]）
-  - 权重衰减与数据集规模的关系（[[../optimizer-lr#权重衰减与数据集规模的关系]]）
-  - 小数据微调：dropout和weight decay不宜过大（[[../optimizer-lr#小数据微调：dropout和weight decay不宜过大]]）
-  - 大模型SFT初始LR与weight decay（[[../optimizer-lr#大模型SFT初始LR与weight decay]]）
-  - LR太大时的泛化正则化效应（[[../optimizer-lr#LR太大时的泛化正则化效应]]）
-- 跨类别链接：[[../regularization/weight-decay]] 从正则化角度讨论权重衰减
-- [[../../contradictory]]：大WD vs 小WD哪个更好 的矛盾——这完全取决于数据规模和模型类型，不存在普适最优值
+- **“Adam + L2 = AdamW”**：通常不等价，区别是衰减是否进入动量和二阶矩。
+- **“PyTorch SGD 总是解耦 weight decay”**：其公开算法是梯度加项；只有明确条件下才与独立缩放等价。
+- **“bias/norm 不衰减因为正则化没有意义”**：是否排除是需要说明和验证的设计选择，不能用参数值小就推导出必然无效。
+- **“所有模型从同一个 decay 开始就正确”**：数值只可作为预注册候选，需同时报告学习率、步数和参数组。
+- **“训练损失更低证明泛化更好”**：比较独立验证/测试指标及种子差异，保留负结果。
 
 ## 参见
 
-- [[../optimizer-lr/optimizer-lr]] 主页面
-- [[adam]] Adam/AdamW优化器实现细节
-- [[sgd-momentum]] SGD中weight decay的经典设置
-- [[learning-rate-scheduling]] 调度策略与weight decay的协同
+- [[optimizer-lr]]：来源技巧与作者经验。
+- [[adam]]：Adam / AdamW 与动量估计。
+- [[sgd-momentum]]：SGD 与 momentum 的交互。
+- [[learning-rate-scheduling]]：学习率调度。
+- [[../../contradictory]]：不同任务条件下的相反经验。
+
+本文为编辑校订，原作者引文保留在主页面；示例数值不构成已验证的实验结论。

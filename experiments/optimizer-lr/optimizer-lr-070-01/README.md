@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-070-01/experiment.py --run --enviro
 - **适用场景**: 大模型微调chat template一致性
 - **原文**: 大模型微调还有一个常见坑：chat template不一致。训练用一种模板，推理用另一种模板，效果会非常难看。
 - **要点**: 虽然说的是template，但原理一致：训练推流程一致的LR才能复用
-- **参见**: [[../llm-sft/llm-sft]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

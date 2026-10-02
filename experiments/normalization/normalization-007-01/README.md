@@ -37,7 +37,7 @@ python experiments/normalization/normalization-007-01/experiment.py --run --envi
 - **适用场景**: 模型调优
 - **原文**: > 为网络增加各种norm：batchnorm、weightnorm、layernorm、groupnorm等等，不一定有用，但也是可能的优化方向，最重要的——代码改动不大。
 - **要点**: 尝试不同类型的归一化几乎不增加代码复杂度，值得作为调优候选方案。
-- **参见**: [[normalization-cheatsheet]], [[../optimizer-lr/optimizer-lr]], [[../debugging/debugging]]
+- **参见**: [normalization-cheatsheet](../../../wiki/normalization/normalization-cheatsheet.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../debugging/debugging](../../../wiki/debugging/debugging.md)
 
 ## 解释边界
 

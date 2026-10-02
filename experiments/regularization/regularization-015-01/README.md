@@ -37,7 +37,7 @@ python experiments/regularization/regularization-015-01/experiment.py --run --en
 - **适用场景**: RNN、Transformer、大模型微调，梯度爆炸
 - **原文**: "梯度裁剪建议默认加，尤其是RNN、Transformer、大模型微调，clip norm 1.0是常见起点。" ——BugBuster喵
 - **要点**: 梯度裁剪可以防止梯度爆炸导致的NaN，间接帮助训练稳定从而改善泛化。但剪裁过大可能损伤性能——正常收敛的模型加clip反而可能下降。DeepSeek实验建议clip norm阈值取1.0。
-- **参见**: [[gradient-clipping]]
+- **参见**: `[[gradient-clipping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

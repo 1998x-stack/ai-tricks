@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-003-01/experiment.py --run --environment remote
 - **适用场景**: reward设计
 - **原文**: "对于有明显规则可以作为critic的问题，比如数学或者逻辑问题，RL是有效果的，但是如果没有明显规则，需要用大模型或者other模型打分的问题，可能RL就没有那么大的效果了。"
 - **要点**: 数学/逻辑等有明确规则的场景RL效果好；主观评价场景（如"C罗比梅西伟大吗"）效果有限。
-- **参见**: [[reward-hacking]]
+- **参见**: [reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

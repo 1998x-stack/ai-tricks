@@ -49,7 +49,7 @@ def GroupNorm(x, gamma, beta, G, eps=1e-5):
     return x * gamma + beta
 ```
 - **要点**: GN 将 (N, H, W) 和组内通道合并统计，核心操作是 reshape 后在组内维度上计算 moments。
-- **参见**: [[../cnn-cv/cnn-cv]]
+- **参见**: [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

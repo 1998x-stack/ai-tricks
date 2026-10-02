@@ -37,7 +37,7 @@ python experiments/initialization/initialization-001-01/experiment.py --run --en
 - **适用场景**: 线性层、卷积层、tanh/sigmoid 激活函数
 - **原文**: "初始化方法，linear / cnn一般选用kaiming uniform 或者normalize" / "无脑用xavier" / "一次惨痛的教训是用初始化cnn的参数，最后acc只能到70%多，仅仅改成xavier，acc可以到98%"
 - **要点**: Xavier 初始化适用于 tanh 和 sigmoid 激活函数，是卷积层和线性层的首选默认初始化方法。PyTorch 已内置 Xavier/Kaiming 初始化，不需要手动实现。
-- **参见**: [[../activation/activation]]
+- **参见**: [../activation/activation](../../../wiki/activation/activation.md)
 
 ## 解释边界
 

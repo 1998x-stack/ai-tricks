@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-005-01/experiment.py --run --enviro
 - **适用场景**: Transformer/LoRA微调，大规模训练
 - **原文**: 初始构建时选 Adam 优化器（也可以AdamW）
 - **要点**: AdamW修正了Adam的权重衰减实现，尤其适合Transformer类模型和LoRA微调
-- **参见**: [[adam]], [[weight-decay]], [[../llm-sft/lora]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [weight-decay](../../../wiki/optimizer-lr/weight-decay.md), [../llm-sft/lora](../../../wiki/llm-sft/lora.md)
 
 ## 解释边界
 

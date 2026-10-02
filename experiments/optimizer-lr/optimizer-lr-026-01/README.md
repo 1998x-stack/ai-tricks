@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-026-01/experiment.py --run --enviro
 - **适用场景**: loss设计不合理时，初始容易爆的场景
 - **原文**: 先上一个小LR保证不爆，等loss降下来了，再慢慢升LR，之后当然还会慢慢再降LR
 - **要点**: 先小LR保证稳定 -> 再升LR加速 -> 最后再降LR收敛
-- **参见**: [[learning-rate-scheduling]], [[lr-range-test]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-017-01/experiment.py --run --enviro
 - **适用场景**: Ensemble集成、跳出局部最优
 - **原文**: 每隔一段时间重启学习率，这样在单位时间内能收敛到多个局部最小值，可以得到很多个模型做集成。
 - **要点**: 周期性LR重启可收集多个局部最优解用于模型集成
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]], [[../regularization/dropout]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [../regularization/dropout](../../../wiki/regularization/dropout.md)
 
 ## 解释边界
 

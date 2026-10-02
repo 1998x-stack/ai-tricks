@@ -37,7 +37,7 @@ python experiments/infra/infra-008-01/experiment.py --run --environment remote.j
 - **适用场景**: 序列任务训练加速，减少 padding 浪费
 - **原文**: "分桶策略可以根据输入序列的长度将数据分成不同的桶，从而在训练过程中更高效地利用计算资源。这种方法可以减少 padding 的数量，提高训练效率。"
 - **要点**: 按序列长度将数据分到不同桶（如 [10, 20, 30, 40, 50]），每个桶内 padding 到该桶最大长度；减少无效 padding 计算，大幅提升 Transformer/RNN 训练效率；TensorFlow 通过 `bucket_by_sequence_length` 实现，PyTorch 需自定义 collate_fn。
-- **参见**: [[../batch-size/batch-size]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

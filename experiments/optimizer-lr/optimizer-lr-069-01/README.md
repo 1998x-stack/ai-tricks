@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-069-01/experiment.py --run --enviro
 - **适用场景**: 使用带backbone的预训练模型
 - **原文**: 使用了带backbone的网络，如训练VGG16-SSD建议选择finetune的方式，从头训练不仅费时费力，甚至难以收敛。
 - **要点**: 微调预训练模型需用更低的LR（通常1e-4及以下）
-- **参见**: [[../llm-sft/llm-sft]] | [[lr-range-test]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md) | [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

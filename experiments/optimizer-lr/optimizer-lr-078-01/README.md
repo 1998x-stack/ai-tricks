@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-078-01/experiment.py --run --enviro
 - **适用场景**: 推荐系统老汤模型热启动
 - **原文**: 对于推荐系统的老汤模型，建议热启动，但是热启动大概率也是追平
 - **要点**: 老模型热启动需embedding+DNN全量加载，仅对倒数第一层做扰动
-- **参见**: [[learning-rate-scheduling]] | [[../recsys/recsys]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md) | [../recsys/recsys](../../../wiki/recsys/recsys.md)
 
 ## 解释边界
 

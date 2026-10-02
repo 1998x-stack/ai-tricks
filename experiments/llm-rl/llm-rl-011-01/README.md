@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-011-01/experiment.py --run --environment remote
 - **适用场景**: reward增长缓慢
 - **原文**: "KL散度很低，奖励几乎不增长或者增长缓慢，KL惩罚太过了，模型被过度束缚，调低系数，同时可以检查下学习率，如果学习率非常低，模型更新步子太小，可能也会导致reward增长缓慢。"
 - **要点**: KL惩罚过强会束缚模型；同时检查LR是否过低。
-- **参见**: [[kl-divergence-rlhf]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [kl-divergence-rlhf](../../../wiki/llm-rl/kl-divergence-rlhf.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

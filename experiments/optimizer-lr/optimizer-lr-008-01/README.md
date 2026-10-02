@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-008-01/experiment.py --run --enviro
 - **适用场景**: CV分类/检测模型
 - **原文**: cv类模型在1e-3级别附近，衰减
 - **要点**: CV类模型初始LR在1e-3附近，后续衰减
-- **参见**: [[learning-rate-scheduling]], [[lr-range-test]], [[../cnn-cv/cnn-cv]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

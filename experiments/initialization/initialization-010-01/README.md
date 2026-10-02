@@ -37,7 +37,7 @@ python experiments/initialization/initialization-010-01/experiment.py --run --en
 - **适用场景**: 使用预训练模型微调时
 - **原文**: "使用 pretrained 模型时记得把 load 过程打印出来，保证模型被 load 了"
 - **要点**: 加载预训练权重时务必打印 load 日志，检查参数名称和形状是否匹配。模型未正确加载的情况在静默模式下极难排查。
-- **参见**: [[transfer-learning]]
+- **参见**: `[[transfer-learning]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

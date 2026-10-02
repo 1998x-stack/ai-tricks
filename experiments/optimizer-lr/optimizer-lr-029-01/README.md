@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-029-01/experiment.py --run --enviro
 - **适用场景**: SGD+Momentum的默认动量值
 - **原文**: momentum取0.9
 - **要点**: SGD+Momentum的动量值通常取0.9，可尝试0.8-0.99范围
-- **参见**: [[sgd-momentum]], [[sgd-momentum]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-003-01/experiment.py --run --environment remote
 - **适用场景**: 通用CV任务，追求稳定提点
 - **原文**: "在3x3卷积的基础上加上1x3和3x1的旁路卷积核，最后在推理阶段把三个卷积核都fusion到3x3卷积核上"
 - **要点**: 来自ICCV2019，训练时加旁路分支，推理时融合回3x3，无额外推理成本，约提1个点
-- **参见**: [[3x3-conv-rule]]
+- **参见**: [3x3-conv-rule](../../../wiki/cnn-cv/3x3-conv-rule.md)
 
 ## 解释边界
 

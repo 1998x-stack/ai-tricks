@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-004-01/experiment.py --run --environment remote
 - **适用场景**: 移动端/轻量级网络、速度敏感场景
 - **原文**: "能用可分离卷积替代的卷积一定要替代，一般除了第一个卷积，都能替代"
 - **要点**: 替代后可将通道数乘2（参数和计算量线性增长，仍有速度增益）；深度可分离卷积参数量大幅减少
-- **参见**: [[../infra/gradient-checkpointing]], [[MobileNet]]
+- **参见**: [../infra/gradient-checkpointing](../../../wiki/infra/gradient-checkpointing.md), `[[MobileNet]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

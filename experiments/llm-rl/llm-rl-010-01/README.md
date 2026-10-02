@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-010-01/experiment.py --run --environment remote
 - **适用场景**: KL散度失控
 - **原文**: "Reward持续上升，并且KL散度爆炸式增长，这需要增加KL惩罚项的权重，通常建议从一个较小的值（如0.001）开始，逐步增加。"
 - **要点**: KL爆炸说明模型偏离SFT过远，应增加KL惩罚权重，从小值逐步爬升。
-- **参见**: [[kl-divergence-rlhf]]
+- **参见**: [kl-divergence-rlhf](../../../wiki/llm-rl/kl-divergence-rlhf.md)
 
 ## 解释边界
 

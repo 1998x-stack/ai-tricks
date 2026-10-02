@@ -37,7 +37,7 @@ python experiments/debugging/debugging-013-01/experiment.py --run --environment 
 - **适用场景**: 模型效果不理想时的第一步
 - **原文**: "优先调learning rate! 优先调learning rate! 优先调learning rate!"
 - **要点**: 学习率是影响最大的超参数。先用LR Range Test找到合理范围：从1e-5开始以10倍递增，观察loss曲线，选择发散前的那一档。不要同时调超过两个超参数。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

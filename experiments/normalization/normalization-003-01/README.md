@@ -37,7 +37,7 @@ python experiments/normalization/normalization-003-01/experiment.py --run --envi
 - **适用场景**: CNN 分类/回归
 - **原文**: > Batch Normalization。这是我一直在使用的技巧，可以很大程度的加快收敛速度。建议搭建自己网络的时候尽量加上BN，如果有BN了全连接层就没必要加Dropout了。
 - **要点**: BN 不仅加速训练，本身也提供正则化效果，可替代全连接层上的 Dropout。
-- **参见**: [[batch-normalization]], [[../regularization/regularization]], [[../cnn-cv/cnn-cv]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../regularization/regularization](../../../wiki/regularization/regularization.md), [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

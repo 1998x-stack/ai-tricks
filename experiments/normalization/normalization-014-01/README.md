@@ -37,7 +37,7 @@ python experiments/normalization/normalization-014-01/experiment.py --run --envi
 - **适用场景**: CNN 训练
 - **原文**: > LRN一类的，其实可以不用。不行可以再拿来试试看。
 - **要点**: Local Response Normalization 已被 BN 等更优方法取代，仅作为兜底尝试。
-- **参见**: [[../cnn-cv/cnn-cv]]
+- **参见**: [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

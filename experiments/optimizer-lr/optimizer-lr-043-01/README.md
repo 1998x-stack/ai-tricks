@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-043-01/experiment.py --run --enviro
 - **适用场景**: 快速获取baseline的默认配置
 - **原文**: Learning rate从1e-3开始，用AdamW优化器，batch size 64到256之间，weight decay默认0.01，epoch数不低于30。
 - **要点**: LR=1e-3, AdamW, bs=64~256, wd=0.01, epoch>=30
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

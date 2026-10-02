@@ -37,7 +37,7 @@ python experiments/initialization/initialization-012-01/experiment.py --run --en
 - **适用场景**: 大语言模型（LLM）预训练的参数初始化
 - **原文**: "参数初始化的标准差取0.06"
 - **要点**: DeepSeek LLM 的实验表明，在 1e17~2e19 FLOPS 的计算规模下，大部分超参的最优值固定，其中参数初始化标准差固定为 0.06，不需要随计算量调整。
-- **参见**: [[llm]]
+- **参见**: `[[llm]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

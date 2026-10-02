@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-014-01/experiment.py --run --environment remo
 - **适用场景**: SFT 数据集构成
 - **原文**: "大模型 SFT 里，单轮和多轮数据比例就是超参数。"
 - **要点**: 单轮对话数据与多轮对话数据的混合比例是 SFT 数据层面的重要超参数。比例失衡会导致模型在某种对话模式下表现差。具体最佳比例取决于下游应用场景——纯 QA 场景单轮占比高，对话助手场景多轮占比高。建议作为超参数进行实验搜索。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

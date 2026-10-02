@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-007-01/experiment.py --run --environment remote
 - **适用场景**: 减少计算量
 - **原文**: "在ReLU之前使用最大池化来节省一些计算。由于ReLU阈值的值为0和最大池化只有max激活，使用Conv > MaxPool > ReLU而不是Conv > ReLU > MaxPool"
 - **要点**: 两者的输出等价，但MaxPool > ReLU可节省一个max操作
-- **参见**: [[receptive-field]], [[../activation/activation]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md), [../activation/activation](../../../wiki/activation/activation.md)
 
 ## 解释边界
 

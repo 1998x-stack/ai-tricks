@@ -37,7 +37,7 @@ python experiments/debugging/debugging-012-01/experiment.py --run --environment 
 - **适用场景**: Loss异常但数据/model无问题
 - **原文**: "loss是基本不会出错的地方，但loss也是最容易出错的地方"
 - **要点**: 排查loss函数本身是否有 log(0) 等操作。多任务loss要确保各loss在同一量级。分类用Softmax，回归用L2但要注意输出值的范围 —— 预测10000而模型输出0会导致NaN。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

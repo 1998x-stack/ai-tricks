@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-040-01/experiment.py --run --enviro
 - **适用场景**: 调参顺序
 - **原文**: 新手最容易犯的错，是同时调学习率、batch size、正则化系数，一口气改五六个参数。我的做法是先把学习率锁定在一个合理范围，再动其他参数。
 - **要点**: 调参第一步：锁定LR范围，再动其他参数
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

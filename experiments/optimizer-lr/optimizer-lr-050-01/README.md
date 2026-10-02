@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-050-01/experiment.py --run --enviro
 - **适用场景**: 训练过程监控
 - **原文**: 不要过早的early stopping，有时候收敛平台在后段，你会错过
 - **要点**: 训练初期平台期不代表结束，LR衰减后可能继续收敛
-- **参见**: [[early-stopping]]
+- **参见**: `[[early-stopping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

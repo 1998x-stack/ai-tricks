@@ -37,7 +37,7 @@ python experiments/initialization/initialization-004-01/experiment.py --run --en
 - **适用场景**: 不同网络层类型对应的初始化分布选择
 - **原文**: "给word embedding初始化，最开始使用了TensorFlow中默认的initializer（即glorot_uniform_initializer），训练速度慢不说，结果也不好。改为uniform，训练速度飙升，结果也飙升" / "均匀分布初始化：w = np.random.uniform(low=-scale, high=scale, size=[n_in, n_out])，其中scale通常设置为√3/n"
 - **要点**: 均匀分布简化实现为 $w = \text{Uniform}(-\sqrt{3/n}, \sqrt{3/n})$；高斯分布为 $w = \mathcal{N}(0, 1/\sqrt{n})$。具体选择取决于激活函数和任务性质，Embedding 用 uniform 可能优于 glorot_uniform。
-- **参见**: [[embedding]]
+- **参见**: `[[embedding]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

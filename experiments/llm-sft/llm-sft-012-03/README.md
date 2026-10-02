@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-012-03/experiment.py --run --environment remo
 - **适用场景**: 显存受限时的 QLoRA 微调
 - **原文**: "QLoRA 很省显存，但别以为它没有代价。量化配置、计算精度、梯度 checkpoint、sequence packing 都会影响训练稳定性。bf16 能用就用。长上下文训练要特别注意显存和位置编码适配，不是把 max length 改到 32k 就完事。"
 - **要点**: QLoRA 虽然大幅降低了显存需求，但引入了额外的调参维度：量化配置（4-bit NF4 vs FP4）、计算精度、是否开启梯度 checkpoint、是否使用 sequence packing，这些都会影响训练稳定性和最终效果。优先使用 bf16（硬件支持前提下），长上下文训练时要特别注意位置编码的适配——不是简单改 `max_length` 就能解决。
-- **参见**: [[../infra/infra]]
+- **参见**: [../infra/infra](../../../wiki/infra/infra.md)
 
 ## 解释边界
 

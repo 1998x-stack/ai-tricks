@@ -37,7 +37,7 @@ python experiments/recsys/recsys-001-02/experiment.py --run --environment remote
 - **适用场景**: 推荐系统老汤模型迭代
 - **原文**: > 对于推荐系统的老汤模型，建议热启动，但是热启动大概率也是追平，小概率找到了之前没有找到的关键特征，可以超越，其他操作笔者的实验都是负向，除了热启动，而且就算热启动，如果只启动embedding层也是不行的，必须embedding+DNN全部热启动，然后仅对倒数第一层作扰动，或者类似wide&deep，新加一个结构对最后一层个性化扰动，为啥最后一层，因为，你扰动太多又负向了。
 - **要点**: 只热启 Embedding 层不够，必须 Embedding + DNN 全部热启，且仅对倒数第一层做扰动；对更多层做扰动几乎必定负向。
-- **参见**: [[warm-start]]
+- **参见**: [warm-start](../../../wiki/recsys/warm-start.md)
 
 ## 解释边界
 

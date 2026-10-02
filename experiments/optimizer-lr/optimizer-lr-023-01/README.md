@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-023-01/experiment.py --run --enviro
 - **适用场景**: loss爆炸、NaN、训练不稳定
 - **原文**: 太大：loss爆炸或者nan；太小：半天loss没反映
 - **要点**: LR过高的典型表现：loss震荡/发散/NaN/输出重复无意义内容
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

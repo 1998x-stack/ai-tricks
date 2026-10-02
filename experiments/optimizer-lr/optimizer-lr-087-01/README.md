@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-087-01/experiment.py --run --enviro
 - **适用场景**: 大模型训练loss指标异常的诊断
 - **原文**: 到了中后期，loss小效果不一定好。从小步数的checkpoint进行accuracy或其他业务指标判断。
 - **要点**: 大模型训练后期LR衰减太猛可能导致loss虽低但业务指标差，需checkpoint评估
-- **参见**: [[lr-range-test]] | [[eval-metrics]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | `[[eval-metrics]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

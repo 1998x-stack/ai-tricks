@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-030-01/experiment.py --run --environment 
 - **适用场景**: 文本分类、风控、推荐系统
 - **原文**: "再看数据切分，很多相似模板同时出现在训练和验证里，验证集高估了泛化。" / "按话术模板和时间切分，补了一批线上 hard case"
 - **要点**: 当数据集存在模板结构或重复模式时（如自动生成的模板化文本），按模板ID或时间切分而非随机切分，才能真实评估泛化能力。
-- **参见**: [[cross-validation]], [[../debugging/small-data-overfit-test]]
+- **参见**: [cross-validation](../../../wiki/data-eval/cross-validation.md), [../debugging/small-data-overfit-test](../../../wiki/debugging/small-data-overfit-test.md)
 
 ## 解释边界
 

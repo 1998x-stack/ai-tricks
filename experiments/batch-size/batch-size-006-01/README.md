@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-006-01/experiment.py --run --environmen
 - **适用场景**: CNN、ResNet 类模型调参
 - **原文**: > batch size和学习率存在线性缩放关系——batch size翻倍，学习率通常也可以适当放大。具体倍数关系业界没有定论，但有一个被广泛验证的经验值：batch size从64扩到256时，学习率可以从0.1对应扩到0.4左右。这个比例不是死的，但给你一个锚点。
 - **要点**: batch size 翻倍时学习率可按比例放大，64→256 对应 lr 0.1→0.4 是常用锚点，但非固定公式。
-- **参见**: [[batch-size-lr-scaling]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [batch-size-lr-scaling](../../../wiki/batch-size/batch-size-lr-scaling.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

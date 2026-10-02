@@ -7,12 +7,12 @@
     "line": 22,
     "heading": "He 初始化（ReLU 专用）",
     "author": "炫光 / 京东白条 / 摘星狐狸",
-    "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+    "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
     "raw_exact_lines": [
       507,
       1256
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.weight_init",
   "a": "xavier_normal",

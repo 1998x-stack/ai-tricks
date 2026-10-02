@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-057-01/experiment.py --run --enviro
 - **适用场景**: Transformer系列模型
 - **原文**: Transformer 类模型很多时候 1e-4 到 3e-4 是常见起点，具体看模型大小和batch。warmup我现在几乎默认会开，尤其是Transformer。
 - **要点**: Transformer lr在1e-4~3e-4，warmup默认必开
-- **参见**: [[../nlp/bert-finetuning]] | [[learning-rate-scheduling]]
+- **参见**: [../nlp/bert-finetuning](../../../wiki/nlp/bert-finetuning.md) | [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

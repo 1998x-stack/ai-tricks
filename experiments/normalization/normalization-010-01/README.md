@@ -37,7 +37,7 @@ python experiments/normalization/normalization-010-01/experiment.py --run --envi
 - **适用场景**: 通用训练
 - **原文**: > batchnorm也是大杀器，可以大大加快训练速度和模型性能
 - **要点**: BN 是训练速度和模型性能双重提升的关键组件之一（与 ReLU、Dropout、Adam 并列）。
-- **参见**: [[batch-normalization]], [[../activation/activation]], [[../optimizer-lr/optimizer-lr]], [[../regularization/regularization]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../activation/activation](../../../wiki/activation/activation.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

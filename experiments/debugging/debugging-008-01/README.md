@@ -37,7 +37,7 @@ python experiments/debugging/debugging-008-01/experiment.py --run --environment 
 - **适用场景**: 训练集loss低，验证集loss高
 - **原文**: "在训练集上的误差很小...但是验证集的loss相对较大...那就是过拟合了"
 - **要点**: 训练loss低（如<0.01）但验证loss高（如0.3-0.6）。解决方案优先级：加数据 > 加正则化（dropout, weight decay）> 降低模型容量。最有效的方法永远是多标记数据。
-- **参见**: [[../regularization/regularization]], [[../data-eval/data-eval]]
+- **参见**: [../regularization/regularization](../../../wiki/regularization/regularization.md), [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

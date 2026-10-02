@@ -11,7 +11,7 @@
     "raw_exact_lines": [
       2611
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "training.max_weight_norm",
   "a": 0.0,

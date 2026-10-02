@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-011-01/experiment.py --run --enviro
 - **适用场景**: 精确查找最佳初始学习率
 - **原文**: 先用 学习率搜索 (LR Range Test) 找到最佳初始学习率
 - **要点**: 使用ExponentialLR从极小LR指数增长，观察loss曲线找到最佳LR
-- **参见**: [[lr-range-test]], [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

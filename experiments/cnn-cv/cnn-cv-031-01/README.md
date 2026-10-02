@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-031-01/experiment.py --run --environment remote
 - **适用场景**: Anchor-based检测
 - **原文**: "anchor层不一定要有三层，同一层按照需求可以设定的aspect ratio和size都是可选的……比如blazeface把所有anchor集中在一层"
 - **要点**: 按数据集目标分布灵活设计anchor
-- **参见**: [[fpn-neck-design]]
+- **参见**: [fpn-neck-design](../../../wiki/cnn-cv/fpn-neck-design.md)
 
 ## 解释边界
 

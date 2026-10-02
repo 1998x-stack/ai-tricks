@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-003-01/experiment.py --run --environment 
 - **适用场景**: 分类/检测/生成任务，尤其是数据收集阶段
 - **原文**: "数据的多样性非常重要，再三强调，训练集的数据分布一定要包括测试集的数据分布，这样测试集才会有好的效果。"
 - **要点**: 测试集效果差但训练集还可以时，检查测试集里有没有训练集未覆盖的数据类型。人工针对性添加缺失类型的样本（5-10条起步）。
-- **参见**: [[data-augmentation]]
+- **参见**: [data-augmentation](../../../wiki/data-eval/data-augmentation.md)
 
 ## 解释边界
 

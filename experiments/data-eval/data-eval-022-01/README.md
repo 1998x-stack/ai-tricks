@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-022-01/experiment.py --run --environment 
 - **适用场景**: 大模型SFT数据构建
 - **原文**: "数据集的风格一定要统一，输出的答案风格一定要单一。比如，每次答案都是以json格式的，确保数据都是```json xxx```这种格式。如果sql的答案都是select a,b,c，那么就不要出现select *。保证你数据的统一性，纯洁性是模型不学偏的根本。"
 - **要点**: SFT数据的输出风格必须高度一致，混入多种格式会导致模型输出不稳定。同一任务的数据模板、格式、答案风格应该严格统一。
-- **参见**: [[sft-data]], [[prompt-format]]
+- **参见**: `[[sft-data]]`（原 Wiki 未解析链接）, `[[prompt-format]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

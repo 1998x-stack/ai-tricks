@@ -37,7 +37,7 @@ python experiments/nlp/nlp-010-01/experiment.py --run --environment remote.json
 - **适用场景**: NLP 分类、序列标注、文本生成等任务的数据扩充
 - **原文**: *"在nlp领域可以用大量数据增强方式-比如，同义词替换，随机抛弃词语，句子改写，句子转译等"*
 - **要点**: NLP 数据增强的常用方法包括：同义词替换（SR）、随机词语丢弃（RD）、回译（back-translation）、句子改写。这些方法在数据量不足时能显著提升模型泛化能力。
-- **参见**: [[text-data-augmentation]]
+- **参见**: [text-data-augmentation](../../../wiki/nlp/text-data-augmentation.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-045-01/experiment.py --run --enviro
 - **适用场景**: ReLU神经元"死亡"问题
 - **原文**: LR在可以工作的最大值下往小收一收，免得ReLU把神经元弄死了。
 - **要点**: LR太大会使ReLU神经元永久死亡（dying ReLU），LR应偏保守
-- **参见**: [[lr-range-test]] | [[../activation/activation-selection]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | [../activation/activation-selection](../../../wiki/activation/activation-selection.md)
 
 ## 解释边界
 

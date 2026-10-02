@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-019-01/experiment.py --run --environment remote
 - **适用场景**: 训练初期输出重复/无意义
 - **原文**: "模型训练初期就输出大量重复或者无意义的内容，学习率过高。过大的学习率可能导致模型参数更新过于剧烈，跳出了有效的参数空间，导致mode collapse。这需要降低学习率。对于大模型微调，学习率通常设置得非常小，例如1e-6到1e-5之间。"
 - **要点**: 训练初期输出重复/无意义内容 → LR过高 → 降低LR（大模型微调LR在1e-6到1e-5之间）。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

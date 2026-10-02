@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-019-01/experiment.py --run --environment 
 - **适用场景**: 理解模型学到的表征、检查embedding质量
 - **原文**: "对于embedding可视化的问题最好是先用pca降维，然后采用t-sne进行可视化，但是，对于类别很多的情况，个人建议还是肉眼抽样观察，t-sne只能对于类目不多的情况的embedding进行可视化。"
 - **要点**: PCA用于初始降维（去噪声），t-SNE进一步降维到2D/3D可视化。t-SNE在类别多时效果不佳，此时应人工抽样观察bad case。
-- **参见**: [[visualization]], [[embedding]]
+- **参见**: `[[visualization]]`（原 Wiki 未解析链接）, `[[embedding]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-062-01/experiment.py --run --enviro
 - **适用场景**: 深度网络结构设计
 - **原文**: shortcut connection里，找不到concat，用add凑合吧，反之亦然。
 - **要点**: shortcut/residual connection降低优化难度，使LR调节更鲁棒
-- **参见**: [[../cnn-cv/skip-connections]]
+- **参见**: [../cnn-cv/skip-connections](../../../wiki/cnn-cv/skip-connections.md)
 
 ## 解释边界
 

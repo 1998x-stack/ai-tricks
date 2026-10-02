@@ -37,7 +37,7 @@ python experiments/activation/activation-004-01/experiment.py --run --environmen
 - **适用场景**: 隐层激活函数选型
 - **原文**: "对于中间隐层，则优先选择relu激活函数（relu激活函数可以有效的解决sigmoid和tanh出现的梯度弥散问题，多次实验表明它会比其他激活函数以更快的速度收敛）。另外，构建序列神经网络（RNN）时要优先选用tanh激活函数。"
 - **要点**: ReLU 收敛速度优于 sigmoid/tanh；RNN/序列网络优先用 tanh。
-- **参见**: [[relu]], [[activation-selection]], [[../normalization/normalization]]
+- **参见**: [relu](../../../wiki/activation/relu.md), [activation-selection](../../../wiki/activation/activation-selection.md), [../normalization/normalization](../../../wiki/normalization/normalization.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-073-01/experiment.py --run --enviro
 - **适用场景**: 大模型训练模式崩溃
 - **原文**: 模型训练初期就输出大量重复或者无意义的内容，学习率过高。过大的学习率可能导致模型参数更新过于剧烈，跳出了有效的参数空间，导致mode collapse。
 - **要点**: 训练初期输出重复/无意义内容 -> 立即降低LR
-- **参见**: [[lr-range-test]] | [[../llm-rl/reward-hacking]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | [../llm-rl/reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

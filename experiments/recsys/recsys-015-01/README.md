@@ -37,7 +37,7 @@ python experiments/recsys/recsys-015-01/experiment.py --run --environment remote
 - **适用场景**: 召回模型 Embedding 处理
 - **原文**: > 做召回的同学，不要迷信专家们说的embedding做l2 norm，笔者就踩过这个坑，直接对embedding l2结果效果贼垃圾，查了半天，直接去掉l2，效果正常了。
 - **要点**: 对 Embedding 施加 L2 Normalization 可能严重损害召回效果，不建议盲目添加。如果效果差，先去掉 L2 试试。
-- **参见**: [[../initialization/initialization]], [[negative-sampling]]
+- **参见**: [../initialization/initialization](../../../wiki/initialization/initialization.md), [negative-sampling](../../../wiki/recsys/negative-sampling.md)
 
 ## 解释边界
 

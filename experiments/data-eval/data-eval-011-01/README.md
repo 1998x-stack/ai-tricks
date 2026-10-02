@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-011-01/experiment.py --run --environment 
 - **适用场景**: 多任务学习、多目标优化
 - **原文**: "多任务情况下，各loss想法限制在一个量级上，或者最终限制在一个量级上，初期可以着重一个任务的loss"
 - **要点**: 多任务的不同loss若在量级上差异过大，梯度会被大loss的任务主导。需要将各loss归一化到相近量级。
-- **参见**: [[multi-task-learning]], [[eval-metrics]]
+- **参见**: `[[multi-task-learning]]`（原 Wiki 未解析链接）, [eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

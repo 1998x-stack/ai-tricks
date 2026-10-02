@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-049-01/experiment.py --run --enviro
 - **适用场景**: 对比实验可靠性
 - **原文**: 随机数种子设定好，否则很多对比实验结论不一定准确
 - **要点**: 固定seed确保实验可重复，否则LR调的结论可能是噪声
-- **参见**: [[../data-eval/cross-validation]]
+- **参见**: [../data-eval/cross-validation](../../../wiki/data-eval/cross-validation.md)
 
 ## 解释边界
 

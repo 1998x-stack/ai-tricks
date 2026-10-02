@@ -37,7 +37,7 @@ python experiments/nlp/nlp-007-01/experiment.py --run --environment remote.json
 - **适用场景**: 序列特征聚合为定长向量（分类、匹配）
 - **原文**: *"reduce function 一般attention 优于简单pooling"*
 - **要点**: 将序列 token 表示聚合成一个向量时，self-attention 或 cross-attention 加权求和的效果优于 mean pooling 或 max pooling；在多任务场景下需要为不同任务构建独立的 QKV。
-- **参见**: [[../recsys/multi-task-recsys]], [[../recsys/multi-task-recsys]]
+- **参见**: [../recsys/multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md), [../recsys/multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

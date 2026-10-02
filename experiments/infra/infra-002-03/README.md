@@ -37,7 +37,7 @@ python experiments/infra/infra-002-03/experiment.py --run --environment remote.j
 - **适用场景**: 多卡多机大规模训练加速
 - **原文**: "分布式训练可以将训练任务分布到多个计算设备上，从而加速训练过程。通过使用数据并行或模型并行的方式，可以有效提高训练效率。"
 - **要点**: 使用 `torch.distributed.init_process_group(backend, rank, world_size)` 初始化；数据并行（DataParallel/DDP）适合单机多卡，模型并行（Model Parallel）适合超大模型；大模型场景下 DeepSpeed、Megatron-LM 是主流方案。
-- **参见**: [[../batch-size/batch-size]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

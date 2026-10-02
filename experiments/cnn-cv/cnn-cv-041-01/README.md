@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-041-01/experiment.py --run --environment remote
 - **适用场景**: 关键点检测、人脸对齐、姿态估计
 - **原文**: "尽可能使用全卷积网络来做landmark，不要直接用fc回归，回归真的不太稳定"
 - **要点**: CNN数学上是平移不变的，位置信息通过padding泄露；FC直接回归landmark相当于用padding拟合位置信息，不稳定
-- **参见**: [[fpn-neck-design]], [[fpn-neck-design]]
+- **参见**: [fpn-neck-design](../../../wiki/cnn-cv/fpn-neck-design.md), [fpn-neck-design](../../../wiki/cnn-cv/fpn-neck-design.md)
 
 ## 解释边界
 

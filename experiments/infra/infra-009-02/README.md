@@ -37,7 +37,7 @@ python experiments/infra/infra-009-02/experiment.py --run --environment remote.j
 - **适用场景**: DataLoader 性能调优
 - **原文**: "当使用 torch.utils.data.DataLoader 时，设置 num_workers > 0，而不是默认值0，同时设置 pin_memory=True，而不是默认值False"
 - **要点**: `num_workers > 0` 通过多进程数据加载避免 GPU 空闲等待；`pin_memory=True` 锁页内存加速 CPU→GPU 传输；两者结合可显著提升数据吞吐。
-- **参见**: [[../batch-size/batch-size]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

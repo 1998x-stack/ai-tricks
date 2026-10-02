@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-022-01/experiment.py --run --environment remote
 - **适用场景**: Critic网络训练
 - **原文**: "Critic的Value Loss波动剧烈，难以收敛，这是因为reward方差过大，导致Critic难以准确估计长期价值，这时候需要对reward或者advantage进行归一化"
 - **要点**: Critic Value Loss波动 → reward方差大 → 对reward或advantage做归一化。
-- **参见**: [[reward-normalization]], [[advantage-normalization]]
+- **参见**: `[[reward-normalization]]`（原 Wiki 未解析链接）, `[[advantage-normalization]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

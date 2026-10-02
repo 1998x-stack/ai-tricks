@@ -37,7 +37,7 @@ python experiments/activation/activation-006-02/experiment.py --run --environmen
 - **适用场景**: 当 ReLU 出现神经元死亡（dying ReLU）问题时
 - **原文**: "对于激活函数，relu也在大多数情况下表现不错，当然也可以试试leakyrelu和prelu，prelu貌似效果还不错" / "如果还想再提升精度可以将ReLU改成PReLU试试" / "为了解决 ReLU 激活函数中的梯度消失问题，也可以更换成Leaky ReLU激活函数等其他变体"
 - **要点**: ReLU 的负半轴恒为 0 可能导致神经元永久失活。LeakyReLU 引入小斜率、PReLU 引入可学习斜率，是 dying ReLU 的标准解法。
-- **参见**: [[leaky-relu-prelu]], [[../regularization/regularization]]
+- **参见**: [leaky-relu-prelu](../../../wiki/activation/leaky-relu-prelu.md), [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

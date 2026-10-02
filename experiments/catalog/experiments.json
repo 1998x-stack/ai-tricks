@@ -13,7 +13,7 @@
         2717,
         2802
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "sigmoid",
@@ -66,7 +66,7 @@
         190,
         2717
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.output_activation",
     "a": "relu",
@@ -118,7 +118,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.output_contract",
     "a": "softmax_before_cross_entropy",
@@ -170,7 +170,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.output_contract",
     "a": "relu_regression",
@@ -222,7 +222,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.output_contract",
     "a": "sigmoid_before_bce_logits",
@@ -274,7 +274,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.rnn_activation",
     "a": "relu",
@@ -326,7 +326,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "sigmoid",
@@ -378,7 +378,7 @@
       "raw_exact_lines": [
         1850
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "sigmoid",
@@ -431,7 +431,7 @@
         91,
         3022
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -484,7 +484,7 @@
         91,
         3022
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -537,7 +537,7 @@
         718,
         721
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy",
@@ -590,7 +590,7 @@
         718,
         721
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy",
@@ -642,7 +642,7 @@
       "raw_exact_lines": [
         208
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.retrieval",
     "a": "pointwise_bce",
@@ -694,7 +694,7 @@
       "raw_exact_lines": [
         407
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.1,
@@ -747,7 +747,7 @@
         2684,
         2689
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.pool_relu_order",
     "a": "relu_pool",
@@ -799,7 +799,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "identity",
@@ -851,7 +851,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "identity",
@@ -903,7 +903,7 @@
       "raw_exact_lines": [
         1848
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -957,7 +957,7 @@
         1303,
         1329
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "xavier_normal",
@@ -1013,7 +1013,7 @@
         1303,
         1329
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "kaiming_normal",
@@ -1117,7 +1117,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -1215,11 +1215,11 @@
       "line": 15,
       "heading": "batch size 在表示学习/对比学习领域越大越好",
       "author": "爱睡觉的KKY",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         52
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.contrastive_batch",
     "a": 32,
@@ -1267,11 +1267,11 @@
       "line": 15,
       "heading": "batch size 在表示学习/对比学习领域越大越好",
       "author": "爱睡觉的KKY",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         52
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.contrastive_negative_pool",
     "a": "microbatch",
@@ -1319,11 +1319,11 @@
       "line": 22,
       "heading": "batch size 并非越大越好——小批次有时有奇效",
       "author": "炫光",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         81
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 256,
@@ -1371,11 +1371,11 @@
       "line": 28,
       "heading": "PPO / RLHF 阶段 batch size 宁大勿小",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         140
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.rollout_batch",
     "a": 32,
@@ -1423,11 +1423,11 @@
       "line": 35,
       "heading": "GRPO 训练 batch size 越大效果越稳定",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         151
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.prompt_batch",
     "a": 8,
@@ -1475,11 +1475,11 @@
       "line": 41,
       "heading": "推荐系统 batch size 最佳范围 32-512",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -1527,11 +1527,11 @@
       "line": 48,
       "heading": "batch size 与学习率的线性缩放关系",
       "author": "四点半的理一",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1081
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.1,
@@ -1581,11 +1581,11 @@
       "line": 48,
       "heading": "batch size 与学习率的线性缩放关系",
       "author": "四点半的理一",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1081
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.1,
@@ -1635,11 +1635,11 @@
       "line": 55,
       "heading": "大 batch 训练快但泛化不一定更好，需记录 effective batch size",
       "author": "BugBuster喵",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1488
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.batch_metadata",
     "a": "nominal_only",
@@ -1687,12 +1687,12 @@
       "line": 62,
       "heading": "批量大小受硬件内存限制，多 GPU 总批量为单卡批量乘以 GPU 数",
       "author": "阿里云云栖号",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1733,
         1735
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.world_size",
     "a": 1,
@@ -1740,11 +1740,11 @@
       "line": 68,
       "heading": "小批量：梯度噪声正则化 vs 大批量：训练加速",
       "author": "白小鱼",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         3033
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -1792,11 +1792,11 @@
       "line": 74,
       "heading": "小批次显存小但梯度不稳定，大批次显存大但易陷入局部最优",
       "author": "苏辄",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1824
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 16,
@@ -1844,11 +1844,11 @@
       "line": 80,
       "heading": "DeepSeek LLM 批大小与学习率的 Scaling Law",
       "author": "Sam聊算法",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2904
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.scaling_policy",
     "a": "fixed",
@@ -1896,11 +1896,11 @@
       "line": 87,
       "heading": "梯度累积代码实现",
       "author": "（代码段）",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2462
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.accumulation_steps",
     "a": 1,
@@ -1948,11 +1948,11 @@
       "line": 87,
       "heading": "梯度累积代码实现",
       "author": "（代码段）",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2462
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.accumulation_normalization",
     "a": "unscaled",
@@ -2000,11 +2000,11 @@
       "line": 87,
       "heading": "梯度累积代码实现",
       "author": "（代码段）",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2462
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.tail_accumulation",
     "a": "drop",
@@ -2052,11 +2052,11 @@
       "line": 94,
       "heading": "mini batch size 数十到数百皆可，SGD 默认设定",
       "author": "匿名用户",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2882
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -2104,11 +2104,11 @@
       "line": 100,
       "heading": "开源默认 batch 不一定适合你的数据",
       "author": "BugBuster喵",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1575
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 256,
@@ -2156,7 +2156,7 @@
       "line": 106,
       "heading": "调参应先锁定学习率，再调 batch size",
       "author": "四点半的理一",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2206,11 +2206,11 @@
       "line": 113,
       "heading": "batch size 在不同任务中影响不同",
       "author": "BBuf",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         288
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -2258,11 +2258,11 @@
       "line": 119,
       "heading": "分桶策略（Bucketing）减少 padding 提高训练效率",
       "author": "（代码段）",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2444
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.batch_order",
     "a": "random",
@@ -2310,7 +2310,7 @@
       "line": 125,
       "heading": "推荐系统热启动时 batch size 需注意",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2360,11 +2360,11 @@
       "line": 131,
       "heading": "PPO 学习率通常比 SFT 小一个数量级",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         137
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 2e-05,
@@ -2572,7 +2572,7 @@
       "raw_exact_lines": [
         696
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.conv_block",
     "a": "standard",
@@ -2624,7 +2624,7 @@
       "raw_exact_lines": [
         678
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.conv_block",
     "a": "one_5x5",
@@ -2676,7 +2676,7 @@
       "raw_exact_lines": [
         441
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.first_filter",
     "a": "learned",
@@ -2778,7 +2778,7 @@
       "raw_exact_lines": [
         299
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.feature_extraction",
     "a": "online",
@@ -3130,7 +3130,7 @@
       "raw_exact_lines": [
         707
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.anchors",
     "a": "default",
@@ -3232,7 +3232,7 @@
       "raw_exact_lines": [
         666
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.last_dilation",
     "a": 1,
@@ -3434,7 +3434,7 @@
       "raw_exact_lines": [
         668
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.downsample_kernel",
     "a": 3,
@@ -3486,7 +3486,7 @@
       "raw_exact_lines": [
         690
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.last_stage",
     "a": "stride2",
@@ -3588,7 +3588,7 @@
       "raw_exact_lines": [
         2725
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.downsample_channels",
     "a": "constant",
@@ -3690,7 +3690,7 @@
       "raw_exact_lines": [
         686
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.residual",
     "a": false,
@@ -3742,7 +3742,7 @@
       "raw_exact_lines": [
         291
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.conv_block",
     "a": "plain",
@@ -3794,7 +3794,7 @@
       "raw_exact_lines": [
         291
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.conv_block",
     "a": "plain",
@@ -3896,7 +3896,7 @@
       "raw_exact_lines": [
         296
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.proposal_limit",
     "a": 100,
@@ -3948,7 +3948,7 @@
       "raw_exact_lines": [
         296
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.box_head",
     "a": "deterministic",
@@ -4000,7 +4000,7 @@
       "raw_exact_lines": [
         707
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.anchors",
     "a": "default",
@@ -4052,7 +4052,7 @@
       "raw_exact_lines": [
         431
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.image_sizes",
     "a": [
@@ -4110,7 +4110,7 @@
       "raw_exact_lines": [
         2633
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.context_pool",
     "a": "global",
@@ -4262,7 +4262,7 @@
       "raw_exact_lines": [
         432
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.first_channels",
     "a": 8,
@@ -4314,7 +4314,7 @@
       "raw_exact_lines": [
         696
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.depthwise_width_multiplier",
     "a": 1,
@@ -4416,7 +4416,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "mse_on_class_ids",
@@ -4468,7 +4468,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.output_contract",
     "a": "relu_regression",
@@ -4520,7 +4520,7 @@
       "raw_exact_lines": [
         718
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy",
@@ -4572,7 +4572,7 @@
       "raw_exact_lines": [
         722
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy",
@@ -4624,7 +4624,7 @@
       "raw_exact_lines": [
         726
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.landmark_head",
     "a": "coordinate_fc",
@@ -4676,7 +4676,7 @@
       "raw_exact_lines": [
         728
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.brightness_jitter",
     "a": 0.0,
@@ -4778,7 +4778,7 @@
       "raw_exact_lines": [
         712
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -4830,7 +4830,7 @@
       "raw_exact_lines": [
         714
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.detector",
     "a": "one_stage",
@@ -4882,7 +4882,7 @@
       "raw_exact_lines": [
         716
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.pretrain_task",
     "a": "classification",
@@ -4934,7 +4934,7 @@
       "raw_exact_lines": [
         294
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.initialization",
     "a": "random",
@@ -4986,7 +4986,7 @@
       "raw_exact_lines": [
         782
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.load_check",
     "a": "unchecked",
@@ -5038,7 +5038,7 @@
       "raw_exact_lines": [
         2578
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.proxy_depth",
     "a": "full",
@@ -5090,7 +5090,7 @@
       "raw_exact_lines": [
         2656
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -5142,7 +5142,7 @@
       "raw_exact_lines": [
         2584
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.dropout",
     "a": 0.0,
@@ -5294,7 +5294,7 @@
       "raw_exact_lines": [
         1042
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.shape_policy",
     "a": "wide_shallow",
@@ -5346,7 +5346,7 @@
       "raw_exact_lines": [
         662
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.channel_schedule",
     "a": "constant",
@@ -5448,7 +5448,7 @@
       "raw_exact_lines": [
         50
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "regularization_first",
@@ -5500,7 +5500,7 @@
       "raw_exact_lines": [
         387
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_accuracy",
@@ -5602,7 +5602,7 @@
       "raw_exact_lines": [
         646
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "default",
@@ -5704,7 +5704,7 @@
       "raw_exact_lines": [
         383
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.task_weighting",
     "a": "unscaled",
@@ -5806,7 +5806,7 @@
       "raw_exact_lines": [
         688
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.compression_policy",
     "a": "small_from_scratch",
@@ -5858,7 +5858,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -5960,7 +5960,7 @@
       "raw_exact_lines": [
         2620
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.center_grayscale",
     "a": true,
@@ -6012,7 +6012,7 @@
       "raw_exact_lines": [
         730
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy",
@@ -6064,7 +6064,7 @@
       "raw_exact_lines": [
         724
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "evaluation.protocol",
     "a": "accuracy_only",
@@ -6117,7 +6117,7 @@
         50,
         369
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "full_data_first",
@@ -6169,7 +6169,7 @@
       "raw_exact_lines": [
         1585
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.label_filter",
     "a": "none",
@@ -6221,7 +6221,7 @@
       "raw_exact_lines": [
         118
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.domain_sampling",
     "a": "source_only",
@@ -6274,7 +6274,7 @@
         59,
         1454
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.split_policy",
     "a": "random",
@@ -6327,7 +6327,7 @@
         999,
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.split_policy",
     "a": "random",
@@ -6380,7 +6380,7 @@
         999,
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.split_policy",
     "a": "random",
@@ -6432,7 +6432,7 @@
       "raw_exact_lines": [
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.holdout_policy",
     "a": "reuse_test",
@@ -6485,7 +6485,7 @@
         117,
         387
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_accuracy",
@@ -6539,7 +6539,7 @@
         724,
         1579
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_loss",
@@ -6641,7 +6641,7 @@
       "raw_exact_lines": [
         411
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.diagnostics",
     "a": "train_only",
@@ -6693,7 +6693,7 @@
       "raw_exact_lines": [
         383
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.task_weighting",
     "a": "unscaled",
@@ -6745,7 +6745,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.target_normalization",
     "a": false,
@@ -6797,7 +6797,7 @@
       "raw_exact_lines": [
         422
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.standardize",
     "a": false,
@@ -6849,7 +6849,7 @@
       "raw_exact_lines": [
         422
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.shuffle",
     "a": false,
@@ -6902,7 +6902,7 @@
         1035,
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -6955,7 +6955,7 @@
         1035,
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -7008,7 +7008,7 @@
         1035,
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -7061,7 +7061,7 @@
         1035,
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -7115,7 +7115,7 @@
         722,
         2643
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy",
@@ -7169,7 +7169,7 @@
         722,
         2643
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.class_weights",
     "a": "none",
@@ -7222,7 +7222,7 @@
         197,
         198
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.negative_source",
     "a": "global_random",
@@ -7274,7 +7274,7 @@
       "raw_exact_lines": [
         1505
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.class_sampling",
     "a": "natural",
@@ -7326,7 +7326,7 @@
       "raw_exact_lines": [
         1505
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation_strength",
     "a": 0.1,
@@ -7378,7 +7378,7 @@
       "raw_exact_lines": [
         1505
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.multiturn_fraction",
     "a": 0.1,
@@ -7431,7 +7431,7 @@
         1511,
         1583
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.label_filter",
     "a": "none",
@@ -7483,7 +7483,7 @@
       "raw_exact_lines": [
         178
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "visualization.embedding",
     "a": "tsne_raw",
@@ -7585,7 +7585,7 @@
       "raw_exact_lines": [
         1458
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "evaluation.protocol",
     "a": "loss_only",
@@ -7637,7 +7637,7 @@
       "raw_exact_lines": [
         119
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.answer_style",
     "a": "mixed",
@@ -7689,7 +7689,7 @@
       "raw_exact_lines": [
         1501
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.label_filter",
     "a": "none",
@@ -7741,7 +7741,7 @@
       "raw_exact_lines": [
         566
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.domain_sampling",
     "a": "source_only",
@@ -7793,7 +7793,7 @@
       "raw_exact_lines": [
         1573
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "random_changes",
@@ -7846,7 +7846,7 @@
         58,
         1569
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.seed_policy",
     "a": "independent_unlogged",
@@ -7998,7 +7998,7 @@
       "raw_exact_lines": [
         393
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.diagnostics",
     "a": "accuracy_only",
@@ -8050,7 +8050,7 @@
       "raw_exact_lines": [
         1583
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.deduplicate",
     "a": "none",
@@ -8098,11 +8098,11 @@
       "line": 16,
       "heading": "小数据过拟合测试",
       "author": "Andrej Karpathy / BugBuster喵 / TNotes / Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         369
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.preflight",
     "a": "none",
@@ -8150,7 +8150,7 @@
       "line": 23,
       "heading": "随机标签测试",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8200,11 +8200,11 @@
       "line": 30,
       "heading": "五种最常见的实现Bug",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         514
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.preflight",
     "a": "none",
@@ -8252,11 +8252,11 @@
       "line": 30,
       "heading": "五种最常见的实现Bug",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         514
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.shape_check",
     "a": false,
@@ -8304,11 +8304,11 @@
       "line": 30,
       "heading": "五种最常见的实现Bug",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         514
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.dtype_check",
     "a": false,
@@ -8356,11 +8356,11 @@
       "line": 30,
       "heading": "五种最常见的实现Bug",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         514
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.force_eval_mode",
     "a": true,
@@ -8408,11 +8408,11 @@
       "line": 30,
       "heading": "五种最常见的实现Bug",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         514
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.kind",
     "a": "cross_entropy_double_softmax",
@@ -8460,7 +8460,7 @@
       "line": 37,
       "heading": "NaN诊断：突然出现的NaN",
       "author": "TNotes / 陈城南",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8510,7 +8510,7 @@
       "line": 37,
       "heading": "NaN诊断：突然出现的NaN",
       "author": "TNotes / 陈城南",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8560,7 +8560,7 @@
       "line": 44,
       "heading": "NaN诊断：逐渐发散到NaN",
       "author": "TNotes / 陈城南 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8610,11 +8610,11 @@
       "line": 51,
       "heading": "torch.autograd.detect_anomaly()",
       "author": "TNotes",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         3157
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.autograd_anomaly",
     "a": false,
@@ -8662,7 +8662,7 @@
       "line": 58,
       "heading": "梯度裁剪（临时修复）",
       "author": "陈城南 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8712,7 +8712,7 @@
       "line": 65,
       "heading": "过拟合诊断",
       "author": "无忧无虑 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8762,11 +8762,11 @@
       "line": 72,
       "heading": "欠拟合诊断",
       "author": "无忧无虑 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1007
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.width",
     "a": 32,
@@ -8814,11 +8814,11 @@
       "line": 72,
       "heading": "欠拟合诊断",
       "author": "无忧无虑 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1007
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.depth",
     "a": 2,
@@ -8866,11 +8866,11 @@
       "line": 79,
       "heading": "训练不收敛：检查数据流水线",
       "author": "陈城南 / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         774
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.data_alignment",
     "a": "unchecked",
@@ -8918,7 +8918,7 @@
       "line": 86,
       "heading": "训练不收敛：检查优化器参数",
       "author": "陈城南 / 摘星狐狸",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -8968,11 +8968,11 @@
       "line": 93,
       "heading": "损失函数排查",
       "author": "陈城南 / Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         796
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.numeric_implementation",
     "a": "naive_log_softmax",
@@ -9020,11 +9020,11 @@
       "line": 100,
       "heading": "先调学习率",
       "author": "无忧无虑 / 四点半的理一 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1029
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 1e-06,
@@ -9072,11 +9072,11 @@
       "line": 107,
       "heading": "学习率预热扫描（LR Range Test）",
       "author": "四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1077
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.lr_policy",
     "a": "default",
@@ -9124,11 +9124,11 @@
       "line": 114,
       "heading": "可视化调试：Layer Activations",
       "author": "杨军 (CS231n)",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         855
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.activation_histograms",
     "a": false,
@@ -9176,11 +9176,11 @@
       "line": 121,
       "heading": "可视化调试：Layer Weights",
       "author": "杨军 / Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         866
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.weight_histograms",
     "a": false,
@@ -9228,11 +9228,11 @@
       "line": 128,
       "heading": "可视化调试：Softmax输出分布",
       "author": "Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         393
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.confidence_histograms",
     "a": false,
@@ -9280,11 +9280,11 @@
       "line": 135,
       "heading": "对比训练集和验证集的Loss",
       "author": "Captain Jack / 无忧无虑",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         411
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.diagnostics",
     "a": "train_only",
@@ -9332,11 +9332,11 @@
       "line": 142,
       "heading": "不要怀疑NN的能力",
       "author": "Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         375
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.width",
     "a": 32,
@@ -9384,11 +9384,11 @@
       "line": 149,
       "heading": "不要盲目信任论文默认参数",
       "author": "Captain Jack / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         435
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.lr_policy",
     "a": "default",
@@ -9436,11 +9436,11 @@
       "line": 156,
       "heading": "一次只改一个变量",
       "author": "四点半的理一 / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1083
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "multiple_changes",
@@ -9488,11 +9488,11 @@
       "line": 163,
       "heading": "记录一切",
       "author": "BugBuster喵 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.level",
     "a": "metrics_only",
@@ -9540,11 +9540,11 @@
       "line": 170,
       "heading": "先诊断再下手（消融思维）",
       "author": "四点半的理一 / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1089
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "random_changes",
@@ -9592,11 +9592,11 @@
       "line": 177,
       "heading": "连续调参无提升时去看数据和错误样例",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1585
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.label_filter",
     "a": "none",
@@ -9644,11 +9644,11 @@
       "line": 184,
       "heading": "确认模型加载了预训练权重",
       "author": "陈城南",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         782
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.load_check",
     "a": "unchecked",
@@ -9696,7 +9696,7 @@
       "line": 191,
       "heading": "Debug流程：从简单到复杂",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -9746,11 +9746,11 @@
       "line": 198,
       "heading": "调试时要悲观主义",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         483
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.fault_injection",
     "a": "none",
@@ -9798,11 +9798,11 @@
       "line": 205,
       "heading": "观察Loss胜于观察准确率",
       "author": "Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         387
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_accuracy",
@@ -9850,7 +9850,7 @@
       "line": 212,
       "heading": "确认训练/推理预处理一致性",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -9900,7 +9900,7 @@
       "line": 219,
       "heading": "梯度检查与裁剪",
       "author": "摘星狐狸",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -9950,7 +9950,7 @@
       "line": 219,
       "heading": "梯度检查与裁剪",
       "author": "摘星狐狸",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -10000,11 +10000,11 @@
       "line": 226,
       "heading": "早停策略",
       "author": "BugBuster喵 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.patience",
     "a": 0,
@@ -10052,7 +10052,7 @@
       "line": 233,
       "heading": "可视化Embedding（t-SNE）",
       "author": "杨军",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -10102,11 +10102,11 @@
       "line": 240,
       "heading": "数据泄露排查",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1454
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.split_policy",
     "a": "random",
@@ -10154,11 +10154,11 @@
       "line": 247,
       "heading": "验证集被反复调穿",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.holdout_policy",
     "a": "reuse_test",
@@ -10206,11 +10206,11 @@
       "line": 254,
       "heading": "梯度累积与显存优化",
       "author": "LindgeWAI / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         2091
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.accumulation_steps",
     "a": 1,
@@ -10263,7 +10263,7 @@
         1492,
         2485
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.precision",
     "a": "fp32",
@@ -10316,7 +10316,7 @@
         1492,
         2485
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.precision",
     "a": "fp32",
@@ -10369,7 +10369,7 @@
         1492,
         2485
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.loss_scaling",
     "a": "none",
@@ -10421,7 +10421,7 @@
       "raw_exact_lines": [
         2503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.world_size",
     "a": 1,
@@ -10473,7 +10473,7 @@
       "raw_exact_lines": [
         2503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.sharding",
     "a": "ddp",
@@ -10525,7 +10525,7 @@
       "raw_exact_lines": [
         2503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.sharding",
     "a": "zero2",
@@ -10577,7 +10577,7 @@
       "raw_exact_lines": [
         181
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.gradient_checkpointing",
     "a": false,
@@ -10630,7 +10630,7 @@
         1527,
         1929
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.sampler",
     "a": "grid",
@@ -10683,7 +10683,7 @@
         1527,
         1929
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.sampler",
     "a": "random",
@@ -10736,7 +10736,7 @@
         1519,
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "tracking.level",
     "a": "metrics_only",
@@ -10788,7 +10788,7 @@
       "raw_exact_lines": [
         770
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "engineering.pipeline",
     "a": "monolithic",
@@ -10840,7 +10840,7 @@
       "raw_exact_lines": [
         2143
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "engineering.runner",
     "a": "inline",
@@ -10892,7 +10892,7 @@
       "raw_exact_lines": [
         2444
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.batch_order",
     "a": "random",
@@ -10944,7 +10944,7 @@
       "raw_exact_lines": [
         2090
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.num_workers",
     "a": 0,
@@ -10996,7 +10996,7 @@
       "raw_exact_lines": [
         2090
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.pin_memory",
     "a": false,
@@ -11048,7 +11048,7 @@
       "raw_exact_lines": [
         2089
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.tensor_conversion",
     "a": "tensor_copy",
@@ -11100,7 +11100,7 @@
       "raw_exact_lines": [
         2089
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.tensor_conversion",
     "a": "tensor_copy",
@@ -11153,7 +11153,7 @@
         58,
         1569
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.seed_policy",
     "a": "independent_unlogged",
@@ -11205,7 +11205,7 @@
       "raw_exact_lines": [
         2462
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.accumulation_steps",
     "a": 1,
@@ -11259,7 +11259,7 @@
         789,
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.restore",
     "a": "weights_only",
@@ -11313,7 +11313,7 @@
         789,
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_last",
@@ -11415,7 +11415,7 @@
       "raw_exact_lines": [
         2904
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.scaling_policy",
     "a": "fixed",
@@ -11468,7 +11468,7 @@
         50,
         369
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "full_data_first",
@@ -11521,7 +11521,7 @@
         788,
         1486
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -11569,12 +11569,12 @@
       "line": 15,
       "heading": "Xavier/Glorot 初始化（通用首选）",
       "author": "爱睡觉的KKY / 炫光 / Jarvix / 匿名用户",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         54,
         642
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "normal_fan_in",
@@ -11622,12 +11622,12 @@
       "line": 22,
       "heading": "He 初始化（ReLU 专用）",
       "author": "炫光 / 京东白条 / 摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         507,
         1256
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "xavier_normal",
@@ -11677,11 +11677,11 @@
       "line": 29,
       "heading": "截断正态初始化（Truncated Normal）用于 Embedding",
       "author": "爱睡觉的KKY",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         54
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.embedding_init",
     "a": "normal",
@@ -11729,11 +11729,11 @@
       "line": 35,
       "heading": "Uniform vs Normal 初始化的选择",
       "author": "Jarvix / 摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         1286
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.embedding_init",
     "a": "normal",
@@ -11781,11 +11781,11 @@
       "line": 42,
       "heading": "SVD 初始化用于 RNN",
       "author": "摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         1300
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.recurrent_init",
     "a": "normal",
@@ -11833,7 +11833,7 @@
       "line": 49,
       "heading": "零初始化的神话与陷阱",
       "author": "京东白条",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -11883,7 +11883,7 @@
       "line": 49,
       "heading": "零初始化的神话与陷阱",
       "author": "京东白条",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -11933,11 +11933,11 @@
       "line": 56,
       "heading": "TensorFlow 与 PyTorch 初始化差异",
       "author": "爱睡觉的KKY",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         163
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.framework",
     "a": "pytorch",
@@ -11985,12 +11985,12 @@
       "line": 62,
       "heading": "权重用随机初始化，Bias 恒为零",
       "author": "炫光 / 匿名用户",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         283,
         2882
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.bias_init",
     "a": "normal",
@@ -12038,11 +12038,11 @@
       "line": 68,
       "heading": "不同初始化做 Ensemble",
       "author": "炫光",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.ensemble_init",
     "a": [
@@ -12096,11 +12096,11 @@
       "line": 68,
       "heading": "不同初始化做 Ensemble",
       "author": "炫光",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.ensemble_vote",
     "a": "hard",
@@ -12148,11 +12148,11 @@
       "line": 75,
       "heading": "预训练模型加载后必须验证",
       "author": "微尘-黄含驰",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         782
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "validation.load_check",
     "a": "unchecked",
@@ -12200,11 +12200,11 @@
       "line": 82,
       "heading": "长训练中换初始化方法跳出局部最优",
       "author": "炫光",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         87
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "default",
@@ -12252,7 +12252,7 @@
       "line": 88,
       "heading": "DeepSeek 大模型初始化标准差",
       "author": "Sam聊算法",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -12302,7 +12302,7 @@
       "line": 88,
       "heading": "DeepSeek 大模型初始化标准差",
       "author": "Sam聊算法",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -12352,11 +12352,11 @@
       "line": 95,
       "heading": "正交初始化用于深层网络",
       "author": "摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         1300
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "normal_fan_in",
@@ -12404,11 +12404,11 @@
       "line": 101,
       "heading": "初始化对 CNN 的巨大影响（案例）",
       "author": "Jarvix",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         642
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "default",
@@ -12456,11 +12456,11 @@
       "line": 107,
       "heading": "先过拟合再谈初始化",
       "author": "微尘-黄含驰",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "init_search_first",
@@ -12512,7 +12512,7 @@
       "raw_exact_lines": [
         126
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.policy_start",
     "a": "base",
@@ -12564,7 +12564,7 @@
       "raw_exact_lines": [
         130
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_loss",
@@ -12616,7 +12616,7 @@
       "raw_exact_lines": [
         127
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.kind",
     "a": "subjective_judge",
@@ -12668,7 +12668,7 @@
       "raw_exact_lines": [
         131
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.policy_start",
     "a": "sft",
@@ -12720,7 +12720,7 @@
       "raw_exact_lines": [
         132
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.eval_every_steps",
     "a": 500,
@@ -12772,7 +12772,7 @@
       "raw_exact_lines": [
         126
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.base_success_stratum",
     "a": "below_20pct",
@@ -12824,7 +12824,7 @@
       "raw_exact_lines": [
         128
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.validation",
     "a": "format_only",
@@ -12876,7 +12876,7 @@
       "raw_exact_lines": [
         141
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.hack_guard",
     "a": "none",
@@ -12928,7 +12928,7 @@
       "raw_exact_lines": [
         141
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.judge_policy",
     "a": "single",
@@ -12980,7 +12980,7 @@
       "raw_exact_lines": [
         141
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.length_cap",
     "a": 0,
@@ -13032,7 +13032,7 @@
       "raw_exact_lines": [
         133
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.kl_beta",
     "a": 0.1,
@@ -13084,7 +13084,7 @@
       "raw_exact_lines": [
         142
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.kl_beta",
     "a": 0.01,
@@ -13136,7 +13136,7 @@
       "raw_exact_lines": [
         143
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.kl_beta",
     "a": 1.0,
@@ -13188,7 +13188,7 @@
       "raw_exact_lines": [
         129
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.kl_beta",
     "a": 0.01,
@@ -13240,7 +13240,7 @@
       "raw_exact_lines": [
         137
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 2e-05,
@@ -13292,7 +13292,7 @@
       "raw_exact_lines": [
         138
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.sft_mix",
     "a": 0.0,
@@ -13344,7 +13344,7 @@
       "raw_exact_lines": [
         139
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.normalize",
     "a": false,
@@ -13396,7 +13396,7 @@
       "raw_exact_lines": [
         140
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.rollout_batch",
     "a": 32,
@@ -13448,7 +13448,7 @@
       "raw_exact_lines": [
         136
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.clip_norm",
     "a": 1.0,
@@ -13500,7 +13500,7 @@
       "raw_exact_lines": [
         144
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -13602,7 +13602,7 @@
       "raw_exact_lines": [
         145
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.length_normalize",
     "a": false,
@@ -13654,7 +13654,7 @@
       "raw_exact_lines": [
         146
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.components",
     "a": [
@@ -13712,7 +13712,7 @@
       "raw_exact_lines": [
         146
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "reward.component_weighting",
     "a": "unscaled",
@@ -13764,7 +13764,7 @@
       "raw_exact_lines": [
         147
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.value_clip",
     "a": 0.0,
@@ -13816,7 +13816,7 @@
       "raw_exact_lines": [
         147
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.value_lr",
     "a": 1e-05,
@@ -13868,7 +13868,7 @@
       "raw_exact_lines": [
         148
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.entropy_coef",
     "a": 0.0,
@@ -13920,7 +13920,7 @@
       "raw_exact_lines": [
         134
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.policy_start",
     "a": "base",
@@ -13972,7 +13972,7 @@
       "raw_exact_lines": [
         135
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.policy_start",
     "a": "weak_base",
@@ -14024,7 +14024,7 @@
       "raw_exact_lines": [
         149
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.dpo_beta",
     "a": 0.5,
@@ -14076,7 +14076,7 @@
       "raw_exact_lines": [
         150
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "rl.dpo_beta",
     "a": 0.01,
@@ -14128,7 +14128,7 @@
       "raw_exact_lines": [
         150
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.0001,
@@ -14180,7 +14180,7 @@
       "raw_exact_lines": [
         1547
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.preference_filter",
     "a": "unfiltered",
@@ -14232,7 +14232,7 @@
       "raw_exact_lines": [
         1547
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.policy_start",
     "a": "weak_sft",
@@ -14284,7 +14284,7 @@
       "raw_exact_lines": [
         151
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.prompt_batch",
     "a": 8,
@@ -14336,7 +14336,7 @@
       "raw_exact_lines": [
         134
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.policy_start",
     "a": "base",
@@ -14388,7 +14388,7 @@
       "raw_exact_lines": [
         113
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.prompt_policy",
     "a": "minimal",
@@ -14440,7 +14440,7 @@
       "raw_exact_lines": [
         114
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.label_filter",
     "a": "single_teacher",
@@ -14492,7 +14492,7 @@
       "raw_exact_lines": [
         115
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.0001,
@@ -14544,7 +14544,7 @@
       "raw_exact_lines": [
         115
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.weight_decay",
     "a": 0.25,
@@ -14596,7 +14596,7 @@
       "raw_exact_lines": [
         118
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.domain_sampling",
     "a": "source_only",
@@ -14648,7 +14648,7 @@
       "raw_exact_lines": [
         119
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.answer_style",
     "a": "mixed",
@@ -14700,7 +14700,7 @@
       "raw_exact_lines": [
         120
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.sft_format",
     "a": "cot_fewshot",
@@ -14752,7 +14752,7 @@
       "raw_exact_lines": [
         121
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.samples_per_domain",
     "a": 100,
@@ -14804,7 +14804,7 @@
       "raw_exact_lines": [
         122
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.curriculum",
     "a": "random",
@@ -14856,7 +14856,7 @@
       "raw_exact_lines": [
         117
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_loss",
@@ -14908,7 +14908,7 @@
       "raw_exact_lines": [
         116
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.scale",
     "a": "small",
@@ -14960,7 +14960,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "adapter.rank",
     "a": 8,
@@ -15012,7 +15012,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "adapter.rank",
     "a": 16,
@@ -15064,7 +15064,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "adapter.alpha",
     "a": 16,
@@ -15116,7 +15116,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "adapter.alpha",
     "a": 32,
@@ -15168,7 +15168,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "adapter.dropout",
     "a": 0.0,
@@ -15220,7 +15220,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.0001,
@@ -15272,7 +15272,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "adapter.target_modules",
     "a": [
@@ -15332,7 +15332,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.epochs",
     "a": 2,
@@ -15384,7 +15384,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.max_length",
     "a": 512,
@@ -15436,7 +15436,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 4,
@@ -15488,7 +15488,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.quantization",
     "a": "none",
@@ -15540,7 +15540,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.quantization",
     "a": "fp4",
@@ -15592,7 +15592,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.precision",
     "a": "fp16",
@@ -15644,7 +15644,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.gradient_checkpointing",
     "a": false,
@@ -15696,7 +15696,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.chat_template_contract",
     "a": "mismatched",
@@ -15748,7 +15748,7 @@
       "raw_exact_lines": [
         1505
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.multiturn_fraction",
     "a": 0.1,
@@ -15950,7 +15950,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.max_length",
     "a": 512,
@@ -16002,7 +16002,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.rope_scaling",
     "a": "none",
@@ -16054,7 +16054,7 @@
       "raw_exact_lines": [
         1468
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.assistant_only",
     "a": false,
@@ -16106,7 +16106,7 @@
       "raw_exact_lines": [
         1468
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.tokenizer_contract",
     "a": "mismatched",
@@ -16158,7 +16158,7 @@
       "raw_exact_lines": [
         1468
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.preprocess_contract",
     "a": "mismatched",
@@ -16210,7 +16210,7 @@
       "raw_exact_lines": [
         1509
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.knowledge_source",
     "a": "parameters",
@@ -16262,7 +16262,7 @@
       "raw_exact_lines": [
         126
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.alignment_policy",
     "a": "sft_only",
@@ -16314,7 +16314,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.epochs",
     "a": 6,
@@ -16366,7 +16366,7 @@
       "raw_exact_lines": [
         1484
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -16419,7 +16419,7 @@
         122,
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.curriculum",
     "a": "random",
@@ -16472,7 +16472,7 @@
         122,
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.deduplicate",
     "a": "none",
@@ -16525,7 +16525,7 @@
         122,
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.refusal_fraction",
     "a": 0.0,
@@ -16578,7 +16578,7 @@
         122,
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.domain_fraction",
     "a": 1.0,
@@ -16630,7 +16630,7 @@
       "raw_exact_lines": [
         51
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -16682,7 +16682,7 @@
       "raw_exact_lines": [
         206
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.pooling",
     "a": "cls",
@@ -16734,7 +16734,7 @@
       "raw_exact_lines": [
         206
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.pooling",
     "a": "cls",
@@ -16786,7 +16786,7 @@
       "raw_exact_lines": [
         169
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.adversarial",
     "a": "none",
@@ -16838,7 +16838,7 @@
       "raw_exact_lines": [
         169
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.adversarial",
     "a": "fgm",
@@ -16890,7 +16890,7 @@
       "raw_exact_lines": [
         184
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.cross_attention",
     "a": false,
@@ -16942,7 +16942,7 @@
       "raw_exact_lines": [
         184
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.cross_attention_kind",
     "a": "none",
@@ -16994,7 +16994,7 @@
       "raw_exact_lines": [
         201
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.attention_window",
     "a": 128,
@@ -17046,7 +17046,7 @@
       "raw_exact_lines": [
         207
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -17098,7 +17098,7 @@
       "raw_exact_lines": [
         56
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.pooling",
     "a": "masked_mean",
@@ -17150,7 +17150,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.rnn_activation",
     "a": "relu",
@@ -17202,7 +17202,7 @@
       "raw_exact_lines": [
         54
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.embedding_init",
     "a": "xavier_uniform",
@@ -17254,7 +17254,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -17306,7 +17306,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -17358,7 +17358,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -17410,7 +17410,7 @@
       "raw_exact_lines": [
         2088
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.warmup_ratio",
     "a": 0.0,
@@ -17418,7 +17418,9 @@
     "profile": "nlp",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.schedule": "warmup_cosine"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -17462,7 +17464,7 @@
       "raw_exact_lines": [
         2424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.tokenizer_kind",
     "a": "word",
@@ -17514,7 +17516,7 @@
       "raw_exact_lines": [
         2424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.tokenizer_kind",
     "a": "bpe",
@@ -17566,7 +17568,7 @@
       "raw_exact_lines": [
         2444
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.batch_order",
     "a": "random",
@@ -17618,7 +17620,7 @@
       "raw_exact_lines": [
         1404
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.embedding_source",
     "a": "random",
@@ -17670,7 +17672,7 @@
       "raw_exact_lines": [
         1404
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.recurrent_init",
     "a": "normal",
@@ -17722,7 +17724,7 @@
       "raw_exact_lines": [
         60
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "sgd",
@@ -17774,7 +17776,7 @@
       "raw_exact_lines": [
         1492
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.clip_norm",
     "a": 0.0,
@@ -17826,7 +17828,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -17878,7 +17880,7 @@
       "raw_exact_lines": [
         191
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.dropout",
     "a": 0.0,
@@ -17930,7 +17932,7 @@
       "raw_exact_lines": [
         191
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -17982,7 +17984,7 @@
       "raw_exact_lines": [
         191
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.embedding_dropout",
     "a": 0.0,
@@ -18034,7 +18036,7 @@
       "raw_exact_lines": [
         284
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.dropout",
     "a": 0.5,
@@ -18088,7 +18090,7 @@
       "raw_exact_lines": [
         207
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -18140,7 +18142,7 @@
       "raw_exact_lines": [
         2589
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -18192,7 +18194,7 @@
       "raw_exact_lines": [
         2589
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -18244,7 +18246,7 @@
       "raw_exact_lines": [
         710
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -18296,7 +18298,7 @@
       "raw_exact_lines": [
         89
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -18348,7 +18350,7 @@
       "raw_exact_lines": [
         89
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -18400,7 +18402,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.target_normalization",
     "a": false,
@@ -18452,7 +18454,7 @@
       "raw_exact_lines": [
         434
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -18504,7 +18506,7 @@
       "raw_exact_lines": [
         2719
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -18556,7 +18558,7 @@
       "raw_exact_lines": [
         2820
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -18658,7 +18660,7 @@
       "raw_exact_lines": [
         2796
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -18710,7 +18712,7 @@
       "raw_exact_lines": [
         429
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "local_response",
@@ -18762,7 +18764,7 @@
       "raw_exact_lines": [
         1402
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "none",
@@ -18814,7 +18816,7 @@
       "raw_exact_lines": [
         77
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "sgd",
@@ -18866,7 +18868,7 @@
       "raw_exact_lines": [
         60
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "sgd",
@@ -18918,7 +18920,7 @@
       "raw_exact_lines": [
         286
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "adam",
@@ -18970,7 +18972,7 @@
       "raw_exact_lines": [
         1109
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "adam",
@@ -19022,7 +19024,7 @@
       "raw_exact_lines": [
         788
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "adam",
@@ -19074,7 +19076,7 @@
       "raw_exact_lines": [
         196
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.sparse_kind",
     "a": "adam",
@@ -19126,7 +19128,7 @@
       "raw_exact_lines": [
         196
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.dense_kind",
     "a": "sgd",
@@ -19178,7 +19180,7 @@
       "raw_exact_lines": [
         51
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -19280,7 +19282,7 @@
       "raw_exact_lines": [
         79
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.lr_policy",
     "a": "grid",
@@ -19332,7 +19334,7 @@
       "raw_exact_lines": [
         1077
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.lr_policy",
     "a": "default",
@@ -19384,7 +19386,7 @@
       "raw_exact_lines": [
         1153
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.lr_policy",
     "a": "default",
@@ -19436,7 +19438,7 @@
       "raw_exact_lines": [
         1726
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.lr_policy",
     "a": "default",
@@ -19538,7 +19540,7 @@
       "raw_exact_lines": [
         2088
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.warmup_ratio",
     "a": 0.03,
@@ -19546,7 +19548,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.schedule": "warmup_cosine"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -19590,7 +19594,7 @@
       "raw_exact_lines": [
         791
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -19642,7 +19646,7 @@
       "raw_exact_lines": [
         289
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "multistep",
@@ -19694,7 +19698,7 @@
       "raw_exact_lines": [
         2808
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -19746,7 +19750,7 @@
       "raw_exact_lines": [
         1355
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -19798,7 +19802,7 @@
       "raw_exact_lines": [
         85
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -19850,7 +19854,7 @@
       "raw_exact_lines": [
         1230
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.gamma",
     "a": 0.9,
@@ -19858,7 +19862,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.schedule": "exponential"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -20152,7 +20158,7 @@
       "raw_exact_lines": [
         401
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -20204,7 +20210,7 @@
       "raw_exact_lines": [
         405
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "constant",
@@ -20308,7 +20314,7 @@
       "raw_exact_lines": [
         52
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.accumulation_steps",
     "a": 1,
@@ -20514,7 +20520,7 @@
       "raw_exact_lines": [
         136
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.clip_norm",
     "a": 0.0,
@@ -20716,7 +20722,7 @@
       "raw_exact_lines": [
         115
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.0001,
@@ -20768,7 +20774,7 @@
       "raw_exact_lines": [
         115
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.weight_decay",
     "a": 0.25,
@@ -20876,7 +20882,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.kind": "adam"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -20926,7 +20934,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.kind": "adam"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -21120,7 +21130,7 @@
       "raw_exact_lines": [
         1083
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "multiple_changes",
@@ -21172,7 +21182,7 @@
       "raw_exact_lines": [
         1075
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "joint_random",
@@ -21224,7 +21234,7 @@
       "raw_exact_lines": [
         1029
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "architecture_first",
@@ -21276,7 +21286,7 @@
       "raw_exact_lines": [
         1480
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "architecture_first",
@@ -21328,7 +21338,7 @@
       "raw_exact_lines": [
         1119
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.baseline_recipe",
     "a": "project_default",
@@ -21380,7 +21390,7 @@
       "raw_exact_lines": [
         792
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -21434,7 +21444,7 @@
       "raw_exact_lines": [
         407
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.1,
@@ -21586,7 +21596,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -21638,7 +21648,7 @@
       "raw_exact_lines": [
         58
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.seed_policy",
     "a": "independent_unlogged",
@@ -21690,7 +21700,7 @@
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.patience",
     "a": 2,
@@ -21742,7 +21752,7 @@
       "raw_exact_lines": [
         50
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "regularization_first",
@@ -21944,7 +21954,7 @@
       "raw_exact_lines": [
         642
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.weight_init",
     "a": "default",
@@ -22196,7 +22206,7 @@
       "raw_exact_lines": [
         1720
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "step",
@@ -22248,7 +22258,7 @@
       "raw_exact_lines": [
         1754
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.weight_decay",
     "a": 0.0001,
@@ -22300,7 +22310,7 @@
       "raw_exact_lines": [
         1756
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.0001,
@@ -22352,7 +22362,7 @@
       "raw_exact_lines": [
         686
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.residual",
     "a": false,
@@ -22454,7 +22464,7 @@
       "raw_exact_lines": [
         688
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.compression_policy",
     "a": "small_from_scratch",
@@ -22506,7 +22516,7 @@
       "raw_exact_lines": [
         195
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.gamma",
     "a": 0.9,
@@ -22514,7 +22524,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.schedule": "exponential"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -22558,7 +22570,7 @@
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -22616,7 +22628,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.schedule": "warmup_cosine"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -22666,7 +22680,9 @@
     "profile": "vision",
     "metric": "test_accuracy",
     "direction": "max",
-    "controls": {},
+    "controls": {
+      "optimizer.schedule": "warmup_cosine"
+    },
     "contrast_type": "single_factor",
     "status": "protocol_ready_training_pending",
     "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
@@ -22760,7 +22776,7 @@
       "raw_exact_lines": [
         294
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -22812,7 +22828,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.preprocess_contract",
     "a": "mismatched",
@@ -22864,7 +22880,7 @@
       "raw_exact_lines": [
         405
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -23166,7 +23182,7 @@
       "raw_exact_lines": [
         788
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.lr",
     "a": 0.001,
@@ -23218,7 +23234,7 @@
       "raw_exact_lines": [
         166
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.schedule",
     "a": "cosine",
@@ -23370,7 +23386,7 @@
       "raw_exact_lines": [
         791
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "wide_grid",
@@ -23422,7 +23438,7 @@
       "raw_exact_lines": [
         584
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "wide_random",
@@ -23474,7 +23490,7 @@
       "raw_exact_lines": [
         433
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "adam",
@@ -23776,7 +23792,7 @@
       "raw_exact_lines": [
         2091
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.accumulation_steps",
     "a": 1,
@@ -23828,7 +23844,7 @@
       "raw_exact_lines": [
         194
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.feature_policy",
     "a": "all_at_once",
@@ -23880,7 +23896,7 @@
       "raw_exact_lines": [
         166
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.warm_start",
     "a": "embedding_only",
@@ -23932,7 +23948,7 @@
       "raw_exact_lines": [
         166
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.perturb_scope",
     "a": "all_layers",
@@ -23984,7 +24000,7 @@
       "raw_exact_lines": [
         187
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.numeric_transform",
     "a": "raw",
@@ -24036,7 +24052,7 @@
       "raw_exact_lines": [
         187
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.outlier_bin",
     "a": false,
@@ -24088,7 +24104,7 @@
       "raw_exact_lines": [
         187
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.bin_selection",
     "a": "fixed_quantiles",
@@ -24140,7 +24156,7 @@
       "raw_exact_lines": [
         194
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.feature_policy",
     "a": "all_at_once",
@@ -24192,7 +24208,7 @@
       "raw_exact_lines": [
         197
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.negative_source",
     "a": "exposed_unclicked",
@@ -24244,7 +24260,7 @@
       "raw_exact_lines": [
         198
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.negative_source",
     "a": "global_random",
@@ -24296,7 +24312,7 @@
       "raw_exact_lines": [
         172
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.multitask_gradient",
     "a": "sum",
@@ -24348,7 +24364,7 @@
       "raw_exact_lines": [
         172
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.multitask_gradient",
     "a": "pareto",
@@ -24400,7 +24416,7 @@
       "raw_exact_lines": [
         383
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.task_weighting",
     "a": "unscaled",
@@ -24452,7 +24468,7 @@
       "raw_exact_lines": [
         203
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.pooling",
     "a": "masked_mean",
@@ -24504,7 +24520,7 @@
       "raw_exact_lines": [
         204
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.feature_gate",
     "a": "none",
@@ -24556,7 +24572,7 @@
       "raw_exact_lines": [
         204
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.feature_gate",
     "a": "none",
@@ -24608,7 +24624,7 @@
       "raw_exact_lines": [
         205
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.objective",
     "a": "supervised",
@@ -24660,7 +24676,7 @@
       "raw_exact_lines": [
         208
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.retrieval",
     "a": "pointwise_bce",
@@ -24712,7 +24728,7 @@
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 32,
@@ -24764,7 +24780,7 @@
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.batch_size",
     "a": 128,
@@ -24816,7 +24832,7 @@
       "raw_exact_lines": [
         196
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.sparse_kind",
     "a": "adam",
@@ -24868,7 +24884,7 @@
       "raw_exact_lines": [
         1238
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "sgd",
@@ -24920,7 +24936,7 @@
       "raw_exact_lines": [
         193
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.embedding_l2_normalize",
     "a": true,
@@ -24972,7 +24988,7 @@
       "raw_exact_lines": [
         192
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.epochs",
     "a": 3,
@@ -25024,7 +25040,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.activation",
     "a": "relu",
@@ -25076,7 +25092,7 @@
       "raw_exact_lines": [
         207
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.norm",
     "a": "batch",
@@ -25128,7 +25144,7 @@
       "raw_exact_lines": [
         200
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "checkpoint.selection_metric",
     "a": "val_loss",
@@ -25180,7 +25196,7 @@
       "raw_exact_lines": [
         1109
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "optimizer.kind",
     "a": "adam",
@@ -25232,7 +25248,7 @@
       "raw_exact_lines": [
         1454
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.split_policy",
     "a": "random",
@@ -25284,7 +25300,7 @@
       "raw_exact_lines": [
         1468
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.exclude_known_positive",
     "a": false,
@@ -25336,7 +25352,7 @@
       "raw_exact_lines": [
         56
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.pooling",
     "a": "masked_mean",
@@ -25438,7 +25454,7 @@
       "raw_exact_lines": [
         424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.dropout",
     "a": 0.0,
@@ -25490,7 +25506,7 @@
       "raw_exact_lines": [
         424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.dropout",
     "a": 0.1,
@@ -25542,7 +25558,7 @@
       "raw_exact_lines": [
         424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.dropout_enabled",
     "a": true,
@@ -25744,7 +25760,7 @@
       "raw_exact_lines": [
         1838
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.l1",
     "a": 0.0,
@@ -25796,7 +25812,7 @@
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.patience",
     "a": 0,
@@ -25848,7 +25864,7 @@
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.patience",
     "a": 2,
@@ -25900,7 +25916,7 @@
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.pruning",
     "a": "none",
@@ -25952,7 +25968,7 @@
       "raw_exact_lines": [
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -26004,7 +26020,7 @@
       "raw_exact_lines": [
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -26056,7 +26072,7 @@
       "raw_exact_lines": [
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -26208,7 +26224,7 @@
       "raw_exact_lines": [
         2611
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.max_weight_norm",
     "a": 0.0,
@@ -26260,7 +26276,7 @@
       "raw_exact_lines": [
         2814
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "loss.flooding",
     "a": 0.0,
@@ -26312,7 +26328,7 @@
       "raw_exact_lines": [
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -26364,7 +26380,7 @@
       "raw_exact_lines": [
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "data.augmentation",
     "a": "none",
@@ -26416,7 +26432,7 @@
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.ensemble_members",
     "a": 1,
@@ -26468,7 +26484,7 @@
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.ensemble_diversity",
     "a": "initialization",
@@ -26520,7 +26536,7 @@
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "inference.ensemble_diversity",
     "a": "initialization",
@@ -26572,7 +26588,7 @@
       "raw_exact_lines": [
         284
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "model.dropout",
     "a": 0.0,
@@ -26626,7 +26642,7 @@
       "raw_exact_lines": [
         1095
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "search.policy",
     "a": "random_changes",
@@ -26678,7 +26694,7 @@
       "raw_exact_lines": [
         1492
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "axis": "training.clip_norm",
     "a": 0.0,

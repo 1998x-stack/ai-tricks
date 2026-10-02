@@ -37,7 +37,7 @@ python experiments/recsys/recsys-011-01/experiment.py --run --environment remote
 - **适用场景**: 召回模型输出层选择
 - **原文**: > 推荐召回用softmax效果比sigmoid更好，意思就是召回更适合对比学习那种listwise学习方式。
 - **要点**: 召回任务中 Softmax（listwise）效果优于 Sigmoid（pointwise），因为召回本质更适合 listwise / 对比学习范式。
-- **参见**: [[../data-eval/eval-metrics]], [[../batch-size/batch-size-generalization]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md), [../batch-size/batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md)
 
 ## 解释边界
 

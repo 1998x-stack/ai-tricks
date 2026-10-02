@@ -37,7 +37,7 @@ python experiments/activation/activation-008-01/experiment.py --run --environmen
 - **适用场景**: 推荐系统召回
 - **原文**: "推荐召回用softmax效果比sigmoid更好，意思就是召回更适合对比学习那种listwise学习方式"
 - **要点**: 推荐召回本质是 listwise 排序问题，softmax 的多类别对比学习方式优于 sigmoid 的点式二分类。
-- **参见**: [[../data-eval/eval-metrics]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

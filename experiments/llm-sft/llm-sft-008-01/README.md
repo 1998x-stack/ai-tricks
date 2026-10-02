@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-008-01/experiment.py --run --environment remo
 - **适用场景**: SFT 训练策略
 - **原文**: "可以对数据集设置一个难易程度，让模型先学简单后学难的，有利于模型的加速收敛。"
 - **要点**: 在 SFT 数据中标注难易程度，训练时先喂简单样本、再逐步增加困难样本的比重，可以加速模型收敛。这种方法在数据量大、任务多样时效果尤其明显。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

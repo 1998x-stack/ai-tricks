@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-028-01/experiment.py --run --enviro
 - **适用场景**: 表示学习/对比学习/大batch受限
 - **原文**: batch size 在表示学习，对比学习领域一般越大越好，显存不够上累计梯度
 - **要点**: 梯度累积等效扩大batch size，注意同步缩放LR
-- **参见**: [[gradient-accumulation]]
+- **参见**: `[[gradient-accumulation]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

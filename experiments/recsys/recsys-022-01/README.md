@@ -37,7 +37,7 @@ python experiments/recsys/recsys-022-01/experiment.py --run --environment remote
 - **适用场景**: 推荐模型负样本构建
 - **原文**: > 推荐模型里，负样本采样把正样本混进去了
 - **要点**: 负采样时必须确保未误采正样本，否则模型学到错误信号，但表面看仍在正常训练。
-- **参见**: [[negative-sampling]]
+- **参见**: [negative-sampling](../../../wiki/recsys/negative-sampling.md)
 
 ## 解释边界
 

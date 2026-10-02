@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-059-01/experiment.py --run --enviro
 - **适用场景**: 替代step/指数衰减的通用方案
 - **原文**: 实验表明训练期间使用不同的学习率总体上是有益的，因此建议在一个取值范围内周期性地改变学习率，而不是将其设定为固定值。
 - **要点**: Cyclic LR在上下界间周期性变化，优于固定衰减策略
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

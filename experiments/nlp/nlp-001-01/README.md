@@ -37,7 +37,7 @@ python experiments/nlp/nlp-001-01/experiment.py --run --environment remote.json
 - **适用场景**: BERT/RoBERTa/DeBERTa等预训练语言模型微调
 - **原文**: *"lr ，最重要的参数，一般nlp bert类模型在1e-5级别附近，warmup，衰减"*
 - **要点**: BERT类模型微调学习率通常在 1e-5 ~ 5e-5 范围，从零训练Transformer时常见起点为 1e-4 ~ 3e-4。务必配合warmup（约总步数 3%~10%）和cosine/linear衰减。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[../optimizer-lr/learning-rate-scheduling]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../optimizer-lr/learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

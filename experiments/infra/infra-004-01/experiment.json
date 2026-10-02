@@ -12,7 +12,7 @@
       1527,
       1929
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "search.sampler",
   "a": "grid",

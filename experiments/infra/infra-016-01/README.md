@@ -37,7 +37,7 @@ python experiments/infra/infra-016-01/experiment.py --run --environment remote.j
 - **适用场景**: 验证代码正确性与模型容量
 - **原文**: "刚开始，先上小规模数据，模型往大了放，只要不爆显存，能用256个filter你就别用128个。直接奔着过拟合去。" / "先小样本过拟合，确认代码和数据没问题" / "先overfit 再trade off，首先保证你的模型 capacity 能够过拟合"
 - **要点**: 用小数据+大模型验证训练流程是否正确：若无法过拟合则检查代码bug（数据加载、loss 计算、参数更新）而非调参。这是资深工程师与新人最大的区别——先确保 pipeline 正确，再谈优化。
-- **参见**: [[../debugging/debugging]]
+- **参见**: [../debugging/debugging](../../../wiki/debugging/debugging.md)
 
 ## 解释边界
 

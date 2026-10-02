@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-018-01/experiment.py --run --enviro
 - **适用场景**: 无调度器的手动训练、验证集遇到瓶颈
 - **原文**: 到后期验证集遇到瓶颈的时候就除以2（或5）再继续，直到LR变得非常非常小，训练也停止了。
 - **要点**: 验证集不提升时LR减半或减五分之一继续训练
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/debugging/debugging-034-01/experiment.py --run --environment 
 - **适用场景**: 长期调参项目管理
 - **原文**: "每天看验证集调参数，调到最后验证集也成了训练的一部分"
 - **要点**: 保留一个真正不碰的最终测试集，重要版本才评一次。验证集被"调穿"后不再代表泛化能力。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-026-01/experiment.py --run --environment remote
 - **适用场景**: DPO训练缓慢
 - **原文**: "DPO中，模型对 chosen 和 rejected 的概率差增长缓慢，这是因为beta 值过高。DPO中的 beta 参数扮演着类似PPO中KL散度惩罚的角色，它控制着隐式奖励模型的温度。beta 过高意味着策略更新过于保守。可以调低 beta。降低 beta可以让模型更大胆地学习偏好，拉开 chosen 和 rejected 的差距。"
 - **要点**: Beta控制DPO隐式奖励温度；beta过高导致更新保守，概率差增长慢 → 降低beta让模型更大胆学习偏好。
-- **参见**: [[dpo]]
+- **参见**: [dpo](../../../wiki/llm-rl/dpo.md)
 
 ## 解释边界
 

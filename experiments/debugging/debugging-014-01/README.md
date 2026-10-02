@@ -37,7 +37,7 @@ python experiments/debugging/debugging-014-01/experiment.py --run --environment 
 - **适用场景**: 寻找合适的初始学习率
 - **原文**: "从1e-5开始，以10倍为单位往上跳，比如1e-4、1e-3、1e-2，观察loss曲线"
 - **要点**: Loss应平稳下降；从某个点开始loss发散/爆炸时，前一个值就是候选学习率。也可以用指数递增的方式在一个epoch内扫完。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

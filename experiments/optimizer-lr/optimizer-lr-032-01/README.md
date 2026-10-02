@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-032-01/experiment.py --run --enviro
 - **适用场景**: RNN/Transformer/大模型微调，防止梯度爆炸
 - **原文**: 当出现训练不稳定（如损失值突然飙升），可启用梯度裁剪，裁剪值一般为0.2。
 - **要点**: 梯度裁剪默认建议加上，clip norm 1.0为常见起点，但裁剪可能影响性能
-- **参见**: [[gradient-clipping]]
+- **参见**: `[[gradient-clipping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

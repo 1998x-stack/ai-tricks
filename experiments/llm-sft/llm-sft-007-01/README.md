@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-007-01/experiment.py --run --environment remo
 - **适用场景**: 多任务/多领域 SFT 数据量决策
 - **原文**: "对于多任务问题，可能有的同学会问到底多少条数据才合理，个人经验，每个垂域400条高质量数据足矣。"
 - **要点**: 对于每个垂直领域，大约 400 条高质量标注数据就足够让模型学会该领域的回答范式。关键在"高质量"——宁可 400 条精标，不要 4000 条脏数据。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-014-04/experiment.py --run --environment 
 - **适用场景**: 数据量不足或过拟合时的通用手段
 - **原文**: "数据增强要结合任务本身来设计" / "图像裁剪，对称变换，旋转平移，都可以让模型在验证集上的表现更好。" / "数据越多越好！总是使用数据增强，如水平翻转，旋转，缩放裁剪等。"
 - **要点**: CV领域：裁剪、翻转、旋转、色彩抖动、亮度变化、cutmix、mixup。NLP领域：同义词替换、随机丢弃词语、句子改写、回译（back-translation）。增强强度本身也是一个需要调节的超参数。
-- **参见**: [[data-augmentation]], [[../regularization/overfitting-underfitting]]
+- **参见**: [data-augmentation](../../../wiki/data-eval/data-augmentation.md), [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md)
 
 ## 解释边界
 

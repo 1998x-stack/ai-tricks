@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-017-03/experiment.py --run --environment 
 - **适用场景**: 分类、检测、推荐、大模型SFT
 - **原文**: "我越来越倾向于把数据也当成超参数。比如分类任务里，正负样本比例就是超参数。推荐任务里，负采样策略就是超参数。检测任务里，resize 尺寸和增强强度就是超参数。大模型 SFT 里，单轮和多轮数据比例就是超参数。"
 - **要点**: 数据配置（采样比例、增强策略、混合比例、截断策略、模板格式）对效果的影响往往大于模型结构参数。应有意识地对数据参数进行调优。
-- **参见**: [[hyperparameter-tuning]], [[data-augmentation]]
+- **参见**: `[[hyperparameter-tuning]]`（原 Wiki 未解析链接）, [data-augmentation](../../../wiki/data-eval/data-augmentation.md)
 
 ## 解释边界
 

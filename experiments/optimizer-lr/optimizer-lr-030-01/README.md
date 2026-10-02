@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-030-01/experiment.py --run --enviro
 - **适用场景**: Cyclical LR配合动量联动
 - **原文**: 使用循环学习率时，初始化一个小的学习率，使其开始收敛，并减少周期动量。当学习率增加时，使用递减的循环动量加快收敛。
 - **要点**: LR增加时动量减小，LR减小时动量增加，两者联动效果更好
-- **参见**: [[sgd-momentum]], [[learning-rate-scheduling]], [[sgd-momentum]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md)
 
 ## 解释边界
 

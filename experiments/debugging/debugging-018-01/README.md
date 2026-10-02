@@ -37,7 +37,7 @@ python experiments/debugging/debugging-018-01/experiment.py --run --environment 
 - **适用场景**: 判断过拟合、训练是否充分、是否需要early stop
 - **原文**: "判断过拟合，训练是否足够，是否需要early stop的依据"
 - **要点**: 监控train/val loss的差距。差距大 = 过拟合；都高 = 欠拟合。准确率可能突变（长期为0突然变1），loss更稳定可靠。
-- **参见**: [[../regularization/regularization]]
+- **参见**: [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

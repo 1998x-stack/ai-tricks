@@ -37,7 +37,7 @@ python experiments/debugging/debugging-028-01/experiment.py --run --environment 
 - **适用场景**: 训练过程中的监控
 - **原文**: "准确率虽然是评测指标，但是训练过程中还是要注意loss的。你会发现有些情况下，准确率是突变的"
 - **要点**: Loss提供连续稳定的信号，准确率可能突然跳变。不要因为前期准确率低就提前终止训练。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

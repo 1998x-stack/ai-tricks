@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-016-01/experiment.py --run --enviro
 - **适用场景**: CV任务，max_iter确定的场景
 - **原文**: 学习率衰减策略我一般使用multistep方式，step_size的设置要看视你的的max_iter而定
 - **要点**: 经验初始LR为0.01，使用multistep方式按步数衰减
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

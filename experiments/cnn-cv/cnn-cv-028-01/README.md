@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-028-01/experiment.py --run --environment remote
 - **适用场景**: 语义分割、前景分割
 - **原文**: "如果您在dense prediction领域工作……您应该使用跳过连接，因为对象边界或有用的信息会由于最大池化操作或strided convolutions而丢失"
 - **要点**: skip连接帮助特征空间到图像空间的映射，缓解梯度消失
-- **参见**: [[receptive-field]], [[U-Net]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md), `[[U-Net]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

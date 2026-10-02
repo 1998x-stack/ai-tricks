@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-022-01/experiment.py --run --environment remote
 - **适用场景**: 分割任务
 - **原文**: "网络最后面完全可以使用不采样的空洞卷积来做，对于分割尤其如此"
 - **要点**: 最后面不要再下采样，考虑使用ASPP融合不同尺度的感受野
-- **参见**: [[DeepLab]], [[receptive-field]]
+- **参见**: `[[DeepLab]]`（原 Wiki 未解析链接）, [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

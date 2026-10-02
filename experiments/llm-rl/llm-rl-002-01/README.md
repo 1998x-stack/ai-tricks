@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-002-01/experiment.py --run --environment remote
 - **适用场景**: RL训练监控
 - **原文**: "RL训练的模型更应该关注reward是否快速增长到收敛，而不是看loss"
 - **要点**: RL训练的核心监控指标是reward曲线，loss仅作参考。
-- **参见**: [[../data-eval/eval-metrics]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

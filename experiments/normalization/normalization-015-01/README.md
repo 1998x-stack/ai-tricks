@@ -37,7 +37,7 @@ python experiments/normalization/normalization-015-01/experiment.py --run --envi
 - **适用场景**: 小数据集
 - **原文**: > 适当考虑可用Batch Normalization，尽管有些偷懒
 - **要点**: 小数据集上 BN 仍然是有效的加速手段，不应省略。
-- **参见**: [[batch-normalization]], [[../data-eval/data-eval]], [[../batch-size/batch-size]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md), [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

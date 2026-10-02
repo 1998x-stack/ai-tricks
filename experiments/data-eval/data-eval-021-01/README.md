@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-021-01/experiment.py --run --environment 
 - **适用场景**: LLM微调、RAG系统、大模型应用
 - **原文**: "要做人工标注的 eval set，要覆盖典型问题、边界问题、长尾问题，还要记录失败类型。现在行业里稍微成熟一点的大模型团队，基本都会先搭评测，再谈微调。没有评测的大模型微调，就是在算力上投币。" / "大模型评测方面可以看 OpenCompass、HELM，中文场景再补一下 C-Eval。做 RAG 可以看看 RAGAS。"
 - **要点**: 大模型时代不能只看loss或BLEU/ROUGE。需要构建人工标注的评估集，覆盖典型/边界/长尾问题。OpenCompass用于综合评测，RAGAS用于RAG系统评估。
-- **参见**: [[llm-evaluation]], [[ragas]], [[opencompass]]
+- **参见**: `[[llm-evaluation]]`（原 Wiki 未解析链接）, `[[ragas]]`（原 Wiki 未解析链接）, `[[opencompass]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

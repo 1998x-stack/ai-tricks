@@ -37,7 +37,7 @@ python experiments/infra/infra-012-01/experiment.py --run --environment remote.j
 - **适用场景**: 显存不足时模拟大批次训练
 - **原文**: "梯度累积可以在不增加内存消耗的情况下模拟大批次训练。通过在多个小批次上累积梯度，然后在达到指定累积次数后进行一次参数更新，可以有效提高训练效率。"
 - **要点**: `loss = loss / accumulation_steps` → `loss.backward()` → 每 accum_steps 步后 `optimizer.step()` + `zero_grad()`；等效扩大 batch size；调参时需记录清楚"单卡 batch × 卡数 × 累积步数 = 总有效 batch"。
-- **参见**: [[../batch-size/batch-size]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

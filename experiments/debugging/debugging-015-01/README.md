@@ -37,7 +37,7 @@ python experiments/debugging/debugging-015-01/experiment.py --run --environment 
 - **适用场景**: 理解神经网络内部状态
 - **原文**: "比较理想的layer activation应该具备sparse和localized的特点"
 - **要点**: 可视化隐藏层的activation矩阵。如果feature map的activation跟原始输入长得一样，说明这个filter没学到有用的东西。理想的activation应该是稀疏且局部化的。
-- **参见**: [[../cnn-cv/cnn-cv]]
+- **参见**: [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

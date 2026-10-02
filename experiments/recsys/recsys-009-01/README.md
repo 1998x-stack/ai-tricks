@@ -37,7 +37,7 @@ python experiments/recsys/recsys-009-01/experiment.py --run --environment remote
 - **适用场景**: 推荐特征重要性分析
 - **原文**: > 对于推荐来说senet和lhuc，是深度学习领域为数不多的可以观察特征重要性的模型结构
 - **要点**: SENet 和 LHUC 是推荐系统中少数可直接观察特征重要性的模型结构，适合用于特征筛选和可解释性分析。
-- **参见**: [[feature-binning]], [[multi-task-recsys]]
+- **参见**: [feature-binning](../../../wiki/recsys/feature-binning.md), [multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

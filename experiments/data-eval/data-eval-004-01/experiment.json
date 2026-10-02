@@ -12,7 +12,7 @@
       59,
       1454
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "data.split_policy",
   "a": "random",

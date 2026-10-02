@@ -37,7 +37,7 @@ python experiments/activation/activation-014-01/experiment.py --run --environmen
 - **适用场景**: 网络调参流程
 - **原文**: "先疯狂加隐藏层，一直加到过拟合，然后开始减隐藏层，然后开始调神经元个数，然后开始调激活函数，然后开始调隐藏层的类型..."
 - **要点**: 激活函数的调优优先级低于网络深度和宽度。应先用 ReLU 做 baseline，再尝试 PReLU 等变体来提升精度。
-- **参见**: [[activation-selection]], [[../debugging/small-data-overfit-test]]
+- **参见**: [activation-selection](../../../wiki/activation/activation-selection.md), [../debugging/small-data-overfit-test](../../../wiki/debugging/small-data-overfit-test.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-035-01/experiment.py --run --enviro
 - **适用场景**: 大模型SFT微调
 - **原文**: 调参的时候，可以对learning rate，weight decay从大往小调，通常lr从1E-4开始，weight decay从0.25开始。
 - **要点**: SFT微调lr从1e-4下探，weight_decay从0.25下探
-- **参见**: [[weight-decay]], [[../llm-sft/llm-sft]], [[lr-range-test]]
+- **参见**: [weight-decay](../../../wiki/optimizer-lr/weight-decay.md), [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

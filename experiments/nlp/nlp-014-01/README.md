@@ -37,7 +37,7 @@ python experiments/nlp/nlp-014-01/experiment.py --run --environment remote.json
 - **适用场景**: LSTM、BiLSTM 等序列模型
 - **原文**: *"调整LSTM参数与Word2Vec初始化"*
 - **要点**: LSTM 的 hidden size 和层数需要根据任务复杂度调整；使用预训练的 Word2Vec 或 GloVe 初始化 embedding 层可以加速收敛。在预训练语言模型普及前这是一个关键技巧，现在仍适用于资源受限或特定领域场景。
-- **参见**: [[../initialization/initialization]], [[word-embedding]]
+- **参见**: [../initialization/initialization](../../../wiki/initialization/initialization.md), `[[word-embedding]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

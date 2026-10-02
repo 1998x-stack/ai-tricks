@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-042-01/experiment.py --run --enviro
 - **适用场景**: 调参优先级排序，大规模业务
 - **原文**: 绝大多数任务里，最值得先调的永远是学习率和数据相关参数。学习率不对，其他全白搭。
 - **要点**: LR > 数据 > 模型结构 > 其他超参数
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

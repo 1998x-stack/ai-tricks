@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-082-01/experiment.py --run --enviro
 - **适用场景**: 超参数范围不确定时
 - **原文**: 由粗到细的随机搜索可以缩小超高性能参数的范围
 - **要点**: 先用随机搜索大范围采样确认有效区间，再在小区间内精细搜索
-- **参见**: [[../infra/wandb-sweeps]]
+- **参见**: [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md)
 
 ## 解释边界
 

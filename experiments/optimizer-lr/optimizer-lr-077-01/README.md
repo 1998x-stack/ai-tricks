@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-077-01/experiment.py --run --enviro
 - **适用场景**: CV任务Adam+Cosine基线
 - **原文**: 学习率初始时可以设置3.5e-4，可以适当进行调整，基本就在5e-4 ~ 5e-5之间
 - **要点**: CV通用初始LR 3.5e-4（Adam），范围5e-4~5e-5
-- **参见**: [[lr-range-test]] | [[../cnn-cv/cnn-cv]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/debugging/debugging-033-01/experiment.py --run --environment 
 - **适用场景**: 离线指标好但线上效果差
 - **原文**: "验证集是随机切的，同一个用户的连续行为同时出现在训练和验证里，模型学到了一些用户短期偏好泄漏"
 - **要点**: 按时间切分而非随机切分可避免数据泄露。同样模板/用户/场景的数据不要同时出现在训练和验证集中。数据泄露是假提升的最大来源。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

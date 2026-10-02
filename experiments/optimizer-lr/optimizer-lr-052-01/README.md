@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-052-01/experiment.py --run --enviro
 - **适用场景**: 模型初始化方法选择
 - **原文**: 对于weight的初始化一般都是使用xavier初始化
 - **要点**: Xavier（tanh/sigmoid）或He初始化（ReLU），好的初始化使LR更有效
-- **参见**: [[../initialization/initialization]]
+- **参见**: [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

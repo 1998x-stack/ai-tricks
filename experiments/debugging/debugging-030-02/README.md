@@ -37,7 +37,7 @@ python experiments/debugging/debugging-030-02/experiment.py --run --environment 
 - **适用场景**: 防止梯度爆炸/消失
 - **原文**: "梯度归一、梯度裁剪一定很重要"
 - **要点**: 计算梯度范数，设置阈值进行裁剪。PyTorch中使用 `torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm)`。经常与bf16混合精度配合使用。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

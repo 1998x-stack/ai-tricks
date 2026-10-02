@@ -37,7 +37,7 @@ python experiments/regularization/regularization-004-01/experiment.py --run --en
 - **适用场景**: 需要稀疏权重的场景（特征选择、模型压缩）
 - **原文**: "L1 正则化：对稀疏性敏感，权重趋于零" ——苏辄
 - **要点**: 适用于需要稀疏性的场景，通过惩罚权重的绝对值使权重趋于零，起到特征选择作用。L2则平滑权重变化，惩罚较大权重值。
-- **参见**: [[weight-decay]]
+- **参见**: `[[weight-decay]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

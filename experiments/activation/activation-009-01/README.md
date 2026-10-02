@@ -37,7 +37,7 @@ python experiments/activation/activation-009-01/experiment.py --run --environmen
 - **适用场景**: 学习率调节 + ReLU 搭配
 - **原文**: "LR在可以工作的最大值下往小收一收, 免得ReLU把神经元弄死了"
 - **要点**: 学习率过大会使大量 ReLU 神经元陷入永不激活的状态。在可工作的最大 LR 下适当调小，在收敛速度和神经元存活率之间平衡。
-- **参见**: [[relu]], [[../optimizer-lr/adam]]
+- **参见**: [relu](../../../wiki/activation/relu.md), [../optimizer-lr/adam](../../../wiki/optimizer-lr/adam.md)
 
 ## 解释边界
 

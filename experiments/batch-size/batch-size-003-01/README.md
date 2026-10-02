@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-003-01/experiment.py --run --environmen
 - **适用场景**: RLHF、PPO 强化学习训练
 - **原文**: > RLHF阶段的batch_size宁大勿小。更大的批次可以提供更稳定的梯度估计，尤其对于PPO。如果显存不足，应优先使用Gradient Accumulation来等效扩大批次大小。
 - **要点**: PPO 的策略更新对梯度噪声敏感，大批次提供稳定梯度估计，显存不足时用梯度累积替代减小批次。
-- **参见**: [[gradient-accumulation]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [gradient-accumulation](../../../wiki/batch-size/gradient-accumulation.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/regularization/regularization-008-01/experiment.py --run --en
 - **适用场景**: 多路卷积特征融合后的正则化，底层特征图
 - **原文**: "如果你有两个或更多的卷积层对相同的输入进行操作，那么在特征连接后使用SpatialDropout。由于这些卷积层是在相同的输入上操作的，输出特征很可能是相关的。SpatialDropout删除了那些相关的特征，并防止网络中的过拟合。"
 - **要点**: 主要用于较低的卷积层，整通道丢弃而非单神经元丢弃，打破特征图之间的相关性。当多路卷积共享输入时效果最好。
-- **参见**: [[dropout]]
+- **参见**: [dropout](../../../wiki/regularization/dropout.md)
 
 ## 解释边界
 

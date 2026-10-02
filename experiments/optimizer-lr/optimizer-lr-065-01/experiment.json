@@ -11,7 +11,7 @@
     "raw_exact_lines": [
       195
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "optimizer.gamma",
   "a": 0.9,
@@ -19,7 +19,9 @@
   "profile": "vision",
   "metric": "test_accuracy",
   "direction": "max",
-  "controls": {},
+  "controls": {
+    "optimizer.schedule": "exponential"
+  },
   "contrast_type": "single_factor",
   "status": "protocol_ready_training_pending",
   "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",

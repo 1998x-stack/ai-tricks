@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-005-01/experiment.py --run --environmen
 - **适用场景**: 推荐系统 CTR 预估、召回排序模型
 - **原文**: > batch size对于推荐来说32-64-128-512测试效果再高一般也不会正向了，再低训练太慢了。
 - **要点**: 推荐系统 batch size 存在有效上限（约 512），超出后收益递减；低于 32 则训练过慢。
-- **参见**: [[batch-size-generalization]], [[../optimizer-lr/optimizer-lr]]
+- **参见**: [batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md), [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

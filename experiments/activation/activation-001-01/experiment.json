@@ -12,7 +12,7 @@
       2717,
       2802
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.activation",
   "a": "sigmoid",

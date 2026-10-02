@@ -37,7 +37,7 @@ python experiments/normalization/normalization-008-01/experiment.py --run --envi
 - **适用场景**: 回归任务
 - **原文**: > 一般来说分类就是Softmax, 回归就是L2的loss. 但是要注意loss的错误范围（主要是回归），你预测一个label是10000的值，模型输出0，你算算这loss多大，这还是单变量的情况下。一般结果都是nan。所以不仅仅输入要做normalization，输出也要这么弄。
 - **要点**: 回归任务中预测目标量级过大时 loss 会爆炸为 NaN，需对 label 做归一化到合理范围（如 0~1 或零均值单位方差）。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/debugging/debugging-019-01/experiment.py --run --environment 
 - **适用场景**: 模型在小数据上也无法拟合时的心理建设
 - **原文**: "不要怀疑NN的能力，不要怀疑NN的能力，不要怀疑NN的能力。就我们调参狗能遇到的问题，NN没法拟合的，这概率是有多小？"
 - **要点**: 如果模型连小数据都无法过拟合，99%是代码bug或数据问题，而不是神经网络的表达极限。检查dataloader、label、loss实现。
-- **参见**: [[debugging#小数据过拟合测试]]
+- **参见**: [debugging#小数据过拟合测试](../../../wiki/debugging/debugging.md#小数据过拟合测试)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-037-04/experiment.py --run --enviro
 - **适用场景**: LLM预训练超参设定
 - **原文**: β1=0.9, β2=0.95, weight_decay=0.1；初始化标准差0.06；梯度裁剪阈值1.0；warmup steps 2000；multistep scheduler在80%和90% tokens处各降一次。
 - **要点**: 大部分超参固定，warmup 2000步，multistep两阶段衰减
-- **参见**: [[weight-decay]], [[../llm-sft/llm-sft]]
+- **参见**: [weight-decay](../../../wiki/optimizer-lr/weight-decay.md), [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/recsys/recsys-005-01/experiment.py --run --environment remote
 - **适用场景**: 粗排模型训练
 - **原文**: > 粗排用精排后topk做负样本，基本是有效果的
 - **要点**: 将精排模型打分后排在后部的样本作为粗排的负样本，这一策略在多数场景有效。
-- **参见**: [[negative-sampling]]
+- **参见**: [negative-sampling](../../../wiki/recsys/negative-sampling.md)
 
 ## 解释边界
 

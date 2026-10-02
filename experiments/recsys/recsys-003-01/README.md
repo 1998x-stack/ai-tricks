@@ -37,7 +37,7 @@ python experiments/recsys/recsys-003-01/experiment.py --run --environment remote
 - **适用场景**: 推荐系统特征筛选
 - **原文**: > 做推荐的同学，一般特征不要直接全怼进去，最好是一个一个的加特征进行效果测试，因为有些特征可能导致模型过拟合，最好还是一个一个加
 - **要点**: 一次性加入所有特征可能导致过拟合，应逐个添加并测试效果。
-- **参见**: [[feature-binning]]
+- **参见**: [feature-binning](../../../wiki/recsys/feature-binning.md)
 
 ## 解释边界
 

@@ -11,7 +11,7 @@
 | B | `0.99` |
 | 任务配置 | `vision` |
 | 主指标 | `test_accuracy`（max） |
-| 固定条件 | `{}`，另固定数据/模型版本、切分、种子、硬件 |
+| 固定条件 | `{"optimizer.schedule": "exponential"}`，另固定数据/模型版本、切分、种子、硬件 |
 | 对照类型 | `single_factor` |
 | 状态 | 协议和编排入口已生成；完整训练尚未执行，专用驱动支持情况见总表 |
 
@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-020-01/experiment.py --run --enviro
 - **适用场景**: 通用LR衰减系数选择
 - **原文**: 学习率一般要随着训练进行衰减。衰减系数设0.1，0.3，0.5均可，衰减时机，可以是验证集准确率不再上升时
 - **要点**: 衰减系数可选0.1/0.3/0.5，在验证集平台期触发
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

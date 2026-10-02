@@ -37,7 +37,7 @@ python experiments/initialization/initialization-009-02/experiment.py --run --en
 - **适用场景**: 竞赛、需要提升模型鲁棒性时
 - **原文**: "可以使用不同的初始化方式训练出模型，然后做ensemble"
 - **要点**: 用不同的初始化方法（Xavier、He、Uniform、Normal）分别训练模型，再对结果做 voting/soft-voting，可以低成本获取多样性。
-- **参见**: [[ensemble]]
+- **参见**: `[[ensemble]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

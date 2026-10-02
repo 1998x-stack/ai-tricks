@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-026-01/experiment.py --run --environment 
 - **适用场景**: 所有实验对比场景
 - **原文**: "随机数种子设定好，否则很多对比实验结论不一定准确" / "没有 seed，不记录环境，结果就很难复现。固定 seed 也不代表完全确定，但至少别让实验变成记忆游戏。"
 - **要点**: 每次实验记录随机种子和运行环境。种子不固定时，小数据任务的结果方差可能大于调参带来的提升幅度。使用固定种子（如42、3407）进行对比实验。
-- **参见**: [[cross-validation]], [[../infra/wandb-sweeps]]
+- **参见**: [cross-validation](../../../wiki/data-eval/cross-validation.md), [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md)
 
 ## 解释边界
 

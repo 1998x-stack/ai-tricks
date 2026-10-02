@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-015-01/experiment.py --run --enviro
 - **适用场景**: 训练后期进一步压低loss
 - **原文**: 固定lr值，然后训，发现损失不咋下降了，设置一个在这个时间点下降0.1倍（一般都是10倍下降，经验值）
 - **要点**: loss平台期将LR x0.1，继续下降到下一个平台期再降
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

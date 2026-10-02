@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-020-01/experiment.py --run --environment remo
 - **适用场景**: SFT 训练停止条件
 - **原文**: "训练轮数不要太多，很多 SFT 两三个 epoch 已经开始记数据了。"
 - **要点**: SFT 不同于预训练，数据量通常有限，几轮 epoch 后模型就会从"学习范式"转向"记忆数据"。建议在验证集上监控指标变化，一旦指标不再提升或开始下降就停止。通常 2-3 个 epoch 是常见的合理范围。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

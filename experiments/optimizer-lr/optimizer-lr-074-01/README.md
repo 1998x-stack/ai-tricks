@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-074-01/experiment.py --run --enviro
 - **适用场景**: 手动梯度检查、防止梯度爆炸
 - **原文**: 如果你没用过Theano或者Torch，梯度实现就只能靠自己人肉算了。梯度实现还真的挺容易出错的。梯度裁剪的一般步骤：计算梯度，计算范数，裁剪，再应用。
 - **要点**: 梯度裁剪通用做法：计算梯度范数 -> 按阈值裁剪 -> 应用更新
-- **参见**: [[gradient-clipping]]
+- **参见**: `[[gradient-clipping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

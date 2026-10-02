@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-010-01/experiment.py --run --environment 
 - **适用场景**: 训练过程中的诊断
 - **原文**: "判断过拟合，训练是否足够，是否需要early stop的依据" / "模型在训练集上的误差很小……但是验证集的 loss 相对较大。那就是过拟合了。在训练集和验证集上的loss都比较大……那可能就是欠拟合了。"
 - **要点**: 训练loss低+验证loss高=过拟合（加正则化、加数据）；两边loss都高=欠拟合（加模型容量、调学习率）。这是调参诊断的第一步。
-- **参见**: [[../regularization/overfitting-underfitting]], [[underfitting]]
+- **参见**: [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md), `[[underfitting]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

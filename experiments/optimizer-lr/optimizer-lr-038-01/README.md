@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-038-01/experiment.py --run --enviro
 - **适用场景**: LoRA/QLoRA微调预训练大模型
 - **原文**: LoRA调参里最常调的是学习率、rank、alpha、dropout。学习率1e-4到3e-4是常见范围，小数据强基座可更低。rank 8/16/32开始。
 - **要点**: LoRA lr在1e-4~3e-4常见，小数据更保守；rank不是越大越好
-- **参见**: [[lora]] | [[lr-range-test]]
+- **参见**: `[[lora]]`（原 Wiki 未解析链接） | [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

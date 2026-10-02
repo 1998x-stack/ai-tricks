@@ -37,7 +37,7 @@ python experiments/activation/activation-007-01/experiment.py --run --environmen
 - **适用场景**: 当分类精度因类别相似不够高时
 - **原文**: "如果你的分类精度不够是因为有两类或者多类太相近造成的，考虑使用其他softmax，比如amsoftmax" / "各种魔改的softmax能更好的增大类间差距"
 - **要点**: 标准 softmax 仅优化类别分离，AM-Softmax、ArcFace、CosFace 等变体通过加 margin 增大类间距离，适合细粒度分类和人脸识别。
-- **参见**: [[../data-eval/eval-metrics]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

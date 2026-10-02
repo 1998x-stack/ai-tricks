@@ -37,7 +37,7 @@ python experiments/debugging/debugging-009-02/experiment.py --run --environment 
 - **适用场景**: 训练集和验证集loss都高
 - **原文**: "在训练集和验证集上的loss都比较大，都大于0.3，那可能就是欠拟合了"
 - **要点**: 两边loss都高，说明模型表达能力不足或学习率不对。先检查学习率，然后增大模型宽度/深度，或检查代码bug。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

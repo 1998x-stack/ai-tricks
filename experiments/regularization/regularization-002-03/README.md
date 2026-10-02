@@ -37,7 +37,7 @@ python experiments/regularization/regularization-002-03/experiment.py --run --en
 - **适用场景**: 全连接层、CNN、Transformer微调，预训练模型内部
 - **原文**: "Dropout, Dropout, Dropout(不仅仅可以防止过拟合, 其实这相当于做人力成本最低的Ensemble)" ——匿名
 - **要点**: 默认比例从0.2~0.5，若不知设多少直接选0.5。测试时必须关闭。预训练模型中Dropout ratio不一定要大，0到0.1常见，有时reset到0有奇效。一过拟合不要猛加Dropout，先看数据量、标签质量、weight decay、早停。
-- **参见**: [[dropout]], [[../data-eval/eval-metrics]]
+- **参见**: [dropout](../../../wiki/regularization/dropout.md), [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

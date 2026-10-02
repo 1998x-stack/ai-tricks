@@ -37,7 +37,7 @@ python experiments/recsys/recsys-019-01/experiment.py --run --environment remote
 - **适用场景**: 样本极度不平衡的推荐任务
 - **原文**: > 对于负样本太多的数据集，测试集的loss降并不代表没有过拟合，试试看看f1或者auc有没有降低，因为有可能负样本学的爆好，所以loss降低，但是正样本凉了
 - **要点**: 负样本远多于正样本时，Loss 下降可能是因为负样本学好了而正样本反而变差，应同步监控 F1 或 AUC。
-- **参见**: [[imbalanced-data]], [[eval-metrics]]
+- **参见**: `[[imbalanced-data]]`（原 Wiki 未解析链接）, `[[eval-metrics]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

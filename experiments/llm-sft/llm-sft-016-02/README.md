@@ -41,7 +41,7 @@ python experiments/llm-sft/llm-sft-016-02/experiment.py --run --environment remo
   - 需要位置编码适配（RoPE 等的外推能力有限）
   - 可能导致训练不稳定
   建议根据实际数据分布设定，统计训练数据中 95% 分位的长度作为 max length 起点，再进行微调。
-- **参见**: [[../infra/infra]]
+- **参见**: [../infra/infra](../../../wiki/infra/infra.md)
 
 ## 解释边界
 

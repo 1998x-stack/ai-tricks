@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-015-01/experiment.py --run --environment 
 - **适用场景**: 类别极度不平衡的分类任务（异常检测、长尾识别）
 - **原文**: "Focal loss对于极大不平衡的数据集确实有奇效，其中gamma因子可以成10倍数衰减" / "如果你的分类精度不够是样本不均衡造成的，考虑使用focal loss。" / "如果你有高度不平衡的数据问题，在训练期间应用类别加权操作。"
 - **要点**: Focal Loss通过调制系数降低易分类样本的loss权重，使训练更关注难样本。gamma通常从0.5开始尝试，以10倍步长搜索。也可用sklearn的class_weight计算类别权重。过采样/欠采样也是常用手段。
-- **参见**: [[class-imbalance]], [[focal-loss]]
+- **参见**: [class-imbalance](../../../wiki/data-eval/class-imbalance.md), [focal-loss](../../../wiki/data-eval/focal-loss.md)
 
 ## 解释边界
 

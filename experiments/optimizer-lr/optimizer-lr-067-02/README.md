@@ -11,7 +11,7 @@
 | B | `1e-07` |
 | 任务配置 | `vision` |
 | 主指标 | `test_accuracy`（max） |
-| 固定条件 | `{}`，另固定数据/模型版本、切分、种子、硬件 |
+| 固定条件 | `{"optimizer.schedule": "warmup_cosine"}`，另固定数据/模型版本、切分、种子、硬件 |
 | 对照类型 | `single_factor` |
 | 状态 | 协议和编排入口已生成；完整训练尚未执行，专用驱动支持情况见总表 |
 
@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-067-02/experiment.py --run --enviro
 - **适用场景**: 对已有baseline做精细调参
 - **原文**: lr也可以调调，适当放大缩小看看，cos退火的起始点或者warm-up的持续时长，也可以试试改改
 - **要点**: 可精调：cos起始点、warmup持续长度、LR初值
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

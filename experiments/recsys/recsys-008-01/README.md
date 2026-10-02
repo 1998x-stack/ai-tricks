@@ -37,7 +37,7 @@ python experiments/recsys/recsys-008-01/experiment.py --run --environment remote
 - **适用场景**: 推荐系统序列特征聚合
 - **原文**: > 对于推荐序列来说pooling和attention的效果差别真的不大，基本没有diff
 - **要点**: 在推荐系统的序列特征聚合中，简单 Pooling 和 Attention 的线上效果差异极小，优先使用简单的 Pooling 以降低复杂度。
-- **参见**: [[../normalization/layer-normalization]], [[multi-task-recsys]]
+- **参见**: [../normalization/layer-normalization](../../../wiki/normalization/layer-normalization.md), [multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-046-01/experiment.py --run --enviro
 - **适用场景**: 判断LR问题是太小还是需要进一步衰减
 - **原文**: 太小的话中间结果有点水波纹或者噪点的样子，因为filter学习太慢的原因；需要进一步降低的情况也是如此，但可视化中间结果两者不一样。
 - **要点**: LR太小时中间特征有水波纹；LR需要降低时loss不再下降但特征正常
-- **参见**: [[lr-range-test]] | [[../data-eval/eval-metrics]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

@@ -12,7 +12,7 @@
       190,
       2717
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.output_activation",
   "a": "relu",

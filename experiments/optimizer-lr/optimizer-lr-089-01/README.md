@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-089-01/experiment.py --run --enviro
 - **适用场景**: 推荐系统特征工程
 - **原文**: 做推荐的同学，一般特征不要直接全怼进去，最好是一个一个的加特征进行效果测试，因为有些特征可能导致模型过拟合
 - **要点**: 推荐系统特征逐个加入测试，避免引入干扰特征使LR失效
-- **参见**: [[../recsys/recsys]] | [[../recsys/feature-binning]]
+- **参见**: [../recsys/recsys](../../../wiki/recsys/recsys.md) | [../recsys/feature-binning](../../../wiki/recsys/feature-binning.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/regularization/regularization-016-01/experiment.py --run --en
 - **适用场景**: 训练后期追求泛化性能上限
 - **原文**: "SGD+momentum可以实现找到全局最小值，但它依赖于鲁棒初始化。我建议你使用SGD+动量，因为它能达到更好的最佳效果。" ——匿名（亚马逊工程师）
 - **要点**: SGD+Momentum泛化能力通常比Adam强1~2个点。大厂标准做法：前几个epoch用Adam快速冷启动，之后切换到SGD进行微调（两阶段训练）。AdamW在Adam基础上保留weight decay效果，提升泛化。
-- **参见**: [[../optimizer-lr/adam]]
+- **参见**: [../optimizer-lr/adam](../../../wiki/optimizer-lr/adam.md)
 
 ---
 

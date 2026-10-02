@@ -37,7 +37,7 @@ python experiments/regularization/regularization-006-03/experiment.py --run --en
 - **适用场景**: CV（裁剪/翻转/旋转/平移/色彩变换）、NLP（同义词替换/随机丢弃/回译）、推荐（采样策略）
 - **原文**: "数据越多越好！总是使用数据增强，如水平翻转，旋转，缩放裁剪等。这可以帮助大幅度提高精确度。" ——匿名（亚马逊工程师）
 - **要点**: 数据增强是最有效的正则化手段，比任何参数调整都重要。Imagenet级别的大数据集没有不过拟合的，必须上各种数据增强硬调。小数据微调时不要过度增强破坏信号。Mixup/CutMix是更高级的增强形式。
-- **参见**: [[data-augmentation]]
+- **参见**: `[[data-augmentation]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

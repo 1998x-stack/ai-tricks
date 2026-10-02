@@ -37,7 +37,7 @@ python experiments/debugging/debugging-023-01/experiment.py --run --environment 
 - **适用场景**: 调参前的系统诊断
 - **原文**: "真正高效的调参，是先诊断，再下手。你的模型到底卡在哪里？"
 - **要点**: 训练集loss高 → 模型表达能力或学习率问题；训练集loss低但验证集高 → 过拟合，加数据/正则化；两个都低但验证集不收敛 → 学习率进入悬崖区。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[../regularization/regularization]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

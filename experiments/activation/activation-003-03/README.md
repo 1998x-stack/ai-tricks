@@ -37,7 +37,7 @@ python experiments/activation/activation-003-03/experiment.py --run --environmen
 - **适用场景**: 输出层设计
 - **原文**: "多分类任务选用softmax输出，二分类任务选用sigmoid输出，回归任务选用线性输出" / "如果是连续的用identify，分类的用softmax，拟合回归的话直接wx +b就行"
 - **要点**: 多分类 → softmax；二分类 → sigmoid；回归 → 线性/identity/无激活函数。
-- **参见**: [[../data-eval/eval-metrics]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-031-01/experiment.py --run --enviro
 - **适用场景**: 正则化防过拟合，尤其Transformer
 - **原文**: ResNet类模型对weight decay相对不敏感，但Transformer类模型，尤其是大batch训练时，weight decay设大了会让模型完全无法收敛。我的经验是先从0.01开始，如果不稳定往0.001甚至0.0001调。
 - **要点**: ResNet对weight decay不敏感；Transformer很敏感，从0.01开始试
-- **参见**: [[weight-decay]]
+- **参见**: [weight-decay](../../../wiki/optimizer-lr/weight-decay.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-003-01/experiment.py --run --environment remo
 - **适用场景**: SFT 超参数初始化
 - **原文**: "调参的时候，可以对learning rate，weight decay从大往小调，通常lr从1E-4开始，weight decay从0.25开始。"
 - **要点**: SFT 的 LR 从 1e-4 开始尝试，从大到小搜索；weight decay 从 0.25 开始，也是从大到小调。Tang AI 的经验是这两个参数从大往小调比从小往大更容易找到合适值。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

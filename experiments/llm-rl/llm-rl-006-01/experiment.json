@@ -11,7 +11,7 @@
     "raw_exact_lines": [
       126
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "checkpoint.base_success_stratum",
   "a": "below_20pct",

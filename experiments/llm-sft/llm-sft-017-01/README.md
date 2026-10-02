@@ -41,7 +41,7 @@ python experiments/llm-sft/llm-sft-017-01/experiment.py --run --environment remo
   2. **Tokenizer 不一致**: 训练时使用的 tokenizer 与推理时不匹配，导致生成结果异常。
   3. **训练和推理预处理不一致**: 数据清洗、截断策略、特殊 token 处理等必须完全相同。
   4. **Chat template 不一致**（见上条独立技巧）。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

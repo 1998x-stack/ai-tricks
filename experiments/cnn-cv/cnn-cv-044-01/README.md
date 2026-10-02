@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-044-01/experiment.py --run --environment remote
 - **适用场景**: 图像比对、人脸识别、ReID
 - **原文**: "metric learning（图像比对）一般说来是batchsize更大会性能更好，因为这样能采样到的正负样本对的范围更大"
 - **要点**: 更大的batch能覆盖更多正负样本对；显存不够用梯度累积
-- **参见**: [[../batch-size/batch-size-generalization]], [[TripletLoss]]
+- **参见**: [../batch-size/batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md), `[[TripletLoss]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/debugging/debugging-005-01/experiment.py --run --environment 
 - **适用场景**: Loss逐渐增大然后变成NaN
 - **原文**: "学习率过高；梯度爆炸"
 - **要点**: 学习率太大导致参数更新越过最优点；梯度爆炸导致参数数值溢出。先降低学习率，若无效则启用梯度裁剪作为临时修复。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[optimizer-lr#梯度裁剪]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), `[[optimizer-lr#梯度裁剪]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

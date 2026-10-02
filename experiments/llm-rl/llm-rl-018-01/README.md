@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-018-01/experiment.py --run --environment remote
 - **适用场景**: LR调度策略
 - **原文**: "使用warmup和decay策略通常是个好主意，一般推荐cosine策略。"
 - **要点**: 推荐cosine LR schedule + warmup。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

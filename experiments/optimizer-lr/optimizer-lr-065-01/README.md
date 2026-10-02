@@ -11,7 +11,7 @@
 | B | `0.5` |
 | 任务配置 | `vision` |
 | 主指标 | `test_accuracy`（max） |
-| 固定条件 | `{}`，另固定数据/模型版本、切分、种子、硬件 |
+| 固定条件 | `{"optimizer.schedule": "exponential"}`，另固定数据/模型版本、切分、种子、硬件 |
 | 对照类型 | `single_factor` |
 | 状态 | 协议和编排入口已生成；完整训练尚未执行，专用驱动支持情况见总表 |
 
@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-065-01/experiment.py --run --enviro
 - **适用场景**: 推荐系统等经典场景
 - **原文**: 学习率最好是从高到底2倍速度递减一般从0.01开始。
 - **要点**: LR从0.01开始，按2倍速度递减
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

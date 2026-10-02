@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-017-01/experiment.py --run --environment remote
 - **适用场景**: 训练不稳定
 - **原文**: "当出现训练不稳定（如损失值突然飙升），可启用梯度裁剪，裁剪值一般为0.2。"
 - **要点**: 梯度裁剪默认值0.2，用于防止loss突然飙升。
-- **参见**: [[gradient-clipping]]
+- **参见**: `[[gradient-clipping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

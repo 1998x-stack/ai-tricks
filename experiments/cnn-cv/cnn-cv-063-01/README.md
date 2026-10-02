@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-063-01/experiment.py --run --environment remote
 - **适用场景**: 追求最终小模型性能
 - **原文**: "先训一个大模型然后裁剪，也许比直接训一个小模型性能好"
 - **要点**: 大模型蒸馏/裁剪到小模型，可能比直接训小模型效果好
-- **参见**: [[../infra/gradient-checkpointing]], [[../regularization/label-smoothing]]
+- **参见**: [../infra/gradient-checkpointing](../../../wiki/infra/gradient-checkpointing.md), [../regularization/label-smoothing](../../../wiki/regularization/label-smoothing.md)
 
 ## 解释边界
 

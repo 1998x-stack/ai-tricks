@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-018-01/experiment.py --run --environment remote
 - **适用场景**: 底层视觉任务（去噪、增强、关键点）
 - **原文**: "感受野也不是越大越好……对于某些low-level的任务而言，比如图像降噪，感受野可能也就局部patch大小"
 - **要点**: low-level任务感受野不用太大；low-level任务下采样意义更小，应尽可能少下采样
-- **参见**: [[receptive-field]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

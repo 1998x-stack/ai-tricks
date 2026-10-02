@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-006-01/experiment.py --run --environment 
 - **适用场景**: 长时间迭代优化的项目
 - **原文**: "很多人嘴上说没有用测试集，实际上每天看验证集调参数，调到最后验证集也成了训练的一部分。解决办法是保留一个真正不碰的最终测试集，最好按时间或业务单元切。重要版本才评一次。"
 - **要点**: 连续迭代时会无意中让验证集信息影响调参决策。应冻结一个最终测试集，只在关键版本时评估一次。
-- **参见**: [[cross-validation]]
+- **参见**: [cross-validation](../../../wiki/data-eval/cross-validation.md)
 
 ## 解释边界
 

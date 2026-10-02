@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-041-01/experiment.py --run --enviro
 - **适用场景**: 模型效果不满意时的第一反应
 - **原文**: 1、优先调 learning rate！优先调 learning rate！优先调 learning rate！学习速率会很大程度上影响模型的表现。
 - **要点**: LR是第一优先级超参数
-- **参见**: [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/normalization/normalization-009-01/experiment.py --run --envi
 - **适用场景**: 通用 CNN 训练
 - **原文**: > batch normalization我一直没用，虽然我知道这个很好，我不用仅仅是因为我懒。所以要鼓励使用batch normalization。
 - **要点**: BN 效果公认优秀，不应因惰性而省略。
-- **参见**: [[batch-normalization]], [[../cnn-cv/cnn-cv]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

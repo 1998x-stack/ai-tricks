@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-024-01/experiment.py --run --environment remote
 - **适用场景**: 基础网络设计
 - **原文**: "微步幅是只卷积步幅选择2，然后模板数量逐层翻倍"
 - **要点**: stride=2卷积替代pooling下采样，特征图越变越厚；反卷积对称地翻回来
-- **参见**: [[receptive-field]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

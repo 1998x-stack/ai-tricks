@@ -41,7 +41,7 @@ python experiments/llm-sft/llm-sft-019-01/experiment.py --run --environment remo
   - **RL 推上限**: 在 SFT 的基础上，让模型在偏好维度上做到更好。
   - 如果 SFT 效果差，RL 基本不可能好（"如果运动员只能 10 中 2，他怎么都到不了 10 中 8"）。
   - 对于有确定性 rule reward 的任务（如数学、逻辑），可以跳过 SFT 直接做纯 RL；但反之——没有 SFT 先给能力，RL 难以奏效。
-- **参见**: [[../llm-rl/llm-rl]]
+- **参见**: [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md)
 
 ## 解释边界
 

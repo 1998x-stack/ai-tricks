@@ -37,7 +37,7 @@ python experiments/debugging/debugging-027-01/experiment.py --run --environment 
 - **适用场景**: 调试心态
 - **原文**: "调试深度学习模型的第一要义——悲观主义"
 - **要点**: 先假设你的代码有bug，逐步验证每个环节。不要假设代码正确然后怀疑模型能力。
-- **参见**: [[debugging#不要怀疑NN的能力]]
+- **参见**: [debugging#不要怀疑NN的能力](../../../wiki/debugging/debugging.md#不要怀疑NN的能力)
 
 ## 解释边界
 

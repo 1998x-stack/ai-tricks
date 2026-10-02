@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-024-01/experiment.py --run --environment remote
 - **适用场景**: Base-RL效果提升
 - **原文**: "如果Base-RL的效果想要更进一步，可以试试用base-RL拒绝采样一批样本，然后对Base模型进行简单的冷启动微调，随后再继续RL。这就是先挑出reward高的样本先微调冷启动一把。"
 - **要点**: Base-RL后，用拒绝采样挑reward高的样本，对Base模型冷启动微调，再继续RL。
-- **参见**: [[grpo]]
+- **参见**: [grpo](../../../wiki/llm-rl/grpo.md)
 
 ## 解释边界
 

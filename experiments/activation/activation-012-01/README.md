@@ -37,7 +37,7 @@ python experiments/activation/activation-012-01/experiment.py --run --environmen
 - **适用场景**: 移动端 / 低算力设备
 - **原文**: "ReLu6：限制激活值的上界，超过6的统一算为6，减轻运算压力，适合移动设备"
 - **要点**: ReLU6 将输出截断至 [0, 6] 区间，减少激活值的动态范围，降低量化难度和计算压力，MobileNet 等轻量网络常用。
-- **参见**: [[../infra/mixed-precision]]
+- **参见**: [../infra/mixed-precision](../../../wiki/infra/mixed-precision.md)
 
 ## 解释边界
 

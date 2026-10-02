@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-012-01/experiment.py --run --environment remote
 - **适用场景**: 基模直接RL
 - **原文**: "对于没有经过SFT的模型，kl散度可以不用开，因为没有经过SFT的模型产生的数据实际多样性还是有的，不会像SFT那么统一"
 - **要点**: 基模本身多样性好于SFT模型，未过SFT的直接RL可不开KL。
-- **参见**: [[../llm-sft/llm-sft]], [[kl-divergence-rlhf]]
+- **参见**: [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md), [kl-divergence-rlhf](../../../wiki/llm-rl/kl-divergence-rlhf.md)
 
 ## 解释边界
 

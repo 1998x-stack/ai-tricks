@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-061-01/experiment.py --run --enviro
 - **适用场景**: LR与正则化的关系
 - **原文**: 如果使用恒定的学习率而不是使用学习率范围进行搜索，则最佳权重衰减会有所不同。由于较大的学习率提供正则化，因此较小的权重衰减值是最佳的。
 - **要点**: 大的LR本身就有正则化效果，此时weight decay可设小
-- **参见**: [[weight-decay]]
+- **参见**: [weight-decay](../../../wiki/optimizer-lr/weight-decay.md)
 
 ## 解释边界
 

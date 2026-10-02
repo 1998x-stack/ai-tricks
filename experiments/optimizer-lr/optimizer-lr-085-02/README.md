@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-085-02/experiment.py --run --enviro
 - **适用场景**: Cyclical LR + Cyclical Momentum
 - **原文**: 最佳学习率取决于动量，而动量又取决于学习率。在不引起训练不稳定的情况下尽可能设置大的动量值。
 - **要点**: LR和Momentum相互依赖，需联合搜索；使用Cyclical策略时两者应反向周期变化
-- **参见**: [[sgd-momentum]], [[learning-rate-scheduling]], [[sgd-momentum]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md)
 
 ## 解释边界
 

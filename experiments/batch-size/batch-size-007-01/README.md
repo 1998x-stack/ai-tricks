@@ -37,7 +37,7 @@ python experiments/batch-size/batch-size-007-01/experiment.py --run --environmen
 - **适用场景**: A100/H100 多卡训练、梯度累积场景
 - **原文**: > batch size 也重要，但它不是越大越好。大 batch 训练快，梯度稳定，但泛化不一定更好。今天大家用 A100、H100、L40S、国产卡集群，gradient accumulation 很常见，看到的 batch size 往往是 effective batch size。调参时要记录清楚：单卡 batch、卡数、累积步数、总 batch 到底是多少。很多复现实验复现不出来，就是这里没说清。
 - **要点**: 使用多卡和梯度累积时必须记录「单卡 batch × 卡数 × 累积步数 = effective batch size」的完整公式，否则实验无法复现。
-- **参见**: [[gradient-accumulation]], [[batch-size-generalization]], [[../infra/distributed-training]]
+- **参见**: [gradient-accumulation](../../../wiki/batch-size/gradient-accumulation.md), [batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md), [../infra/distributed-training](../../../wiki/infra/distributed-training.md)
 
 ## 解释边界
 

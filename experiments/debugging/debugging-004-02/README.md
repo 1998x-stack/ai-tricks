@@ -37,7 +37,7 @@ python experiments/debugging/debugging-004-02/experiment.py --run --environment 
 - **适用场景**: 训练到中途loss突然变成NaN
 - **原文**: "输入中存在Nan（坏样本）；损失函数的计算,如交叉熵损失函数的计算可能出现log(0),所以就会出现loss为Nan"
 - **要点**: 首先检查输入数据是否含有NaN，其次检查loss计算中是否有log(0)操作。使用 `torch.isnan()` 逐层排查输入和中间结果。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

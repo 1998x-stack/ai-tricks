@@ -37,7 +37,7 @@ python experiments/regularization/regularization-005-03/experiment.py --run --en
 - **适用场景**: 任何训练流程，防止验证集loss回升后的过拟合
 - **原文**: "不要过早的early stopping，有时候收敛平台在后段，你会错过，参考1. ，先过拟合train set" ——爱睡觉的KKY
 - **要点**: 监控验证集loss，在连续若干epoch不下降时停止。但不要过早早停——有可能收敛发生在训练后段。ASHA/Hyperband这类方法让跑得差的组合尽早停。早停短训适合筛掉明显垃圾组合，不能完全替代完整训练。随机种子策略：跑一批随机种子后早停，挑loss下降快的种子深度训练。
-- **参见**: [[early-stopping]], [[../optimizer-lr/learning-rate-scheduling]]
+- **参见**: [early-stopping](../../../wiki/regularization/early-stopping.md), [../optimizer-lr/learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

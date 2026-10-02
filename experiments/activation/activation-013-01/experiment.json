@@ -13,7 +13,7 @@
       1303,
       1329
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "model.weight_init",
   "a": "xavier_normal",

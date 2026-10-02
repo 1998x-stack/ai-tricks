@@ -36,8 +36,8 @@ python experiments/batch-size/batch-size-012-02/experiment.py --run --environmen
 - **来源**: （代码段）
 - **适用场景**: PyTorch 下显存不足时等效扩大 batch size
 - **原文**: > 梯度累积可以在不增加内存消耗的情况下模拟大批次训练。通过在多个小批次上累积梯度，然后在达到指定累积次数后进行一次参数更新，可以有效提高训练效率。
-- **要点**: 核心实现为 loss = loss / accumulation_steps，每积累 accumulation_steps 次才执行 optimizer.step()，注意 loss 需除以累积步数以保持梯度量级一致。
-- **参见**: [[gradient-accumulation]], [[../infra/distributed-training]]
+- **要点**: 等大 microbatch 的平均 loss 可除以实际累积次数；尾组、变长 token 或有效标签数不同，应按有效样本/token 总数加权。每组累积完成后更新，epoch 尾组也必须更新，参见梯度累积页的完整代码。
+- **参见**: [gradient-accumulation](../../../wiki/batch-size/gradient-accumulation.md), [../infra/distributed-training](../../../wiki/infra/distributed-training.md)
 
 ## 解释边界
 

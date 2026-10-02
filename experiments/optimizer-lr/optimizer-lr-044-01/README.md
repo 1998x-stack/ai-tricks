@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-044-01/experiment.py --run --enviro
 - **适用场景**: CV任务，SGD训练
 - **原文**: SGD一般初始学习率为0.1（具体还得调），然后选择Cos或者Step下降
 - **要点**: SGD初始LR一般为0.1，配合momentum 0.9
-- **参见**: [[sgd-momentum]], [[lr-range-test]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

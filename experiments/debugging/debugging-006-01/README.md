@@ -37,7 +37,7 @@ python experiments/debugging/debugging-006-01/experiment.py --run --environment 
 - **适用场景**: 定位产生NaN的具体操作
 - **原文**: "代码问题定位 autograd.detect_anomaly()"
 - **要点**: 用 `with torch.autograd.detect_anomaly():` 包裹前向和反向传播，PyTorch会在产生NaN的精确位置抛出异常，精确定位问题操作。
-- **参见**: [[debugging#NaN诊断：突然出现的NaN]]
+- **参见**: [debugging#NaN诊断：突然出现的NaN](../../../wiki/debugging/debugging.md#NaN诊断：突然出现的NaN)
 
 ## 解释边界
 

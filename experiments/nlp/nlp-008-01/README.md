@@ -37,7 +37,7 @@ python experiments/nlp/nlp-008-01/experiment.py --run --environment remote.json
 - **适用场景**: RNN、LSTM、GRU 等循环神经网络
 - **原文**: *"构建序列神经网络（RNN）时要优先选用tanh激活函数"*
 - **要点**: RNN 内部隐状态更新时 tanh 优于 ReLU，因为 tanh 的输出范围 (-1, 1) 能有效缓解梯度爆炸且提供稳定的梯度流；ReLU 在 RNN 中容易导致激活值失控。
-- **参见**: [[activation-functions]]
+- **参见**: `[[activation-functions]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/infra/infra-005-01/experiment.py --run --environment remote.j
 - **适用场景**: 实验管理、结果复现
 - **原文**: "调参记录必须严格。每次实验至少记录代码版本、数据版本、配置、随机种子、硬件、训练时间、最优 checkpoint、评估结果、错误样例。别相信自己的记忆。" / "Hydra 或 OmegaConf 用来管理配置也很重要，不然实验一多，你自己都不知道哪组参数跑出了结果。"
 - **要点**: 每次实验必须记录代码版本+数据版本+配置+种子+硬件+checkpoint+评估结果；使用 W&B / MLflow 追踪实验；使用 Hydra / OmegaConf 管理配置；模型/数据/参数三者分离（数据路径存 txt，参数配置存 yaml）。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

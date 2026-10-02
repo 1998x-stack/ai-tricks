@@ -37,7 +37,7 @@ python experiments/infra/infra-003-01/experiment.py --run --environment remote.j
 - **适用场景**: 显存不足时的训练优化
 - **原文**: "显存不够用的时候，gradient checkpointing可以起到降低显存的效果"
 - **要点**: 以时间换空间，在前向传播时不保存中间激活值，反向传播时重新计算，可显著降低显存占用，适合长序列和大模型微调场景。
-- **参见**: [[../batch-size/batch-size]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/regularization/regularization-009-01/experiment.py --run --en
 - **适用场景**: 防止权重过大、梯度爆炸，作为L2的补充
 - **原文**: "与L2正则化相反，在你的损失函数中惩罚高权重，这个约束直接正则化你的权重。"
 - **要点**: 在Keras中通过 `kernel_constraint=max_norm(2.)` 设置。限制网络权值的上界，直接约束而非惩罚。有助于防止梯度爆炸。权重始终有界。
-- **参见**: [[weight-decay]], [[gradient-clipping]]
+- **参见**: `[[weight-decay]]`（原 Wiki 未解析链接）, `[[gradient-clipping]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

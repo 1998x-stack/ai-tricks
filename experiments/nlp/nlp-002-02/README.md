@@ -37,7 +37,7 @@ python experiments/nlp/nlp-002-02/experiment.py --run --environment remote.json
 - **适用场景**: 文本匹配、句子对分类等使用BERT做表征的任务
 - **原文**: *"bert不要太过于相信cls的embedding能力，还是要看看它有没有做过相关任务，特别对于文本匹配场景"*
 - **要点**: CLS token 的向量表示并非万能，尤其在文本匹配场景中需要验证其是否经过相关任务训练；可考虑使用 pooling 或 attention 聚合所有 token 的表示替代 CLS。
-- **参见**: [[../recsys/multi-task-recsys]]
+- **参见**: [../recsys/multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

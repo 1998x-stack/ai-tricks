@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-056-02/experiment.py --run --enviro
 - **适用场景**: 小数据微调预训练模型
 - **原文**: 小数据微调时weight decay太大可能损伤预训练能力，太小又容易过拟合。dropout在大预训练模型微调中不一定要大，0到0.1常见。
 - **要点**: 小数据微调时weight decay保守（0.01开始），dropout偏小（0~0.1）
-- **参见**: [[weight-decay]] | [[dropout]] | [[../llm-sft/llm-sft]]
+- **参见**: [weight-decay](../../../wiki/optimizer-lr/weight-decay.md) | `[[dropout]]`（原 Wiki 未解析链接） | [../llm-sft/llm-sft](../../../wiki/llm-sft/llm-sft.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/debugging/debugging-026-01/experiment.py --run --environment 
 - **适用场景**: 系统的深度学习调试流程
 - **原文**: "从不最简单模型入手；成功搭建模型，重现结果；分解偏差各项，逐步拟合数据"
 - **要点**: 1) 从最简单的架构开始；2) 在小数据上跑通；3) 逐步增加复杂度；4) 由粗到细搜索超参数；5) 欠拟合增大模型，过拟合加数据。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[../data-eval/data-eval]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

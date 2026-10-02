@@ -37,7 +37,7 @@ python experiments/debugging/debugging-010-01/experiment.py --run --environment 
 - **适用场景**: Loss不下降或震荡
 - **原文**: "dataset构建基本不会有啥问题，构建好了后需要检查一下输出的数据读取是否正确"
 - **要点**: 把dataloader单独跑一遍，用 `torch.isnan()` 检测源数据是否正确。检查数据增强是否破坏了信号（如CV任务裁剪掉了目标区域），检查label与input是否对齐。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

@@ -36,8 +36,8 @@ python experiments/initialization/initialization-002-01/experiment.py --run --en
 - **来源**: 炫光 / 京东白条 / 摘星狐狸
 - **适用场景**: ReLU 及变体（LeakyReLU、PReLU）激活函数的网络层
 - **原文**: "relu激活函数初始化推荐使用He normal，tanh初始化推荐使用Glorot normal" / "ReLU初始化推荐使用He normal，tanh初始化推荐使用Glorot normal"
-- **要点**: He 初始化（也称 Kaiming 初始化）是 ReLU 系列激活函数的标准搭配，标准差设置为 $2/n$，可以避免 ReLU 带来的梯度消失问题。
-- **参见**: [[../activation/activation]]
+- **要点**: He 初始化（也称 Kaiming 初始化）是 ReLU 系列激活函数的标准搭配，方差设置为 $2/\mathrm{fan\_in}$，标准差为 $\sqrt{2/\mathrm{fan\_in}}$，可以避免 ReLU 带来的梯度消失问题。
+- **参见**: [../activation/activation](../../../wiki/activation/activation.md)
 
 ## 解释边界
 

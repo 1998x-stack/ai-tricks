@@ -37,7 +37,7 @@ python experiments/recsys/recsys-016-01/experiment.py --run --environment remote
 - **适用场景**: 大规模推荐系统训练
 - **原文**: > 对于数据量巨大的推荐系统的模型来说一个epoch足矣，再多就会过拟合。
 - **要点**: 推荐系统数据量极大时，一个 epoch 即可收敛，更多 epoch 会导致过拟合。
-- **参见**: [[../regularization/overfitting-underfitting]], [[../regularization/overfitting-underfitting]]
+- **参见**: [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md), [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md)
 
 ## 解释边界
 

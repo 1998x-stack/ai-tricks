@@ -37,7 +37,7 @@ python experiments/nlp/nlp-013-01/experiment.py --run --environment remote.json
 - **适用场景**: 序列模型训练效率优化
 - **原文**: *"分桶策略可以根据输入序列的长度将数据分成不同的桶，从而在训练过程中更高效地利用计算资源。这种方法可以减少 padding 的数量，提高训练效率。"*
 - **要点**: 将相同或相近长度的序列分到同一 batch，减少无效 padding 的计算量。可用 `bucket_by_sequence_length` 实现，显著提升吞吐量。
-- **参见**: [[training-efficiency]]
+- **参见**: `[[training-efficiency]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

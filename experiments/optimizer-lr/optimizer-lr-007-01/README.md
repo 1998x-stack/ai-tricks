@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-007-01/experiment.py --run --enviro
 - **适用场景**: NLP Bert类模型
 - **原文**: lr，最重要的参数，一般nlp bert类模型在1e-5级别附近，warmup，衰减
 - **要点**: NLP Bert类模型初始LR在1e-5附近，配合warmup和衰减
-- **参见**: [[learning-rate-scheduling]], [[lr-range-test]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

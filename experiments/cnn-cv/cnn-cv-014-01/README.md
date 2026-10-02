@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-014-01/experiment.py --run --environment remote
 - **适用场景**: 高效多尺度特征融合
 - **原文**: "bifpn真的有用"
 - **要点**: BiFPN是实践证明有效的加权特征融合方式
-- **参见**: [[EfficientDet]]
+- **参见**: `[[EfficientDet]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

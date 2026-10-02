@@ -37,7 +37,7 @@ python experiments/normalization/normalization-013-01/experiment.py --run --envi
 - **适用场景**: 理论学习
 - **原文**: > Batch Normalization 于2015年由 Google 提出，开 Normalization 之先河。其规范化针对单个神经元进行，利用网络训练时一个 mini-batch 的数据来计算该神经元的均值和方差，因而称为 Batch Normalization。
 - **要点**: BN 沿 batch 维度计算统计量，对每个神经元独立做标准化，从根本上缓解内部协变量偏移。
-- **参见**: [[batch-normalization]], [[../activation/activation]], [[../initialization/initialization]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../activation/activation](../../../wiki/activation/activation.md), [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-008-02/experiment.py --run --environment remote
 - **适用场景**: 训练中发现reward hacking
 - **原文**: "在RLHF中可能经常碰到Reward Hacking，解决方案是在奖励函数中加入惩罚项，或者调低某个reward的权重系数，或者将这些作弊样本作为负例，重新训练奖励模型。"
 - **要点**: 三种解法：1）加惩罚项；2）调低可疑reward权重；3）将hack样本作负例重新训练RM。
-- **参见**: [[reward-hacking]]
+- **参见**: [reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

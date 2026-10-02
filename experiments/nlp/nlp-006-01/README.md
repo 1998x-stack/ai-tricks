@@ -37,7 +37,7 @@ python experiments/nlp/nlp-006-01/experiment.py --run --environment remote.json
 - **适用场景**: 序列模型的特征归一化
 - **原文**: *"序列输入上LN，非序列上BN"* / *"序列特征才用layernorm，正常用batchnorm"*
 - **要点**: 序列数据（文本、时序）因为长度可变且依赖 batch 统计量不稳定，应使用 LayerNorm；而图像等非序列数据使用 BatchNorm。错误使用 BN 会导致收敛困难。
-- **参见**: [[../normalization/normalization]]
+- **参见**: [../normalization/normalization](../../../wiki/normalization/normalization.md)
 
 ## 解释边界
 

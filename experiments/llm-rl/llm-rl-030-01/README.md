@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-030-01/experiment.py --run --environment remote
 - **适用场景**: GRPO训练配置
 - **原文**: "GRPO训练，batch size越大，其实效果越稳定，尤其是模型能力没有那么好的情况下。"
 - **要点**: GRPO中更大的batch size带来更稳定的训练效果，尤其在基模能力一般时。
-- **参见**: [[../batch-size/batch-size]], [[grpo]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), [grpo](../../../wiki/llm-rl/grpo.md)
 
 ## 解释边界
 

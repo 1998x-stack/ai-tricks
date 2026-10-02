@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-039-01/experiment.py --run --environment remote
 - **适用场景**: 细粒度分类
 - **原文**: "如果你的分类精度不够是因为有两类或者多类太相近造成的，考虑使用其他softmax，比如amsoftmax"
 - **要点**: 各种魔改softmax能更好增大类间差距
-- **参见**: [[../batch-size/batch-size-generalization]], [[ArcFace]]
+- **参见**: [../batch-size/batch-size-generalization](../../../wiki/batch-size/batch-size-generalization.md), `[[ArcFace]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

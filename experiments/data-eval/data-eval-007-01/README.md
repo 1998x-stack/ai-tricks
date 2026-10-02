@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-007-01/experiment.py --run --environment 
 - **适用场景**: 训练过程中的监控决策
 - **原文**: "准确率虽然是评测指标，但是训练过程中还是要注意loss的。你会发现有些情况下，准确率是突变的，原来一直是0，可能保持上千迭代，然后突然变1。要是因为这个你提前中断训练了，只有老天替你惋惜了。" / "loss，对于大模型训练仅能做一个基本的判断了，基本上，到了中后期，loss小，效果不一定好"
 - **要点**: 准确率可能突变，loss的下降趋势更稳定可靠。但大模型训练中后期loss与效果解耦，需结合业务指标判断。
-- **参见**: [[eval-metrics]], [[eval-metrics]]
+- **参见**: [eval-metrics](../../../wiki/data-eval/eval-metrics.md), [eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

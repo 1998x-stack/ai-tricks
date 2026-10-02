@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-010-01/experiment.py --run --environment remote
 - **适用场景**: 语义分割、前景分割
 - **原文**: "如果你的问题域与稠密预测相关（如语义分割），我建议你使用膨胀残差网络作为预训练模型"
 - **要点**: Dilated Residual Networks最适合dense prediction任务
-- **参见**: [[receptive-field]], [[DeepLab]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md), `[[DeepLab]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

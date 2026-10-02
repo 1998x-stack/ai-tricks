@@ -37,7 +37,7 @@ python experiments/recsys/recsys-007-01/experiment.py --run --environment remote
 - **适用场景**: 多任务训练平衡
 - **原文**: > 多任务情况下, 各loss想法限制在一个量级上, 或者最终限制在一个量级上, 初期可以着重一个任务的loss
 - **要点**: 多任务训练的各个 Loss 应通过权重调整至同一量级，初期可侧重某一主任务。
-- **参见**: [[multi-task-recsys]]
+- **参见**: [multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

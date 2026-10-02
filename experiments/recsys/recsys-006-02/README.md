@@ -37,7 +37,7 @@ python experiments/recsys/recsys-006-02/experiment.py --run --environment remote
 - **适用场景**: 推荐系统多目标任务
 - **原文**: > 推荐多目标任务可以考虑采用Gradient Surgery的方式，帕累托就算复杂度又高，效果也没有好很多，不推荐。
 - **要点**: Gradient Surgery 是多任务学习中的有效方法，Pareto 优化复杂度高且收益有限，不推荐。
-- **参见**: [[multi-task-recsys]], [[multi-task-recsys]]
+- **参见**: [multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md), [multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md)
 
 ## 解释边界
 

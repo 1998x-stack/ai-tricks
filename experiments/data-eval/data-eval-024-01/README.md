@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-024-01/experiment.py --run --environment 
 - **适用场景**: 自动驾驶、跨领域迁移
 - **原文**: "经过分析得出，训练集缺乏夜晚场景、反光等情况。后续将在训练集中加入此类数据纠正偏差。"
 - **要点**: 训练集和测试集分布偏差的分析方法：使用两个验证数据集（一个来自训练集分布，一个来自测试集分布），对比各自的错误率来诊断分布偏移。
-- **参见**: [[domain-adaptation]], [[cross-validation]]
+- **参见**: `[[domain-adaptation]]`（原 Wiki 未解析链接）, [cross-validation](../../../wiki/data-eval/cross-validation.md)
 
 ## 解释边界
 

@@ -44,3 +44,9 @@ python -m your_driver --request /remote/run/request.json --output /remote/run
 - 基础设施：真实 GPU/多卡执行与同步计时；内存公式或 CPU 模拟不代表 GPU 结果。
 
 驱动完成后，把实际支持字段写入资源配置及 `tools/audit.py` 的能力检查。仅更新 `supported_axes` 列表而没有代码实现不算完成。
+
+## 预检与记录一致性
+
+原生驱动在下载前校验两组完整配置，拒绝不生效的调度/优化器参数。`eval_every_examples` 以训练样本数计数；到达阈值后的第一个 optimizer 更新点执行验证，因此不同微批布局可有最多一个更新批次的对齐误差。SFT 验证始终只计算 assistant token 损失，即使训练组比较是否 mask 用户 token。
+
+history 步数必须严格递增、包含最终更新与 checkpoint 选择步。checkpoint 的 `step` 处于 1 到最终 optimizer_steps 之间。除显式早停外，单 epoch 实际读取数量必须等于声明的训练 split 大小。来源标题/行号/哈希失配应先重新生成目录并复核，不能跳过来源校验。

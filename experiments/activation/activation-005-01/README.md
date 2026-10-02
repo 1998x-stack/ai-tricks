@@ -37,7 +37,7 @@ python experiments/activation/activation-005-01/experiment.py --run --environmen
 - **适用场景**: 避免梯度消失
 - **原文**: "Sigmoid：适合概率输出，但可能导致梯度消失"
 - **要点**: Sigmoid/tanh 在饱和区梯度趋近于零，深层网络中易导致梯度消失。sigmoid 仅推荐用于二分类输出层或需要概率输出的场景，tanh 推荐用于 RNN。
-- **参见**: [[activation-selection]], [[../normalization/normalization]]
+- **参见**: [activation-selection](../../../wiki/activation/activation-selection.md), [../normalization/normalization](../../../wiki/normalization/normalization.md)
 
 ## 解释边界
 

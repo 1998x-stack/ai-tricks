@@ -37,7 +37,7 @@ python experiments/recsys/recsys-023-01/experiment.py --run --environment remote
 - **适用场景**: 多任务 / 层次化特征聚合
 - **原文**: > 基于banckbone 构建层次化的neck 一般都比直接使用最后一层输出要好，reduce function 一般attention 优于简单pooling，多任务需要构建不同的qkv
 - **要点**: 通用原则上 Attention 优于 Pooling（尽管在推荐序列上二者差异不大），多任务场景需要为每个任务构建独立的 Query / Key / Value。
-- **参见**: [[attention]], [[multi-task-recsys]], [[pooling]]
+- **参见**: `[[attention]]`（原 Wiki 未解析链接）, [multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md), `[[pooling]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

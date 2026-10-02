@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-063-01/experiment.py --run --enviro
 - **适用场景**: 任何深层网络的训练
 - **原文**: Batch Normalization可以很大程度的加快收敛速度。建议搭建自己网络的时候尽量加上BN。
 - **要点**: BN加快收敛，允许使用更大的LR
-- **参见**: [[batch-normalization]]
+- **参见**: `[[batch-normalization]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

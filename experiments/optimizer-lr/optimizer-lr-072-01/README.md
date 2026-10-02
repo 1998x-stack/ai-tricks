@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-072-01/experiment.py --run --enviro
 - **适用场景**: RLHF/PPO全流程训练
 - **原文**: PPO学习率通常比SFT小一个数量级；RLHF阶段batch_size宁大勿小；梯度裁剪0.2；reward归一化；KL惩罚从0.001开始。
 - **要点**: PPO调参：LR更小、batch更大、grad clip、reward归一化
-- **参见**: [[../llm-rl/llm-rl]] | [[../llm-rl/ppo-rlhf]]
+- **参见**: [../llm-rl/llm-rl](../../../wiki/llm-rl/llm-rl.md) | [../llm-rl/ppo-rlhf](../../../wiki/llm-rl/ppo-rlhf.md)
 
 ## 解释边界
 

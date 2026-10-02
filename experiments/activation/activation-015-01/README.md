@@ -37,7 +37,7 @@ python experiments/activation/activation-015-01/experiment.py --run --environmen
 - **适用场景**: 新模型调试起点
 - **原文**: "做新模型的时候，最开始不要加激活函数，不要加batchnorm，不要加dropout，先就纯模型。然后再一步一步的实验"
 - **要点**: 先从纯线性模型起步，确认 baseline 正确后再逐步加入激活函数和正则化，避免一次性引入过多因素导致问题无法定位。
-- **参见**: [[../normalization/normalization]], [[../regularization/regularization]]
+- **参见**: [../normalization/normalization](../../../wiki/normalization/normalization.md), [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

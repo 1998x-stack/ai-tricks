@@ -37,7 +37,7 @@ python experiments/nlp/nlp-009-01/experiment.py --run --environment remote.json
 - **适用场景**: 词向量层初始化
 - **原文**: *"embedding 一般选择截断 normalize"* / 使用 uniform 初始化替换 xavier 后训练速度和效果显著提升
 - **要点**: Word Embedding 层推荐使用截断正态分布（truncated normal）或均匀分布（uniform）初始化，不要无脑用 xavier。正确的初始化方法对 embedding 质量影响巨大。
-- **参见**: [[../initialization/initialization]]
+- **参见**: [../initialization/initialization](../../../wiki/initialization/initialization.md)
 
 ## 解释边界
 

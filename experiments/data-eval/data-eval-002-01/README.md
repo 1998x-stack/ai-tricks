@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-002-01/experiment.py --run --environment 
 - **适用场景**: 任何机器学习项目，尤其是数据收集阶段
 - **原文**: "机器学习的效果很大程度上取决于参数调节的好坏……不过，上述说法很明显忽略了一个重要的条件，那就是，所用来训练的数据是行之有效的" / "当你连续调10组参数都没有稳定提升时，别再调第11组，去看数据和错误样例。"
 - **要点**: 如果数据不足以代表真实分布、标签不准确、或存在样本偏差，再好的参数也无效。先花时间检查数据，再做调参决策。
-- **参见**: [[class-imbalance]], [[../debugging/debugging]]
+- **参见**: [class-imbalance](../../../wiki/data-eval/class-imbalance.md), [../debugging/debugging](../../../wiki/debugging/debugging.md)
 
 ## 解释边界
 

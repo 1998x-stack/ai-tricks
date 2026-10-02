@@ -37,7 +37,7 @@ python experiments/regularization/regularization-001-01/experiment.py --run --en
 - **适用场景**: 所有深度学习任务，尤其是从零训练新模型
 - **原文**: "先overfit 再trade off，首先保证你的model capacity能够过拟合，再尝试减小模型，各种正则化方法" ——爱睡觉的KKY
 - **要点**: 先在小数据上过拟合（甚至100~32条样本），这是验证代码正确性和模型容量的最高效手段。不能过拟合 → 检查代码bug、学习率、标签质量。
-- **参见**: [[overfitting-underfitting]], [[../optimizer-lr/learning-rate-scheduling]], [[../data-eval/data-eval]]
+- **参见**: [overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md), [../optimizer-lr/learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

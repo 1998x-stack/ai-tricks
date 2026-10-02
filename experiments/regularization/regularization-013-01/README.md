@@ -37,7 +37,7 @@ python experiments/regularization/regularization-013-01/experiment.py --run --en
 - **适用场景**: 构建CNN/深度网络，BN与Dropout的取舍
 - **原文**: "如果有BN了全连接层就没必要加Dropout了。" ——BBuf
 - **要点**: BN兼具加速训练和轻微正则化效果。过拟合时优先加Dropout再加BN。过拟合越严重，Dropout+BN加的位置就越多，有奇效（甚至对Embedding层加）。一般建议：CV任务尽量加BN，RNN/序列任务用LN。小batch时考虑GN替代BN。
-- **参见**: [[../normalization/normalization]]
+- **参见**: [../normalization/normalization](../../../wiki/normalization/normalization.md)
 
 ## 解释边界
 

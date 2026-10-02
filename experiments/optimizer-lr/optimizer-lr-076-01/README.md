@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-076-01/experiment.py --run --enviro
 - **适用场景**: 通用Deep Learning默认设置
 - **原文**: Adam优化器学习速率3e-4
 - **要点**: 使用Adam时默认LR=3e-4是一个广泛使用的经验值
-- **参见**: [[lr-range-test]] | [[adam]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | [adam](../../../wiki/optimizer-lr/adam.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-016-01/experiment.py --run --environment remote
 - **适用场景**: FCN/分割/检测
 - **原文**: "CV的任务，context window是很重要的。所以你对自己模型的receptive field的大小要心中有数。特别是用FCN，大目标需要很大的receptive field"
 - **要点**: FCN没有FC层兜底，感受野必须覆盖目标；有FC的网络好歹有个全局信息
-- **参见**: [[receptive-field]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

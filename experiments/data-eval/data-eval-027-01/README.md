@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-027-01/experiment.py --run --environment 
 - **适用场景**: 分类任务的过拟合抑制
 - **原文**: "Label smoothing将hard label转变成soft label，使网络优化更加平滑。它通常用于减少训练DNN的过拟合问题并进一步提高分类性能。"
 - **要点**: 将hard label（0/1）转换为soft label（如0.9/0.1），防止模型对训练标签过分自信，提升泛化能力。实现：`targets = (1 - label_smooth) * targets + label_smooth / num_classes`。
-- **参见**: [[../regularization/regularization]], [[../regularization/overfitting-underfitting]]
+- **参见**: [../regularization/regularization](../../../wiki/regularization/regularization.md), [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md)
 
 ## 解释边界
 

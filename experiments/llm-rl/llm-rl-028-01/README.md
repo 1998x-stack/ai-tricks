@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-028-01/experiment.py --run --environment remote
 - **适用场景**: DPO数据构建
 - **原文**: "chosen 和 rejected 差异太小，训练信号弱；差异太大，又可能只学到表面特征。"
 - **要点**: 偏好数据中chosen和rejected差异过小则信号弱，过大则学到表面特征，需平衡。
-- **参见**: [[preference-data]], [[dpo-data]]
+- **参见**: `[[preference-data]]`（原 Wiki 未解析链接）, `[[dpo-data]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

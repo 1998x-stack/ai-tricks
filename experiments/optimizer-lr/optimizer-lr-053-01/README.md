@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-053-01/experiment.py --run --enviro
 - **适用场景**: LR问题的系统性诊断
 - **原文**: loss降得太慢，学习率可能小；loss震荡或发散，学习率可能大；训练分上去验证不动，可能过拟合或验证集不匹配；训练验证都低，可能模型容量问题。
 - **要点**: 通过loss曲线形态判断LR问题：慢->小, 震荡->大, 平台->需衰减
-- **参见**: [[lr-range-test]] | [[../debugging/training-curve-diagnosis]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md) | [../debugging/training-curve-diagnosis](../../../wiki/debugging/training-curve-diagnosis.md)
 
 ## 解释边界
 

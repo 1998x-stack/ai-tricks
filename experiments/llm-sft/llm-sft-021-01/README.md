@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-021-01/experiment.py --run --environment remo
 - **适用场景**: 预训练模型全量参数微调
 - **原文**: "预训练模型全量微调，尤其是 BERT、RoBERTa、DeBERTa、ViT 这类，常见范围在 1e-5 到 5e-5，别上来就 1e-3。"
 - **要点**: 全量微调（Full Fine-tuning）的学习率通常比 LoRA 低一个数量级，在 1e-5~5e-5 范围内。这与 LoRA 的 1e-4~3e-4 不同，因为全量微调同时更新所有参数，需要更小的步长来保护预训练权重不被破坏。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

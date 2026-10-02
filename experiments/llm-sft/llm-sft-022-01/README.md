@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-022-01/experiment.py --run --environment remo
 - **适用场景**: SFT 数据组织和训练调度
 - **原文**: "可以对数据集设置一个难易程度，让模型先学简单后学难的" + "大模型微调里，数据调参包括指令格式、答案风格、样本去重、低质量样本过滤"
 - **要点**: 除了课程学习（由易到难）外，SFT 数据管理还包括：样本去重、低质量样本过滤、拒答样本比例控制、领域样本与通用样本的混合比例等。这些数据层面的调参往往比模型参数调优更值钱。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

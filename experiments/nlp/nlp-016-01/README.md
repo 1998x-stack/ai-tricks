@@ -37,7 +37,7 @@ python experiments/nlp/nlp-016-01/experiment.py --run --environment remote.json
 - **适用场景**: RNN、LSTM、Transformer 等深度序列模型训练
 - **原文**: *"梯度裁剪建议默认加，尤其是 RNN、Transformer、大模型微调，clip norm 1.0 是常见起点"* / *"梯度归一、梯度裁剪一定很重要"*
 - **要点**: 序列模型（尤其是 RNN 和 Transformer）在长序列训练时容易出现梯度爆炸，梯度裁剪（gradient norm clipping）是标准且有效的解决方案，建议 clip norm 设为 1.0 作为起点。
-- **参见**: [[../optimizer-lr/optimizer-lr]], [[training-stability]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md), `[[training-stability]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

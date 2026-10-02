@@ -37,7 +37,7 @@ python experiments/normalization/normalization-006-01/experiment.py --run --envi
 - **适用场景**: 分布式训练 / 多 GPU
 - **原文**: > batchnorm一定要用，如果你是多机多卡，也可以考虑同步的batchnorm。
 - **要点**: 分布式训练中默认各卡独立计算 BN 统计量，Sync BN 跨卡同步均值和方差，得到更准确的统计估计。
-- **参见**: [[batch-normalization]], [[../infra/infra]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../infra/infra](../../../wiki/infra/infra.md)
 
 ## 解释边界
 

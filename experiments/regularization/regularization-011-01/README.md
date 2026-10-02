@@ -37,7 +37,7 @@ python experiments/regularization/regularization-011-01/experiment.py --run --en
 - **适用场景**: 图像分类、表示学习，数据增强的升级形式
 - **原文**: "数据调参包括数据清洗、采样比例、增强策略、类别平衡、hard negative mining、标签平滑、mixup、cutmix"
 - **要点**: Mixup将两张图按比例混合，标签也按比例混合；CutMix裁剪一张图的一部分贴到另一张图上。二者都强制模型学习更平滑的决策边界，是强大的正则化手段。属于数据调参的高级技巧。
-- **参见**: [[data-augmentation]], [[label-smoothing]]
+- **参见**: `[[data-augmentation]]`（原 Wiki 未解析链接）, [label-smoothing](../../../wiki/regularization/label-smoothing.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/llm-sft/llm-sft-013-01/experiment.py --run --environment remo
 - **适用场景**: SFT 训练与推理的配置对齐
 - **原文**: "大模型微调还有一个常见坑：chat template 不一致。训练用一种模板，推理用另一种模板，效果会非常难看，而且不容易第一时间发现。"
 - **要点**: 训练时使用的 chat template 必须与推理时完全一致，否则模型会出现严重的格式混乱和回答退化。这个 bug 极其隐蔽，因为训练 loss 看起来正常，但模型输出一塌糊涂。建议将 template 写入训练配置并通过单元测试验证训练和推理的一致性。
-- **参见**: [[../infra/infra]]
+- **参见**: [../infra/infra](../../../wiki/infra/infra.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/infra/infra-010-01/experiment.py --run --environment remote.j
 - **适用场景**: 避免不必要的 tensor 内存拷贝
 - **原文**: "torch.tensor() 总是会复制数据，如果你要转换一个numpy数组，使用 torch.as_tensor() 或 torch.from_numpy() 来避免复制数据"
 - **要点**: `torch.tensor()` 总会复制数据；`torch.as_tensor()` 和 `torch.from_numpy()` 尽可能共享内存（零拷贝）；涉及 numpy→tensor 转换时优先使用后两者以节省内存和提升速度。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

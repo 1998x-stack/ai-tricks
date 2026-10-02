@@ -37,7 +37,7 @@ python experiments/normalization/normalization-004-01/experiment.py --run --envi
 - **适用场景**: 推荐系统 / NLP
 - **原文**: > 序列特征才用layernorm，正常用batchnorm。
 - **要点**: LayerNorm 独立于 batch 维度，适合变长序列；BN 依赖 batch 统计量，适合固定长度的非序列特征。
-- **参见**: [[layer-normalization]], [[../nlp/nlp]], [[../recsys/recsys]]
+- **参见**: [layer-normalization](../../../wiki/normalization/layer-normalization.md), [../nlp/nlp](../../../wiki/nlp/nlp.md), [../recsys/recsys](../../../wiki/recsys/recsys.md)
 
 ## 解释边界
 

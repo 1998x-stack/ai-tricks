@@ -37,7 +37,7 @@ python experiments/debugging/debugging-032-01/experiment.py --run --environment 
 - **适用场景**: 观察模型对数据的整体理解
 - **原文**: "通过t-SNE对隐藏层进行降维...人工review同一类图片在降维之后的低维空间里是否处于相邻的区域"
 - **要点**: 用t-SNE将隐藏层输出降到2D/3D，查看同类样本是否聚类。可用于发现数据问题或模型学习问题。先用PCA降维再用t-SNE效果更好。
-- **参见**: [[../cnn-cv/cnn-cv]]
+- **参见**: [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

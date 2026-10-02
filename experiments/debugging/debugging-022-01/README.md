@@ -37,7 +37,7 @@ python experiments/debugging/debugging-022-01/experiment.py --run --environment 
 - **适用场景**: 实验管理和复现
 - **原文**: "每次实验至少记录代码版本、数据版本、配置、随机种子、硬件、训练时间、最优checkpoint、评估结果、错误样例"
 - **要点**: 记录seed、config、数据版本、代码版本。固定随机种子（42/3407）。别相信自己的记忆，两周后你只会记得"大概好像那组不错"。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

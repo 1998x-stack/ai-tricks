@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-016-01/experiment.py --run --environment 
 - **适用场景**: 召回、对比学习、检索任务
 - **原文**: "召回负采样负样本效果肯定高于曝光未点击负样本" / "粗排用精排后topk做负样本，基本是有效果的"
 - **要点**: 召回任务的负样本选择非常关键。曝光未点击负样本优于随机负样本；用精排模型排名的top-K结果作为粗排的负样本是有效做法。
-- **参见**: [[negative-sampling]], [[recommendation]]
+- **参见**: `[[negative-sampling]]`（原 Wiki 未解析链接）, `[[recommendation]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

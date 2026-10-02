@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-019-01/experiment.py --run --enviro
 - **适用场景**: 长期训练，稳定的LR衰减策略
 - **原文**: 学习率衰减很有用，设置一个指数衰减的scheduler，衰减率0.99，是一个不错的选择
 - **要点**: 指数衰减率0.99使LR缓慢下降，训练集大时可增大衰减率
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md)
 
 ## 解释边界
 

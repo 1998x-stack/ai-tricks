@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-010-01/experiment.py --run --enviro
 - **适用场景**: 快速确定合理LR范围
 - **原文**: 从1e-5开始，以10倍为单位往上跳，比如1e-4、1e-3、1e-2，观察loss曲线。正常情况下，loss应该平稳下降；如果从某个点开始loss开始发散甚至爆炸，那个点之前的第一档就是你的候选学习率。
 - **要点**: 十倍递增扫描LR，选发散前一档
-- **参见**: [[lr-range-test]], [[lr-range-test]]
+- **参见**: [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

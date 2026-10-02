@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-033-01/experiment.py --run --environment remote
 - **适用场景**: 语义分割、前景分割
 - **原文**: "要捕获对象周围的上下文信息，可以使用多尺度特性的池化模块"
 - **要点**: 该思想成功用于语义分割/前景分割，如PSPNet的SPP模块
-- **参见**: [[PSPNet]], [[DeepLab]]
+- **参见**: `[[PSPNet]]`（原 Wiki 未解析链接）, `[[DeepLab]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

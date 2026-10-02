@@ -16,7 +16,7 @@
 - **来源**: 爱睡觉的KKY
 - **适用场景**: 对比学习、表示学习（如 SimCLR、MoCo、CLIP）
 - **原文**: > batch size 在表示学习，对比学习领域一般越大越好，显存不够上累计梯度，否则模型可能不收敛… 其他领域看情况；
-- **要点**: 对比学习依赖大量负样本区分正负对，小批次容易导致模型坍塌，必须用大批次或梯度累积等效扩大批次。
+- **要点**: 对使用 in-batch negatives 的对比学习，负样本池大小会改变损失。普通梯度累积只累加各 microbatch 的梯度，不自动增加 softmax 分母中的负样本；如需大负样本池，须额外使用跨批表示缓存/重算或全局表示收集。参考 [Gao 等的梯度缓存方法](https://arxiv.org/abs/2101.06983)，不能把其效果归于普通累积。
 - **参见**: [[batch-size-generalization]], [[gradient-accumulation]], [[../optimizer-lr/optimizer-lr]]
 
 ### batch size 并非越大越好——小批次有时有奇效
@@ -88,7 +88,7 @@
 - **来源**: （代码段）
 - **适用场景**: PyTorch 下显存不足时等效扩大 batch size
 - **原文**: > 梯度累积可以在不增加内存消耗的情况下模拟大批次训练。通过在多个小批次上累积梯度，然后在达到指定累积次数后进行一次参数更新，可以有效提高训练效率。
-- **要点**: 核心实现为 loss = loss / accumulation_steps，每积累 accumulation_steps 次才执行 optimizer.step()，注意 loss 需除以累积步数以保持梯度量级一致。
+- **要点**: 等大 microbatch 的平均 loss 可除以实际累积次数；尾组、变长 token 或有效标签数不同，应按有效样本/token 总数加权。每组累积完成后更新，epoch 尾组也必须更新，参见梯度累积页的完整代码。
 - **参见**: [[gradient-accumulation]], [[../infra/distributed-training]]
 
 ### mini batch size 数十到数百皆可，SGD 默认设定

@@ -37,7 +37,7 @@ python experiments/normalization/normalization-002-01/experiment.py --run --envi
 - **适用场景**: 过拟合处理
 - **原文**: > 如果过拟合，首先是dropout，然后batchnorm，过拟合越严重dropout+bn加的地方就越多，有些直接对embedding层加，有奇效。
 - **要点**: 按过拟合严重度渐进增加正则：dropout → BN → 更密集的 dropout+BN → 对 embedding 层直接加。
-- **参见**: [[batch-normalization]], [[../regularization/regularization]], [[../recsys/recsys]]
+- **参见**: [batch-normalization](../../../wiki/normalization/batch-normalization.md), [../regularization/regularization](../../../wiki/regularization/regularization.md), [../recsys/recsys](../../../wiki/recsys/recsys.md)
 
 ## 解释边界
 

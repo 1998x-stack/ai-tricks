@@ -37,7 +37,7 @@ python experiments/nlp/nlp-003-01/experiment.py --run --environment remote.json
 - **适用场景**: NLP 分类、序列标注、文本匹配等任务的泛化提升
 - **原文**: *"对于nlp任务，采用embedding扰动的方式有奇效，比如Fast Gradient Method（FGM）和Projected Gradient Descent（PGD）"*
 - **要点**: 在 embedding 层添加对抗扰动（FGM 单步、PGD 多步），可视为一种数据增强，能显著提升模型鲁棒性和泛化能力，实现成本低。
-- **参见**: [[text-data-augmentation]], [[../regularization/regularization]]
+- **参见**: [text-data-augmentation](../../../wiki/nlp/text-data-augmentation.md), [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

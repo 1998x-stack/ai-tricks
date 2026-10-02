@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-025-01/experiment.py --run --enviro
 - **适用场景**: 判断LR是否需要衰减
 - **原文**: 需要进一步降低了：loss在当前LR下一路降了下来，但是半天不再降了。
 - **要点**: loss在平台期不再下降时需降低LR
-- **参见**: [[learning-rate-scheduling]], [[learning-rate-scheduling]], [[lr-range-test]]
+- **参见**: [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [learning-rate-scheduling](../../../wiki/optimizer-lr/learning-rate-scheduling.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

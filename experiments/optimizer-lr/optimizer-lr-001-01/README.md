@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-001-01/experiment.py --run --enviro
 - **适用场景**: 通用深度学习任务，尤其是起步阶段
 - **原文**: 不知道用啥优化器，无脑Adam，对绝大多数问题都有不错的效果
 - **要点**: Adam是泛用性最强的默认优化器，适合绝大多数问题
-- **参见**: [[adam]], [[adam]]
+- **参见**: [adam](../../../wiki/optimizer-lr/adam.md), [adam](../../../wiki/optimizer-lr/adam.md)
 
 ## 解释边界
 

@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-018-01/experiment.py --run --environment 
 - **适用场景**: 任何有监督任务，尤其是标注质量不可控的场景
 - **原文**: "标签噪声分析可以看 Cleanlab" / "我们重新清洗标签，按话术模板和时间切分，补了一批线上 hard case，模型参数几乎没大改，F1 在新验证集上从86提到89"
 - **要点**: 标签噪声是模型效果差但不易察觉的常见原因。可使用Cleanlab等工具检测疑似错误标签。人工抽样验证标签一致性常常能发现30%的问题。
-- **参见**: [[class-imbalance]], [[cleanlab]]
+- **参见**: [class-imbalance](../../../wiki/data-eval/class-imbalance.md), `[[cleanlab]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

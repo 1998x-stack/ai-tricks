@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-005-01/experiment.py --run --environment remote
 - **适用场景**: RL训练流程
 - **原文**: "一定记得取不同训练步骤的checkpoint针对某些问题进行检验，好记性不如烂笔头，看指标终究抵不过bad case的研究。"
 - **要点**: 取不同训练步数的checkpoint做人类评估，不要只看指标。
-- **参见**: [[../data-eval/eval-metrics]]
+- **参见**: [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ---
 

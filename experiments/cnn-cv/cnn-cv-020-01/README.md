@@ -37,7 +37,7 @@ python experiments/cnn-cv/cnn-cv-020-01/experiment.py --run --environment remote
 - **适用场景**: 通用CNN架构设计
 - **原文**: "下采样在网络前几层的密度大一些……越往后下采样的密度应该更小"
 - **要点**: 前几层高频下采样换速度（精度损失微弱）；中间层用不下采样的方法提高深度
-- **参见**: [[receptive-field]]
+- **参见**: [receptive-field](../../../wiki/cnn-cv/receptive-field.md)
 
 ## 解释边界
 

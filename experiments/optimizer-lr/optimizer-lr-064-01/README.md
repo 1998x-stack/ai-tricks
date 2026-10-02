@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-064-01/experiment.py --run --enviro
 - **适用场景**: 模型容量与性能的权衡
 - **原文**: 先训一个大模型然后裁剪，也许比直接训一个小模型性能好。
 - **要点**: 先训练大容量模型后压缩，比直接训练小模型效果更好，LR策略也需相应调整
-- **参见**: [[../regularization/overfitting-underfitting]]
+- **参见**: [../regularization/overfitting-underfitting](../../../wiki/regularization/overfitting-underfitting.md)
 
 ## 解释边界
 

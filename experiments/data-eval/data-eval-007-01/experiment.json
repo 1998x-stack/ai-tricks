@@ -12,7 +12,7 @@
       117,
       387
     ],
-    "raw_attribution_status": "exact_fragment_matched"
+    "raw_attribution_status": "normalized_fragment_matched"
   },
   "axis": "checkpoint.selection_metric",
   "a": "val_accuracy",

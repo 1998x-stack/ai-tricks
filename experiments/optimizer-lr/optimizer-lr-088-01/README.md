@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-088-01/experiment.py --run --enviro
 - **适用场景**: 显存不足时扩大有效batch size
 - **原文**: 梯度累积：增大batch，规避GPU内存的限制
 - **要点**: 梯度累积使有效batch变大，相应需调整LR（batch翻倍LR可翻倍）
-- **参见**: [[gradient-accumulation]] | [[../batch-size/batch-size]]
+- **参见**: `[[gradient-accumulation]]`（原 Wiki 未解析链接） | [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

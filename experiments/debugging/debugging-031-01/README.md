@@ -37,7 +37,7 @@ python experiments/debugging/debugging-031-01/experiment.py --run --environment 
 - **适用场景**: 防止过拟合和节省算力
 - **原文**: "不要过早的early stopping，有时候收敛平台在后段"
 - **要点**: 先确保模型能在训练集上过拟合，再用早停防过拟合。有些模型前期看不出起色，然后开始稳定学习。给NN一点时间。
-- **参见**: [[../regularization/regularization]]
+- **参见**: [../regularization/regularization](../../../wiki/regularization/regularization.md)
 
 ## 解释边界
 

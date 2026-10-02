@@ -37,7 +37,7 @@ python experiments/debugging/debugging-021-01/experiment.py --run --environment 
 - **适用场景**: 调参实验设计
 - **原文**: "不要同时调超过两个超参数。这是新手和大神最本质的区别。"
 - **要点**: 同时改多个参数无法归因。每次实验只改一个变量，记录所有配置。效果涨了知道为什么涨，跌了知道谁背锅。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

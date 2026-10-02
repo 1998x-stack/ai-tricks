@@ -14,7 +14,7 @@
         2717,
         2802
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-001-01"
@@ -35,7 +35,7 @@
         190,
         2717
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-002-01"
@@ -55,7 +55,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-003-01",
@@ -77,7 +77,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-004-01",
@@ -98,7 +98,7 @@
       "raw_exact_lines": [
         1850
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-005-01"
@@ -119,7 +119,7 @@
         91,
         3022
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-006-01",
@@ -141,7 +141,7 @@
         718,
         721
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-007-01",
@@ -162,7 +162,7 @@
       "raw_exact_lines": [
         208
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-008-01"
@@ -182,7 +182,7 @@
       "raw_exact_lines": [
         407
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-009-01"
@@ -203,7 +203,7 @@
         2684,
         2689
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-010-01"
@@ -223,7 +223,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-011-01",
@@ -244,7 +244,7 @@
       "raw_exact_lines": [
         1848
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-012-01"
@@ -266,7 +266,7 @@
         1303,
         1329
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-013-01",
@@ -305,7 +305,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "activation-015-01"
@@ -333,17 +333,17 @@
     "id": "batch-size-001",
     "category": "batch-size",
     "title": "batch size 在表示学习/对比学习领域越大越好",
-    "body": "- **来源**: 爱睡觉的KKY\n- **适用场景**: 对比学习、表示学习（如 SimCLR、MoCo、CLIP）\n- **原文**: > batch size 在表示学习，对比学习领域一般越大越好，显存不够上累计梯度，否则模型可能不收敛… 其他领域看情况；\n- **要点**: 对比学习依赖大量负样本区分正负对，小批次容易导致模型坍塌，必须用大批次或梯度累积等效扩大批次。\n- **参见**: [[batch-size-generalization]], [[gradient-accumulation]], [[../optimizer-lr/optimizer-lr]]",
+    "body": "- **来源**: 爱睡觉的KKY\n- **适用场景**: 对比学习、表示学习（如 SimCLR、MoCo、CLIP）\n- **原文**: > batch size 在表示学习，对比学习领域一般越大越好，显存不够上累计梯度，否则模型可能不收敛… 其他领域看情况；\n- **要点**: 对使用 in-batch negatives 的对比学习，负样本池大小会改变损失。普通梯度累积只累加各 microbatch 的梯度，不自动增加 softmax 分母中的负样本；如需大负样本池，须额外使用跨批表示缓存/重算或全局表示收集。参考 [Gao 等的梯度缓存方法](https://arxiv.org/abs/2101.06983)，不能把其效果归于普通累积。\n- **参见**: [[batch-size-generalization]], [[gradient-accumulation]], [[../optimizer-lr/optimizer-lr]]",
     "source": {
       "wiki": "wiki/batch-size/batch-size.md",
       "line": 15,
       "heading": "batch size 在表示学习/对比学习领域越大越好",
       "author": "爱睡觉的KKY",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         52
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-001-01",
@@ -360,11 +360,11 @@
       "line": 22,
       "heading": "batch size 并非越大越好——小批次有时有奇效",
       "author": "炫光",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         81
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-002-01"
@@ -380,11 +380,11 @@
       "line": 28,
       "heading": "PPO / RLHF 阶段 batch size 宁大勿小",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         140
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-003-01"
@@ -400,11 +400,11 @@
       "line": 35,
       "heading": "GRPO 训练 batch size 越大效果越稳定",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         151
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-004-01"
@@ -420,11 +420,11 @@
       "line": 41,
       "heading": "推荐系统 batch size 最佳范围 32-512",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-005-01"
@@ -440,11 +440,11 @@
       "line": 48,
       "heading": "batch size 与学习率的线性缩放关系",
       "author": "四点半的理一",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1081
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-006-01",
@@ -461,11 +461,11 @@
       "line": 55,
       "heading": "大 batch 训练快但泛化不一定更好，需记录 effective batch size",
       "author": "BugBuster喵",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1488
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-007-01"
@@ -481,12 +481,12 @@
       "line": 62,
       "heading": "批量大小受硬件内存限制，多 GPU 总批量为单卡批量乘以 GPU 数",
       "author": "阿里云云栖号",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1733,
         1735
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-008-01"
@@ -502,11 +502,11 @@
       "line": 68,
       "heading": "小批量：梯度噪声正则化 vs 大批量：训练加速",
       "author": "白小鱼",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         3033
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-009-01"
@@ -522,11 +522,11 @@
       "line": 74,
       "heading": "小批次显存小但梯度不稳定，大批次显存大但易陷入局部最优",
       "author": "苏辄",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1824
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-010-01"
@@ -542,11 +542,11 @@
       "line": 80,
       "heading": "DeepSeek LLM 批大小与学习率的 Scaling Law",
       "author": "Sam聊算法",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2904
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-011-01"
@@ -556,17 +556,17 @@
     "id": "batch-size-012",
     "category": "batch-size",
     "title": "梯度累积代码实现",
-    "body": "- **来源**: （代码段）\n- **适用场景**: PyTorch 下显存不足时等效扩大 batch size\n- **原文**: > 梯度累积可以在不增加内存消耗的情况下模拟大批次训练。通过在多个小批次上累积梯度，然后在达到指定累积次数后进行一次参数更新，可以有效提高训练效率。\n- **要点**: 核心实现为 loss = loss / accumulation_steps，每积累 accumulation_steps 次才执行 optimizer.step()，注意 loss 需除以累积步数以保持梯度量级一致。\n- **参见**: [[gradient-accumulation]], [[../infra/distributed-training]]",
+    "body": "- **来源**: （代码段）\n- **适用场景**: PyTorch 下显存不足时等效扩大 batch size\n- **原文**: > 梯度累积可以在不增加内存消耗的情况下模拟大批次训练。通过在多个小批次上累积梯度，然后在达到指定累积次数后进行一次参数更新，可以有效提高训练效率。\n- **要点**: 等大 microbatch 的平均 loss 可除以实际累积次数；尾组、变长 token 或有效标签数不同，应按有效样本/token 总数加权。每组累积完成后更新，epoch 尾组也必须更新，参见梯度累积页的完整代码。\n- **参见**: [[gradient-accumulation]], [[../infra/distributed-training]]",
     "source": {
       "wiki": "wiki/batch-size/batch-size.md",
       "line": 87,
       "heading": "梯度累积代码实现",
       "author": "（代码段）",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2462
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-012-01",
@@ -584,11 +584,11 @@
       "line": 94,
       "heading": "mini batch size 数十到数百皆可，SGD 默认设定",
       "author": "匿名用户",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2882
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-013-01"
@@ -604,11 +604,11 @@
       "line": 100,
       "heading": "开源默认 batch 不一定适合你的数据",
       "author": "BugBuster喵",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         1575
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-014-01"
@@ -624,7 +624,7 @@
       "line": 106,
       "heading": "调参应先锁定学习率，再调 batch size",
       "author": "四点半的理一",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -642,11 +642,11 @@
       "line": 113,
       "heading": "batch size 在不同任务中影响不同",
       "author": "BBuf",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         288
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-016-01"
@@ -662,11 +662,11 @@
       "line": 119,
       "heading": "分桶策略（Bucketing）减少 padding 提高训练效率",
       "author": "（代码段）",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         2444
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-017-01"
@@ -682,7 +682,7 @@
       "line": 125,
       "heading": "推荐系统热启动时 batch size 需注意",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -700,11 +700,11 @@
       "line": 131,
       "heading": "PPO 学习率通常比 SFT 小一个数量级",
       "author": "Tang AI",
-      "sha256": "a1856792a48fbde3863aa66243d333096791c5031ce03ae2c48a88ebe10210e6",
+      "sha256": "da265eb04eefa8f8a590f402d86639aee2414871539ebd41a6996cb6465f7131",
       "raw_exact_lines": [
         137
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "batch-size-019-01"
@@ -778,7 +778,7 @@
       "raw_exact_lines": [
         696
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-004-01"
@@ -798,7 +798,7 @@
       "raw_exact_lines": [
         678
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-005-01"
@@ -818,7 +818,7 @@
       "raw_exact_lines": [
         441
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-006-01"
@@ -856,7 +856,7 @@
       "raw_exact_lines": [
         299
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-008-01"
@@ -984,7 +984,7 @@
       "raw_exact_lines": [
         707
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-015-01"
@@ -1022,7 +1022,7 @@
       "raw_exact_lines": [
         666
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-017-01"
@@ -1096,7 +1096,7 @@
       "raw_exact_lines": [
         668
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-021-01"
@@ -1116,7 +1116,7 @@
       "raw_exact_lines": [
         690
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-022-01"
@@ -1154,7 +1154,7 @@
       "raw_exact_lines": [
         2725
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-024-01"
@@ -1192,7 +1192,7 @@
       "raw_exact_lines": [
         686
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-026-01"
@@ -1212,7 +1212,7 @@
       "raw_exact_lines": [
         291
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-027-01",
@@ -1251,7 +1251,7 @@
       "raw_exact_lines": [
         296
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-029-01"
@@ -1271,7 +1271,7 @@
       "raw_exact_lines": [
         296
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-030-01"
@@ -1291,7 +1291,7 @@
       "raw_exact_lines": [
         707
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-031-01"
@@ -1311,7 +1311,7 @@
       "raw_exact_lines": [
         431
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-032-01"
@@ -1331,7 +1331,7 @@
       "raw_exact_lines": [
         2633
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-033-01"
@@ -1370,7 +1370,7 @@
       "raw_exact_lines": [
         432
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-035-01"
@@ -1390,7 +1390,7 @@
       "raw_exact_lines": [
         696
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-036-01"
@@ -1428,7 +1428,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-038-01",
@@ -1449,7 +1449,7 @@
       "raw_exact_lines": [
         718
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-039-01"
@@ -1469,7 +1469,7 @@
       "raw_exact_lines": [
         722
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-040-01"
@@ -1489,7 +1489,7 @@
       "raw_exact_lines": [
         726
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-041-01"
@@ -1509,7 +1509,7 @@
       "raw_exact_lines": [
         728
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-042-01"
@@ -1547,7 +1547,7 @@
       "raw_exact_lines": [
         712
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-044-01"
@@ -1567,7 +1567,7 @@
       "raw_exact_lines": [
         714
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-045-01"
@@ -1587,7 +1587,7 @@
       "raw_exact_lines": [
         716
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-046-01"
@@ -1607,7 +1607,7 @@
       "raw_exact_lines": [
         294
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-047-01"
@@ -1627,7 +1627,7 @@
       "raw_exact_lines": [
         782
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-048-01"
@@ -1647,7 +1647,7 @@
       "raw_exact_lines": [
         2578
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-049-01"
@@ -1667,7 +1667,7 @@
       "raw_exact_lines": [
         2656
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-050-01"
@@ -1687,7 +1687,7 @@
       "raw_exact_lines": [
         2584
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-051-01"
@@ -1726,7 +1726,7 @@
       "raw_exact_lines": [
         1042
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-053-01"
@@ -1746,7 +1746,7 @@
       "raw_exact_lines": [
         662
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-054-01"
@@ -1784,7 +1784,7 @@
       "raw_exact_lines": [
         50
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-056-01"
@@ -1804,7 +1804,7 @@
       "raw_exact_lines": [
         387
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-057-01"
@@ -1842,7 +1842,7 @@
       "raw_exact_lines": [
         646
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-059-01"
@@ -1880,7 +1880,7 @@
       "raw_exact_lines": [
         383
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-061-01"
@@ -1918,7 +1918,7 @@
       "raw_exact_lines": [
         688
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-063-01"
@@ -1938,7 +1938,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-064-01"
@@ -1976,7 +1976,7 @@
       "raw_exact_lines": [
         2620
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-066-01"
@@ -1996,7 +1996,7 @@
       "raw_exact_lines": [
         730
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-067-01"
@@ -2016,7 +2016,7 @@
       "raw_exact_lines": [
         724
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "cnn-cv-068-01"
@@ -2037,7 +2037,7 @@
         50,
         369
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-001-01"
@@ -2057,7 +2057,7 @@
       "raw_exact_lines": [
         1585
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-002-01"
@@ -2077,7 +2077,7 @@
       "raw_exact_lines": [
         118
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-003-01"
@@ -2098,7 +2098,7 @@
         59,
         1454
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-004-01"
@@ -2119,7 +2119,7 @@
         999,
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-005-01",
@@ -2140,7 +2140,7 @@
       "raw_exact_lines": [
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-006-01"
@@ -2161,7 +2161,7 @@
         117,
         387
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-007-01"
@@ -2183,7 +2183,7 @@
         724,
         1579
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-008-01"
@@ -2221,7 +2221,7 @@
       "raw_exact_lines": [
         411
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-010-01"
@@ -2241,7 +2241,7 @@
       "raw_exact_lines": [
         383
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-011-01"
@@ -2261,7 +2261,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-012-01"
@@ -2281,7 +2281,7 @@
       "raw_exact_lines": [
         422
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-013-01",
@@ -2303,7 +2303,7 @@
         1035,
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-014-01",
@@ -2328,7 +2328,7 @@
         722,
         2643
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-015-01",
@@ -2350,7 +2350,7 @@
         197,
         198
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-016-01"
@@ -2370,7 +2370,7 @@
       "raw_exact_lines": [
         1505
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-017-01",
@@ -2393,7 +2393,7 @@
         1511,
         1583
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-018-01"
@@ -2413,7 +2413,7 @@
       "raw_exact_lines": [
         178
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-019-01"
@@ -2451,7 +2451,7 @@
       "raw_exact_lines": [
         1458
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-021-01"
@@ -2471,7 +2471,7 @@
       "raw_exact_lines": [
         119
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-022-01"
@@ -2491,7 +2491,7 @@
       "raw_exact_lines": [
         1501
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-023-01"
@@ -2511,7 +2511,7 @@
       "raw_exact_lines": [
         566
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-024-01"
@@ -2531,7 +2531,7 @@
       "raw_exact_lines": [
         1573
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-025-01"
@@ -2552,7 +2552,7 @@
         58,
         1569
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-026-01"
@@ -2608,7 +2608,7 @@
       "raw_exact_lines": [
         393
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-029-01"
@@ -2628,7 +2628,7 @@
       "raw_exact_lines": [
         1583
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "data-eval-030-01"
@@ -2644,11 +2644,11 @@
       "line": 16,
       "heading": "小数据过拟合测试",
       "author": "Andrej Karpathy / BugBuster喵 / TNotes / Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         369
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-001-01"
@@ -2658,13 +2658,13 @@
     "id": "debugging-002",
     "category": "debugging",
     "title": "随机标签测试",
-    "body": "- **来源**: BugBuster喵\n- **适用场景**: 验证模型实现是否正确\n- **原文**: \"随机标签能不能不过拟合\"\n- **要点**: 打乱标签后模型应该无法过拟合（loss不下降）。如果随机标签下loss依然下降，说明模型在记忆数据而非学习规律，通常是数据泄露或代码bug。\n- **参见**: [[../data-eval/data-eval]]",
+    "body": "- **来源**: BugBuster喵\n- **适用场景**: 验证模型实现是否正确\n- **原文**: \"随机标签能不能不过拟合\"\n- **要点**: 高容量模型可以记忆固定随机训练标签，训练 loss 下降本身不构成泄漏证据。随机标签只在训练前生成一次；用独立且未参与调参的验证集检验泛化，并检查输入是否含标签信息。参见 [Zhang 等的随机标签实验](https://arxiv.org/abs/1611.03530)。\n- **参见**: [[../data-eval/data-eval]]",
     "source": {
       "wiki": "wiki/debugging/debugging.md",
       "line": 23,
       "heading": "随机标签测试",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2676,17 +2676,17 @@
     "id": "debugging-003",
     "category": "debugging",
     "title": "五种最常见的实现Bug",
-    "body": "- **来源**: Josh Robin (伯克利) / 量子位\n- **适用场景**: 调试新搭建的模型\n- **原文**: \"错误的张量形状；预处理输入错误；损失函数错误输入；忘记设置正确的训练模型；错误的数据类型。\"\n- **要点**: 1) 张量形状不匹配；2) 预处理/输入错误；3) 损失函数输入错误（如输入了未归一化的logits而非softmax输出）；4) 忘记设置 model.train()；5) 数据类型错误（未转成 float32）。\n- **参见**: [[../normalization/normalization]]",
+    "body": "- **来源**: Josh Robin (伯克利) / 量子位\n- **适用场景**: 调试新搭建的模型\n- **原文**: \"错误的张量形状；预处理输入错误；损失函数错误输入；忘记设置正确的训练模型；错误的数据类型。\"\n- **要点**: 1) 张量形状不匹配；2) 预处理/输入错误；3) 损失函数接口错误（PyTorch CrossEntropyLoss 应接收原始 logits，而非预先 softmax 的输出；BCEWithLogitsLoss 同理）；4) 忘记设置 model.train()；5) 数据类型错误（输入采用模型所需浮点类型，类别索引通常为 int64）。接口依据见 [PyTorch CrossEntropyLoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)。\n- **参见**: [[../normalization/normalization]]",
     "source": {
       "wiki": "wiki/debugging/debugging.md",
       "line": 30,
       "heading": "五种最常见的实现Bug",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         514
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-003-01",
@@ -2706,7 +2706,7 @@
       "line": 37,
       "heading": "NaN诊断：突然出现的NaN",
       "author": "TNotes / 陈城南",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2725,7 +2725,7 @@
       "line": 44,
       "heading": "NaN诊断：逐渐发散到NaN",
       "author": "TNotes / 陈城南 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2743,11 +2743,11 @@
       "line": 51,
       "heading": "torch.autograd.detect_anomaly()",
       "author": "TNotes",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         3157
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-006-01"
@@ -2763,7 +2763,7 @@
       "line": 58,
       "heading": "梯度裁剪（临时修复）",
       "author": "陈城南 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2781,7 +2781,7 @@
       "line": 65,
       "heading": "过拟合诊断",
       "author": "无忧无虑 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2799,11 +2799,11 @@
       "line": 72,
       "heading": "欠拟合诊断",
       "author": "无忧无虑 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1007
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-009-01",
@@ -2820,11 +2820,11 @@
       "line": 79,
       "heading": "训练不收敛：检查数据流水线",
       "author": "陈城南 / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         774
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-010-01"
@@ -2840,7 +2840,7 @@
       "line": 86,
       "heading": "训练不收敛：检查优化器参数",
       "author": "陈城南 / 摘星狐狸",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -2858,11 +2858,11 @@
       "line": 93,
       "heading": "损失函数排查",
       "author": "陈城南 / Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         796
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-012-01"
@@ -2878,11 +2878,11 @@
       "line": 100,
       "heading": "先调学习率",
       "author": "无忧无虑 / 四点半的理一 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1029
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-013-01"
@@ -2898,11 +2898,11 @@
       "line": 107,
       "heading": "学习率预热扫描（LR Range Test）",
       "author": "四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1077
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-014-01"
@@ -2918,11 +2918,11 @@
       "line": 114,
       "heading": "可视化调试：Layer Activations",
       "author": "杨军 (CS231n)",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         855
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-015-01"
@@ -2938,11 +2938,11 @@
       "line": 121,
       "heading": "可视化调试：Layer Weights",
       "author": "杨军 / Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         866
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-016-01"
@@ -2958,11 +2958,11 @@
       "line": 128,
       "heading": "可视化调试：Softmax输出分布",
       "author": "Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         393
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-017-01"
@@ -2978,11 +2978,11 @@
       "line": 135,
       "heading": "对比训练集和验证集的Loss",
       "author": "Captain Jack / 无忧无虑",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         411
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-018-01"
@@ -2998,11 +2998,11 @@
       "line": 142,
       "heading": "不要怀疑NN的能力",
       "author": "Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         375
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-019-01"
@@ -3018,11 +3018,11 @@
       "line": 149,
       "heading": "不要盲目信任论文默认参数",
       "author": "Captain Jack / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         435
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-020-01"
@@ -3038,11 +3038,11 @@
       "line": 156,
       "heading": "一次只改一个变量",
       "author": "四点半的理一 / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1083
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-021-01"
@@ -3058,11 +3058,11 @@
       "line": 163,
       "heading": "记录一切",
       "author": "BugBuster喵 / 四点半的理一",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-022-01"
@@ -3078,11 +3078,11 @@
       "line": 170,
       "heading": "先诊断再下手（消融思维）",
       "author": "四点半的理一 / BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1089
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-023-01"
@@ -3098,11 +3098,11 @@
       "line": 177,
       "heading": "连续调参无提升时去看数据和错误样例",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1585
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-024-01"
@@ -3118,11 +3118,11 @@
       "line": 184,
       "heading": "确认模型加载了预训练权重",
       "author": "陈城南",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         782
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-025-01"
@@ -3138,7 +3138,7 @@
       "line": 191,
       "heading": "Debug流程：从简单到复杂",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -3156,11 +3156,11 @@
       "line": 198,
       "heading": "调试时要悲观主义",
       "author": "Josh Robin (伯克利) / 量子位",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         483
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-027-01"
@@ -3176,11 +3176,11 @@
       "line": 205,
       "heading": "观察Loss胜于观察准确率",
       "author": "Captain Jack",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         387
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-028-01"
@@ -3196,7 +3196,7 @@
       "line": 212,
       "heading": "确认训练/推理预处理一致性",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -3214,7 +3214,7 @@
       "line": 219,
       "heading": "梯度检查与裁剪",
       "author": "摘星狐狸",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -3233,11 +3233,11 @@
       "line": 226,
       "heading": "早停策略",
       "author": "BugBuster喵 / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-031-01"
@@ -3253,7 +3253,7 @@
       "line": 233,
       "heading": "可视化Embedding（t-SNE）",
       "author": "杨军",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -3271,11 +3271,11 @@
       "line": 240,
       "heading": "数据泄露排查",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1454
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-033-01"
@@ -3291,11 +3291,11 @@
       "line": 247,
       "heading": "验证集被反复调穿",
       "author": "BugBuster喵",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         1567
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-034-01"
@@ -3311,11 +3311,11 @@
       "line": 254,
       "heading": "梯度累积与显存优化",
       "author": "LindgeWAI / 爱睡觉的KKY",
-      "sha256": "d12a96c460c6e6580be98c9f64f71529ed87d9c766a26f8ab166d37c6c0d6fbe",
+      "sha256": "ec0673f906a02f6c74d6040e78490c4f39db3d90a5334ded710802fa8186b315",
       "raw_exact_lines": [
         2091
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "debugging-035-01"
@@ -3336,7 +3336,7 @@
         1492,
         2485
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-001-01",
@@ -3358,7 +3358,7 @@
       "raw_exact_lines": [
         2503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-002-01",
@@ -3380,7 +3380,7 @@
       "raw_exact_lines": [
         181
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-003-01"
@@ -3401,7 +3401,7 @@
         1527,
         1929
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-004-01",
@@ -3423,7 +3423,7 @@
         1519,
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-005-01"
@@ -3443,7 +3443,7 @@
       "raw_exact_lines": [
         770
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-006-01"
@@ -3463,7 +3463,7 @@
       "raw_exact_lines": [
         2143
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-007-01"
@@ -3483,7 +3483,7 @@
       "raw_exact_lines": [
         2444
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-008-01"
@@ -3503,7 +3503,7 @@
       "raw_exact_lines": [
         2090
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-009-01",
@@ -3524,7 +3524,7 @@
       "raw_exact_lines": [
         2089
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-010-01",
@@ -3546,7 +3546,7 @@
         58,
         1569
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-011-01"
@@ -3566,7 +3566,7 @@
       "raw_exact_lines": [
         2462
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-012-01"
@@ -3588,7 +3588,7 @@
         789,
         1525
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-013-01",
@@ -3627,7 +3627,7 @@
       "raw_exact_lines": [
         2904
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-015-01"
@@ -3648,7 +3648,7 @@
         50,
         369
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-016-01"
@@ -3669,7 +3669,7 @@
         788,
         1486
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "infra-017-01"
@@ -3685,12 +3685,12 @@
       "line": 15,
       "heading": "Xavier/Glorot 初始化（通用首选）",
       "author": "爱睡觉的KKY / 炫光 / Jarvix / 匿名用户",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         54,
         642
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-001-01"
@@ -3700,18 +3700,18 @@
     "id": "initialization-002",
     "category": "initialization",
     "title": "He 初始化（ReLU 专用）",
-    "body": "- **来源**: 炫光 / 京东白条 / 摘星狐狸\n- **适用场景**: ReLU 及变体（LeakyReLU、PReLU）激活函数的网络层\n- **原文**: \"relu激活函数初始化推荐使用He normal，tanh初始化推荐使用Glorot normal\" / \"ReLU初始化推荐使用He normal，tanh初始化推荐使用Glorot normal\"\n- **要点**: He 初始化（也称 Kaiming 初始化）是 ReLU 系列激活函数的标准搭配，标准差设置为 $2/n$，可以避免 ReLU 带来的梯度消失问题。\n- **参见**: [[../activation/activation]]",
+    "body": "- **来源**: 炫光 / 京东白条 / 摘星狐狸\n- **适用场景**: ReLU 及变体（LeakyReLU、PReLU）激活函数的网络层\n- **原文**: \"relu激活函数初始化推荐使用He normal，tanh初始化推荐使用Glorot normal\" / \"ReLU初始化推荐使用He normal，tanh初始化推荐使用Glorot normal\"\n- **要点**: He 初始化（也称 Kaiming 初始化）是 ReLU 系列激活函数的标准搭配，方差设置为 $2/\\mathrm{fan\\_in}$，标准差为 $\\sqrt{2/\\mathrm{fan\\_in}}$，可以避免 ReLU 带来的梯度消失问题。\n- **参见**: [[../activation/activation]]",
     "source": {
       "wiki": "wiki/initialization/initialization.md",
       "line": 22,
       "heading": "He 初始化（ReLU 专用）",
       "author": "炫光 / 京东白条 / 摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         507,
         1256
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-002-01"
@@ -3727,11 +3727,11 @@
       "line": 29,
       "heading": "截断正态初始化（Truncated Normal）用于 Embedding",
       "author": "爱睡觉的KKY",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         54
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-003-01"
@@ -3747,11 +3747,11 @@
       "line": 35,
       "heading": "Uniform vs Normal 初始化的选择",
       "author": "Jarvix / 摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         1286
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-004-01"
@@ -3767,11 +3767,11 @@
       "line": 42,
       "heading": "SVD 初始化用于 RNN",
       "author": "摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         1300
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-005-01"
@@ -3781,13 +3781,13 @@
     "id": "initialization-006",
     "category": "initialization",
     "title": "零初始化的神话与陷阱",
-    "body": "- **来源**: 京东白条\n- **适用场景**: 理解为什么不能全零初始化（bias 除外）\n- **原文**: \"将权重矩阵W初始化方法改成了全为0的初始化...在训练完第一个epoch后预测精度就达到了85%以上，最终20个epoch后精度达到92%\"\n- **要点**: 权重的全零初始化在单层 Softmax 回归中可以工作（凸优化），但在多层网络中会破坏对称性导致每层神经元学到相同特征。权重用随机初始化，**bias 全初始化为 0**。\n- **参见**: [[optimizer]]",
+    "body": "- **来源**: 京东白条\n- **适用场景**: 理解为什么不能全零初始化（bias 除外）\n- **原文**: \"将权重矩阵W初始化方法改成了全为0的初始化...在训练完第一个epoch后预测精度就达到了85%以上，最终20个epoch后精度达到92%\"\n- **要点**: 权重的全零初始化在单层 Softmax 回归中可以工作（凸优化），但在多层网络中无法打破隐藏单元的对称性，可能使它们始终学到相同特征。权重用随机初始化，**bias 全初始化为 0**。\n- **参见**: [[optimizer]]",
     "source": {
       "wiki": "wiki/initialization/initialization.md",
       "line": 49,
       "heading": "零初始化的神话与陷阱",
       "author": "京东白条",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -3806,11 +3806,11 @@
       "line": 56,
       "heading": "TensorFlow 与 PyTorch 初始化差异",
       "author": "爱睡觉的KKY",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         163
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-007-01"
@@ -3826,12 +3826,12 @@
       "line": 62,
       "heading": "权重用随机初始化，Bias 恒为零",
       "author": "炫光 / 匿名用户",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         283,
         2882
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-008-01"
@@ -3847,11 +3847,11 @@
       "line": 68,
       "heading": "不同初始化做 Ensemble",
       "author": "炫光",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-009-01",
@@ -3868,11 +3868,11 @@
       "line": 75,
       "heading": "预训练模型加载后必须验证",
       "author": "微尘-黄含驰",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         782
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-010-01"
@@ -3888,11 +3888,11 @@
       "line": 82,
       "heading": "长训练中换初始化方法跳出局部最优",
       "author": "炫光",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         87
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-011-01"
@@ -3908,7 +3908,7 @@
       "line": 88,
       "heading": "DeepSeek 大模型初始化标准差",
       "author": "Sam聊算法",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [],
       "raw_attribution_status": "wiki_attributed_raw_unverified"
     },
@@ -3927,11 +3927,11 @@
       "line": 95,
       "heading": "正交初始化用于深层网络",
       "author": "摘星狐狸",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         1300
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-013-01"
@@ -3947,11 +3947,11 @@
       "line": 101,
       "heading": "初始化对 CNN 的巨大影响（案例）",
       "author": "Jarvix",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         642
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-014-01"
@@ -3967,11 +3967,11 @@
       "line": 107,
       "heading": "先过拟合再谈初始化",
       "author": "微尘-黄含驰",
-      "sha256": "9bfacc9f5db927dbc75258be28e09c2083235f3585a5ae537a3aae628855ade2",
+      "sha256": "91fda047388b86f0c1a28797ffb44b2556924952c2d18df745a2034b03b0b5c2",
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "initialization-015-01"
@@ -3991,7 +3991,7 @@
       "raw_exact_lines": [
         126
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-001-01"
@@ -4011,7 +4011,7 @@
       "raw_exact_lines": [
         130
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-002-01"
@@ -4031,7 +4031,7 @@
       "raw_exact_lines": [
         127
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-003-01"
@@ -4051,7 +4051,7 @@
       "raw_exact_lines": [
         131
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-004-01"
@@ -4071,7 +4071,7 @@
       "raw_exact_lines": [
         132
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-005-01"
@@ -4091,7 +4091,7 @@
       "raw_exact_lines": [
         126
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-006-01"
@@ -4111,7 +4111,7 @@
       "raw_exact_lines": [
         128
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-007-01"
@@ -4131,7 +4131,7 @@
       "raw_exact_lines": [
         141
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-008-01",
@@ -4153,7 +4153,7 @@
       "raw_exact_lines": [
         133
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-009-01"
@@ -4173,7 +4173,7 @@
       "raw_exact_lines": [
         142
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-010-01"
@@ -4193,7 +4193,7 @@
       "raw_exact_lines": [
         143
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-011-01"
@@ -4213,7 +4213,7 @@
       "raw_exact_lines": [
         129
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-012-01"
@@ -4233,7 +4233,7 @@
       "raw_exact_lines": [
         137
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-013-01"
@@ -4253,7 +4253,7 @@
       "raw_exact_lines": [
         138
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-014-01"
@@ -4273,7 +4273,7 @@
       "raw_exact_lines": [
         139
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-015-01"
@@ -4293,7 +4293,7 @@
       "raw_exact_lines": [
         140
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-016-01"
@@ -4313,7 +4313,7 @@
       "raw_exact_lines": [
         136
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-017-01"
@@ -4333,7 +4333,7 @@
       "raw_exact_lines": [
         144
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-018-01"
@@ -4371,7 +4371,7 @@
       "raw_exact_lines": [
         145
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-020-01"
@@ -4391,7 +4391,7 @@
       "raw_exact_lines": [
         146
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-021-01",
@@ -4412,7 +4412,7 @@
       "raw_exact_lines": [
         147
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-022-01",
@@ -4433,7 +4433,7 @@
       "raw_exact_lines": [
         148
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-023-01"
@@ -4453,7 +4453,7 @@
       "raw_exact_lines": [
         134
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-024-01"
@@ -4473,7 +4473,7 @@
       "raw_exact_lines": [
         135
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-025-01"
@@ -4493,7 +4493,7 @@
       "raw_exact_lines": [
         149
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-026-01"
@@ -4513,7 +4513,7 @@
       "raw_exact_lines": [
         150
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-027-01",
@@ -4534,7 +4534,7 @@
       "raw_exact_lines": [
         1547
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-028-01"
@@ -4554,7 +4554,7 @@
       "raw_exact_lines": [
         1547
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-029-01"
@@ -4574,7 +4574,7 @@
       "raw_exact_lines": [
         151
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-030-01"
@@ -4594,7 +4594,7 @@
       "raw_exact_lines": [
         134
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-rl-031-01"
@@ -4614,7 +4614,7 @@
       "raw_exact_lines": [
         113
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-001-01"
@@ -4634,7 +4634,7 @@
       "raw_exact_lines": [
         114
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-002-01"
@@ -4654,7 +4654,7 @@
       "raw_exact_lines": [
         115
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-003-01",
@@ -4675,7 +4675,7 @@
       "raw_exact_lines": [
         118
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-004-01"
@@ -4695,7 +4695,7 @@
       "raw_exact_lines": [
         119
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-005-01"
@@ -4715,7 +4715,7 @@
       "raw_exact_lines": [
         120
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-006-01"
@@ -4735,7 +4735,7 @@
       "raw_exact_lines": [
         121
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-007-01"
@@ -4755,7 +4755,7 @@
       "raw_exact_lines": [
         122
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-008-01"
@@ -4775,7 +4775,7 @@
       "raw_exact_lines": [
         117
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-009-01"
@@ -4795,7 +4795,7 @@
       "raw_exact_lines": [
         116
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-010-01"
@@ -4815,7 +4815,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-011-01",
@@ -4844,7 +4844,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-012-01",
@@ -4867,7 +4867,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-013-01"
@@ -4887,7 +4887,7 @@
       "raw_exact_lines": [
         1505
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-014-01"
@@ -4927,7 +4927,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-016-01",
@@ -4948,7 +4948,7 @@
       "raw_exact_lines": [
         1468
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-017-01",
@@ -4970,7 +4970,7 @@
       "raw_exact_lines": [
         1509
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-018-01"
@@ -4990,7 +4990,7 @@
       "raw_exact_lines": [
         126
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-019-01"
@@ -5010,7 +5010,7 @@
       "raw_exact_lines": [
         1543
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-020-01"
@@ -5030,7 +5030,7 @@
       "raw_exact_lines": [
         1484
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-021-01"
@@ -5051,7 +5051,7 @@
         122,
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "llm-sft-022-01",
@@ -5074,7 +5074,7 @@
       "raw_exact_lines": [
         51
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-001-01"
@@ -5094,7 +5094,7 @@
       "raw_exact_lines": [
         206
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-002-01",
@@ -5115,7 +5115,7 @@
       "raw_exact_lines": [
         169
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-003-01",
@@ -5136,7 +5136,7 @@
       "raw_exact_lines": [
         184
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-004-01",
@@ -5157,7 +5157,7 @@
       "raw_exact_lines": [
         201
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-005-01"
@@ -5177,7 +5177,7 @@
       "raw_exact_lines": [
         207
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-006-01"
@@ -5197,7 +5197,7 @@
       "raw_exact_lines": [
         56
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-007-01"
@@ -5217,7 +5217,7 @@
       "raw_exact_lines": [
         1226
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-008-01"
@@ -5237,7 +5237,7 @@
       "raw_exact_lines": [
         54
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-009-01"
@@ -5257,7 +5257,7 @@
       "raw_exact_lines": [
         190
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-010-01",
@@ -5279,7 +5279,7 @@
       "raw_exact_lines": [
         2088
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-011-01"
@@ -5299,7 +5299,7 @@
       "raw_exact_lines": [
         2424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-012-01",
@@ -5320,7 +5320,7 @@
       "raw_exact_lines": [
         2444
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-013-01"
@@ -5340,7 +5340,7 @@
       "raw_exact_lines": [
         1404
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-014-01",
@@ -5361,7 +5361,7 @@
       "raw_exact_lines": [
         60
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-015-01"
@@ -5381,7 +5381,7 @@
       "raw_exact_lines": [
         1492
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "nlp-016-01"
@@ -5401,7 +5401,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-001-01"
@@ -5421,7 +5421,7 @@
       "raw_exact_lines": [
         191
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-002-01",
@@ -5443,7 +5443,7 @@
       "raw_exact_lines": [
         284
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-003-01"
@@ -5463,7 +5463,7 @@
       "raw_exact_lines": [
         207
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-004-01"
@@ -5483,7 +5483,7 @@
       "raw_exact_lines": [
         2589
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-005-01",
@@ -5504,7 +5504,7 @@
       "raw_exact_lines": [
         710
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-006-01"
@@ -5524,7 +5524,7 @@
       "raw_exact_lines": [
         89
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-007-01",
@@ -5545,7 +5545,7 @@
       "raw_exact_lines": [
         381
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-008-01"
@@ -5565,7 +5565,7 @@
       "raw_exact_lines": [
         434
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-009-01"
@@ -5585,7 +5585,7 @@
       "raw_exact_lines": [
         2719
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-010-01"
@@ -5605,7 +5605,7 @@
       "raw_exact_lines": [
         2820
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-011-01"
@@ -5643,7 +5643,7 @@
       "raw_exact_lines": [
         2796
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-013-01"
@@ -5663,7 +5663,7 @@
       "raw_exact_lines": [
         429
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-014-01"
@@ -5683,7 +5683,7 @@
       "raw_exact_lines": [
         1402
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "normalization-015-01"
@@ -5703,7 +5703,7 @@
       "raw_exact_lines": [
         77
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-001-01"
@@ -5723,7 +5723,7 @@
       "raw_exact_lines": [
         60
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-002-01"
@@ -5743,7 +5743,7 @@
       "raw_exact_lines": [
         286
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-003-01"
@@ -5763,7 +5763,7 @@
       "raw_exact_lines": [
         1109
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-004-01"
@@ -5783,7 +5783,7 @@
       "raw_exact_lines": [
         788
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-005-01"
@@ -5803,7 +5803,7 @@
       "raw_exact_lines": [
         196
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-006-01",
@@ -5824,7 +5824,7 @@
       "raw_exact_lines": [
         51
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-007-01"
@@ -5862,7 +5862,7 @@
       "raw_exact_lines": [
         79
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-009-01"
@@ -5882,7 +5882,7 @@
       "raw_exact_lines": [
         1077
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-010-01"
@@ -5902,7 +5902,7 @@
       "raw_exact_lines": [
         1153
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-011-01"
@@ -5922,7 +5922,7 @@
       "raw_exact_lines": [
         1726
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-012-01"
@@ -5960,7 +5960,7 @@
       "raw_exact_lines": [
         2088
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-014-01"
@@ -5980,7 +5980,7 @@
       "raw_exact_lines": [
         791
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-015-01"
@@ -6000,7 +6000,7 @@
       "raw_exact_lines": [
         289
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-016-01"
@@ -6020,7 +6020,7 @@
       "raw_exact_lines": [
         2808
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-017-01"
@@ -6040,7 +6040,7 @@
       "raw_exact_lines": [
         1355
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-018-01"
@@ -6060,7 +6060,7 @@
       "raw_exact_lines": [
         85
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-019-01"
@@ -6080,7 +6080,7 @@
       "raw_exact_lines": [
         1230
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-020-01"
@@ -6173,7 +6173,7 @@
       "raw_exact_lines": [
         401
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-025-01"
@@ -6193,7 +6193,7 @@
       "raw_exact_lines": [
         405
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-026-01"
@@ -6231,7 +6231,7 @@
       "raw_exact_lines": [
         52
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-028-01"
@@ -6305,7 +6305,7 @@
       "raw_exact_lines": [
         136
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-032-01"
@@ -6362,7 +6362,7 @@
       "raw_exact_lines": [
         115
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-035-01",
@@ -6440,7 +6440,7 @@
       "raw_exact_lines": [
         1083
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-039-01"
@@ -6460,7 +6460,7 @@
       "raw_exact_lines": [
         1075
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-040-01"
@@ -6480,7 +6480,7 @@
       "raw_exact_lines": [
         1029
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-041-01"
@@ -6500,7 +6500,7 @@
       "raw_exact_lines": [
         1480
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-042-01"
@@ -6520,7 +6520,7 @@
       "raw_exact_lines": [
         1119
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-043-01"
@@ -6540,7 +6540,7 @@
       "raw_exact_lines": [
         792
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-044-01"
@@ -6560,7 +6560,7 @@
       "raw_exact_lines": [
         407
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-045-01"
@@ -6616,7 +6616,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-048-01"
@@ -6636,7 +6636,7 @@
       "raw_exact_lines": [
         58
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-049-01"
@@ -6656,7 +6656,7 @@
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-050-01"
@@ -6676,7 +6676,7 @@
       "raw_exact_lines": [
         50
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-051-01"
@@ -6750,7 +6750,7 @@
       "raw_exact_lines": [
         642
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-055-01"
@@ -6825,7 +6825,7 @@
       "raw_exact_lines": [
         1720
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-059-01"
@@ -6845,7 +6845,7 @@
       "raw_exact_lines": [
         1754
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-060-01"
@@ -6865,7 +6865,7 @@
       "raw_exact_lines": [
         1756
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-061-01"
@@ -6885,7 +6885,7 @@
       "raw_exact_lines": [
         686
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-062-01"
@@ -6923,7 +6923,7 @@
       "raw_exact_lines": [
         688
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-064-01"
@@ -6943,7 +6943,7 @@
       "raw_exact_lines": [
         195
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-065-01"
@@ -6963,7 +6963,7 @@
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-066-01"
@@ -7020,7 +7020,7 @@
       "raw_exact_lines": [
         294
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-069-01"
@@ -7040,7 +7040,7 @@
       "raw_exact_lines": [
         1545
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-070-01"
@@ -7060,7 +7060,7 @@
       "raw_exact_lines": [
         405
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-071-01"
@@ -7170,7 +7170,7 @@
       "raw_exact_lines": [
         788
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-077-01"
@@ -7190,7 +7190,7 @@
       "raw_exact_lines": [
         166
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-078-01"
@@ -7246,7 +7246,7 @@
       "raw_exact_lines": [
         791
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-081-01"
@@ -7266,7 +7266,7 @@
       "raw_exact_lines": [
         584
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-082-01"
@@ -7286,7 +7286,7 @@
       "raw_exact_lines": [
         433
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-083-01"
@@ -7379,7 +7379,7 @@
       "raw_exact_lines": [
         2091
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-088-01"
@@ -7399,7 +7399,7 @@
       "raw_exact_lines": [
         194
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "optimizer-lr-089-01"
@@ -7419,7 +7419,7 @@
       "raw_exact_lines": [
         166
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-001-01",
@@ -7440,7 +7440,7 @@
       "raw_exact_lines": [
         187
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-002-01",
@@ -7462,7 +7462,7 @@
       "raw_exact_lines": [
         194
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-003-01"
@@ -7482,7 +7482,7 @@
       "raw_exact_lines": [
         197
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-004-01"
@@ -7502,7 +7502,7 @@
       "raw_exact_lines": [
         198
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-005-01"
@@ -7522,7 +7522,7 @@
       "raw_exact_lines": [
         172
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-006-01",
@@ -7543,7 +7543,7 @@
       "raw_exact_lines": [
         383
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-007-01"
@@ -7563,7 +7563,7 @@
       "raw_exact_lines": [
         203
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-008-01"
@@ -7583,7 +7583,7 @@
       "raw_exact_lines": [
         204
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-009-01",
@@ -7604,7 +7604,7 @@
       "raw_exact_lines": [
         205
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-010-01"
@@ -7624,7 +7624,7 @@
       "raw_exact_lines": [
         208
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-011-01"
@@ -7644,7 +7644,7 @@
       "raw_exact_lines": [
         199
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-012-01",
@@ -7665,7 +7665,7 @@
       "raw_exact_lines": [
         196
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-013-01"
@@ -7685,7 +7685,7 @@
       "raw_exact_lines": [
         1238
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-014-01"
@@ -7705,7 +7705,7 @@
       "raw_exact_lines": [
         193
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-015-01"
@@ -7725,7 +7725,7 @@
       "raw_exact_lines": [
         192
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-016-01"
@@ -7745,7 +7745,7 @@
       "raw_exact_lines": [
         189
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-017-01"
@@ -7765,7 +7765,7 @@
       "raw_exact_lines": [
         207
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-018-01"
@@ -7785,7 +7785,7 @@
       "raw_exact_lines": [
         200
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-019-01"
@@ -7805,7 +7805,7 @@
       "raw_exact_lines": [
         1109
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-020-01"
@@ -7825,7 +7825,7 @@
       "raw_exact_lines": [
         1454
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-021-01"
@@ -7845,7 +7845,7 @@
       "raw_exact_lines": [
         1468
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-022-01"
@@ -7865,7 +7865,7 @@
       "raw_exact_lines": [
         56
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "recsys-023-01"
@@ -7903,7 +7903,7 @@
       "raw_exact_lines": [
         424
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-002-01",
@@ -7945,7 +7945,7 @@
       "raw_exact_lines": [
         1838
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-004-01"
@@ -7965,7 +7965,7 @@
       "raw_exact_lines": [
         61
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-005-01",
@@ -7987,7 +7987,7 @@
       "raw_exact_lines": [
         2672
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-006-01",
@@ -8045,7 +8045,7 @@
       "raw_exact_lines": [
         2611
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-009-01"
@@ -8065,7 +8065,7 @@
       "raw_exact_lines": [
         2814
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-010-01"
@@ -8085,7 +8085,7 @@
       "raw_exact_lines": [
         1503
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-011-01",
@@ -8106,7 +8106,7 @@
       "raw_exact_lines": [
         302
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-012-01",
@@ -8128,7 +8128,7 @@
       "raw_exact_lines": [
         284
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-013-01"
@@ -8148,7 +8148,7 @@
       "raw_exact_lines": [
         1095
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-014-01"
@@ -8168,7 +8168,7 @@
       "raw_exact_lines": [
         1492
       ],
-      "raw_attribution_status": "exact_fragment_matched"
+      "raw_attribution_status": "normalized_fragment_matched"
     },
     "experiments": [
       "regularization-015-01"

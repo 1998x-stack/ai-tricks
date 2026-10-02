@@ -37,7 +37,7 @@ python experiments/debugging/debugging-029-01/experiment.py --run --environment 
 - **适用场景**: 训练效果好但推理效果差
 - **原文**: "训练和推理的预处理是否完全一致"
 - **要点**: 训练时用的预处理（归一化参数、resize方式、数据增强）必须和推理时完全一致。不一致会导致严重的性能下降，且难以排查。
-- **参见**: [[../data-eval/data-eval]]
+- **参见**: [../data-eval/data-eval](../../../wiki/data-eval/data-eval.md)
 
 ## 解释边界
 

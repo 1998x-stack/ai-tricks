@@ -37,7 +37,7 @@ python experiments/debugging/debugging-011-01/experiment.py --run --environment 
 - **适用场景**: 模型参数未参与训练
 - **原文**: "要保证model的参数被加载到optimizer里了...如果你的model2的参数未添加到optimizer里，这部分参数就没参与学习"
 - **要点**: 确保所有模型参数都被传入了优化器。先后创建model1、optimizer、model2时，model2的参数不会自动被optimizer管理。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

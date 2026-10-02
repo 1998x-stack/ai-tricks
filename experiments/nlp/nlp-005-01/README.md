@@ -37,7 +37,7 @@ python experiments/nlp/nlp-005-01/experiment.py --run --environment remote.json
 - **适用场景**: 长文档分类、长文本序列标注、长文本匹配
 - **原文**: *"对于长文本来说longformer的效果高于各种bert变体"*
 - **要点**: Longformer 使用稀疏注意力机制，支持更长序列（4096+），在处理长文本任务时效果优于标准 BERT 及其变体（RoBERTa、ALBERT 等）。BERT 的 512 长度限制对长文档是明显瓶颈。
-- **参见**: [[../recsys/multi-task-recsys]], [[transformer-variants]]
+- **参见**: [../recsys/multi-task-recsys](../../../wiki/recsys/multi-task-recsys.md), `[[transformer-variants]]`（原 Wiki 未解析链接）
 
 ## 解释边界
 

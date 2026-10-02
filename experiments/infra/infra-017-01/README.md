@@ -37,7 +37,7 @@ python experiments/infra/infra-017-01/experiment.py --run --environment remote.j
 - **适用场景**: 几乎所有 Transformer 和大模型训练
 - **原文**: "warmup 我现在几乎默认会开，尤其是 Transformer。比例一般 3% 到 10% 之间试。scheduler 常用 cosine 或 linear decay" / "万能模板 Adam + Cos退火构建基础"
 - **要点**: warmup 步数一般设总轮次 1/10（参考 BERT）；cosine 退火从初始 lr 平滑降到极小值（如 1e-7）；warmup + cosine 组合是 Transformer 和大模型训练的事实标准。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

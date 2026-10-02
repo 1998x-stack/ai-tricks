@@ -37,7 +37,7 @@ python experiments/infra/infra-004-02/experiment.py --run --environment remote.j
 - **适用场景**: 自动化超参数搜索与实验记录
 - **原文**: "wandb 一款可以大幅提升深度学习效率的神器。可以但不限于用来记录训练测试等深度学习项目开发过程。" / "Weights & Biases 的官方教程里有不少实用的实验管理案例；Optuna 文档里的 pruning 和 sampler 部分值得看"
 - **要点**: W&B Sweeps 支持 grid/random/bayesian 搜索，自动并行调参；调用 `wandb.sweep(sweep_config)` + `wandb.agent(sweep_id, function=main)` 即可启动；支持分布式搜索，可多人协作共享实验视图。
-- **参见**: [[../batch-size/batch-size]]
+- **参见**: [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md)
 
 ## 解释边界
 

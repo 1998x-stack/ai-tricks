@@ -37,7 +37,7 @@ python experiments/normalization/normalization-005-01/experiment.py --run --envi
 - **适用场景**: 不同 batch size 下的训练
 - **原文**: > 在你的网络中始终使用归一化层（normalization layers）。如果你使用较大的批处理大小（比如10个或更多）来训练网络，请使用批标准化层（BatchNormalization）。否则，如果你使用较小的批大小（比如1）进行训练，则使用InstanceNormalization层。请注意，大部分作者发现，如果增加批处理大小，那么批处理规范化会提高性能，而当批处理大小较小时，则会降低性能。但是，如果使用较小的批处理大小，InstanceNormalization会略微提高性能。或者你也可以尝试组规范化（）。
 - **要点**: BN 依赖 batch 统计量，小 batch 时估计不稳定；IN 在每个样本内做归一化，GN 在通道分组内做归一化，均不依赖 batch 大小。
-- **参见**: [[group-normalization]], [[normalization-cheatsheet]], [[../batch-size/batch-size]], [[../cnn-cv/cnn-cv]]
+- **参见**: [group-normalization](../../../wiki/normalization/group-normalization.md), [normalization-cheatsheet](../../../wiki/normalization/normalization-cheatsheet.md), [../batch-size/batch-size](../../../wiki/batch-size/batch-size.md), [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

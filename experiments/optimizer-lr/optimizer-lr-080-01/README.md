@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-080-01/experiment.py --run --enviro
 - **适用场景**: 系统化超参搜索
 - **原文**: wandb可以大幅提升深度学习效率，支持网格搜索和随机搜索。Optuna对中小团队友好，Ray Tune适合集群，W&B记录可视化方便。
 - **要点**: 自动调参工具：wandb(入门友好), Optuna(中小团队), Ray Tune(集群)
-- **参见**: [[../infra/wandb-sweeps]] | [[../infra/wandb-sweeps]]
+- **参见**: [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md) | [../infra/wandb-sweeps](../../../wiki/infra/wandb-sweeps.md)
 
 ## 解释边界
 

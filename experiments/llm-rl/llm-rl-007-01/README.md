@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-007-01/experiment.py --run --environment remote
 - **适用场景**: reward function设计
 - **原文**: "reward的规则一定要考虑完整，且不能太多reward rule，否则会让模型彻底偏向某个规则，或者直接reward hacking。比如，对于仅有1个正例或者1个负例的数据集，如果完成正例的回答是很难的，而回答负例是很简单的，且正例数据比负例少，模型就倾向于全部数据都打负例，这样模型依然可以得到高分。"
 - **要点**: 规则要完整但不宜过多；注意正负样本比例平衡，防止模型走捷径（全打负例获高分）。
-- **参见**: [[reward-hacking]]
+- **参见**: [reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

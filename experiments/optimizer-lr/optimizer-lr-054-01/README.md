@@ -37,7 +37,7 @@ python experiments/optimizer-lr/optimizer-lr-054-01/experiment.py --run --enviro
 - **适用场景**: 经典CNN快速获得baseline
 - **原文**: sgd，步长0.1，weight decay取0.005，momentum取0.9。dropout加relu。做完这些就应该跑出基本靠谱的结果。
 - **要点**: 经典CNN基线：SGD, lr=0.1, momentum=0.9, wd=0.005, dropout+relu
-- **参见**: [[sgd-momentum]], [[lr-range-test]]
+- **参见**: [sgd-momentum](../../../wiki/optimizer-lr/sgd-momentum.md), [lr-range-test](../../../wiki/optimizer-lr/lr-range-test.md)
 
 ## 解释边界
 

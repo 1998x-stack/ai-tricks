@@ -37,7 +37,7 @@ python experiments/activation/activation-002-01/experiment.py --run --environmen
 - **适用场景**: 所有网络的输出层
 - **原文**: "最后一层千万不要relu，因为relu可能把很多数值都干为0" / "最后一层的激活函数千万慎用relu"
 - **要点**: ReLU 会将负值截断为 0，输出层使用会导致信息丢失，破坏预测结果。连续值用 identity，分类用 softmax，回归直接 wx+b。
-- **参见**: [[relu]], [[../data-eval/eval-metrics]]
+- **参见**: [relu](../../../wiki/activation/relu.md), [../data-eval/eval-metrics](../../../wiki/data-eval/eval-metrics.md)
 
 ## 解释边界
 

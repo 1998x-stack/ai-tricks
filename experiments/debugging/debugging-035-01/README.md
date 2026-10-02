@@ -37,7 +37,7 @@ python experiments/debugging/debugging-035-01/experiment.py --run --environment 
 - **适用场景**: 显存不足时模拟大批量训练
 - **原文**: "梯度累积：增大batch，规避GPU内存的限制"
 - **要点**: 在小batch上累积梯度后再更新参数，等效于大batch。注意loss要除以accumulation_steps。对表示学习/对比学习领域，batch size一般越大越好。
-- **参见**: [[../optimizer-lr/optimizer-lr]]
+- **参见**: [../optimizer-lr/optimizer-lr](../../../wiki/optimizer-lr/optimizer-lr.md)
 
 ## 解释边界
 

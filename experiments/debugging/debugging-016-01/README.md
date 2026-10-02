@@ -37,7 +37,7 @@ python experiments/debugging/debugging-016-01/experiment.py --run --environment 
 - **适用场景**: 判断训练是否正常
 - **原文**: "期望的良好的卷积层的weight可视化出来会具备smooth的特性"
 - **要点**: 第一层卷积的weight可视化应该是平滑的。出现大量噪点说明训练过程有问题。但小filter（如3x3）只有9个像素，smooth与否不一定有意义。
-- **参见**: [[../cnn-cv/cnn-cv]]
+- **参见**: [../cnn-cv/cnn-cv](../../../wiki/cnn-cv/cnn-cv.md)
 
 ## 解释边界
 

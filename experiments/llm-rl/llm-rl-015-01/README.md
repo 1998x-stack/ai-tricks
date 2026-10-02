@@ -37,7 +37,7 @@ python experiments/llm-rl/llm-rl-015-01/experiment.py --run --environment remote
 - **适用场景**: 训练稳定性
 - **原文**: "在PPO训练前，务必对RM的输出进行归一化处理。这可以防止因奖励模型打分范围不固定而导致的梯度爆炸或消失，极大提升训练稳定性。"
 - **要点**: PPO前必须对RM输出做归一化，防止梯度爆炸/消失。
-- **参见**: [[reward-hacking]]
+- **参见**: [reward-hacking](../../../wiki/llm-rl/reward-hacking.md)
 
 ## 解释边界
 

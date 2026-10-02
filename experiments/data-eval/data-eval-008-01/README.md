@@ -37,7 +37,7 @@ python experiments/data-eval/data-eval-008-01/experiment.py --run --environment 
 - **适用场景**: 类别不平衡、排序、生成等任务
 - **原文**: "对于负样本太多的数据集，测试集的loss降并不代表没有过拟合，试试看看f1或者auc有没有降低" / "不要只看精度，考虑其他metrics，并始终以上线后的可视化效果为最终评判标准。" / "训练loss下降很舒服，但业务指标可能不动。分类看校准，排序看NDCG、转化，检测看不同尺寸目标，生成看事实性和可用性。"
 - **要点**: Loss下降可能只是因为负样本学得好。始终使用与业务目标对齐的评估指标（F1、AUC、NDCG、召回率、精确率等），不能只依赖loss。
-- **参见**: [[eval-metrics]], [[class-imbalance]]
+- **参见**: [eval-metrics](../../../wiki/data-eval/eval-metrics.md), [class-imbalance](../../../wiki/data-eval/class-imbalance.md)
 
 ## 解释边界
 
