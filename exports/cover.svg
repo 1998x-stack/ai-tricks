@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+<rect width="1200" height="1600" fill="#f4f3eb"/>
+<path d="M0 0H36V1600H0Z" fill="#216653"/>
+<g fill="#216653"><rect x="106" y="112" width="16" height="76"/><rect x="132" y="112" width="16" height="35"/><rect x="132" y="157" width="16" height="31"/></g>
+<text x="180" y="165" font-family="monospace" font-size="44" fill="#20332c" font-weight="bold">AI TRICKS</text>
+<path d="M106 260H1094" stroke="#bcc9bd"/>
+<g font-family="Songti SC, Noto Serif CJK SC, serif" fill="#20332c">
+<text x="100" y="470" font-size="98">深度学习</text><text x="100" y="610" font-size="98">知识与实验手册</text>
+<text x="108" y="760" font-size="32" fill="#216653">从具体技巧，到可检验的 A/B 对照</text>
+</g>
+<g fill="none" stroke="#8fa997" stroke-width="3"><path d="M110 1000H450V930H650M450 1000H850M450 1000V1070H650"/><circle cx="110" cy="1000" r="12" fill="#216653"/><circle cx="650" cy="930" r="9"/><circle cx="850" cy="1000" r="9"/><circle cx="650" cy="1070" r="9"/></g>
+<g font-family="PingFang SC, sans-serif" fill="#52695b"><text x="108" y="1220" font-size="30">14 个领域 · 72 篇知识正文</text><text x="108" y="1280" font-size="30">412 条来源技巧 · 517 个实验协议</text><text x="108" y="1450" font-size="25">中文完整版 / 保留来源 / 明确验证边界</text></g>
+</svg>

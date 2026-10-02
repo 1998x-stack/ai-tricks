@@ -132,3 +132,7 @@ ai-tricks/
 已构建专业中文静态手册：完整知识正文、517 个实验详情、公式排版、全文检索、按领域与实现状态筛选、来源与技术校订。当前版本尚未发布。
 
 [构建、预览与 GitHub Pages 部署说明](site/README.md) · [代码与 Wiki 自审记录](experiments/REVIEW.md)。站点从仓库内容生成，持续显示真实训练完成数及未实现范围。
+
+## 离线阅读与思维导图
+
+[下载中文 EPUB 电子书](exports/AI-Tricks-中文实验手册.epub) · [下载 XMind 思维导图](exports/AI-Tricks-中文思维导图.xmind) · [内容与重建说明](exports/README.md)。
