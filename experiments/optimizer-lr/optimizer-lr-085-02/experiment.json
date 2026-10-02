@@ -1,0 +1,50 @@
+{
+  "id": "optimizer-lr-085-02",
+  "parent_id": "optimizer-lr-085",
+  "title": "LR和Momentum的组合搜索",
+  "source": {
+    "wiki": "wiki/optimizer-lr/optimizer-lr.md",
+    "line": 605,
+    "heading": "LR和Momentum的组合搜索",
+    "author": "阿里云云栖号",
+    "sha256": "b4562456aa9eb86ba17ac41cd7c71428a77f710331594a81b63b72bccfe9afb2",
+    "raw_exact_lines": [],
+    "raw_attribution_status": "wiki_attributed_raw_unverified"
+  },
+  "axis": "optimizer.momentum",
+  "a": 0.85,
+  "b": 0.95,
+  "profile": "vision",
+  "metric": "test_accuracy",
+  "direction": "max",
+  "controls": {},
+  "contrast_type": "single_factor",
+  "status": "protocol_ready_training_pending",
+  "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
+  "secondary_metrics": [
+    "train_loss",
+    "val_loss",
+    "wall_seconds",
+    "peak_cuda_memory_bytes"
+  ],
+  "paired_controls": [
+    "dataset_revision",
+    "model_revision",
+    "train_validation_test_ids",
+    "initialization_seed",
+    "data_order_seed",
+    "hardware",
+    "evaluation_code"
+  ],
+  "budget_rule": "相同预注册样本/token 预算；早停/搜索/集成/压缩等策略另报告实际预算与总成本",
+  "artifacts": [
+    "request.json",
+    "train.log",
+    "history.csv",
+    "predictions.jsonl",
+    "checkpoint_manifest.json",
+    "result.json",
+    "comparison.png",
+    "comparison.svg"
+  ]
+}

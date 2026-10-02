@@ -1,0 +1,52 @@
+{
+  "id": "llm-sft-007-01",
+  "parent_id": "llm-sft-007",
+  "title": "每领域约400条高质量数据即可",
+  "source": {
+    "wiki": "wiki/llm-sft/llm-sft.md",
+    "line": 58,
+    "heading": "每领域约400条高质量数据即可",
+    "author": "Tang AI",
+    "sha256": "0e554d072e48773c29fcfe79e1d259f1ae4ae8a46d08129836a9333516dc3dc1",
+    "raw_exact_lines": [
+      121
+    ],
+    "raw_attribution_status": "exact_fragment_matched"
+  },
+  "axis": "data.samples_per_domain",
+  "a": 100,
+  "b": 400,
+  "profile": "sft",
+  "metric": "test_rougeL",
+  "direction": "max",
+  "controls": {},
+  "contrast_type": "single_factor",
+  "status": "protocol_ready_training_pending",
+  "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。400 条只是预注册对照样本量，不是普适充分样本定理。",
+  "secondary_metrics": [
+    "train_loss",
+    "val_loss",
+    "wall_seconds",
+    "peak_cuda_memory_bytes"
+  ],
+  "paired_controls": [
+    "dataset_revision",
+    "model_revision",
+    "train_validation_test_ids",
+    "initialization_seed",
+    "data_order_seed",
+    "hardware",
+    "evaluation_code"
+  ],
+  "budget_rule": "相同预注册样本/token 预算；早停/搜索/集成/压缩等策略另报告实际预算与总成本",
+  "artifacts": [
+    "request.json",
+    "train.log",
+    "history.csv",
+    "predictions.jsonl",
+    "checkpoint_manifest.json",
+    "result.json",
+    "comparison.png",
+    "comparison.svg"
+  ]
+}

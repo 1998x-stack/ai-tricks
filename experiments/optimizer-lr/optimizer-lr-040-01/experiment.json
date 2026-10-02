@@ -1,0 +1,52 @@
+{
+  "id": "optimizer-lr-040-01",
+  "parent_id": "optimizer-lr-040",
+  "title": "先锁定LR再调其他参数",
+  "source": {
+    "wiki": "wiki/optimizer-lr/optimizer-lr.md",
+    "line": 290,
+    "heading": "先锁定LR再调其他参数",
+    "author": "四点半的理一",
+    "sha256": "b4562456aa9eb86ba17ac41cd7c71428a77f710331594a81b63b72bccfe9afb2",
+    "raw_exact_lines": [
+      1075
+    ],
+    "raw_attribution_status": "exact_fragment_matched"
+  },
+  "axis": "search.policy",
+  "a": "joint_random",
+  "b": "lr_then_batch",
+  "profile": "vision",
+  "metric": "test_accuracy",
+  "direction": "max",
+  "controls": {},
+  "contrast_type": "policy",
+  "status": "protocol_ready_training_pending",
+  "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。本实验比较整体策略，策略内可能改变多项配置；不作单参数因果解释。",
+  "secondary_metrics": [
+    "train_loss",
+    "val_loss",
+    "wall_seconds",
+    "peak_cuda_memory_bytes"
+  ],
+  "paired_controls": [
+    "dataset_revision",
+    "model_revision",
+    "train_validation_test_ids",
+    "initialization_seed",
+    "data_order_seed",
+    "hardware",
+    "evaluation_code"
+  ],
+  "budget_rule": "相同预注册样本/token 预算；早停/搜索/集成/压缩等策略另报告实际预算与总成本",
+  "artifacts": [
+    "request.json",
+    "train.log",
+    "history.csv",
+    "predictions.jsonl",
+    "checkpoint_manifest.json",
+    "result.json",
+    "comparison.png",
+    "comparison.svg"
+  ]
+}

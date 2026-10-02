@@ -1,0 +1,26 @@
+{
+  "main_tips": 412,
+  "atomic_protocols": 517,
+  "categories": {
+    "activation": 16,
+    "batch-size": 19,
+    "cnn-cv": 68,
+    "data-eval": 30,
+    "debugging": 35,
+    "infra": 17,
+    "initialization": 15,
+    "llm-rl": 31,
+    "llm-sft": 22,
+    "nlp": 16,
+    "normalization": 15,
+    "optimizer-lr": 89,
+    "recsys": 23,
+    "regularization": 16
+  },
+  "detail_pages_retained": 58,
+  "raw_exact_matched_lines": 242,
+  "raw_unmatched_candidates": 351,
+  "raw_sha256": "c56ffa133d3341a2817b236b0a929d6ab45aba7cc87a5c633210e1abccdfacdf",
+  "full_training_runs": 0,
+  "all_source_content_atomically_audited": false
+}

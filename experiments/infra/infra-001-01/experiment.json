@@ -1,0 +1,53 @@
+{
+  "id": "infra-001-01",
+  "parent_id": "infra-001",
+  "title": "混合精度训练（FP16 / BF16）",
+  "source": {
+    "wiki": "wiki/infra/infra.md",
+    "line": 16,
+    "heading": "混合精度训练（FP16 / BF16）",
+    "author": "LindgeWAI、知乎社区（匿名）",
+    "sha256": "46e666bdd86b6fb1c1877483e918f586d39971c1666da86470b235d2711271ac",
+    "raw_exact_lines": [
+      1492,
+      2485
+    ],
+    "raw_attribution_status": "exact_fragment_matched"
+  },
+  "axis": "training.precision",
+  "a": "fp32",
+  "b": "bf16",
+  "profile": "vision",
+  "metric": "test_accuracy",
+  "direction": "max",
+  "controls": {},
+  "contrast_type": "single_factor",
+  "status": "protocol_ready_training_pending",
+  "limitations": "真实数据完整训练的待执行协议，未产生训练结论。所列数值是预注册对照，不代表作者经验在所有模型上成立。最终数据/模型适配与驱动必须经核对，禁止以通用分类任务代替专门任务。",
+  "secondary_metrics": [
+    "train_loss",
+    "val_loss",
+    "wall_seconds",
+    "peak_cuda_memory_bytes"
+  ],
+  "paired_controls": [
+    "dataset_revision",
+    "model_revision",
+    "train_validation_test_ids",
+    "initialization_seed",
+    "data_order_seed",
+    "hardware",
+    "evaluation_code"
+  ],
+  "budget_rule": "相同预注册样本/token 预算；早停/搜索/集成/压缩等策略另报告实际预算与总成本",
+  "artifacts": [
+    "request.json",
+    "train.log",
+    "history.csv",
+    "predictions.jsonl",
+    "checkpoint_manifest.json",
+    "result.json",
+    "comparison.png",
+    "comparison.svg"
+  ]
+}
