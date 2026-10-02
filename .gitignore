@@ -29,3 +29,8 @@ experiments/runs/
 *.safetensors
 *.pt
 *.pth
+
+# Static Pages build and browser review artifacts
+_site/
+.site-preview/
+site-test-results/
